@@ -1,0 +1,51 @@
+C51 COMPILER V9.01   MAIN                                                                  10/12/2020 11:25:25 PAGE 1   
+
+
+C51 COMPILER V9.01, COMPILATION OF MODULE MAIN
+OBJECT MODULE PLACED IN main.OBJ
+COMPILER INVOKED BY: C:\Èí¼þ\1. KEILC51Èí¼þ\C51\BIN\C51.EXE main.c BROWSE DEBUG OBJECTEXTEND
+
+line level    source
+
+   1           #include<reg52.h>
+   2            #include<stdio.h>
+   3            #include<stdlib.h>
+   4            #include"cJSON.h"
+   5          typedef unsigned int u16;        
+   6          typedef unsigned char u8;
+   7          sbit a1=P2^0;
+   8          sbit a2=P2^1;
+   9          sbit a3=P2^2;
+  10          sbit a4=P2^3;
+  11          sbit a5=P2^4;
+  12          sbit a6=P2^5;
+  13          sbit a7=P2^6;
+  14          sbit a8=P2^7;
+  15          
+  16          int i;
+  17          
+  18          
+  19          void delay(int a)
+  20          {
+  21   1      while(a--);
+  22   1      }
+  23          
+  24          void main()
+  25            {
+  26   1          
+  27   1       
+  28   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =     12    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =      2    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

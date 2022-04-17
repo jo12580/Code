@@ -1,0 +1,591 @@
+<html>
+<body>
+<pre>
+<h1>礦ision Build Log</h1>
+<h2>Project:</h2>
+C:\Users\007\Desktop\单片机\测试：模块化3.0\模块化3.0.uvproj
+Project File Date:  04/11/2020
+
+<h2>Output:</h2>
+compiling main.c...
+main.c - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling key.c...
+linking...
+Program Size: data=28.0 xdata=0 code=726
+creating hex file from "模块化3.0"...
+"模块化3.0" - 0 Error(s), 0 Warning(s).
+compiling ds1302.c...
+DS1302.C(16): error C129: missing ';' before 'DisplayData'
+ds1302.c - 1 Error(s), 0 Warning(s).
+compiling main.c...
+main.c - 0 Error(s), 0 Warning(s).
+compiling ds1302.c...
+DS1302.C(16): error C129: missing ';' before 'code'
+ds1302.c - 1 Error(s), 0 Warning(s).
+compiling main.c...
+main.c - 0 Error(s), 0 Warning(s).
+compiling ds1302.c...
+DS1302.C(154): error C202: 'DisplayData': undefined identifier
+DS1302.C(155): error C202: 'DisplayData': undefined identifier
+DS1302.C(156): error C202: 'DisplayData': undefined identifier
+DS1302.C(157): error C202: 'DisplayData': undefined identifier
+DS1302.C(158): error C202: 'DisplayData': undefined identifier
+DS1302.C(159): error C202: 'DisplayData': undefined identifier
+DS1302.C(160): error C202: 'DisplayData': undefined identifier
+DS1302.C(166): error C202: 'u8': undefined identifier
+DS1302.C(166): error C141: syntax error near 'i'
+DS1302.C(167): error C202: 'i': undefined identifier
+DS1302.C(169): error C202: 'i': undefined identifier
+DS1302.C(172): error C202: 'LSA': undefined identifier
+DS1302.C(172): error C202: 'LSB': undefined identifier
+DS1302.C(172): error C202: 'LSC': undefined identifier
+DS1302.C(174): error C202: 'LSA': undefined identifier
+DS1302.C(174): error C202: 'LSB': undefined identifier
+DS1302.C(174): error C202: 'LSC': undefined identifier
+DS1302.C(176): error C202: 'LSA': undefined identifier
+DS1302.C(176): error C202: 'LSB': undefined identifier
+DS1302.C(176): error C202: 'LSC': undefined identifier
+DS1302.C(178): error C202: 'LSA': undefined identifier
+DS1302.C(178): error C202: 'LSB': undefined identifier
+DS1302.C(178): error C202: 'LSC': undefined identifier
+DS1302.C(180): error C202: 'LSA': undefined identifier
+DS1302.C(180): error C202: 'LSB': undefined identifier
+DS1302.C(180): error C202: 'LSC': undefined identifier
+DS1302.C(182): error C202: 'LSA': undefined identifier
+DS1302.C(182): error C202: 'LSB': undefined identifier
+DS1302.C(182): error C202: 'LSC': undefined identifier
+DS1302.C(184): error C202: 'LSA': undefined identifier
+DS1302.C(184): error C202: 'LSB': undefined identifier
+DS1302.C(184): error C202: 'LSC': undefined identifier
+DS1302.C(186): error C202: 'i': undefined identifier
+ds1302.c - 33 Error(s), 0 Warning(s).
+compiling ds1302.c...
+DS1302.C(15): error C129: missing ';' before 'code'
+ds1302.c - 1 Error(s), 0 Warning(s).
+compiling ds1302.c...
+DS1302.C(15): error C129: missing ';' before 'code'
+ds1302.c - 1 Error(s), 0 Warning(s).
+compiling ds1302.c...
+DS1302.C(15): error C141: syntax error near ';'
+DS1302.C(15): error C129: missing ';' before 'code'
+ds1302.c - 2 Error(s), 0 Warning(s).
+compiling ds1302.c...
+DS1302.C(15): error C129: missing ';' before 'code'
+ds1302.c - 1 Error(s), 0 Warning(s).
+compiling ds1302.c...
+DS1302.C(15): error C129: missing ';' before 'code'
+ds1302.c - 1 Error(s), 0 Warning(s).
+compiling ds1302.c...
+DS1302.C(154): error C202: 'DisplayData': undefined identifier
+DS1302.C(155): error C202: 'DisplayData': undefined identifier
+DS1302.C(156): error C202: 'DisplayData': undefined identifier
+DS1302.C(157): error C202: 'DisplayData': undefined identifier
+DS1302.C(158): error C202: 'DisplayData': undefined identifier
+DS1302.C(159): error C202: 'DisplayData': undefined identifier
+DS1302.C(160): error C202: 'DisplayData': undefined identifier
+DS1302.C(166): error C202: 'u8': undefined identifier
+DS1302.C(166): error C141: syntax error near 'i'
+DS1302.C(167): error C202: 'i': undefined identifier
+DS1302.C(169): error C202: 'i': undefined identifier
+DS1302.C(172): error C202: 'LSA': undefined identifier
+DS1302.C(172): error C202: 'LSB': undefined identifier
+DS1302.C(172): error C202: 'LSC': undefined identifier
+DS1302.C(174): error C202: 'LSA': undefined identifier
+DS1302.C(174): error C202: 'LSB': undefined identifier
+DS1302.C(174): error C202: 'LSC': undefined identifier
+DS1302.C(176): error C202: 'LSA': undefined identifier
+DS1302.C(176): error C202: 'LSB': undefined identifier
+DS1302.C(176): error C202: 'LSC': undefined identifier
+DS1302.C(178): error C202: 'LSA': undefined identifier
+DS1302.C(178): error C202: 'LSB': undefined identifier
+DS1302.C(178): error C202: 'LSC': undefined identifier
+DS1302.C(180): error C202: 'LSA': undefined identifier
+DS1302.C(180): error C202: 'LSB': undefined identifier
+DS1302.C(180): error C202: 'LSC': undefined identifier
+DS1302.C(182): error C202: 'LSA': undefined identifier
+DS1302.C(182): error C202: 'LSB': undefined identifier
+DS1302.C(182): error C202: 'LSC': undefined identifier
+DS1302.C(184): error C202: 'LSA': undefined identifier
+DS1302.C(184): error C202: 'LSB': undefined identifier
+DS1302.C(184): error C202: 'LSC': undefined identifier
+DS1302.C(186): error C202: 'i': undefined identifier
+ds1302.c - 33 Error(s), 0 Warning(s).
+compiling ds1302.c...
+DS1302.C(15): error C129: missing ';' before 'code'
+ds1302.c - 1 Error(s), 0 Warning(s).
+compiling ds1302.c...
+DS1302.C(15): error C129: missing ';' before 'code'
+ds1302.c - 1 Error(s), 0 Warning(s).
+compiling ds1302.c...
+DS1302.C(15): error C129: missing ';' before 'code'
+ds1302.c - 1 Error(s), 0 Warning(s).
+compiling ds1302.c...
+DS1302.C(15): error C129: missing ';' before 'smgduan'
+ds1302.c - 1 Error(s), 0 Warning(s).
+compiling ds1302.c...
+DS1302.C(15): error C129: missing ';' before 'code'
+ds1302.c - 1 Error(s), 0 Warning(s).
+compiling ds1302.c...
+DS1302.C(15): error C129: missing ';' before 'code'
+ds1302.c - 1 Error(s), 0 Warning(s).
+compiling ds1302.c...
+DS1302.C(155): error C202: 'DisplayData': undefined identifier
+DS1302.C(156): error C202: 'DisplayData': undefined identifier
+DS1302.C(157): error C202: 'DisplayData': undefined identifier
+DS1302.C(158): error C202: 'DisplayData': undefined identifier
+DS1302.C(159): error C202: 'DisplayData': undefined identifier
+DS1302.C(160): error C202: 'DisplayData': undefined identifier
+DS1302.C(161): error C202: 'DisplayData': undefined identifier
+DS1302.C(167): error C202: 'u8': undefined identifier
+DS1302.C(167): error C141: syntax error near 'i'
+DS1302.C(168): error C202: 'i': undefined identifier
+DS1302.C(170): error C202: 'i': undefined identifier
+DS1302.C(173): error C202: 'LSA': undefined identifier
+DS1302.C(173): error C202: 'LSB': undefined identifier
+DS1302.C(173): error C202: 'LSC': undefined identifier
+DS1302.C(175): error C202: 'LSA': undefined identifier
+DS1302.C(175): error C202: 'LSB': undefined identifier
+DS1302.C(175): error C202: 'LSC': undefined identifier
+DS1302.C(177): error C202: 'LSA': undefined identifier
+DS1302.C(177): error C202: 'LSB': undefined identifier
+DS1302.C(177): error C202: 'LSC': undefined identifier
+DS1302.C(179): error C202: 'LSA': undefined identifier
+DS1302.C(179): error C202: 'LSB': undefined identifier
+DS1302.C(179): error C202: 'LSC': undefined identifier
+DS1302.C(181): error C202: 'LSA': undefined identifier
+DS1302.C(181): error C202: 'LSB': undefined identifier
+DS1302.C(181): error C202: 'LSC': undefined identifier
+DS1302.C(183): error C202: 'LSA': undefined identifier
+DS1302.C(183): error C202: 'LSB': undefined identifier
+DS1302.C(183): error C202: 'LSC': undefined identifier
+DS1302.C(185): error C202: 'LSA': undefined identifier
+DS1302.C(185): error C202: 'LSB': undefined identifier
+DS1302.C(185): error C202: 'LSC': undefined identifier
+DS1302.C(187): error C202: 'i': undefined identifier
+ds1302.c - 33 Error(s), 0 Warning(s).
+Build target 'Target 1'
+assembling STARTUP.A51...
+compiling ds1302.c...
+DS1302.C(155): error C202: 'DisplayData': undefined identifier
+DS1302.C(156): error C202: 'DisplayData': undefined identifier
+DS1302.C(157): error C202: 'DisplayData': undefined identifier
+DS1302.C(158): error C202: 'DisplayData': undefined identifier
+DS1302.C(159): error C202: 'DisplayData': undefined identifier
+DS1302.C(160): error C202: 'DisplayData': undefined identifier
+DS1302.C(161): error C202: 'DisplayData': undefined identifier
+DS1302.C(167): error C202: 'u8': undefined identifier
+DS1302.C(167): error C141: syntax error near 'i'
+DS1302.C(168): error C202: 'i': undefined identifier
+DS1302.C(170): error C202: 'i': undefined identifier
+DS1302.C(173): error C202: 'LSA': undefined identifier
+DS1302.C(173): error C202: 'LSB': undefined identifier
+DS1302.C(173): error C202: 'LSC': undefined identifier
+DS1302.C(175): error C202: 'LSA': undefined identifier
+DS1302.C(175): error C202: 'LSB': undefined identifier
+DS1302.C(175): error C202: 'LSC': undefined identifier
+DS1302.C(177): error C202: 'LSA': undefined identifier
+DS1302.C(177): error C202: 'LSB': undefined identifier
+DS1302.C(177): error C202: 'LSC': undefined identifier
+DS1302.C(179): error C202: 'LSA': undefined identifier
+DS1302.C(179): error C202: 'LSB': undefined identifier
+DS1302.C(179): error C202: 'LSC': undefined identifier
+DS1302.C(181): error C202: 'LSA': undefined identifier
+DS1302.C(181): error C202: 'LSB': undefined identifier
+DS1302.C(181): error C202: 'LSC': undefined identifier
+DS1302.C(183): error C202: 'LSA': undefined identifier
+DS1302.C(183): error C202: 'LSB': undefined identifier
+DS1302.C(183): error C202: 'LSC': undefined identifier
+DS1302.C(185): error C202: 'LSA': undefined identifier
+DS1302.C(185): error C202: 'LSB': undefined identifier
+DS1302.C(185): error C202: 'LSC': undefined identifier
+DS1302.C(187): error C202: 'i': undefined identifier
+compiling main.c...
+compiling key.c...
+Target not created
+compiling ds1302.c...
+DS1302.C(15): error C129: missing ';' before 'code'
+ds1302.c - 1 Error(s), 0 Warning(s).
+compiling ds1302.c...
+DS1302.C(12): error C129: missing ';' before 'code'
+ds1302.c - 1 Error(s), 0 Warning(s).
+compiling ds1302.c...
+DS1302.C(12): error C129: missing ';' before 'code'
+ds1302.c - 1 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling ds1302.c...
+DS1302.C(12): error C129: missing ';' before 'code'
+Target not created
+compiling ds1302.c...
+DS1302.C(12): error C129: missing ';' before 'code'
+ds1302.c - 1 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling ds1302.c...
+DS1302.C(12): error C129: missing ';' before 'code'
+Target not created
+compiling ds1302.c...
+DS1302.C(12): error C129: missing ';' before 'code'
+ds1302.c - 1 Error(s), 0 Warning(s).
+compiling ds1302.c...
+DS1302.C(3): error C129: missing ';' before 'code'
+ds1302.c - 1 Error(s), 0 Warning(s).
+compiling ds1302.c...
+DS1302.C(12): error C129: missing ';' before 'code'
+ds1302.c - 1 Error(s), 0 Warning(s).
+compiling ds1302.c...
+DS1302.C(12): error C129: missing ';' before 'DisplayData'
+ds1302.c - 1 Error(s), 0 Warning(s).
+compiling ds1302.c...
+DS1302.C(12): error C129: missing ';' before 'DisplayData'
+ds1302.c - 1 Error(s), 0 Warning(s).
+compiling ds1302.c...
+DS1302.C(12): error C129: missing ';' before 'DisplayData'
+ds1302.c - 1 Error(s), 0 Warning(s).
+compiling ds1302.c...
+DS1302.C(12): error C129: missing ';' before 'DisplayData'
+ds1302.c - 1 Error(s), 0 Warning(s).
+compiling ds1302.c...
+DS1302.C(12): error C129: missing ';' before 'DisplayData'
+ds1302.c - 1 Error(s), 0 Warning(s).
+compiling ds1302.c...
+DS1302.C(12): error C129: missing ';' before 'DisplayData'
+ds1302.c - 1 Error(s), 0 Warning(s).
+compiling ds1302.c...
+DS1302.C(12): error C129: missing ';' before 'DisplayData'
+ds1302.c - 1 Error(s), 0 Warning(s).
+compiling ds1302.c...
+DS1302.C(12): error C129: missing ';' before 'DisplayData'
+ds1302.c - 1 Error(s), 0 Warning(s).
+compiling ds1302.c...
+DS1302.C(12): error C129: missing ';' before 'DisplayData'
+ds1302.c - 1 Error(s), 0 Warning(s).
+compiling ds1302.c...
+DS1302.C(12): error C129: missing ';' before 'DisplayData'
+ds1302.c - 1 Error(s), 0 Warning(s).
+compiling ds1302.c...
+DS1302.C(13): error C129: missing ';' before 'DisplayData'
+ds1302.c - 1 Error(s), 0 Warning(s).
+compiling ds1302.c...
+DS1302.C(12): error C141: syntax error near ';'
+DS1302.C(13): error C129: missing ';' before 'DisplayData'
+ds1302.c - 2 Error(s), 0 Warning(s).
+compiling ds1302.c...
+DS1302.C(12): error C141: syntax error near ';'
+DS1302.C(13): error C129: missing ';' before 'DisplayData'
+ds1302.c - 2 Error(s), 0 Warning(s).
+compiling ds1302.c...
+DS1302.C(13): error C129: missing ';' before 'DisplayData'
+ds1302.c - 1 Error(s), 0 Warning(s).
+compiling ds1302.c...
+DS1302.C(14): error C129: missing ';' before 'code'
+ds1302.c - 1 Error(s), 0 Warning(s).
+compiling ds1302.c...
+DS1302.C(28): error C141: syntax error near 'void'
+DS1302.C(29): error C231: '_Ds1302Write': redefinition
+DS1302.C(29): error C141: syntax error near '{'
+DS1302.C(31): error C231: 'RST': redefinition
+DS1302.C(31): error C231: 'RST': redefinition
+DS1302.C(32): error C231: '__nop_': redefinition
+DS1302.C(34): error C231: 'SCLK': redefinition
+DS1302.C(34): error C231: 'SCLK': redefinition
+DS1302.C(35): error C231: '__nop_': redefinition
+DS1302.C(36): error C279: 'RST': multiple initialization
+DS1302.C(36): error C231: 'RST': redefinition
+DS1302.C(36): error C231: 'RST': redefinition
+DS1302.C(37): error C231: '__nop_': redefinition
+DS1302.C(39): error C141: syntax error near 'for'
+DS1302.C(39): error C141: syntax error near '=', expected ')'
+DS1302.C(39): error C129: missing ';' before '<'
+ds1302.c - 16 Error(s), 0 Warning(s).
+compiling ds1302.c...
+DS1302.C(28): error C141: syntax error near 'void'
+DS1302.C(29): error C231: '_Ds1302Write': redefinition
+DS1302.C(29): error C141: syntax error near '{'
+DS1302.C(31): error C231: 'RST': redefinition
+DS1302.C(31): error C231: 'RST': redefinition
+DS1302.C(32): error C231: '__nop_': redefinition
+DS1302.C(34): error C231: 'SCLK': redefinition
+DS1302.C(34): error C231: 'SCLK': redefinition
+DS1302.C(35): error C231: '__nop_': redefinition
+DS1302.C(36): error C279: 'RST': multiple initialization
+DS1302.C(36): error C231: 'RST': redefinition
+DS1302.C(36): error C231: 'RST': redefinition
+DS1302.C(37): error C231: '__nop_': redefinition
+DS1302.C(39): error C141: syntax error near 'for'
+DS1302.C(39): error C141: syntax error near '=', expected ')'
+DS1302.C(39): error C129: missing ';' before '<'
+ds1302.c - 16 Error(s), 0 Warning(s).
+compiling ds1302.c...
+DS1302.C(28): error C141: syntax error near 'void'
+DS1302.C(29): error C231: '_Ds1302Write': redefinition
+DS1302.C(29): error C141: syntax error near '{'
+DS1302.C(31): error C231: 'RST': redefinition
+DS1302.C(31): error C231: 'RST': redefinition
+DS1302.C(32): error C231: '__nop_': redefinition
+DS1302.C(34): error C231: 'SCLK': redefinition
+DS1302.C(34): error C231: 'SCLK': redefinition
+DS1302.C(35): error C231: '__nop_': redefinition
+DS1302.C(36): error C279: 'RST': multiple initialization
+DS1302.C(36): error C231: 'RST': redefinition
+DS1302.C(36): error C231: 'RST': redefinition
+DS1302.C(37): error C231: '__nop_': redefinition
+DS1302.C(39): error C141: syntax error near 'for'
+DS1302.C(39): error C141: syntax error near '=', expected ')'
+DS1302.C(39): error C129: missing ';' before '<'
+ds1302.c - 16 Error(s), 0 Warning(s).
+compiling ds1302.c...
+DS1302.C(14): error C129: missing ';' before 'code'
+ds1302.c - 1 Error(s), 0 Warning(s).
+compiling ds1302.c...
+DS1302.C(28): error C141: syntax error near 'void'
+DS1302.C(29): error C231: '_Ds1302Write': redefinition
+DS1302.C(29): error C141: syntax error near '{'
+DS1302.C(31): error C231: 'RST': redefinition
+DS1302.C(31): error C231: 'RST': redefinition
+DS1302.C(32): error C231: '__nop_': redefinition
+DS1302.C(34): error C231: 'SCLK': redefinition
+DS1302.C(34): error C231: 'SCLK': redefinition
+DS1302.C(35): error C231: '__nop_': redefinition
+DS1302.C(36): error C279: 'RST': multiple initialization
+DS1302.C(36): error C231: 'RST': redefinition
+DS1302.C(36): error C231: 'RST': redefinition
+DS1302.C(37): error C231: '__nop_': redefinition
+DS1302.C(39): error C141: syntax error near 'for'
+DS1302.C(39): error C141: syntax error near '=', expected ')'
+DS1302.C(39): error C129: missing ';' before '<'
+ds1302.c - 16 Error(s), 0 Warning(s).
+compiling ds1302.c...
+DS1302.C(28): error C141: syntax error near 'void'
+DS1302.C(29): error C231: '_Ds1302Write': redefinition
+DS1302.C(29): error C141: syntax error near '{'
+DS1302.C(31): error C231: 'RST': redefinition
+DS1302.C(31): error C231: 'RST': redefinition
+DS1302.C(32): error C231: '__nop_': redefinition
+DS1302.C(34): error C231: 'SCLK': redefinition
+DS1302.C(34): error C231: 'SCLK': redefinition
+DS1302.C(35): error C231: '__nop_': redefinition
+DS1302.C(36): error C279: 'RST': multiple initialization
+DS1302.C(36): error C231: 'RST': redefinition
+DS1302.C(36): error C231: 'RST': redefinition
+DS1302.C(37): error C231: '__nop_': redefinition
+DS1302.C(39): error C141: syntax error near 'for'
+DS1302.C(39): error C141: syntax error near '=', expected ')'
+DS1302.C(39): error C129: missing ';' before '<'
+ds1302.c - 16 Error(s), 0 Warning(s).
+compiling ds1302.c...
+DS1302.C(28): error C141: syntax error near 'void'
+DS1302.C(29): error C231: '_Ds1302Write': redefinition
+DS1302.C(29): error C141: syntax error near '{'
+DS1302.C(31): error C231: 'RST': redefinition
+DS1302.C(31): error C231: 'RST': redefinition
+DS1302.C(32): error C231: '__nop_': redefinition
+DS1302.C(34): error C231: 'SCLK': redefinition
+DS1302.C(34): error C231: 'SCLK': redefinition
+DS1302.C(35): error C231: '__nop_': redefinition
+DS1302.C(36): error C279: 'RST': multiple initialization
+DS1302.C(36): error C231: 'RST': redefinition
+DS1302.C(36): error C231: 'RST': redefinition
+DS1302.C(37): error C231: '__nop_': redefinition
+DS1302.C(39): error C141: syntax error near 'for'
+DS1302.C(39): error C141: syntax error near '=', expected ')'
+DS1302.C(39): error C129: missing ';' before '<'
+ds1302.c - 16 Error(s), 0 Warning(s).
+compiling ds1302.c...
+DS1302.C(28): error C141: syntax error near 'void'
+DS1302.C(29): error C231: '_Ds1302Write': redefinition
+DS1302.C(29): error C141: syntax error near '{'
+DS1302.C(31): error C231: 'RST': redefinition
+DS1302.C(31): error C231: 'RST': redefinition
+DS1302.C(32): error C231: '__nop_': redefinition
+DS1302.C(34): error C231: 'SCLK': redefinition
+DS1302.C(34): error C231: 'SCLK': redefinition
+DS1302.C(35): error C231: '__nop_': redefinition
+DS1302.C(36): error C279: 'RST': multiple initialization
+DS1302.C(36): error C231: 'RST': redefinition
+DS1302.C(36): error C231: 'RST': redefinition
+DS1302.C(37): error C231: '__nop_': redefinition
+DS1302.C(39): error C141: syntax error near 'for'
+DS1302.C(39): error C141: syntax error near '=', expected ')'
+DS1302.C(39): error C129: missing ';' before '<'
+ds1302.c - 16 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling ds1302.c...
+DS1302.C(28): error C141: syntax error near 'void'
+DS1302.C(29): error C231: '_Ds1302Write': redefinition
+DS1302.C(29): error C141: syntax error near '{'
+DS1302.C(31): error C231: 'RST': redefinition
+DS1302.C(31): error C231: 'RST': redefinition
+DS1302.C(32): error C231: '__nop_': redefinition
+DS1302.C(34): error C231: 'SCLK': redefinition
+DS1302.C(34): error C231: 'SCLK': redefinition
+DS1302.C(35): error C231: '__nop_': redefinition
+DS1302.C(36): error C279: 'RST': multiple initialization
+DS1302.C(36): error C231: 'RST': redefinition
+DS1302.C(36): error C231: 'RST': redefinition
+DS1302.C(37): error C231: '__nop_': redefinition
+DS1302.C(39): error C141: syntax error near 'for'
+DS1302.C(39): error C141: syntax error near '=', expected ')'
+DS1302.C(39): error C129: missing ';' before '<'
+compiling main.c...
+Target not created
+compiling ds1302.c...
+DS1302.C(28): error C141: syntax error near 'void'
+DS1302.C(29): error C231: '_Ds1302Write': redefinition
+DS1302.C(29): error C141: syntax error near '{'
+DS1302.C(31): error C231: 'RST': redefinition
+DS1302.C(31): error C231: 'RST': redefinition
+DS1302.C(32): error C231: '__nop_': redefinition
+DS1302.C(34): error C231: 'SCLK': redefinition
+DS1302.C(34): error C231: 'SCLK': redefinition
+DS1302.C(35): error C231: '__nop_': redefinition
+DS1302.C(36): error C279: 'RST': multiple initialization
+DS1302.C(36): error C231: 'RST': redefinition
+DS1302.C(36): error C231: 'RST': redefinition
+DS1302.C(37): error C231: '__nop_': redefinition
+DS1302.C(39): error C141: syntax error near 'for'
+DS1302.C(39): error C141: syntax error near '=', expected ')'
+DS1302.C(39): error C129: missing ';' before '<'
+ds1302.c - 16 Error(s), 0 Warning(s).
+compiling ds1302.c...
+DS1302.C(14): error C129: missing ';' before 'code'
+ds1302.c - 1 Error(s), 0 Warning(s).
+compiling ds1302.c...
+DS1302.C(14): error C129: missing ';' before 'code'
+ds1302.c - 1 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling ds1302.c...
+DS1302.C(14): error C129: missing ';' before 'code'
+Target not created
+compiling ds1302.c...
+DS1302.C(14): error C129: missing ';' before 'code'
+ds1302.c - 1 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling ds1302.c...
+DS1302.C(14): error C129: missing ';' before 'code'
+Target not created
+compiling ds1302.c...
+DS1302.C(14): error C129: missing ';' before 'code'
+ds1302.c - 1 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling ds1302.c...
+DS1302.C(14): error C129: missing ';' before 'code'
+Target not created
+compiling ds1302.c...
+DS1302.C(14): error C129: missing ';' before 'code'
+ds1302.c - 1 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling ds1302.c...
+DS1302.C(14): error C129: missing ';' before 'code'
+Target not created
+compiling ds1302.c...
+DS1302.C(14): error C129: missing ';' before 'code'
+ds1302.c - 1 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling ds1302.c...
+DS1302.C(14): error C129: missing ';' before 'code'
+Target not created
+compiling ds1302.c...
+DS1302.C(14): error C129: missing ';' before 'code'
+ds1302.c - 1 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling ds1302.c...
+DS1302.C(14): error C129: missing ';' before 'code'
+Target not created
+compiling ds1302.c...
+DS1302.C(14): error C129: missing ';' before 'code'
+ds1302.c - 1 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling ds1302.c...
+DS1302.C(14): error C129: missing ';' before 'code'
+Target not created
+compiling ds1302.c...
+DS1302.C(14): error C129: missing ';' before 'code'
+ds1302.c - 1 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling ds1302.c...
+DS1302.C(14): error C129: missing ';' before 'code'
+Target not created
+compiling ds1302.c...
+DS1302.C(14): error C129: missing ';' before 'code'
+ds1302.c - 1 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling ds1302.c...
+DS1302.C(14): error C129: missing ';' before 'code'
+Target not created
+compiling ds1302.c...
+DS1302.C(14): error C129: missing ';' before 'code'
+ds1302.c - 1 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling ds1302.c...
+DS1302.C(14): error C129: missing ';' before 'code'
+Target not created
+Build target 'Target 1'
+compiling ds1302.c...
+DS1302.C(14): error C129: missing ';' before 'code'
+Target not created
+compiling ds1302.c...
+DS1302.C(14): error C129: missing ';' before 'code'
+ds1302.c - 1 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling ds1302.c...
+DS1302.C(14): error C129: missing ';' before 'code'
+Target not created
+compiling ds1302.c...
+DS1302.C(14): error C129: missing ';' before 'code'
+ds1302.c - 1 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling ds1302.c...
+DS1302.C(14): error C129: missing ';' before 'code'
+Target not created
+compiling ds1302.c...
+DS1302.C(14): error C129: missing ';' before 'code'
+ds1302.c - 1 Error(s), 0 Warning(s).
+compiling ds1302.c...
+DS1302.C(14): error C129: missing ';' before 'code'
+ds1302.c - 1 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling ds1302.c...
+DS1302.C(14): error C129: missing ';' before 'code'
+Target not created
+compiling ds1302.c...
+DS1302.C(14): error C129: missing ';' before 'code'
+ds1302.c - 1 Error(s), 0 Warning(s).
+compiling ds1302.c...
+DS1302.C(13): error C129: missing ';' before 'code'
+ds1302.c - 1 Error(s), 0 Warning(s).
+compiling ds1302.c...
+DS1302.C(28): error C141: syntax error near 'void'
+DS1302.C(29): error C231: '_Ds1302Write': redefinition
+DS1302.C(29): error C141: syntax error near '{'
+DS1302.C(31): error C231: 'RST': redefinition
+DS1302.C(31): error C231: 'RST': redefinition
+DS1302.C(32): error C231: '__nop_': redefinition
+DS1302.C(34): error C231: 'SCLK': redefinition
+DS1302.C(34): error C231: 'SCLK': redefinition
+DS1302.C(35): error C231: '__nop_': redefinition
+DS1302.C(36): error C279: 'RST': multiple initialization
+DS1302.C(36): error C231: 'RST': redefinition
+DS1302.C(36): error C231: 'RST': redefinition
+DS1302.C(37): error C231: '__nop_': redefinition
+DS1302.C(39): error C141: syntax error near 'for'
+DS1302.C(39): error C141: syntax error near '=', expected ')'
+DS1302.C(39): error C129: missing ';' before '<'
+ds1302.c - 16 Error(s), 0 Warning(s).
+compiling ds1302.c...
+DS1302.C(28): error C141: syntax error near 'void'
+DS1302.C(29): error C231: '_Ds1302Write': redefinition
+DS1302.C(29): error C141: syntax error near '{'
+DS1302.C(31): error C231: 'RST': redefinition
+DS1302.C(31): error C231: 'RST': redefinition
+DS1302.C(32): error C231: '__nop_': redefinition
+DS1302.C(34): error C231: 'SCLK': redefinition
+DS1302.C(34): error C231: 'SCLK': redefinition
+DS1302.C(35): error C231: '__nop_': redefinition
+DS1302.C(36): error C279: 'RST': multiple initialization
+DS1302.C(36): error C231: 'RST': redefinition
+DS1302.C(36): error C231: 'RST': redefinition
+DS1302.C(37): error C231: '__nop_': redefinition
+DS1302.C(39): error C141: syntax error near 'for'
+DS1302.C(39): error C141: syntax error near '=', expected ')'
+DS1302.C(39): error C129: missing ';' before '<'
+ds1302.c - 16 Error(s), 0 Warning(s).

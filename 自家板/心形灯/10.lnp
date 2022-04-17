@@ -1,0 +1,3 @@
+"main.obj" 
+TO "10.13" 
+PRINT(".\Listings\10.m51") RAMSIZE(256) 

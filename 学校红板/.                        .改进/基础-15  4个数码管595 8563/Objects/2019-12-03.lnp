@@ -1,0 +1,7 @@
+".\Objects\STARTUP.obj",
+".\Objects\main.obj",
+".\Objects\PCF8563.obj",
+".\Objects\voice.obj",
+".\Objects\74hc595.obj" 
+TO ".\Objects\2019-12-03" 
+PRINT(".\Listings\2019-12-03.m51")

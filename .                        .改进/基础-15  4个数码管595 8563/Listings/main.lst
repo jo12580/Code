@@ -1,0 +1,96 @@
+C51 COMPILER V9.59.0.0   MAIN                                                              12/07/2019 22:30:57 PAGE 1   
+
+
+C51 COMPILER V9.59.0.0, COMPILATION OF MODULE MAIN
+OBJECT MODULE PLACED IN .\Objects\main.obj
+COMPILER INVOKED BY: D:\Keil_v5\C51\BIN\C51.EXE main.c OPTIMIZE(8,SPEED) BROWSE DEBUG OBJECTEXTEND PRINT(.\Listings\main
+                    -.lst) TABS(2) OBJECT(.\Objects\main.obj)
+
+line level    source
+
+   1          //---------------------------
+   2          //
+   3          //---------------------------
+   4          #include<reg52.h>
+   5          #include <PCF8563.h>
+   6          #include<voice.h>
+   7          #include "74hc595.h"
+   8          
+   9          typedef unsigned char uchar ;
+  10          typedef unsigned int  uint  ;
+  11          sbit key_play=P1^6;  //语音播放引脚定义 
+  12          sbit led0=P1^4;
+  13          sbit led1=P1^5;
+  14          
+  15          extern unsigned char year,mon,day,hou,min,sec,week,last_sec;
+  16          
+  17          //=============================
+  18          void main()
+  19          {
+  20   1          year=0x19; //给定今天日期初值
+  21   1          mon=0x12;  //
+  22   1          day=0x07;  //
+  23   1          hou=0x22;  //给定今天时间初值
+  24   1          min=0x25;  //
+  25   1          sec=0x52;  //
+  26   1          week=0x05; //
+  27   1        
+  28   1        led0=0;
+  29   1        led1=1;
+  30   1        write_time_8563();     //写日期初值,数据放于 time[7] 
+  31   1        read_time_8563();   //读日期,数据放于 year,mon,day,hou,min,sec,week
+  32   1        
+  33   1       display_time( 12,30,20,5);      
+  34   1       display_date(19,12,7);
+  35   1       display_temperature( 12,20);
+  36   1        
+  37   1        
+  38   1        while(1)
+  39   1        { last_sec=sec;
+  40   2          read_time_8563(); // year,mon,day,hou,min,sec
+  41   2          if(last_sec!=sec)   //
+  42   2          {
+  43   3            
+  44   3             display_time( hou,min,sec,week);  
+  45   3            led0=~led0;
+  46   3            led1=~led1;
+  47   3      //====================================
+  48   3            voice(hou/10+2);
+  49   3            if(hou>10){   voice(12); } //十
+  50   3            voice(hou%10+2);
+  51   3            voice(14);  //            
+  52   3      
+  53   3      //=====================================     
+  54   3            voice(min/10+2);
+C51 COMPILER V9.59.0.0   MAIN                                                              12/07/2019 22:30:57 PAGE 2   
+
+  55   3            if(min>10){   voice(12); } //十
+  56   3            voice(min%10+2);
+  57   3            voice(15);  //      
+  58   3      //===============================     
+  59   3            voice(sec/10+2);
+  60   3            if(sec>10){   voice(12); } //十
+  61   3            voice(sec%10+2);
+  62   3            voice(16);  //秒
+  63   3      
+  64   3            
+  65   3          }
+  66   2          
+  67   2        }
+  68   1      }
+  69          
+  70          //---------------------------
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =    255    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

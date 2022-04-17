@@ -1,0 +1,148 @@
+BL51 BANKED LINKER/LOCATER V6.22                                                        03/23/2021  18:31:58  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.22, INVOKED BY:
+D:\SOFTWARE\KEIL\32\C51\BIN\BL51.EXE main.obj TO T3 PRINT (.\Listings\T3.m51) RAMSIZE (256)
+
+
+MEMORY MODEL: SMALL
+
+
+INPUT MODULES INCLUDED:
+  main.obj (MAIN)
+  D:\SOFTWARE\KEIL\32\C51\LIB\C51S.LIB (?C_STARTUP)
+  D:\SOFTWARE\KEIL\32\C51\LIB\C51S.LIB (?C?SIDIV)
+  D:\SOFTWARE\KEIL\32\C51\LIB\C51S.LIB (RAND)
+  D:\SOFTWARE\KEIL\32\C51\LIB\C51S.LIB (?C?UIDIV)
+
+
+LINK MAP OF MODULE:  T3 (MAIN)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+            DATA    0008H     0004H     UNIT         ?DT?RAND?RAND
+            DATA    000CH     0002H     UNIT         ?DT?MAIN
+            IDATA   000EH     0001H     UNIT         ?STACK
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0003H     ABSOLUTE     
+            CODE    0003H     0008H     UNIT         ?PR?MAIN?MAIN
+            CODE    000BH     0003H     ABSOLUTE     
+            CODE    000EH     008BH     UNIT         ?C?LIB_CODE
+            CODE    0099H     0062H     UNIT         ?PR?TIMER0?MAIN
+            CODE    00FBH     004DH     UNIT         ?PR?RAND?RAND
+            CODE    0148H     0012H     UNIT         ?PR?TIMER0INIT?MAIN
+            CODE    015AH     000CH     UNIT         ?C_C51STARTUP
+
+
+
+OVERLAY MAP OF MODULE:   T3 (MAIN)
+
+
+SEGMENT
+  +--> CALLED SEGMENT
+---------------------
+?PR?TIMER0?MAIN
+  +--> ?PR?RAND?RAND
+
+*** NEW ROOT ***************************************************
+
+?C_C51STARTUP
+  +--> ?PR?MAIN?MAIN
+
+?PR?MAIN?MAIN
+  +--> ?PR?TIMER0INIT?MAIN
+
+
+
+BL51 BANKED LINKER/LOCATER V6.22                                                      03/23/2021  18:31:58  PAGE 2
+
+
+SYMBOL TABLE OF MODULE:  T3 (MAIN)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        MAIN
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  D:0080H         PUBLIC        P0
+  D:0090H         PUBLIC        P1
+  D:00A0H         PUBLIC        P2
+  D:00B0H         PUBLIC        P3
+  B:00A8H.7       PUBLIC        EA
+  D:00A8H         PUBLIC        IE
+  D:00B8H         PUBLIC        IP
+  C:0003H         PUBLIC        main
+  C:0099H         PUBLIC        Timer0
+  D:0098H         PUBLIC        SCON
+  D:0089H         PUBLIC        TMOD
+  D:0088H         PUBLIC        TCON
+  B:00A8H.1       PUBLIC        ET0
+  B:0088H.5       PUBLIC        TF0
+  C:0148H         PUBLIC        Timer0Init
+  D:008CH         PUBLIC        TH0
+  D:008AH         PUBLIC        TL0
+  B:0088H.4       PUBLIC        TR0
+  D:00C8H         PUBLIC        T2CON
+  D:00D0H         PUBLIC        PSW
+  -------         PROC          TIMER0INIT
+  C:0148H         LINE#         4
+  C:0148H         LINE#         5
+  C:0148H         LINE#         6
+  C:014BH         LINE#         7
+  C:014EH         LINE#         8
+  C:0151H         LINE#         9
+  C:0153H         LINE#         10
+  C:0155H         LINE#         11
+  C:0157H         LINE#         12
+  C:0159H         LINE#         13
+  -------         ENDPROC       TIMER0INIT
+  -------         PROC          MAIN
+  C:0003H         LINE#         15
+  C:0003H         LINE#         16
+  C:0003H         LINE#         17
+  C:0006H         LINE#         18
+  C:0009H         LINE#         19
+  -------         ENDPROC       MAIN
+  -------         PROC          TIMER0
+  -------         DO            
+  D:000CH         SYMBOL        i
+  D:0004H         SYMBOL        num
+  -------         ENDDO         
+  C:0099H         LINE#         23
+  C:00B6H         LINE#         27
+  C:00B9H         LINE#         28
+  C:00BCH         LINE#         29
+  C:00C4H         LINE#         30
+  C:00CEH         LINE#         31
+BL51 BANKED LINKER/LOCATER V6.22                                                      03/23/2021  18:31:58  PAGE 3
+
+
+  C:00D8H         LINE#         32
+  C:00D8H         LINE#         33
+  C:00DEH         LINE#         34
+  C:00E0H         LINE#         35
+  C:00E0H         LINE#         36
+  -------         ENDPROC       TIMER0
+  -------         ENDMOD        MAIN
+
+  -------         MODULE        ?C?SIDIV
+  C:000EH         PUBLIC        ?C?SIDIV
+  -------         ENDMOD        ?C?SIDIV
+
+  -------         MODULE        RAND
+  D:0008H         PUBLIC        ?SRAND?BYTE
+  C:00FBH         PUBLIC        RAND
+  C:013DH         PUBLIC        _SRAND
+  -------         ENDMOD        RAND
+
+  -------         MODULE        ?C?UIDIV
+  C:0044H         PUBLIC        ?C?UIDIV
+  -------         ENDMOD        ?C?UIDIV
+
+Program Size: data=15.0 xdata=0 code=358
+LINK/LOCATE RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)

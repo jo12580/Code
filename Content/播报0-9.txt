@@ -1,0 +1,197 @@
+		  			  #include "reg52.h"			
+typedef unsigned int u16;	 
+typedef unsigned char u8;
+typedef unsigned char uchar	  ;
+typedef unsigned int  uint	;
+sbit k1=P1^6;  //语音播放引脚定义 
+sbit k2=P1^7;  //语音播放引脚定义 
+sbit k3=P1^0;
+
+sbit Led1=P1^4;
+sbit Led2=P1^5;
+
+sbit a1=P0^1; 
+sbit a2=P0^2;
+sbit a3=P0^3;
+sbit a4=P0^4;
+sbit a5=P0^5;
+sbit a6=P0^6;
+sbit a7=P0^7;
+sbit a0=P0^0;
+
+sbit led=P2^0;
+sbit rest=P2^7; //语音芯片复位引脚定义
+sbit  dat=P2^6;  //语音芯片数据线引脚定义
+sbit busy=P2^5;  //语音芯片---引脚定义
+
+int i,j;
+
+uchar a,b=1;
+void music(uchar i);
+void  delay(uint i);
+
+					void delay(u16 i)
+						{
+							while(i--);	
+						}
+
+void main()
+{
+					  uchar i=1;
+	    Led1=0;
+		Led2=1;
+	    P0=0;
+	
+
+	delay(100);	
+	while (1) 	 {
+
+	         			 if(k1==0)
+	  	 for(j=1;j<9;j++)
+	  {
+	  
+	  
+	  if(i>1) music(i+2);
+	  while(!busy);
+	  if(i>1)  music(12);
+	  	  while(!busy);
+	  music(i+2)   ;
+		 		 for(i=0;i<9;i++)
+{		  i=0;
+a1=1 ;
+a2=0 ;
+a3=0 ;
+a4=0 ;
+a5=0 ;
+a6=0 ;
+a7=0 ;
+music(2);
+
+		  i=1;
+delay(50000);//1
+a1=1 ;
+a2=1 ;
+a3=1 ;
+a4=0 ;
+a5=0 ;
+a6=1 ;
+a7=1 ;
+music(3);
+
+		   i=2;
+delay(50000);//2
+a1=0 ;
+a2=2 ;
+a3=0 ;
+a4=0 ;
+a5=1 ;
+a6=0 ;
+a7=0 ;
+music(4);
+
+		    i=3;
+delay(50000);//3
+a1=0 ;
+a2=1 ;
+a3=0 ;
+a4=0 ;
+a5=0 ;
+a6=0 ;
+a7=1 ;
+music(5);
+
+			 i=4;
+delay(50000);//4
+a1=0 ;
+a2=0 ;
+a3=1 ;
+a4=0 ;
+a5=0 ;
+a6=1 ;
+a7=1 ;
+music(6);
+
+			 i=5;
+delay(50000);//5
+a1=0 ;
+a2=0 ;
+a3=0 ;
+a4=1 ;
+a5=0 ;
+a6=0 ;
+a7=1 ;
+music(7);
+
+		    i=6;
+delay(50000);//6
+a1=0 ;
+a2=0 ;
+a3=0 ;
+a4=1 ;
+a5=0 ;
+a6=0 ;
+a7=0 ;
+music(8);
+
+			  i=7;
+delay(50000);//7
+a1=1 ;
+a2=1 ;
+a3=0 ;
+a4=0 ;
+a5=0 ;
+a6=1 ;
+a7=1 ;
+music(9);
+
+			  i=8;
+delay(50000);//8
+a1=0 ;
+a2=0 ;
+a3=0 ;
+a4=0 ;
+a5=0 ;
+a6=0 ;
+a7=0 ;
+music(10);
+
+			  i=9;
+delay(50000);//9
+a1=0 ;
+a2=0 ;
+a3=0 ;
+a4=0 ;
+a5=0 ;
+a6=1 ;
+a7=1 ;
+music(11);
+
+
+}  
+		  }
+   				}    
+}
+ 
+
+
+void music(uchar i)
+{	
+	dat=0;  
+	rest=0;
+	delay(50);
+	rest=1;					
+	delay(50);
+	rest=0;
+    delay(50);
+	
+	dat=0;
+	delay(50);
+	
+	for(a=0;a<i;a++)
+       {
+		dat=1;
+		delay(50);
+		dat=0;
+		delay(50);   
+	   }
+}

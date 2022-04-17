@@ -1,0 +1,148 @@
+C51 COMPILER V9.01   74HC595                                                               12/30/2021 11:45:20 PAGE 1   
+
+
+C51 COMPILER V9.01, COMPILATION OF MODULE 74HC595
+OBJECT MODULE PLACED IN 74hc595.OBJ
+COMPILER INVOKED BY: D:\Software\Keil\32\C51\BIN\C51.EXE 74hc595.c OPTIMIZE(8,SPEED) BROWSE DEBUG OBJECTEXTEND TABS(2)
+
+line level    source
+
+   1          #include "reg52.h"
+   2          #include "intrins.h"
+   3          #include "74hc595.h"
+   4          
+   5          unsigned char year_2_h,year_2_l,month_2_h,month_2_l,day_2_h,day_2_l,
+   6                hour_2_h,hour_2_l,min_2_h,min_2_l,sec_2_h,sec_2_l,week_2_h,week_2_l;
+   7          int temp_int_2_h,temp_int_2_l,temp_float2int_2_h,temp_float2int_2_l;
+   8          
+   9          unsigned char code led_code[] =
+  10          //{0xff,0xff,0x01,0x02,0x04,
+  11          //0x08,0x10,0x20,0x40,0x80};  //此为测试代码
+  12          
+  13          { 0x82, 0xAF, 0xC4, 0x85, 0xA9, 0x91, 
+  14          0x90, 0xA7, 0x80, 0x81, 0xA0, 0x98, 
+  15          0xD2, 0x8C, 0xD0, 0xF0, 0xFD, 0x7F };
+  16          
+  17          
+  18          void HC595SendData(unsigned char SendVal,unsigned char ctr)
+  19          {  
+  20   1        unsigned char i,m;
+  21   1        m=led_code[SendVal];
+  22   1      
+  23   1        if(ctr==2) m=m&0xdf;//加个小数点
+  24   1            
+  25   1        for(i=0;i<8;i++) 
+  26   1        {
+  27   2            SCK_595=1;
+  28   2          if(m&0x80) 
+  29   2          DATA_595=1;                                                                                             
+             -                                                                                                                  //set 
+             -dataline high  0X80  最高位与SendVal左移的最高位 进行逻辑运算
+  30   2          else 
+  31   2          DATA_595=0;
+  32   2          m=m<<1;
+  33   2          SCK_595=1;  
+  34   2          _nop_();   //短暂延时产生一定宽度的脉冲信号
+  35   2          _nop_();   //短暂延时 
+  36   2        }
+  37   1        /*以下四条语句不能放在此函数里，不然会有闪烁感
+  38   1        RCK_595=0; //set dataline low
+  39   1        _nop_();  //短暂延时
+  40   1        _nop_();  //短暂延时
+  41   1        RCK_595=1;
+  42   1        应放在显示函数的后面（每传输完一组数据再拉高）*/      
+  43   1      }
+  44          
+  45          void display_time(unsigned char hour_2,min_2,sec_2,week_2)
+  46          {
+  47   1        hour_2_h=hour_2/10;
+  48   1        hour_2_l=hour_2%10;
+  49   1        min_2_h=min_2/10;
+  50   1        min_2_l=min_2%10;
+  51   1        sec_2_h=sec_2/10;
+  52   1        sec_2_l=sec_2%10;
+  53   1        week_2_h=week_2/10;
+C51 COMPILER V9.01   74HC595                                                               12/30/2021 11:45:20 PAGE 2   
+
+  54   1        week_2_l=week_2%10;
+  55   1        
+  56   1        HC595SendData(sec_2_l,1);
+  57   1        HC595SendData(sec_2_h,1);
+  58   1        HC595SendData(min_2_l,1);
+  59   1        HC595SendData(min_2_h,1);
+  60   1        HC595SendData(hour_2_l,1);
+  61   1        HC595SendData(hour_2_h,1);
+  62   1        HC595SendData(10,1);
+  63   1        HC595SendData(week_2_l,1);
+  64   1        
+  65   1        RCK_595=0; //set dataline low
+  66   1        _nop_();  //短暂延时
+  67   1        _nop_();  //短暂延时
+  68   1        RCK_595=1;
+  69   1      
+  70   1      }
+  71          
+  72          void display_date(unsigned char year_2,month_2,day_2)
+  73          {
+  74   1        year_2_h=year_2/10;
+  75   1        year_2_l=year_2%10;
+  76   1        month_2_h=month_2/10;
+  77   1        month_2_l=month_2%10;
+  78   1        day_2_h=day_2/10;
+  79   1        day_2_l=day_2%10;
+  80   1      
+  81   1        HC595SendData(day_2_l,1);
+  82   1        HC595SendData(day_2_h,1);
+  83   1        HC595SendData(month_2_l,1);
+  84   1        HC595SendData(month_2_h,1);
+  85   1        HC595SendData(year_2_l,1);
+  86   1        HC595SendData(year_2_h,1);
+  87   1        HC595SendData(0,1);
+  88   1        HC595SendData(2,1);
+  89   1      
+  90   1        RCK_595=0; //set dataline low
+  91   1        _nop_();  //短暂延时
+  92   1        _nop_();  //短暂延时
+  93   1        RCK_595=1;
+  94   1      }
+  95          
+  96          void display_temperature(int temp_int_2,temp_float2int_2)
+  97          {
+  98   1        temp_int_2_h=temp_int_2/10;
+  99   1        temp_int_2_l=temp_int_2%10;
+ 100   1        temp_float2int_2_h=temp_float2int_2/10;
+ 101   1        temp_float2int_2_l=temp_float2int_2%10;
+ 102   1      
+ 103   1        HC595SendData(temp_float2int_2_l,1);
+ 104   1        HC595SendData(temp_float2int_2_h,1);
+ 105   1        HC595SendData(temp_int_2_l,2);//加个小数点
+ 106   1        HC595SendData(temp_int_2_h,1);
+ 107   1        HC595SendData(10,1);
+ 108   1        HC595SendData(10,1);
+ 109   1        HC595SendData(10,1);
+ 110   1        HC595SendData(10,1);
+ 111   1      
+ 112   1        RCK_595=0; //set dataline low
+ 113   1        _nop_();  //短暂延时
+ 114   1        _nop_();  //短暂延时
+ 115   1        RCK_595=1;
+C51 COMPILER V9.01   74HC595                                                               12/30/2021 11:45:20 PAGE 3   
+
+ 116   1      }
+ 117          
+ 118          
+ 119          
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =    410    ----
+   CONSTANT SIZE    =     18    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =     22       9
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

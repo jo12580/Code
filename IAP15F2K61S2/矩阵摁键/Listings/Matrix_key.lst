@@ -1,0 +1,120 @@
+C51 COMPILER V9.01   MATRIX_KEY                                                            04/23/2021 16:44:15 PAGE 1   
+
+
+C51 COMPILER V9.01, COMPILATION OF MODULE MATRIX_KEY
+OBJECT MODULE PLACED IN Matrix_key.OBJ
+COMPILER INVOKED BY: D:\Software\Keil\32\C51\BIN\C51.EXE Matrix_key.c OPTIMIZE(8,SPEED) BROWSE DEBUG OBJECTEXTEND PRINT(
+                    -.\Listings\Matrix_key.lst) TABS(2)
+
+line level    source
+
+   1          #include <STC15F2K60S2.H>
+   2          #include<Matrix_key.h>
+   3          
+   4          void Delay_key()    //@11.0592MHz  100us
+   5          {
+   6   1        unsigned char i, j;
+   7   1        i = 2;
+   8   1        j = 15;
+   9   1        do
+  10   1        {
+  11   2          while (--j);
+  12   2        } while (--i);
+  13   1      }
+  14          
+  15          unsigned char key_scanf()
+  16          {
+  17   1        unsigned int S;
+  18   1        unsigned char a;
+  19   1        P44=0;P42=1;P3=0x7f;
+  20   1        a=P3&0x0f;
+  21   1        if(a!=0x7f)
+  22   1        {
+  23   2          Delay_key();
+  24   2          a=P3&0x0f;
+  25   2          if(a!=0x7f)
+  26   2          {
+  27   3            switch(P3)
+  28   3            {
+  29   4              case 0x77:S=4;break;
+  30   4              case 0x7b:S=5;break;
+  31   4              case 0x7d:S=6;break;
+  32   4              case 0x7e:S=7;break;
+  33   4            }
+  34   3            while(!P3);
+  35   3          }
+  36   2        }
+  37   1        
+  38   1        P44=1;P42=0;P3=0xbf;
+  39   1        a=P3&0x0f;
+  40   1        if(a!=0xbf)
+  41   1        {
+  42   2          Delay_key();
+  43   2          if(a!=0xbf)
+  44   2          {
+  45   3            switch(P3)
+  46   3            {
+  47   4              case 0xb7:S=8;break;
+  48   4              case 0xbb:S=9;break;
+  49   4              case 0xbd:S=10;break;
+  50   4              case 0xbe:S=11;break;
+  51   4            }
+  52   3            while(!P3);
+  53   3          }
+  54   2        }
+C51 COMPILER V9.01   MATRIX_KEY                                                            04/23/2021 16:44:15 PAGE 2   
+
+  55   1        
+  56   1        P44=1;P42=1;P3=0xdf;
+  57   1        a=P3&0x0f;
+  58   1        if(a!=0xdf)
+  59   1        {
+  60   2          Delay_key();
+  61   2          if(a!=0xdf)
+  62   2          {
+  63   3            switch(P3)
+  64   3            {
+  65   4              case 0xd7:S=12;break;
+  66   4              case 0xdb:S=13;break;
+  67   4              case 0xdd:S=14;break;
+  68   4              case 0xde:S=15;break;
+  69   4            }
+  70   3            while(!P3);
+  71   3          }
+  72   2        }
+  73   1        
+  74   1        P44=1;P42=1;P3=0xef;
+  75   1        a=P3&0x0f;
+  76   1        if(a!=0xef)
+  77   1        {
+  78   2          Delay_key();
+  79   2          if(a!=0xef)
+  80   2          {
+  81   3            switch(P3)
+  82   3            {
+  83   4              case 0xe7:S=16;break;
+  84   4              case 0xeb:S=17;break;
+  85   4              case 0xed:S=18;break;
+  86   4              case 0xee:S=19;break;
+  87   4            }
+  88   3            while(!P3);
+  89   3          }
+  90   2        } 
+  91   1        return S;
+  92   1      }
+  93          
+  94          
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =    296    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----       1
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

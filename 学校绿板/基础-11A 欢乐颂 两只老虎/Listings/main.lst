@@ -1,0 +1,137 @@
+C51 COMPILER V9.01   MAIN                                                                  11/12/2021 20:30:20 PAGE 1   
+
+
+C51 COMPILER V9.01, COMPILATION OF MODULE MAIN
+OBJECT MODULE PLACED IN .\Objects\main.obj
+COMPILER INVOKED BY: D:\Software\Keil\32\C51\BIN\C51.EXE main.c OPTIMIZE(8,SPEED) BROWSE DEBUG OBJECTEXTEND PRINT(.\List
+                    -ings\main.lst) TABS(2) OBJECT(.\Objects\main.obj)
+
+line level    source
+
+   1          # include<reg52.h>
+   2          #include<voice.h>
+   3          sbit k1=P1^6;  //语音播放引脚定义 
+   4          sbit k2=P1^7;  //语音播放引脚定义 
+   5          sbit Led1=P3^3;
+   6          sbit Led2=P3^4;
+   7          
+   8          void  delay(unsigned int i);
+   9          
+  10          
+  11          code unsigned char MUSIC[]={3,3,4,5,   5,4,3,2,   1,1,2,3,  3,2,2,0,
+  12                                      3,3,4,5,   5,4,3,2,   1,1,2,3,  2,1,1,0,
+  13                                      2,2,3,1,   2,3,3,1,   2,4,3,1,  1,2,5,0,
+  14                                      3,3,4,5,   5,4,3,2,   1,1,2,3,  2,1,1,0,
+  15                                      }; 
+  16          
+  17          //code unsigned char MUSIC[]={1,2,3,1,0,0,    2,3,4,2,0,0,    3,4,5,3,0,0,    4,5,6,4,0,0,3,
+  18          //                            2,5,1,0,3,    2,5,1,1,    1,2,3,1,    1,2,3,1,
+  19          //                            3,4,5,5,    3,4,5,5,    5,6,5,4,3,1,    
+  20          //                            2,5,1,1,    2,5,1,1,    5,6,7,1,    2,1,7,6
+  21          //                            }; 
+  22          
+  23          void main()
+  24          {
+  25   1        
+  26   1      //  voice(9);
+  27   1        
+  28   1        unsigned char i;
+  29   1        Led1=0;  Led2=1; P0=0;  delay(100); 
+  30   1        P0=0;
+  31   1        while (1)
+  32   1        {
+  33   2          for(i=0;i<100;i++)
+  34   2          {
+  35   3            voice(MUSIC[i]+1);    //播放语音
+  36   3      //      voice(4);     //播放语音
+  37   3      //      voice(2);     //播放语音
+  38   3      //      voice(4);     //播放语音
+  39   3      //      voice(2);     //播放语音
+  40   3      //      voice(17);    //播放语音
+  41   3      ////      voice(39);    //播放语音
+  42   3            delay(40000);     
+  43   3            Led1=~Led1;   //
+  44   3            Led2=~Led2;   //  
+  45   3            P0=~P0;
+  46   3          }
+  47   2        }
+  48   1      }
+  49           
+  50          
+  51          void  delay(unsigned int i)
+  52          {
+  53   1        while(i--);
+  54   1      }
+C51 COMPILER V9.01   MAIN                                                                  11/12/2021 20:30:20 PAGE 2   
+
+  55          
+  56          //语音素材列表
+  57          //地址  内容
+  58          //1   无声音
+  59          //2   0
+  60          //3   1
+  61          //4   2
+  62          //5   3
+  63          //6   4
+  64          //7   5
+  65          //8   6
+  66          //9   7
+  67          //10  8
+  68          //11  9
+  69          //12  十
+  70          //13  百
+  71          //14  点
+  72          //15  分
+  73          //16  秒
+  74          //17  年
+  75          //18  月
+  76          //19  日
+  77          //20  星期
+  78          //21  度
+  79          //22  百分之
+  80          //23  现在北京时间是
+  81          //24  现在温度是
+  82          //25  现在湿度是
+  83          //26  音乐（铁路广播前的提示音）
+  84          //27  整
+  85          //28  今天是
+  86          //29  上午
+  87          //30  下午
+  88          //31  晚上
+  89          //32  负
+  90          //33  滴（铃音，提示音）
+  91          //34  欢迎光临本店
+  92          //35  欢迎使用本公司产品
+  93          //36  欢迎再次光临
+  94          //37  广西师范大学
+  95          //38  电子工程学院
+  96          //39  电子科学与技术
+  97          //40  电子信息工程
+  98          //41  通信工程
+  99          //42  专业
+ 100          //43  学号
+ 101          //44  电子楼
+ 102          //45  室
+ 103          //46  大学生创新基地
+ 104          //47  请设置参数
+ 105          //48  请输入
+ 106          //49  价格
+ 107          //50  当前距离
+ 108          //51  重量
+ 109          //52  千克
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =     66    ----
+   CONSTANT SIZE    =     64    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+C51 COMPILER V9.01   MAIN                                                                  11/12/2021 20:30:20 PAGE 3   
+
+   DATA SIZE        =   ----       1
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

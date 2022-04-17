@@ -1,0 +1,57 @@
+C51 COMPILER V9.01   MAIN                                                                  05/17/2020 16:23:41 PAGE 1   
+
+
+C51 COMPILER V9.01, COMPILATION OF MODULE MAIN
+OBJECT MODULE PLACED IN main.OBJ
+COMPILER INVOKED BY: C:\软件\C51\BIN\C51.EXE main.c BROWSE DEBUG OBJECTEXTEND
+
+line level    source
+
+   1          #include<reg52.h>
+   2          #include <PCF8563.h>
+   3          #include<voice.h>
+   4          #include "74hc595.h"
+   5          typedef unsigned char uchar ;
+   6          typedef unsigned int  uint      ;
+   7          
+   8          extern unsigned char year,mon,day,hou,min,sec,week,last_sec;
+   9          
+  10          
+  11          void main()
+  12          {
+  13   1                      year=0x19; //给定今天日期初值
+  14   1                      mon=0x12;  //
+  15   1                      day=0x03;  //
+  16   1                      hou=0x22;  //给定今天时间初值
+  17   1                      min=0x25;  //
+  18   1                      sec=0x52;  //
+  19   1                      week=0x02; //
+  20   1              
+  21   1      
+  22   1              
+  23   1              write_time_8563();               //写日期初值,数据放于 time[7] 
+  24   1              read_time_8563();               //读日期,数据放于 year,mon,day,hou,min,sec,week
+  25   1              while(1)
+  26   1              {       last_sec=sec;
+  27   2                      read_time_8563(); // year,mon,day,hou,min,sec
+  28   2                      if(last_sec!=sec)   //
+  29   2                      {
+  30   3                              display_time(hou,min,sec,week);
+  31   3                      
+  32   3              }
+  33   2      }
+  34   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =     62    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

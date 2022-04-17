@@ -1,0 +1,393 @@
+C51 COMPILER V9.01   MAIN                                                                  04/11/2021 17:21:12 PAGE 1   
+
+
+C51 COMPILER V9.01, COMPILATION OF MODULE MAIN
+OBJECT MODULE PLACED IN main.OBJ
+COMPILER INVOKED BY: D:\Software\Keil\32\C51\BIN\C51.EXE main.c OPTIMIZE(8,SPEED) BROWSE DEBUG OBJECTEXTEND PRINT(.\List
+                    -ings\main.lst) TABS(2)
+
+line level    source
+
+   1          #include "stc15f2k60s2.h"
+   2          #include<intrins.h>
+   3          
+   4          #define uchar unsigned char
+   5          #define uint unsigned int
+   6            
+   7          sbit SDA=P2^1;
+   8          sbit SCL=P2^0;
+   9          
+  10          uchar tab[]={0XC0,0XF9,0XA4,0XB0,0X99,0X92,0X82,0XF8,0X80,0X90,0XBF,0XFF};
+  11          uchar yi,er,san,si,wu,liu,qi,ba;
+  12          bit S4,S5,S6,S7;
+  13          uchar num[8];
+  14          uchar AD;
+  15          
+  16          void Allinit(void);
+  17          void Delayms(int ms);
+  18          void Display1(uchar yi,uchar er);
+  19          void Display2(uchar san,uchar si);
+  20          void Display3(uchar wu,uchar liu);
+  21          void Display4(uchar qi,uchar ba);
+  22          
+  23          //unsigned char AD_Read(unsigned char add);
+  24          //void AD_Write(unsigned char dat);
+  25          
+  26          //void EEPROM_Write(unsigned char add,unsigned char dat);
+  27          //unsigned char EEPROM_Read(unsigned char add);
+  28          
+  29          void EEPROM_Write(unsigned char add);
+  30          void EEPROM_Read(unsigned char add);
+  31          
+  32          void main(void)
+  33          {
+  34   1        Allinit();
+  35   1        
+  36   1      //  num=EEPROM_Read(0x66);Delayms(2);
+  37   1      //  EEPROM_Write(0x66,num+1);Delayms(2);
+  38   1        EEPROM_Write(0x00);Delayms(2);
+  39   1        EEPROM_Read(0x00);Delayms(2);
+  40   1        
+  41   1        yi=num[0]/10;er=num[0]%10;san=11;
+  42   1        si=num[5]/10;wu=num[5]%10;liu=11;
+  43   1        qi=num[7]/10;ba=num[7]%10;
+  44   1      //  yi=num/100;er=num%100/10;san=num%10;
+  45   1      //  si=11;wu=11;liu=11;qi=11;ba=11;
+  46   1        while(1)
+  47   1        {
+  48   2      //    AD=AD_Read(0x03);
+  49   2      //    yi=AD/100;er=AD%100/10;san=AD%10;
+  50   2      //    AD_Write(127);
+  51   2          Display1(yi,er);
+  52   2          Display2(san,si);
+  53   2          Display3(wu,liu);
+  54   2          Display4(qi,ba);
+C51 COMPILER V9.01   MAIN                                                                  04/11/2021 17:21:12 PAGE 2   
+
+  55   2        }
+  56   1      }
+  57          
+  58          void Delay6us()   //@11.0592MHz
+  59          {
+  60   1        unsigned char i;
+  61   1      
+  62   1        i = 14;
+  63   1        while (--i);
+  64   1      }
+  65          
+  66          void IIC_Start()
+  67          {
+  68   1        SDA=1;
+  69   1        SCL=1;
+  70   1        Delay6us();
+  71   1        SDA=0;
+  72   1        Delay6us();
+  73   1        SCL=0;
+  74   1      }
+  75          
+  76          void IIC_Stop()
+  77          {
+  78   1        SDA=0;
+  79   1        SCL=1;
+  80   1        Delay6us();
+  81   1        SDA=1;
+  82   1      }
+  83          
+  84          void IIC_Ack(void)
+  85          {
+  86   1        SDA=0;
+  87   1        Delay6us();
+  88   1        SCL=1;
+  89   1        Delay6us();
+  90   1        SCL=0;
+  91   1        Delay6us();
+  92   1        SDA=1;
+  93   1      }
+  94          
+  95          bit IIC_WaitAck(void)
+  96          {
+  97   1        SDA=1;
+  98   1        Delay6us();
+  99   1        SCL=1;
+ 100   1        Delay6us();
+ 101   1        if(SDA)
+ 102   1        {
+ 103   2          SCL=0;
+ 104   2          IIC_Stop();
+ 105   2          return 0;
+ 106   2        }
+ 107   1        else 
+ 108   1        {
+ 109   2          SCL=0;
+ 110   2          return 1;
+ 111   2        }
+ 112   1      }
+ 113          
+ 114          void IIC_SendByte(unsigned char dat)// 1001 1010 
+ 115          {
+ 116   1        unsigned char i;
+C51 COMPILER V9.01   MAIN                                                                  04/11/2021 17:21:12 PAGE 3   
+
+ 117   1        for(i=0;i<8;i++)
+ 118   1        {
+ 119   2          if(dat&0x80)SDA=1;
+ 120   2          else SDA=0; 
+ 121   2          Delay6us();
+ 122   2          SCL=1;
+ 123   2          dat<<=1;
+ 124   2          Delay6us();
+ 125   2          SCL=0;
+ 126   2        }
+ 127   1      }
+ 128          
+ 129          unsigned char IIC_RecByte(void)
+ 130          {
+ 131   1        unsigned char i;
+ 132   1        unsigned char dat;
+ 133   1        for(i=0;i<8;i++)
+ 134   1        {
+ 135   2          SCL=1;
+ 136   2          Delay6us();
+ 137   2          dat<<=1;
+ 138   2          if(SDA)dat|=0x01;//1010 1001   0000 0010
+ 139   2          SCL=0;
+ 140   2          Delay6us();
+ 141   2        }
+ 142   1        return dat;
+ 143   1      }
+ 144          
+ 145          void EEPROM_Read(unsigned char add)
+ 146          {
+ 147   1        unsigned char i;
+ 148   1        IIC_Start();
+ 149   1        IIC_SendByte(0xa0);
+ 150   1        IIC_WaitAck();
+ 151   1        IIC_SendByte(add);//
+ 152   1        IIC_WaitAck();
+ 153   1        IIC_Stop();
+ 154   1        
+ 155   1        IIC_Start();
+ 156   1        IIC_SendByte(0xa1);
+ 157   1        IIC_WaitAck();
+ 158   1        
+ 159   1        for(i=0;i<8;i++)
+ 160   1        {
+ 161   2          num[i]=IIC_RecByte();
+ 162   2          IIC_Ack();
+ 163   2        }
+ 164   1        IIC_Stop(); 
+ 165   1      }
+ 166          
+ 167          void EEPROM_Write(unsigned char add)
+ 168          {
+ 169   1        IIC_Start();
+ 170   1        IIC_SendByte(0xa0);
+ 171   1        IIC_WaitAck();
+ 172   1        IIC_SendByte(add);//
+ 173   1        IIC_WaitAck();
+ 174   1        IIC_SendByte(15);
+ 175   1        IIC_WaitAck();
+ 176   1        IIC_SendByte(25);
+ 177   1        IIC_WaitAck();
+ 178   1        IIC_SendByte(35);
+C51 COMPILER V9.01   MAIN                                                                  04/11/2021 17:21:12 PAGE 4   
+
+ 179   1        IIC_WaitAck();
+ 180   1        IIC_SendByte(45);
+ 181   1        IIC_WaitAck();
+ 182   1        IIC_SendByte(55);
+ 183   1        IIC_WaitAck();
+ 184   1        IIC_SendByte(65);
+ 185   1        IIC_WaitAck();
+ 186   1        IIC_SendByte(75);
+ 187   1        IIC_WaitAck();
+ 188   1        IIC_SendByte(85);
+ 189   1        IIC_WaitAck();
+ 190   1        
+ 191   1        IIC_Stop();
+ 192   1      }
+ 193          
+ 194          
+ 195          //unsigned char EEPROM_Read(unsigned char add)
+ 196          //{
+ 197          //  unsigned char temp;
+ 198          //  IIC_Start();
+ 199          //  IIC_SendByte(0xa0);
+ 200          //  IIC_WaitAck();
+ 201          //  IIC_SendByte(add);//
+ 202          //  IIC_WaitAck();
+ 203          //  IIC_Stop();
+ 204          //  
+ 205          //  IIC_Start();
+ 206          //  IIC_SendByte(0xa1);
+ 207          //  IIC_WaitAck();
+ 208          //  temp=IIC_RecByte();
+ 209          //  IIC_Stop(); 
+ 210          //  
+ 211          //  return temp;
+ 212          //}
+ 213          
+ 214          //void EEPROM_Write(unsigned char add,unsigned char dat)
+ 215          //{
+ 216          //  IIC_Start();
+ 217          //  IIC_SendByte(0xa0);
+ 218          //  IIC_WaitAck();
+ 219          //  IIC_SendByte(add);//
+ 220          //  IIC_WaitAck();
+ 221          //  IIC_SendByte(dat);
+ 222          //  IIC_WaitAck();
+ 223          //  IIC_Stop();
+ 224          //}
+ 225          
+ 226          
+ 227          //unsigned char AD_Read(unsigned char add)
+ 228          //{
+ 229          //  unsigned char temp;
+ 230          //  IIC_Start();
+ 231          //  IIC_SendByte(0x90);
+ 232          //  IIC_WaitAck();
+ 233          //  IIC_SendByte(add);//
+ 234          //  IIC_WaitAck();
+ 235          //  IIC_Stop();
+ 236          //  
+ 237          //  IIC_Start();
+ 238          //  IIC_SendByte(0x91);
+ 239          //  IIC_WaitAck();
+ 240          //  temp=IIC_RecByte();
+C51 COMPILER V9.01   MAIN                                                                  04/11/2021 17:21:12 PAGE 5   
+
+ 241          //  IIC_Stop(); 
+ 242          //  
+ 243          //  return temp;
+ 244          //}
+ 245          
+ 246          //void AD_Write(unsigned char dat)
+ 247          //{
+ 248          //  IIC_Start();
+ 249          //  IIC_SendByte(0x90);
+ 250          //  IIC_WaitAck();
+ 251          //  IIC_SendByte(0x40);//
+ 252          //  IIC_WaitAck();
+ 253          //  IIC_SendByte(dat);
+ 254          //  IIC_WaitAck();
+ 255          //  IIC_Stop();
+ 256          //}
+ 257          
+ 258          void Display1(uchar yi,uchar er)
+ 259          {
+ 260   1        P2=0XC0;
+ 261   1        P0=0X01;
+ 262   1        P2=0XE0;
+ 263   1        P0=tab[yi];
+ 264   1        Delayms(1);
+ 265   1        
+ 266   1        P2=0XC0;
+ 267   1        P0=0X02;
+ 268   1        P2=0XE0;
+ 269   1        P0=tab[er];
+ 270   1        Delayms(1);
+ 271   1      }
+ 272          
+ 273          void Display2(uchar san,uchar si)
+ 274          {
+ 275   1        P2=0XC0;
+ 276   1        P0=0X04;
+ 277   1        P2=0XE0;
+ 278   1        P0=tab[san];
+ 279   1        Delayms(1);
+ 280   1        
+ 281   1        P2=0XC0;
+ 282   1        P0=0X08;
+ 283   1        P2=0XE0;
+ 284   1        P0=tab[si];
+ 285   1        Delayms(1);
+ 286   1      }
+ 287          
+ 288          void Display3(uchar wu,uchar liu)
+ 289          {
+ 290   1        P2=0XC0;
+ 291   1        P0=0X10;
+ 292   1        P2=0XE0;
+ 293   1        P0=tab[wu];
+ 294   1        Delayms(1);
+ 295   1        
+ 296   1        P2=0XC0;
+ 297   1        P0=0X20;
+ 298   1        P2=0XE0;
+ 299   1        P0=tab[liu];
+ 300   1        Delayms(1);
+ 301   1      }
+ 302          
+C51 COMPILER V9.01   MAIN                                                                  04/11/2021 17:21:12 PAGE 6   
+
+ 303          void Display4(uchar qi,uchar ba)
+ 304          {
+ 305   1        P2=0XC0;
+ 306   1        P0=0X40;
+ 307   1        P2=0XE0;
+ 308   1        P0=tab[qi];
+ 309   1        Delayms(1);
+ 310   1        
+ 311   1        P2=0XC0;
+ 312   1        P0=0X80;
+ 313   1        P2=0XE0;
+ 314   1        P0=tab[ba];
+ 315   1        Delayms(1);
+ 316   1      }
+ 317          
+ 318          void Allinit(void)
+ 319          {
+ 320   1        P2=0XA0;//打开控制蜂鸣器的573
+ 321   1        P0=0X00;//关闭蜂鸣器继电器
+ 322   1        
+ 323   1        P2=0XC0;//打开控制数码管位选的573
+ 324   1        P0=0XFF;//选中所有数码管
+ 325   1        P2=0XE0;//打开控制数码管段选的573
+ 326   1        P0=0XFF;//关闭所有的数码管
+ 327   1        
+ 328   1        P2=0X80;//打开控制LED的573
+ 329   1        P0=0XFF;//关闭所有的LED
+ 330   1      }
+ 331          
+ 332          void Delayms(int ms)
+ 333          {
+ 334   1        int i,j;
+ 335   1        for(i=0;i<ms;i++)
+ 336   1          for(j=845;j>0;j--);
+ 337   1      }
+ 338          
+ 339          /*
+ 340          void Delay1ms(int ms)   //@11.0592MHz
+ 341          {
+ 342            unsigned char i, j,k;
+ 343          
+ 344            for(k=0;k<ms;k++)
+ 345            {
+ 346              _nop_();
+ 347              _nop_();
+ 348              _nop_();
+ 349              i = 11;
+ 350              j = 190;
+ 351              do
+ 352              {
+ 353                while (--j);
+ 354              } while (--i);
+ 355            }
+ 356          }
+ 357          */
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =    590    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+C51 COMPILER V9.01   MAIN                                                                  04/11/2021 17:21:12 PAGE 7   
+
+   DATA SIZE        =     29       4
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =      4    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

@@ -1,0 +1,52 @@
+C51 COMPILER V9.01   VOICE                                                                 01/04/2020 23:35:47 PAGE 1   
+
+
+C51 COMPILER V9.01, COMPILATION OF MODULE VOICE
+OBJECT MODULE PLACED IN voice.OBJ
+COMPILER INVOKED BY: C:\Èí¼þ\C51\BIN\C51.EXE voice.c BROWSE DEBUG OBJECTEXTEND
+
+line level    source
+
+   1          #include<voice.h>
+   2          
+   3          void  delay_us(unsigned int i)
+   4          {
+   5   1              while(i--);
+   6   1      }
+   7          
+   8          void voice(unsigned char i)
+   9          {       
+  10   1              unsigned char a;
+  11   1              dat=0;  
+  12   1              rest=0;
+  13   1              delay_us(50);
+  14   1              rest=1;                                 
+  15   1              delay_us(50);
+  16   1              rest=0;
+  17   1          delay_us(50);
+  18   1              dat=0;
+  19   1              delay_us(50);
+  20   1              
+  21   1              for(a=0;a<i;a++)
+  22   1             {
+  23   2                      dat=1;
+  24   2                      delay_us(50);
+  25   2                      dat=0;
+  26   2                      delay_us(50);   
+  27   2                 }
+  28   1              while (!busy);    
+  29   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =     62    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

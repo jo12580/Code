@@ -1,0 +1,138 @@
+BL51 BANKED LINKER/LOCATER V6.22                                                        03/25/2021  16:12:51  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.22, INVOKED BY:
+D:\SOFTWARE\KEIL\32\C51\BIN\BL51.EXE main.obj TO T3 PRINT (.\Listings\T3.m51) RAMSIZE (256)
+
+
+MEMORY MODEL: SMALL
+
+
+INPUT MODULES INCLUDED:
+  main.obj (MAIN)
+  D:\SOFTWARE\KEIL\32\C51\LIB\C51S.LIB (?C_STARTUP)
+  D:\SOFTWARE\KEIL\32\C51\LIB\C51S.LIB (?C?SIDIV)
+  D:\SOFTWARE\KEIL\32\C51\LIB\C51S.LIB (RAND)
+  D:\SOFTWARE\KEIL\32\C51\LIB\C51S.LIB (?C?UIDIV)
+
+
+LINK MAP OF MODULE:  T3 (MAIN)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+            DATA    0008H     0004H     UNIT         ?DT?RAND?RAND
+            IDATA   000CH     0001H     UNIT         ?STACK
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0003H     ABSOLUTE     
+            CODE    0003H     008BH     UNIT         ?C?LIB_CODE
+            CODE    008EH     004DH     UNIT         ?PR?RAND?RAND
+            CODE    00DBH     001CH     UNIT         ?PR?MAIN?MAIN
+            CODE    00F7H     000CH     UNIT         ?C_C51STARTUP
+            CODE    0103H     000BH     UNIT         ?PR?_DELAY?MAIN
+            CODE    010EH     0009H     UNIT         ?PR?DELAY10MS?MAIN
+
+
+
+OVERLAY MAP OF MODULE:   T3 (MAIN)
+
+
+SEGMENT
+  +--> CALLED SEGMENT
+---------------------
+?C_C51STARTUP
+  +--> ?PR?MAIN?MAIN
+
+?PR?MAIN?MAIN
+  +--> ?PR?RAND?RAND
+  +--> ?PR?_DELAY?MAIN
+
+
+
+SYMBOL TABLE OF MODULE:  T3 (MAIN)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        MAIN
+BL51 BANKED LINKER/LOCATER V6.22                                                      03/25/2021  16:12:51  PAGE 2
+
+
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  D:0080H         PUBLIC        P0
+  D:0090H         PUBLIC        P1
+  D:00A0H         PUBLIC        P2
+  D:00B0H         PUBLIC        P3
+  D:00A8H         PUBLIC        IE
+  C:0103H         PUBLIC        _delay
+  D:00B8H         PUBLIC        IP
+  C:00DBH         PUBLIC        main
+  D:0098H         PUBLIC        SCON
+  C:010EH         PUBLIC        Delay10ms
+  D:0088H         PUBLIC        TCON
+  B:0080H.6       PUBLIC        a
+  D:00C8H         PUBLIC        T2CON
+  D:00D0H         PUBLIC        PSW
+  -------         PROC          DELAY10MS
+  -------         DO            
+  D:0007H         SYMBOL        i
+  D:0006H         SYMBOL        j
+  -------         ENDDO         
+  C:010EH         LINE#         6
+  C:010EH         LINE#         7
+  C:010EH         LINE#         10
+  C:0110H         LINE#         11
+  C:0112H         LINE#         13
+  C:0112H         LINE#         14
+  C:0114H         LINE#         15
+  C:0116H         LINE#         16
+  -------         ENDPROC       DELAY10MS
+  -------         PROC          _DELAY
+  D:0006H         SYMBOL        i
+  C:0103H         LINE#         18
+  C:0103H         LINE#         19
+  C:0103H         LINE#         20
+  C:010DH         LINE#         21
+  -------         ENDPROC       _DELAY
+  -------         PROC          MAIN
+  -------         DO            
+  D:0002H         SYMBOL        i
+  -------         ENDDO         
+  C:00DBH         LINE#         23
+  C:00DBH         LINE#         24
+  C:00DBH         LINE#         26
+  C:00DEH         LINE#         27
+  C:00DEH         LINE#         28
+  C:00DEH         LINE#         29
+  C:00EFH         LINE#         30
+  C:00F1H         LINE#         31
+  C:00F5H         LINE#         32
+  -------         ENDPROC       MAIN
+  -------         ENDMOD        MAIN
+
+  -------         MODULE        ?C?SIDIV
+  C:0003H         PUBLIC        ?C?SIDIV
+  -------         ENDMOD        ?C?SIDIV
+
+  -------         MODULE        RAND
+BL51 BANKED LINKER/LOCATER V6.22                                                      03/25/2021  16:12:51  PAGE 3
+
+
+  D:0008H         PUBLIC        ?SRAND?BYTE
+  C:008EH         PUBLIC        RAND
+  C:00D0H         PUBLIC        _SRAND
+  -------         ENDMOD        RAND
+
+  -------         MODULE        ?C?UIDIV
+  C:0039H         PUBLIC        ?C?UIDIV
+  -------         ENDMOD        ?C?UIDIV
+
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?DELAY10MS?MAIN
+
+Program Size: data=13.0 xdata=0 code=279
+LINK/LOCATE RUN COMPLETE.  1 WARNING(S),  0 ERROR(S)

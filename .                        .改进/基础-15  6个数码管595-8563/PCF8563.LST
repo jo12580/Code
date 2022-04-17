@@ -1,0 +1,212 @@
+C51 COMPILER V9.01   PCF8563                                                               01/04/2020 23:36:24 PAGE 1   
+
+
+C51 COMPILER V9.01, COMPILATION OF MODULE PCF8563
+OBJECT MODULE PLACED IN PCF8563.OBJ
+COMPILER INVOKED BY: C:\软件\C51\BIN\C51.EXE PCF8563.c BROWSE DEBUG OBJECTEXTEND
+
+line level    source
+
+   1          #include <reg52.h>
+   2          #include "PCF8563.h"
+   3          unsigned char year,mon,day,hou,min,sec,week,last_sec;
+   4          const unsigned char  time[7]={0x09,0x11,0x20,0x05,0x11,0x14,0x30}; //设置初值：年.月.日.星期.时.分.秒
+   5          
+   6          //year=0x15;
+   7          //mon=0x12;
+   8          //day=0x26;
+   9          //hou=0x23;
+  10          //min=0x59;
+  11          //sec=0x50;,
+  12          //week=0x06;
+  13          //last_week=7;
+  14          
+  15          //=======延迟子程序===== 
+  16          void delay_8563(unsigned int i)
+  17          {
+  18   1          while(i--);
+  19   1      }
+  20          
+  21          void  start(void) {  //开始子程序
+  22   1              sda_8563 = 1;
+  23   1              scl_8563 = 1;
+  24   1              sda_8563 = 0;
+  25   1              scl_8563 = 0;
+  26   1      
+  27   1      }
+  28          //=====
+  29          void stop(void) {   //结束子程序
+  30   1          scl_8563 = 0;
+  31   1          sda_8563 = 0;
+  32   1          scl_8563 = 1;
+  33   1          sda_8563 = 1;
+  34   1      }
+  35          
+  36          
+  37          //=======写一个字节=====
+  38          unsigned char  writebyte_8563(unsigned char dat)
+  39          {
+  40   1          unsigned int i;
+  41   1              unsigned char  ack=1;
+  42   1              scl_8563 = 0;
+  43   1              for(i=8;i>0;i--)
+  44   1                  {
+  45   2                       if(dat&0x80){sda_8563 = 1;}
+  46   2                       else        {sda_8563 = 0;}
+  47   2                       scl_8563 = 1;
+  48   2                       scl_8563 = 0;
+  49   2                       dat<<=1;
+  50   2                      }  
+  51   1              sda_8563 = 1;
+  52   1              scl_8563 = 1;
+  53   1            while(sda_8563){i++;if(i==1000)break;}
+  54   1              ack = sda_8563;
+  55   1              scl_8563 = 0;
+C51 COMPILER V9.01   PCF8563                                                               01/04/2020 23:36:24 PAGE 2   
+
+  56   1              return(ack);  //有应答则返回0，无的返回1 
+  57   1      }
+  58          
+  59          
+  60          //======读一个字节=======
+  61          unsigned char readbyte_8563(void)
+  62          {
+  63   1          unsigned char i=8;
+  64   1              unsigned char dat=0x00;
+  65   1              scl_8563 = 0;
+  66   1              sda_8563 = 1;
+  67   1              for(;i>0;i--)       {
+  68   2                 scl_8563 = 1;
+  69   2                 dat=dat<<1;
+  70   2                 if(sda_8563)dat|=0x01;
+  71   2                 scl_8563 = 0;
+  72   2              }
+  73   1              sda_8563 = 1;
+  74   1              scl_8563 = 1;
+  75   1              scl_8563 = 0;
+  76   1              return(dat);
+  77   1      }
+  78          
+  79          
+  80          /*
+  81          //=====初始化pcf8563=======
+  82          void Init_pcf8563(void)  {
+  83              unsigned char i,j;
+  84              for(i=8;i<8;i--)  {
+  85                  if(i==4)j=(time[i])&0x07;
+  86                  else    j=( ((time[i]/10)<<4 )&0xf0 )|( (time[i]%10)&0x0f );
+  87                  start();
+  88                  writebyte_8563(0xa2);       //选择写8563芯片
+  89                  writebyte_8563(i+0x02);   //写地址
+  90                  writebyte_8563(j);          //写数据
+  91           }  }
+  92          
+  93          
+  94          */
+  95          
+  96          //=========读日期==========
+  97          void read_time_8563(void)
+  98          {   
+  99   1          unsigned char i;
+ 100   1               P2=0x00;
+ 101   1              for(i=0;i<7;i++)  {
+ 102   2                 start();
+ 103   2                 writebyte_8563(0xa2);            //选择写8563芯片
+ 104   2                 writebyte_8563(i+0x02);      //写地址
+ 105   2                 start();
+ 106   2                 writebyte_8563(0xa3);                //选择读8563芯片
+ 107   2                 switch(i) {
+ 108   3                      case 0:sec= ( readbyte_8563() )&0x7f;break;
+ 109   3                      case 1:min= ( readbyte_8563() )&0x7f;break;
+ 110   3                      case 2:hou= ( readbyte_8563() )&0x3f;break;
+ 111   3                      case 3:day= ( readbyte_8563() )&0x3f;break;
+ 112   3                      case 4:week=( readbyte_8563() )&0x07;break;
+ 113   3                      case 5:mon= ( readbyte_8563() )&0x1f;break;
+ 114   3                      case 6:year=( readbyte_8563() )&0xff;break;
+ 115   3                      default:break;
+ 116   3                      }
+ 117   2                  stop();
+C51 COMPILER V9.01   PCF8563                                                               01/04/2020 23:36:24 PAGE 3   
+
+ 118   2                 }
+ 119   1              sec=((sec&0xf0)>>4&0x0f)*10+(sec&0x0f);//BCD码转换成10进制数
+ 120   1              min=((min&0xf0)>>4&0x0f)*10+(min&0x0f);//BCD码转换成10进制数
+ 121   1              hou=((hou&0xf0)>>4&0x0f)*10+(hou&0x0f);//BCD码转换成10进制数
+ 122   1              day=((day&0xf0)>>4&0x0f)*10+(day&0x0f);//BCD码转换成10进制数
+ 123   1              mon=((mon&0xf0)>>4&0x0f)*10+(mon&0x0f);//BCD码转换成10进制数
+ 124   1              year=((year&0xf0)>>4&0x0f)*10+(year&0x0f);//BCD码转换成10进制数 
+ 125   1      
+ 126   1      }
+ 127          
+ 128          //=========写日期============
+ 129          void write_time_8563(void)  {
+ 130   1              start();   //写年份
+ 131   1              writebyte_8563(0xa2);
+ 132   1      //       P2=0x55;
+ 133   1              writebyte_8563(0x08);
+ 134   1              writebyte_8563(year);
+ 135   1      
+ 136   1              
+ 137   1              stop();
+ 138   1      
+ 139   1              start();  //写月份
+ 140   1              writebyte_8563(0xa2);
+ 141   1              writebyte_8563(0x07);
+ 142   1              writebyte_8563(mon);
+ 143   1              stop();
+ 144   1      
+ 145   1              start();   //写日
+ 146   1              writebyte_8563(0xa2);
+ 147   1              writebyte_8563(0x05);
+ 148   1              writebyte_8563(day);
+ 149   1              stop();
+ 150   1              delay_8563(2);
+ 151   1      
+ 152   1              start();   //写时
+ 153   1              writebyte_8563(0xa2);
+ 154   1              writebyte_8563(0x04);
+ 155   1              writebyte_8563(hou);
+ 156   1              stop();
+ 157   1              delay_8563(2);
+ 158   1               
+ 159   1              start();   //写分
+ 160   1              writebyte_8563(0xa2);
+ 161   1              writebyte_8563(0x03);
+ 162   1              writebyte_8563(min);
+ 163   1              stop();
+ 164   1              delay_8563(2);
+ 165   1      
+ 166   1              start();   //写秒
+ 167   1              writebyte_8563(0xa2);
+ 168   1              writebyte_8563(0x02);
+ 169   1              writebyte_8563(sec);
+ 170   1              stop();
+ 171   1              delay_8563(2);
+ 172   1      
+ 173   1              start();  //写星期
+ 174   1              writebyte_8563(0xa2);
+ 175   1              writebyte_8563(0x06);
+ 176   1              writebyte_8563(week);
+ 177   1              stop();
+ 178   1              delay_8563(2);
+ 179   1      } 
+C51 COMPILER V9.01   PCF8563                                                               01/04/2020 23:36:24 PAGE 4   
+
+ 180          
+ 181          
+ 182          
+ 183          
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =    479    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =     15    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

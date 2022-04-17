@@ -1,0 +1,174 @@
+BL51 BANKED LINKER/LOCATER V6.22                                                        03/22/2021  22:48:56  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.22, INVOKED BY:
+D:\SOFTWARE\KEIL\32\C51\BIN\BL51.EXE main.obj, interrupt.obj TO T3 PRINT (.\Listings\T3.m51) RAMSIZE (256)
+
+
+MEMORY MODEL: SMALL
+
+
+INPUT MODULES INCLUDED:
+  main.obj (MAIN)
+  interrupt.obj (INTERRUPT)
+  D:\SOFTWARE\KEIL\32\C51\LIB\C51S.LIB (?C_STARTUP)
+
+
+LINK MAP OF MODULE:  T3 (MAIN)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+            REG     0008H     0008H     ABSOLUTE     "REG BANK 1"
+            IDATA   0010H     0001H     UNIT         ?STACK
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0003H     ABSOLUTE     
+            CODE    0003H     0003H     ABSOLUTE     
+            CODE    0006H     000CH     UNIT         ?C_C51STARTUP
+                    0012H     0001H                  *** GAP ***
+            CODE    0013H     0003H     ABSOLUTE     
+            CODE    0016H     002AH     UNIT         ?PR?INT0_INTFUN?INTERRUPT
+            CODE    0040H     002AH     UNIT         ?PR?INT1_INTFUN?INTERRUPT
+            CODE    006AH     001FH     UNIT         ?PR?_DELAY?INTERRUPT
+            CODE    0089H     000EH     UNIT         ?PR?MAIN?MAIN
+            CODE    0097H     0007H     UNIT         ?PR?INT0?INTERRUPT
+            CODE    009EH     0007H     UNIT         ?PR?INT1?INTERRUPT
+
+
+
+OVERLAY MAP OF MODULE:   T3 (MAIN)
+
+
+SEGMENT
+  +--> CALLED SEGMENT
+---------------------
+?PR?INT0_INTFUN?INTERRUPT
+  +--> ?PR?_DELAY?INTERRUPT
+
+*** NEW ROOT ***************************************************
+
+?PR?INT1_INTFUN?INTERRUPT
+  +--> ?PR?_DELAY?INTERRUPT
+
+*** NEW ROOT ***************************************************
+
+?C_C51STARTUP
+  +--> ?PR?MAIN?MAIN
+
+BL51 BANKED LINKER/LOCATER V6.22                                                      03/22/2021  22:48:56  PAGE 2
+
+
+?PR?MAIN?MAIN
+  +--> ?PR?INT0?INTERRUPT
+  +--> ?PR?INT1?INTERRUPT
+
+
+
+SYMBOL TABLE OF MODULE:  T3 (MAIN)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        MAIN
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  D:0080H         PUBLIC        P0
+  D:0090H         PUBLIC        P1
+  D:00A0H         PUBLIC        P2
+  D:00B0H         PUBLIC        P3
+  D:00A8H         PUBLIC        IE
+  D:00B8H         PUBLIC        IP
+  C:0089H         PUBLIC        main
+  D:0098H         PUBLIC        SCON
+  D:0088H         PUBLIC        TCON
+  D:00C8H         PUBLIC        T2CON
+  D:00D0H         PUBLIC        PSW
+  -------         PROC          MAIN
+  C:0089H         LINE#         9
+  C:0089H         LINE#         10
+  C:0089H         LINE#         11
+  C:008CH         LINE#         12
+  C:008FH         LINE#         13
+  C:0092H         LINE#         16
+  C:0092H         LINE#         17
+  C:0092H         LINE#         18
+  C:0095H         LINE#         19
+  -------         ENDPROC       MAIN
+  -------         ENDMOD        MAIN
+
+  -------         MODULE        INTERRUPT
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  D:0080H         PUBLIC        P0
+  B:00A8H.7       PUBLIC        EA
+  C:007EH         PUBLIC        _delay
+  B:00A8H.0       PUBLIC        EX0
+  B:0088H.0       PUBLIC        IT0
+  B:00A8H.2       PUBLIC        EX1
+  B:0088H.2       PUBLIC        IT1
+  C:0016H         PUBLIC        int0_intfun
+  C:0040H         PUBLIC        int1_intfun
+  C:0097H         PUBLIC        int0
+  C:009EH         PUBLIC        int1
+  -------         PROC          L?0021
+  -------         ENDPROC       L?0021
+  -------         PROC          _DELAY
+  D:0006H         SYMBOL        i
+  C:007EH         LINE#         3
+  C:007EH         LINE#         4
+  C:007EH         LINE#         5
+BL51 BANKED LINKER/LOCATER V6.22                                                      03/22/2021  22:48:56  PAGE 3
+
+
+  C:0088H         LINE#         6
+  -------         ENDPROC       _DELAY
+  -------         PROC          INT0
+  C:0097H         LINE#         8
+  C:0097H         LINE#         9
+  C:0097H         LINE#         10
+  C:0099H         LINE#         11
+  C:009BH         LINE#         12
+  C:009DH         LINE#         13
+  -------         ENDPROC       INT0
+  -------         PROC          INT1
+  C:009EH         LINE#         15
+  C:009EH         LINE#         16
+  C:009EH         LINE#         17
+  C:00A0H         LINE#         18
+  C:00A2H         LINE#         19
+  C:00A4H         LINE#         20
+  -------         ENDPROC       INT1
+  -------         PROC          INT0_INTFUN
+  -------         DO            
+  D:000AH         SYMBOL        i
+  -------         ENDDO         
+  C:0016H         LINE#         22
+  C:001DH         LINE#         25
+  C:0020H         LINE#         26
+  C:0020H         LINE#         27
+  C:002DH         LINE#         28
+  C:002DH         LINE#         29
+  C:002DH         LINE#         30
+  C:0030H         LINE#         31
+  C:003BH         LINE#         33
+  -------         ENDPROC       INT0_INTFUN
+  -------         PROC          INT1_INTFUN
+  -------         DO            
+  D:000AH         SYMBOL        i
+  -------         ENDDO         
+  C:0040H         LINE#         35
+  C:0047H         LINE#         38
+  C:004AH         LINE#         39
+  C:004AH         LINE#         40
+  C:0057H         LINE#         41
+  C:0057H         LINE#         42
+  C:0057H         LINE#         43
+  C:005AH         LINE#         44
+  C:0065H         LINE#         46
+  -------         ENDPROC       INT1_INTFUN
+  -------         ENDMOD        INTERRUPT
+
+Program Size: data=17.0 xdata=0 code=164
+LINK/LOCATE RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)

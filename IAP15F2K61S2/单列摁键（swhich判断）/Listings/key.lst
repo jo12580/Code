@@ -1,0 +1,74 @@
+C51 COMPILER V9.01   KEY                                                                   03/08/2021 20:05:57 PAGE 1   
+
+
+C51 COMPILER V9.01, COMPILATION OF MODULE KEY
+OBJECT MODULE PLACED IN key.OBJ
+COMPILER INVOKED BY: D:\Software\Keil\32\C51\BIN\C51.EXE key.c OPTIMIZE(8,SPEED) BROWSE DEBUG OBJECTEXTEND PRINT(.\Listi
+                    -ngs\key.lst) TABS(2)
+
+line level    source
+
+   1          #include<reg52.h>
+   2                                            /*
+   3                                              摁键的功能
+   4                                            */
+   5          void key(unsigned char temp )
+   6          {
+   7   1                P2 = 0x80;
+   8   1                switch(temp)
+   9   1                {
+  10   2                  case 1:   //S7
+  11   2                    P0 =0x00;           //输入想实现的功能
+  12   2                    break;
+  13   2                  
+  14   2                  case 2:  //S6
+  15   2                    P0=0xff;
+  16   2                  break;
+  17   2                  
+  18   2                  case 3: //S5
+  19   2                    P0=0x80;
+  20   2                  break;
+  21   2                  
+  22   2      //            case 4: //S4
+  23   2      //      
+  24   2                }
+  25   1      }
+  26          
+  27          unsigned char key_scanf(void)
+  28          {
+  29   1          unsigned char key_value= 0xff;
+  30   1          unsigned char   temp;
+  31   1          temp=P3&0x0f;
+  32   1        switch(temp)
+  33   1        {
+  34   2              case 0x0e:
+  35   2                  key_value = 1;  //S7
+  36   2                  break;    
+  37   2              case 0x0d:
+  38   2                  key_value = 2;  //S6
+  39   2                  break;    
+  40   2              case 0x0b:
+  41   2                  key_value = 3;  //S5
+  42   2                  break;    
+  43   2              case 0x07:
+  44   2                  key_value = 4;  //S4
+  45   2                  break;  
+  46   2        }
+  47   1        return key_value ;
+  48   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =     63    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+C51 COMPILER V9.01   KEY                                                                   03/08/2021 20:05:57 PAGE 2   
+
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

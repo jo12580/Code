@@ -1,0 +1,106 @@
+C51 COMPILER V9.01   MAIN                                                                  01/04/2020 23:35:06 PAGE 1   
+
+
+C51 COMPILER V9.01, COMPILATION OF MODULE MAIN
+OBJECT MODULE PLACED IN main.OBJ
+COMPILER INVOKED BY: C:\软件\C51\BIN\C51.EXE main.c BROWSE DEBUG OBJECTEXTEND
+
+line level    source
+
+   1          //---------------------------
+   2          //
+   3          //---------------------------
+   4          #include<reg52.h>
+   5          #include <PCF8563.h>
+   6          //#include <lcd1602.h>
+   7          typedef unsigned char uchar ;
+   8          typedef unsigned int  uint      ;
+   9          sbit key_play=P1^6;  //语音播放引脚定义 
+  10          sbit led0=P1^4;
+  11          sbit led1=P1^5;
+  12          sbit rest=P2^7; //语音芯片复位引脚定义
+  13          sbit dat=P2^6;  //语音芯片数据线引脚定义
+  14          sbit busy=P2^5;  //语音芯片忙引脚定义
+  15          //uchar a,b=1;
+  16          void music(uchar i);
+  17          void  delay(uint i);
+  18          extern unsigned char year,mon,day,hou,min,sec,week,last_sec;
+  19          
+  20          //=============================
+  21          void main()
+  22          {
+  23   1              
+  24   1              delay(4000);
+  25   1              led0=0;
+  26   1              led1=1;
+  27   1              write_time_8563();               //写日期初值,数据放于 time[7] 
+  28   1              read_time_8563();               //读日期,数据放于 year,mon,day,hou,min,sec,week
+  29   1              while(1)
+  30   1              {       last_sec=sec;
+  31   2                      read_time_8563();
+  32   2                      if(last_sec!=sec)   //
+  33   2                      {
+  34   3                              led0=~led0;
+  35   3                              led1=~led1;
+  36   3                              music(sec/10+1);
+  37   3                              delay(100);
+  38   3                              while(!busy);
+  39   3                              
+  40   3                              music(sec%10+1);
+  41   3                              delay(100);
+  42   3                              while(!busy);
+  43   3                              
+  44   3      //                      music(15);
+  45   3      //                      delay(100);
+  46   3      //                      while(!busy);
+  47   3                      }
+  48   2                      
+  49   2              }
+  50   1      }
+  51          
+  52          //---------------------------
+  53          //
+  54          //---------------------------
+  55          void  delay(uint i)
+C51 COMPILER V9.01   MAIN                                                                  01/04/2020 23:35:06 PAGE 2   
+
+  56          {
+  57   1      while(i--);
+  58   1      }
+  59          
+  60          //---------------------------
+  61          //语音播放子程序
+  62          //变量i取值从1-32，分别播放32段语音素材
+  63          
+  64          //---------------------------
+  65          void music(uchar i)
+  66          {       
+  67   1              uchar a;
+  68   1              rest=0;
+  69   1              delay(50);
+  70   1              rest=1;                                 
+  71   1              delay(50);
+  72   1              rest=~rest;
+  73   1              for(a=0;a<i;a++)
+  74   1             {
+  75   2                      dat=0;
+  76   2                      delay(50);
+  77   2                      dat=~dat;
+  78   2                      delay(50);
+  79   2                      dat=~dat;
+  80   2                 }
+  81   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =    131    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

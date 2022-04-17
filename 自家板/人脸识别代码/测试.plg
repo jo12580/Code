@@ -1,0 +1,33 @@
+<html>
+<body>
+<pre>
+<h1>礦ision Build Log</h1>
+<h2>Project:</h2>
+C:\Users\007\Desktop\单片机\人脸识别代码\测试.uvproj
+Project File Date:  10/11/2020
+
+<h2>Output:</h2>
+compiling main.c...
+main.c - 0 Error(s), 0 Warning(s).
+compiling main.c...
+main.c - 0 Error(s), 0 Warning(s).
+compiling main.c...
+MAIN.C(6): error C141: syntax error near ':'
+MAIN.C(6): error C141: syntax error near ':'
+MAIN.C(6): error C141: syntax error near ':'
+MAIN.C(6): error C141: syntax error near ':'
+MAIN.C(6): error C141: syntax error near ':'
+MAIN.C(6): error C103: '<string>': unclosed string
+main.c(6): error C305: unterminated string/char const
+MAIN.C(7): error C141: syntax error near '_out_fea'
+MAIN.C(7): error C202: '_out_fea': undefined identifier
+MAIN.C(7): error C141: syntax error near 'out_interval_ms'
+MAIN.C(7): error C141: syntax error near 'out_threshold'
+MAIN.C(7): error C141: syntax error near 'pkt_fix'
+MAIN.C(7): error C141: syntax error near 'rel'
+MAIN.C(8): error C141: syntax error near 'port_baud'
+MAIN.C(8): error C103: '<string>': unclosed string
+main.c(8): error C305: unterminated string/char const
+MAIN.C(9): error C141: syntax error near '}'
+MAIN.C(9): error C141: syntax error near ''
+main.c - 18 Error(s), 0 Warning(s).

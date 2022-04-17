@@ -1,0 +1,318 @@
+<html>
+<body>
+<pre>
+<h1>礦ision Build Log</h1>
+<h2>Project:</h2>
+G:\高频训练\基础-09 - 多个数码管显示595\test-74HC595.uvproj
+Project File Date:  06/16/2020
+
+<h2>Output:</h2>
+Build target 'Target 1'
+compiling main.c...
+MAIN.C(5): error C132: '_delay': not in formal parameter list
+MAIN.C(7): error C141: syntax error near 'sbit'
+compiling TIM.c...
+TIM.C(5): error C132: 'IrInit': not in formal parameter list
+TIM.C(5): error C141: syntax error near '{'
+TIM.C(6): error C136: 'IT0': 'void' on variable
+TIM.C(6): error C244: 'IT0': can't initialize, bad type or class
+TIM.C(6): error C136: 'IT0': 'void' on variable
+TIM.C(6): error C132: 'IT0': not in formal parameter list
+TIM.C(7): error C244: 'EX0': can't initialize, bad type or class
+TIM.C(7): error C132: 'EX0': not in formal parameter list
+TIM.C(8): error C244: 'EA': can't initialize, bad type or class
+TIM.C(8): error C132: 'EA': not in formal parameter list
+TIM.C(10): error C244: 'IRIN': can't initialize, bad type or class
+TIM.C(10): error C132: 'IRIN': not in formal parameter list
+TIM.C(11): error C141: syntax error near '}'
+TIM.C(17): error C202: 'Time': undefined identifier
+Target not created
+Build target 'Target 1'
+compiling main.c...
+MAIN.C(5): error C132: '_delay': not in formal parameter list
+MAIN.C(7): error C141: syntax error near 'sbit'
+compiling TIM.c...
+TIM.C(5): error C132: 'IrInit': not in formal parameter list
+TIM.C(5): error C141: syntax error near '{'
+TIM.C(6): error C136: 'IT0': 'void' on variable
+TIM.C(6): error C244: 'IT0': can't initialize, bad type or class
+TIM.C(6): error C136: 'IT0': 'void' on variable
+TIM.C(6): error C132: 'IT0': not in formal parameter list
+TIM.C(7): error C244: 'EX0': can't initialize, bad type or class
+TIM.C(7): error C132: 'EX0': not in formal parameter list
+TIM.C(8): error C244: 'EA': can't initialize, bad type or class
+TIM.C(8): error C132: 'EA': not in formal parameter list
+TIM.C(10): error C244: 'IRIN': can't initialize, bad type or class
+TIM.C(10): error C132: 'IRIN': not in formal parameter list
+TIM.C(11): error C141: syntax error near '}'
+TIM.C(17): error C202: 'Time': undefined identifier
+Target not created
+Build target 'Target 1'
+assembling STARTUP.A51...
+compiling 74hc595.c...
+compiling main.c...
+MAIN.C(6): error C132: '_delay': not in formal parameter list
+MAIN.C(8): error C141: syntax error near 'sbit'
+compiling TIM.c...
+TIM.C(5): error C132: 'IrInit': not in formal parameter list
+TIM.C(5): error C141: syntax error near '{'
+TIM.C(6): error C136: 'IT0': 'void' on variable
+TIM.C(6): error C244: 'IT0': can't initialize, bad type or class
+TIM.C(6): error C136: 'IT0': 'void' on variable
+TIM.C(6): error C132: 'IT0': not in formal parameter list
+TIM.C(7): error C244: 'EX0': can't initialize, bad type or class
+TIM.C(7): error C132: 'EX0': not in formal parameter list
+TIM.C(8): error C244: 'EA': can't initialize, bad type or class
+TIM.C(8): error C132: 'EA': not in formal parameter list
+TIM.C(10): error C244: 'IRIN': can't initialize, bad type or class
+TIM.C(10): error C132: 'IRIN': not in formal parameter list
+TIM.C(11): error C141: syntax error near '}'
+TIM.C(17): error C202: 'Time': undefined identifier
+Target not created
+Build target 'Target 1'
+assembling STARTUP.A51...
+compiling 74hc595.c...
+compiling main.c...
+MAIN.C(6): error C132: '_delay': not in formal parameter list
+MAIN.C(8): error C141: syntax error near 'sbit'
+compiling TIM.c...
+TIM.C(5): error C132: 'IrInit': not in formal parameter list
+TIM.C(5): error C141: syntax error near '{'
+TIM.C(6): error C136: 'IT0': 'void' on variable
+TIM.C(6): error C244: 'IT0': can't initialize, bad type or class
+TIM.C(6): error C136: 'IT0': 'void' on variable
+TIM.C(6): error C132: 'IT0': not in formal parameter list
+TIM.C(7): error C244: 'EX0': can't initialize, bad type or class
+TIM.C(7): error C132: 'EX0': not in formal parameter list
+TIM.C(8): error C244: 'EA': can't initialize, bad type or class
+TIM.C(8): error C132: 'EA': not in formal parameter list
+TIM.C(10): error C244: 'IRIN': can't initialize, bad type or class
+TIM.C(10): error C132: 'IRIN': not in formal parameter list
+TIM.C(11): error C141: syntax error near '}'
+Target not created
+Build target 'Target 1'
+assembling STARTUP.A51...
+compiling 74hc595.c...
+compiling main.c...
+MAIN.C(24): warning C280: 'n': unreferenced local variable
+compiling TIM.c...
+TIM.C(10): warning C206: 'delay': missing function-prototype
+TIM.C(10): error C267: 'delay': requires ANSI-style prototype
+Target not created
+Build target 'Target 1'
+assembling STARTUP.A51...
+compiling 74hc595.c...
+compiling main.c...
+MAIN.C(24): warning C280: 'n': unreferenced local variable
+compiling TIM.c...
+TIM.C(10): warning C206: 'delay': missing function-prototype
+TIM.C(10): error C267: 'delay': requires ANSI-style prototype
+Target not created
+Build target 'Target 1'
+assembling STARTUP.A51...
+compiling 74hc595.c...
+compiling main.c...
+MAIN.C(24): warning C280: 'n': unreferenced local variable
+compiling TIM.c...
+TIM.C(10): warning C206: 'delay': missing function-prototype
+TIM.C(10): error C267: 'delay': requires ANSI-style prototype
+Target not created
+Build target 'Target 1'
+assembling STARTUP.A51...
+compiling 74hc595.c...
+compiling main.c...
+MAIN.C(25): warning C280: 'n': unreferenced local variable
+compiling TIM.c...
+TIM.C(5): error C132: 'ReadIr': not in formal parameter list
+TIM.C(5): error C141: syntax error near 'interrupt'
+TIM.C(7): error C136: 'j': 'void' on variable
+TIM.C(7): error C132: 'j': not in formal parameter list
+TIM.C(7): error C136: 'k': 'void' on variable
+TIM.C(7): error C132: 'k': not in formal parameter list
+TIM.C(8): error C132: 'err': not in formal parameter list
+TIM.C(9): error C244: 'Time': can't initialize, bad type or class
+TIM.C(9): error C132: 'Time': not in formal parameter list
+TIM.C(10): error C141: syntax error near '700'
+TIM.C(10): error C132: 'delay': not in formal parameter list
+TIM.C(11): error C141: syntax error near 'if'
+TIM.C(11): error C141: syntax error near '==', expected ')'
+TIM.C(17): error C141: syntax error near 'while'
+TIM.C(17): error C141: syntax error near '==', expected ')'
+TIM.C(17): error C141: syntax error near '>', expected ')'
+TIM.C(19): error C141: syntax error near '1'
+TIM.C(20): error C129: missing ';' before '--'
+Target not created
+Build target 'Target 1'
+assembling STARTUP.A51...
+compiling 74hc595.c...
+compiling main.c...
+MAIN.C(25): warning C280: 'n': unreferenced local variable
+compiling TIM.c...
+TIM.C(5): error C132: 'ReadIr': not in formal parameter list
+TIM.C(5): error C141: syntax error near 'interrupt'
+TIM.C(7): error C136: 'j': 'void' on variable
+TIM.C(7): error C132: 'j': not in formal parameter list
+TIM.C(7): error C136: 'k': 'void' on variable
+TIM.C(7): error C132: 'k': not in formal parameter list
+TIM.C(8): error C132: 'err': not in formal parameter list
+TIM.C(9): error C244: 'Time': can't initialize, bad type or class
+TIM.C(9): error C132: 'Time': not in formal parameter list
+TIM.C(10): error C141: syntax error near '700'
+TIM.C(10): error C132: 'delay': not in formal parameter list
+TIM.C(11): error C141: syntax error near 'if'
+TIM.C(11): error C141: syntax error near '==', expected ')'
+TIM.C(17): error C141: syntax error near 'while'
+TIM.C(17): error C141: syntax error near '==', expected ')'
+TIM.C(17): error C141: syntax error near '>', expected ')'
+TIM.C(19): error C141: syntax error near '1'
+TIM.C(20): error C129: missing ';' before '--'
+Target not created
+Build target 'Target 1'
+assembling STARTUP.A51...
+compiling 74hc595.c...
+compiling main.c...
+MAIN.C(6): error C132: '_delay': not in formal parameter list
+MAIN.C(8): error C141: syntax error near 'sbit'
+compiling TIM.c...
+TIM.C(5): error C127: '_delay': invalid storage class
+TIM.C(5): error C141: syntax error near 'void'
+TIM.C(5): error C127: 'ReadIr': invalid storage class
+TIM.C(5): error C141: syntax error near 'interrupt'
+TIM.C(7): error C127: 'j': invalid storage class
+TIM.C(7): error C127: 'k': invalid storage class
+TIM.C(8): error C132: 'err': not in formal parameter list
+TIM.C(9): error C244: 'Time': can't initialize, bad type or class
+TIM.C(9): error C132: 'Time': not in formal parameter list
+TIM.C(10): error C141: syntax error near '700'
+TIM.C(10): error C132: 'delay': not in formal parameter list
+TIM.C(11): error C141: syntax error near 'if'
+TIM.C(11): error C141: syntax error near '==', expected ')'
+TIM.C(17): error C141: syntax error near 'while'
+TIM.C(17): error C141: syntax error near '==', expected ')'
+TIM.C(17): error C141: syntax error near '>', expected ')'
+TIM.C(19): error C141: syntax error near '1'
+TIM.C(20): error C129: missing ';' before '--'
+Target not created
+Build target 'Target 1'
+compiling main.c...
+MAIN.C(6): error C132: '_delay': not in formal parameter list
+MAIN.C(8): error C141: syntax error near 'sbit'
+compiling TIM.c...
+TIM.C(5): error C127: '_delay': invalid storage class
+TIM.C(5): error C141: syntax error near 'void'
+TIM.C(5): error C127: 'ReadIr': invalid storage class
+TIM.C(5): error C141: syntax error near 'interrupt'
+TIM.C(7): error C127: 'j': invalid storage class
+TIM.C(7): error C127: 'k': invalid storage class
+TIM.C(8): error C132: 'err': not in formal parameter list
+TIM.C(9): error C244: 'Time': can't initialize, bad type or class
+TIM.C(9): error C132: 'Time': not in formal parameter list
+TIM.C(10): error C141: syntax error near '700'
+TIM.C(10): error C132: 'delay': not in formal parameter list
+TIM.C(11): error C141: syntax error near 'if'
+TIM.C(11): error C141: syntax error near '==', expected ')'
+TIM.C(17): error C141: syntax error near 'while'
+TIM.C(17): error C141: syntax error near '==', expected ')'
+TIM.C(17): error C141: syntax error near '>', expected ')'
+TIM.C(19): error C141: syntax error near '1'
+TIM.C(20): error C129: missing ';' before '--'
+Target not created
+Build target 'Target 1'
+assembling STARTUP.A51...
+compiling 74hc595.c...
+compiling main.c...
+MAIN.C(8): error C141: syntax error near 'sbit'
+compiling TIM.c...
+TIM.C(5): error C127: '_delay': invalid storage class
+TIM.C(5): error C141: syntax error near 'void'
+TIM.C(5): error C127: 'ReadIr': invalid storage class
+TIM.C(5): error C141: syntax error near 'interrupt'
+TIM.C(7): error C127: 'j': invalid storage class
+TIM.C(7): error C127: 'k': invalid storage class
+TIM.C(8): error C132: 'err': not in formal parameter list
+TIM.C(9): error C244: 'Time': can't initialize, bad type or class
+TIM.C(9): error C132: 'Time': not in formal parameter list
+TIM.C(10): error C141: syntax error near '700'
+TIM.C(10): error C132: 'delay': not in formal parameter list
+TIM.C(11): error C141: syntax error near 'if'
+TIM.C(11): error C141: syntax error near '==', expected ')'
+TIM.C(17): error C141: syntax error near 'while'
+TIM.C(17): error C141: syntax error near '==', expected ')'
+TIM.C(17): error C141: syntax error near '>', expected ')'
+TIM.C(19): error C141: syntax error near '1'
+TIM.C(20): error C129: missing ';' before '--'
+Target not created
+Build target 'Target 1'
+compiling main.c...
+MAIN.C(25): warning C280: 'n': unreferenced local variable
+compiling TIM.c...
+TIM.C(5): error C127: '_delay': invalid storage class
+TIM.C(5): error C141: syntax error near 'void'
+TIM.C(5): error C127: 'ReadIr': invalid storage class
+TIM.C(5): error C141: syntax error near 'interrupt'
+TIM.C(7): error C127: 'j': invalid storage class
+TIM.C(7): error C127: 'k': invalid storage class
+TIM.C(8): error C132: 'err': not in formal parameter list
+TIM.C(9): error C244: 'Time': can't initialize, bad type or class
+TIM.C(9): error C132: 'Time': not in formal parameter list
+TIM.C(10): error C141: syntax error near '700'
+TIM.C(10): error C132: 'delay': not in formal parameter list
+TIM.C(11): error C141: syntax error near 'if'
+TIM.C(11): error C141: syntax error near '==', expected ')'
+TIM.C(17): error C141: syntax error near 'while'
+TIM.C(17): error C141: syntax error near '==', expected ')'
+TIM.C(17): error C141: syntax error near '>', expected ')'
+TIM.C(19): error C141: syntax error near '1'
+TIM.C(20): error C129: missing ';' before '--'
+Target not created
+Build target 'Target 1'
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?CO?MAIN
+Program Size: data=52.0 xdata=0 code=1325
+creating hex file from ".\Objects\test-74HC595"...
+".\Objects\test-74HC595" - 0 Error(s), 1 Warning(s).
+Build target 'Target 1'
+assembling STARTUP.A51...
+compiling 74hc595.c...
+compiling main.c...
+MAIN.C(25): warning C280: 'n': unreferenced local variable
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?CO?MAIN
+Program Size: data=52.0 xdata=0 code=1325
+creating hex file from ".\Objects\test-74HC595"...
+".\Objects\test-74HC595" - 0 Error(s), 2 Warning(s).
+Build target 'Target 1'
+assembling STARTUP.A51...
+compiling 74hc595.c...
+compiling main.c...
+MAIN.C(25): warning C280: 'n': unreferenced local variable
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?CO?MAIN
+Program Size: data=52.0 xdata=0 code=1325
+creating hex file from ".\Objects\test-74HC595"...
+".\Objects\test-74HC595" - 0 Error(s), 2 Warning(s).
+Build target 'Target 1'
+assembling STARTUP.A51...
+compiling 74hc595.c...
+compiling main.c...
+MAIN.C(25): warning C280: 'n': unreferenced local variable
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?CO?MAIN
+Program Size: data=52.0 xdata=0 code=1325
+creating hex file from ".\Objects\test-74HC595"...
+".\Objects\test-74HC595" - 0 Error(s), 2 Warning(s).
+Build target 'Target 1'
+assembling STARTUP.A51...
+compiling 74hc595.c...
+compiling main.c...
+MAIN.C(25): warning C280: 'n': unreferenced local variable
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?CO?MAIN
+Program Size: data=52.0 xdata=0 code=1325
+creating hex file from ".\Objects\test-74HC595"...
+".\Objects\test-74HC595" - 0 Error(s), 2 Warning(s).

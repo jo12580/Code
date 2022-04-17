@@ -1,0 +1,297 @@
+C51 COMPILER V9.01   MAIN                                                                  11/07/2021 01:21:45 PAGE 1   
+
+
+C51 COMPILER V9.01, COMPILATION OF MODULE MAIN
+OBJECT MODULE PLACED IN main.OBJ
+COMPILER INVOKED BY: D:\Software\Keil\32\C51\BIN\C51.EXE main.c OPTIMIZE(8,SPEED) BROWSE DEBUG OBJECTEXTEND PRINT(.\List
+                    -ings\main.lst) TABS(2)
+
+line level    source
+
+   1          #include<reg52.h>
+   2          
+   3          typedef unsigned int u16;
+   4          typedef unsigned char u8;
+   5          
+   6          sbit ENA = P2^0;   //右点机使能
+   7          sbit IN1 = P2^1;   //为0右轮反转
+   8          sbit IN2 = P2^2;   //为0右轮正转
+   9          sbit IN3 = P2^3;   //为0左轮正转
+  10          sbit IN4 = P2^4;   //为0左轮反转
+  11          sbit ENB = P2^5;   //左电机使能
+  12          
+  13          sbit left1 = P1^3;
+  14          sbit left2 = P1^2;
+  15          sbit right1 = P1^1;
+  16          sbit right2 = P1^0;
+  17          
+  18          u8 PWMCnt1 = 0;
+  19          u8 PWMCnt2 = 0;
+  20          u8 cntPWM1 = 0;
+  21          u8 cntPWM2 = 0;
+  22          
+  23          void TurnRight1();
+  24          void TurnRight2() ;
+  25          void TurnLeft1();
+  26          void TurnLeft2();
+  27          void Forward()  ;
+  28          void Backward();
+  29          void Stop() ;
+  30          
+  31          void Timer0Init();
+  32          void Timer1Init();
+  33          void XunJi();
+  34          void delay(u16 i);
+  35          
+  36          unsigned int j;
+  37          
+  38          void main()
+  39          {
+  40   1        Timer0Init();
+  41   1        Timer1Init();
+  42   1        while(1)
+  43   1        {
+  44   2          XunJi();
+  45   2        } 
+  46   1      }
+  47            
+  48          //i = 1时， 大概延时10us
+  49          void delay(u16 i)
+  50          {
+  51   1          while (i--);
+  52   1      }
+  53          
+  54          void Timer0Init()
+C51 COMPILER V9.01   MAIN                                                                  11/07/2021 01:21:45 PAGE 2   
+
+  55          {
+  56   1        TH0 = 0xFF;
+  57   1        TL0 = 0xA3;
+  58   1        TMOD &= 0xF0;
+  59   1        TMOD |= 0x01;
+  60   1        EA = 1;
+  61   1        ET0 = 1;
+  62   1        TR0 = 1;
+  63   1      }
+  64          
+  65          void Timer1Init(void)   //100微秒@11.0592MHz
+  66          {
+  67   1        TMOD &= 0x0F;   //设置定时器模式
+  68   1        TL1 = 0xCD;   //设置定时初值
+  69   1        TH1 = 0xD4;   //设置定时初值
+  70   1        TF1 = 0;    //清除TF1标志
+  71   1        TR1 = 1;    //定时器1开始计时
+  72   1        EA = 1;
+  73   1        ET0 = 1;
+  74   1      }
+  75          
+  76          void TurnRight1()      //右转
+  77          {
+  78   1      //  IN1 = 0;  //右轮反转
+  79   1      //  IN2 = 1;
+  80   1      
+  81   1        IN3 = 1;  //左轮正转
+  82   1        IN4 = 0;
+  83   1        cntPWM1 = 30;
+  84   1        cntPWM2 = 15;
+  85   1      }
+  86          
+  87          void TurnRight2()      //右转
+  88          {
+  89   1      //  IN1 = 0;  //右轮反转
+  90   1      //  IN2 = 1;
+  91   1      
+  92   1        IN3 = 1;  //左轮正转
+  93   1        IN4 = 0;
+  94   1        cntPWM1 = 25;
+  95   1        cntPWM2 = 15;
+  96   1      }
+  97          
+  98          void TurnLeft1()        //左转
+  99          {
+ 100   1        IN1 = 1;
+ 101   1        IN2 = 0;    //右轮正转
+ 102   1      
+ 103   1      //  IN3 = 0;
+ 104   1      //  IN4 = 1;    //左轮反转
+ 105   1        cntPWM1 = 15;
+ 106   1        cntPWM2 = 30;
+ 107   1      }         
+ 108          
+ 109          void TurnLeft2()        //左转
+ 110          {
+ 111   1        IN1 = 1;
+ 112   1        IN2 = 0;    //右轮正转
+ 113   1      
+ 114   1      //  IN3 = 0;
+ 115   1      //  IN4 = 1;    //左轮反转
+ 116   1        cntPWM1 = 15;
+C51 COMPILER V9.01   MAIN                                                                  11/07/2021 01:21:45 PAGE 3   
+
+ 117   1        cntPWM2 = 25;
+ 118   1      } 
+ 119            
+ 120          void Forward()         //前进
+ 121          {
+ 122   1        IN1 = 1;
+ 123   1        IN2 = 0;    //右轮正转
+ 124   1      
+ 125   1        IN3 = 1;    //左轮正转
+ 126   1        IN4 = 0;
+ 127   1        
+ 128   1        cntPWM1 = 30;
+ 129   1        cntPWM2 = 30;
+ 130   1      }
+ 131          
+ 132          void Backward()          //后退
+ 133          {
+ 134   1        IN1 = 0;  //右轮反转
+ 135   1        IN2 = 1;
+ 136   1      
+ 137   1        IN3 = 0;
+ 138   1        IN4 = 1;  //左轮反转
+ 139   1        cntPWM1 = 20;
+ 140   1        cntPWM2 = 20;
+ 141   1      }
+ 142          
+ 143          void Stop()           //停止
+ 144          {
+ 145   1        IN1 = 0;
+ 146   1        IN2 = 0;
+ 147   1      
+ 148   1        IN3 = 0;
+ 149   1        IN4 = 0;
+ 150   1      }
+ 151          void XunJi()
+ 152          
+ 153          {
+ 154   1        unsigned char flag = 0;
+ 155   1      
+ 156   1        if((left1 == 0)&&(left2 == 0)&&(right1 == 0)&&(right2 == 0))   //0 0 0 0
+ 157   1          flag = 0;
+ 158   1      
+ 159   1        if((left1 == 0)&&(left2 == 0)&&(right1 == 0)&&(right2 == 1))   //0 0 0 1
+ 160   1          flag = 1;
+ 161   1      
+ 162   1        if((left1 == 0)&&(left2 == 0)&&(right1 == 1)&&(right2 == 0))   //0 0 1 0
+ 163   1          flag = 0;
+ 164   1      
+ 165   1        if((left1 == 0)&&(left2 == 0)&&(right1 == 1)&&(right2 == 1))   //0 0 1 1
+ 166   1          flag = 1;
+ 167   1      
+ 168   1        if((left1 == 0)&&(left2 == 1)&&(right1 == 0)&&(right2 == 0))   //0 1 0 0
+ 169   1          flag = 0;
+ 170   1      
+ 171   1        if((left1 == 0)&&(left2 == 1)&&(right1 == 0)&&(right2 == 1))   //0 1 0 1
+ 172   1          flag = 4;
+ 173   1      
+ 174   1        if((left1 == 0)&&(left2 == 1)&&(right1 == 1)&&(right2 == 0))   //0 1 1 0
+ 175   1          flag = 0;
+ 176   1        
+ 177   1        if((left1 == 0)&&(left2 == 1)&&(right1 == 1)&&(right2 == 1))    //0 1 1 1
+ 178   1          flag = 1;
+C51 COMPILER V9.01   MAIN                                                                  11/07/2021 01:21:45 PAGE 4   
+
+ 179   1        
+ 180   1        if((left1 == 1)&&(left2 == 0)&&(right1 == 0)&&(right2 == 0))   //1 0 0 0
+ 181   1          flag = 3;
+ 182   1        
+ 183   1        if((left1 == 1)&&(left2 == 0)&&(right1 == 0)&&(right2 == 1))   //1 0 0 1
+ 184   1          flag = 0;
+ 185   1        
+ 186   1        if((left1 == 1)&&(left2 == 0)&&(right1 == 1)&&(right2 == 0))   //1 0 1 0
+ 187   1          flag = 2;
+ 188   1        
+ 189   1        if((left1 == 1)&&(left2 == 0)&&(right1 == 1)&&(right2 == 1))   //1 0 1 1
+ 190   1          flag = 0;
+ 191   1        
+ 192   1        if((left1 == 1)&&(left2 == 1)&&(right1 == 0)&&(right2 == 0))   //1 1 0 0
+ 193   1          flag = 3;
+ 194   1         
+ 195   1        if((left1 == 1)&&(left2 == 1)&&(right1 == 0)&&(right2 == 1))   //1 1 0 1
+ 196   1          flag = 0;
+ 197   1      
+ 198   1        if((left1 == 1)&&(left2 == 1)&&(right1 == 1)&&(right2 == 0))   //1 1 1 0
+ 199   1          flag = 3;
+ 200   1        
+ 201   1        if((left1 == 1)&&(left2 == 1)&&(right1 == 1)&&(right2 == 1))   //1 1 1 1
+ 202   1          flag = 5;
+ 203   1        
+ 204   1        switch(flag)
+ 205   1        {
+ 206   2          case 0:Forward();break;
+ 207   2          
+ 208   2          case 1:TurnLeft1();break; 
+ 209   2          
+ 210   2          case 2:TurnLeft2();break;
+ 211   2        
+ 212   2          case 3:TurnRight1();break;
+ 213   2          
+ 214   2          case 4:TurnRight2();break;
+ 215   2          
+ 216   2          default:Stop();break;
+ 217   2        }
+ 218   1      }
+ 219          
+ 220          void InterruptTime0() interrupt 1
+ 221          {
+ 222   1        PWMCnt1++;
+ 223   1        PWMCnt2++;
+ 224   1        
+ 225   1        if(PWMCnt1  >= 200)
+ 226   1        {
+ 227   2          PWMCnt1 = 0;
+ 228   2        }
+ 229   1        if(PWMCnt1 <= cntPWM1)
+ 230   1        {
+ 231   2          ENA = 1;
+ 232   2        }
+ 233   1        else
+ 234   1        {
+ 235   2          ENA = 0;
+ 236   2        }
+ 237   1      
+ 238   1        if(PWMCnt2 >= 200)
+ 239   1        {
+ 240   2          PWMCnt2 = 0;
+C51 COMPILER V9.01   MAIN                                                                  11/07/2021 01:21:45 PAGE 5   
+
+ 241   2        }
+ 242   1        if(PWMCnt2 <= cntPWM2)
+ 243   1        {
+ 244   2          ENB = 1;
+ 245   2        }
+ 246   1        else
+ 247   1        {
+ 248   2          ENB = 0;
+ 249   2        }
+ 250   1      
+ 251   1        TH0 = (65536 - 50)/256;
+ 252   1        TL0 = (65536 - 50)%256;
+ 253   1      }
+ 254          
+ 255          void InterruptTime1() interrupt 3
+ 256          {
+ 257   1        unsigned int i;
+ 258   1        i++;
+ 259   1        if(i==1000)
+ 260   1          if(i==5)
+ 261   1          {
+ 262   2            i=0;
+ 263   2            j++;
+ 264   2          }
+ 265   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =    500    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =      6       2
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

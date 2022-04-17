@@ -1,0 +1,269 @@
+C51 COMPILER V9.01   MIAN                                                                  05/05/2021 21:54:44 PAGE 1   
+
+
+C51 COMPILER V9.01, COMPILATION OF MODULE MIAN
+OBJECT MODULE PLACED IN mian.OBJ
+COMPILER INVOKED BY: D:\Software\Keil\32\C51\BIN\C51.EXE mian.c OPTIMIZE(8,SPEED) BROWSE DEBUG OBJECTEXTEND PRINT(.\List
+                    -ings\mian.lst) TABS(2)
+
+line level    source
+
+   1          /*******************************************************************************  
+   2          * 文件名称：蓝桥杯单片机第十一届省赛试题视频讲解对应程序（7月份）     
+   3          * 程序说明：如需了解有关本程序配套视频讲解，及比赛经验分享\
+   4          *          欢迎访问淘宝店铺网址：shop117015787.taobao.com
+   5          * 日期版本：2021-03
+   6          *******************************************************************************/
+   7          
+   8          
+   9          #include<STC15F2K60S2.H>
+  10          #include<IIC.H>
+  11          
+  12          
+  13          uchar code tab[]={0XC0,0XF9,0XA4,0XB0,0X99,0X92,0X82,0XF8,0X80,0X90,\
+  14                            0X40,0X79,0X24,0X30,0X19,0X12,0X02,0X78,0X00,0X10,\
+  15                            0XBF,0XFF,0XC1,0X8C,0XC8};//  "-"  "关"  U   P  n
+  16          
+  17          unsigned char Digbuf[8] = {0,1,2,3,4,5,6,7};
+  18          uchar S1_Flag=0,S2_Flag=0,S3_Flag=0,S4_Flag=0;
+  19          uchar Digcom=0;
+  20          uchar Key_temp=0xff,key=0xff;
+  21          
+  22          unsigned char AD=0;
+  23          unsigned int AD_Show=0;
+  24          unsigned char Mode=0;
+  25          unsigned char Dig_Show=0;
+  26          unsigned int Threshold=300;
+  27          unsigned int Count=0;
+  28          
+  29          unsigned char AD_intr=0;
+  30          unsigned int Last_AD=0,Now_AD=0;
+  31          unsigned char LED_Bit=0XFF;
+  32          unsigned int AD_Compare_intr=0;
+  33          unsigned int Error_Key=0;
+  34          
+  35          void delayms(int ms);
+  36          void allinit(void);
+  37          void keyscan(void);
+  38          
+  39          void Timer2Init(void);
+  40          void DIG(void);
+  41          
+  42          void main(void)
+  43          {
+  44   1        allinit();
+  45   1        Timer2Init();
+  46   1      //  EEPROM_write(0x00,30);delayms(5);
+  47   1        Threshold=EEPROM_read(0X00)*10;delayms(5);
+  48   1      //  Digbuf[0]=Mode/10;Digbuf[1]=Mode%10;
+  49   1        while(1)
+  50   1        {
+  51   2          if(AD_intr>=99)
+  52   2          {
+  53   3            AD_intr=0;
+  54   3            AD=AD_read(0X03);
+C51 COMPILER V9.01   MIAN                                                                  05/05/2021 21:54:44 PAGE 2   
+
+  55   3            Last_AD=Now_AD;
+  56   3            Now_AD=AD*100/50;
+  57   3            
+  58   3            if((Now_AD<Threshold)&&(Last_AD>Threshold))
+  59   3            {
+  60   4              Count=Count+1;
+  61   4            }
+  62   3            
+  63   3            if(Now_AD<Threshold){AD_Compare_intr++;}
+  64   3            else {AD_Compare_intr=0;}
+  65   3            
+  66   3            if(AD_Compare_intr>=49){P2|=0X80;P2&=0X9F;LED_Bit&=0XFE; P0=LED_Bit;}
+  67   3            else {P2|=0X80;P2&=0X9F;LED_Bit|=0X01; P0=LED_Bit;}
+  68   3            
+  69   3            if(Count%2==1){P2|=0X80;P2&=0X9F;LED_Bit&=0XFd; P0=LED_Bit;}
+  70   3            else {P2|=0X80;P2&=0X9F;LED_Bit|=0X02; P0=LED_Bit;}
+  71   3            
+  72   3            if(Error_Key>=3){P2|=0X80;P2&=0X9F;LED_Bit&=0XFB; P0=LED_Bit;}
+  73   3            else {P2|=0X80;P2&=0X9F;LED_Bit|=0X04; P0=LED_Bit;}
+  74   3          
+  75   3            DIG();
+  76   3          }
+  77   2          
+  78   2          keyscan();
+  79   2          
+  80   2          //delayms(10);
+  81   2        }
+  82   1      }
+  83          
+  84          void keyscan(void)
+  85          {
+  86   1        uchar i;
+  87   1        uchar temp=0xff;
+  88   1      
+  89   1        for(i=0x80;i>8;i>>=1)                   //1000 0000   0100 0000   = 0000 1000
+  90   1        {
+  91   2          temp=0xff;
+  92   2          if(i==0x80) {P44=0; P42=1;P3=(~i);}
+  93   2          else if(i==0x40) {P42=0; P44=1;P3=(~i);}
+  94   2          else { P42=1; P44=1; P3=(~i); }            
+  95   2          
+  96   2          if(i==0x80) {temp=P3;temp&=0x7f;}    // 0111 0111 
+  97   2          else if(i==0x40) {temp=P3;temp&=0xbf;}// 1011 1111
+  98   2          else temp=P3;
+  99   2          
+ 100   2          if((temp&0x0f)!=0x0f)  //
+ 101   2          {
+ 102   3            switch(temp)
+ 103   3            {
+ 104   4              case 0x7e :Error_Key++;break;
+ 105   4              case 0x7d :Error_Key++;break;
+ 106   4              case 0x7b :Error_Key++;break;
+ 107   4              case 0x77 :Error_Key++;break;
+ 108   4              
+ 109   4              case 0xbe :Error_Key++;break;
+ 110   4              case 0xbd :Error_Key++;break;
+ 111   4              case 0xbb :Error_Key++;break;
+ 112   4              case 0xb7 :Error_Key++;break;
+ 113   4              
+ 114   4              case 0xde :Error_Key++;break;
+ 115   4              case 0xdd :Error_Key++;break;
+ 116   4              case 0xdb :
+C51 COMPILER V9.01   MIAN                                                                  05/05/2021 21:54:44 PAGE 3   
+
+ 117   4                if(Dig_Show==2){Count=0;}
+ 118   4                Error_Key=0;
+ 119   4              break;//13
+ 120   4              case 0xd7 :
+ 121   4                if(Dig_Show==0){Dig_Show=1;}
+ 122   4                else if(Dig_Show==1){Dig_Show=2;EEPROM_write(0x00,Threshold/10);}
+ 123   4                else if(Dig_Show==2){Dig_Show=0;} 
+ 124   4                Error_Key=0;
+ 125   4              break;//12
+ 126   4              
+ 127   4              case 0xee :Error_Key++;break;
+ 128   4              case 0xed :Error_Key++;break;
+ 129   4              case 0xeb :
+ 130   4                if(Dig_Show==1)
+ 131   4                {
+ 132   5                  if(Threshold==0)Threshold=500;
+ 133   5                  else Threshold=Threshold-50;
+ 134   5                } 
+ 135   4                Error_Key=0;
+ 136   4              break;//17
+ 137   4              case 0xe7 :
+ 138   4                if(Dig_Show==1)
+ 139   4                {
+ 140   5                  if(Threshold==500)Threshold=0;
+ 141   5                  else Threshold=Threshold+50;
+ 142   5                }
+ 143   4                Error_Key=0;
+ 144   4              break;//16  
+ 145   4              
+ 146   4              default : break;
+ 147   4            }   
+ 148   3          }
+ 149   2          
+ 150   2          while((temp&0x0f)!=0x0f)
+ 151   2          {
+ 152   3            temp=P3;
+ 153   3            temp=temp&0x0f;
+ 154   3          }   
+ 155   2        }
+ 156   1      }
+ 157          
+ 158          void DIG(void)
+ 159          {
+ 160   1        if(Dig_Show==0)
+ 161   1        {
+ 162   2          AD_Show=AD*100/51;
+ 163   2          Digbuf[0]=22;Digbuf[1]=21;Digbuf[2]=21;Digbuf[3]=21;Digbuf[4]=21;
+ 164   2          Digbuf[5]=AD_Show/100+10;Digbuf[6]=AD_Show%100/10;Digbuf[7]=AD_Show%10;       
+ 165   2        }
+ 166   1        else if(Dig_Show==1)
+ 167   1        {
+ 168   2          Digbuf[0]=23;Digbuf[1]=21;Digbuf[2]=21;Digbuf[3]=21;Digbuf[4]=21;
+ 169   2          Digbuf[5]=Threshold/100+10;Digbuf[6]=Threshold%100/10;Digbuf[7]=Threshold%10; 
+ 170   2        }
+ 171   1        else if(Dig_Show==2)
+ 172   1        {
+ 173   2          if(Count<10){Digbuf[0]=24;Digbuf[1]=21;Digbuf[2]=21;Digbuf[3]=21;Digbuf[4]=21;Digbuf[5]=21;Digbuf[6]=21;
+             -Digbuf[7]=Count;}
+ 174   2          else if((Count>=10)&&(Count<100)){Digbuf[0]=24;Digbuf[1]=21;Digbuf[2]=21;Digbuf[3]=21;Digbuf[4]=21;Digbu
+             -f[5]=21;Digbuf[6]=Count/10;Digbuf[7]=Count%10;}
+ 175   2          else if((Count>=100)&&(Count<1000)){Digbuf[0]=24;Digbuf[1]=21;Digbuf[2]=21;Digbuf[3]=21;Digbuf[4]=21;Dig
+             -buf[5]=Count/100;Digbuf[6]=Count%100/10;Digbuf[7]=Count%10;}
+C51 COMPILER V9.01   MIAN                                                                  05/05/2021 21:54:44 PAGE 4   
+
+ 176   2          else if((Count>=1000)&&(Count<10000)){Digbuf[0]=24;Digbuf[1]=21;Digbuf[2]=21;Digbuf[3]=21;Digbuf[4]=Coun
+             -t/1000;Digbuf[5]=Count%1000/100;Digbuf[6]=Count%100/10;Digbuf[7]=Count%10;}
+ 177   2          else if((Count>=10000)&&(Count<100000)){Digbuf[0]=24;Digbuf[1]=21;Digbuf[2]=21;Digbuf[3]=Count/10000;Dig
+             -buf[4]=Count%10000/1000;Digbuf[5]=Count%1000/100;Digbuf[6]=Count%100/10;Digbuf[7]=Count%10;}
+ 178   2        }
+ 179   1      }
+ 180          
+ 181          void Timer2Init(void)   //1毫秒@12.000MHz
+ 182          {
+ 183   1        AUXR |= 0x04;   //定时器时钟1T模式
+ 184   1        T2L = 0x20;   //设置定时初值
+ 185   1        T2H = 0xD1;   //设置定时初值
+ 186   1        AUXR |= 0x10;   //定时器2开始计时
+ 187   1        IE2 |= 0x04;    //开定时器2中断
+ 188   1        EA=1;
+ 189   1      }
+ 190          
+ 191          //中断服务程序
+ 192          void timer2int() interrupt 12           //中断入口
+ 193          {
+ 194   1          P2|=0XC0;//打开位选573   U8
+ 195   1          P0=0XFF;  
+ 196   1          P2&=0XDF;
+ 197   1          P0=(1<<Digcom);
+ 198   1          P2|=0XE0;
+ 199   1          P0=0XFF;
+ 200   1          P2&=0XFF;//打开段选573   U7
+ 201   1          P0=tab[Digbuf[Digcom]];
+ 202   1          if(++Digcom==8)Digcom=0;
+ 203   1        
+ 204   1          AD_intr++;
+ 205   1      }
+ 206          
+ 207          
+ 208          
+ 209          void delayms(int ms)
+ 210          {
+ 211   1        int i,j;
+ 212   1        for(i=ms;i>0;i--)
+ 213   1          for(j=845;j>0;j--);
+ 214   1      }
+ 215          
+ 216          void allinit(void)
+ 217          {
+ 218   1        P2|=0XA0;
+ 219   1        P2&=0XBF;
+ 220   1        P0=0X00;//关闭蜂鸣器，继电器
+ 221   1        
+ 222   1        P2|=0X80;
+ 223   1        P2&=0X9F;
+ 224   1        P0=0XFF;//关闭LED灯
+ 225   1        
+ 226   1        P2|=0XC0;//打开位选573   U8
+ 227   1        P2&=0XDF;
+ 228   1        P0=0XFF;//选择所有数码管
+ 229   1        P2|=0XE0;//打开位选573   U7
+ 230   1        P2&=0XFF;
+ 231   1        P0=0XFF;//关闭所有数码管
+ 232   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+C51 COMPILER V9.01   MIAN                                                                  05/05/2021 21:54:44 PAGE 5   
+
+   CODE SIZE        =   1425    ----
+   CONSTANT SIZE    =     25    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =     34       2
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

@@ -1,0 +1,133 @@
+C51 COMPILER V9.01   JIANPAN                                                               11/21/2021 11:05:28 PAGE 1   
+
+
+C51 COMPILER V9.01, COMPILATION OF MODULE JIANPAN
+OBJECT MODULE PLACED IN .\Objects\jianpan.obj
+COMPILER INVOKED BY: D:\Software\Keil\32\C51\BIN\C51.EXE jianpan.c OPTIMIZE(8,SPEED) BROWSE DEBUG OBJECTEXTEND PRINT(.\L
+                    -istings\jianpan.lst) TABS(2) OBJECT(.\Objects\jianpan.obj)
+
+line level    source
+
+   1          
+   2          //说明：4X4 矩阵接P1口
+   3          //按键扫描函数，返回扫描键值
+   4          //------ 键盘扫描函数，使用行列反转扫描法
+   5          
+   6          #include <reg52.h>
+   7          #include <jianpan.h>
+   8          
+   9          
+  10          void KeyDelay1Ms(int z)
+  11           {
+  12   1        int x,y;
+  13   1        for (x=z;x>0;x--)
+  14   1          for(y=110;y>0;y--);
+  15   1       }
+  16          
+  17          
+  18          
+  19          unsigned char KeyScan() 
+  20          {
+  21   1        unsigned char cord_h,cord_l;// 
+  22   1        P1=0x0f;            // 
+  23   1        cord_h=P1&0x0f;     // 
+  24   1       if(cord_h!=0x0f)    // 
+  25   1       {
+  26   2         KeyDelay1Ms(10);        //
+  27   2        if((P1&0x0f)!=0x0f)
+  28   2         {
+  29   3          cord_h=P1&0x0f;  // 
+  30   3          P1=cord_h|0xf0;  // 
+  31   3          cord_l=P1&0xf0;  // 
+  32   3          while((P1&0xf0)!=0xf0);// 
+  33   3          return(cord_h+cord_l);//
+  34   3         }
+  35   2          else
+  36   2         return(0xff);
+  37   2         
+  38   2       } 
+  39   1       else
+  40   1         return(0xff);
+  41   1       
+  42   1      }
+  43          
+  44          unsigned char KeyPro()
+  45           {
+  46   1        switch(KeyScan())
+  47   1        {   
+  48   2      //------ 按下相应的键显示相对应的码值，此处“=”相当于确认键-----
+  49   2      //   case 0x7e:return '=';break;
+  50   2      //   case 0x7d:return '=';break;
+  51   2      //   case 0x7b:return '=';break;
+  52   2      //   case 0x77:return '=';break;
+  53   2      //   case 0xbe:return '=';break;
+  54   2      //   case 0xbd:return '3';break;
+C51 COMPILER V9.01   JIANPAN                                                               11/21/2021 11:05:28 PAGE 2   
+
+  55   2      //   case 0xbb:return '6';break;
+  56   2      //   case 0xb7:return '9';break;
+  57   2      //   case 0xde:return '.';break;
+  58   2      //   case 0xdd:return '2';break;
+  59   2      //   case 0xdb:return '5';break;
+  60   2      //   case 0xd7:return '8';break;
+  61   2      //   case 0xee:return '0';break;
+  62   2      //   case 0xed:return '1';break;
+  63   2      //   case 0xeb:return '4';break;
+  64   2      //   case 0xe7:return '7';break;
+  65   2      //   default:return 0xff;break;   
+  66   2          
+  67   2          
+  68   2         case 0x7e:return '.';break;    // A种键盘
+  69   2         case 0x7d:return '0';break;
+  70   2         case 0x7b:return '#';break;
+  71   2         case 0x77:return '=';break;
+  72   2         case 0xbe:return '7';break;
+  73   2         case 0xbd:return '8';break;
+  74   2         case 0xbb:return '9';break;
+  75   2         case 0xb7:return 'c';break;
+  76   2         case 0xde:return '4';break;
+  77   2         case 0xdd:return '5';break;
+  78   2         case 0xdb:return '6';break;
+  79   2         case 0xd7:return 'b';break;
+  80   2         case 0xee:return '1';break;
+  81   2         case 0xed:return '2';break;
+  82   2         case 0xeb:return '3';break;
+  83   2         case 0xe7:return 'a';break;
+  84   2         default:return 0xff;break; 
+  85   2      
+  86   2      
+  87   2      //   case 0x7e:return 'a';break;   // B种键盘
+  88   2      //   case 0x7d:return 'b';break;
+  89   2      //   case 0x7b:return 'c';break;
+  90   2      //   case 0x77:return '=';break;
+  91   2      //   case 0xbe:return '3';break;
+  92   2      //   case 0xbd:return '6';break;
+  93   2      //   case 0xbb:return '9';break;
+  94   2      //   case 0xb7:return '#';break;
+  95   2      //   case 0xde:return '2';break;
+  96   2      //   case 0xdd:return '5';break;
+  97   2      //   case 0xdb:return '8';break;
+  98   2      //   case 0xd7:return '0';break;
+  99   2      //   case 0xee:return '1';break;
+ 100   2      //   case 0xed:return '4';break;
+ 101   2      //   case 0xeb:return '3';break;
+ 102   2      //   case 0xe7:return '.';break;
+ 103   2      //   default:return 0xff;break; 
+ 104   2        }
+ 105   1       }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =    201    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+C51 COMPILER V9.01   JIANPAN                                                               11/21/2021 11:05:28 PAGE 3   
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

@@ -1,0 +1,76 @@
+C51 COMPILER V9.01   INTERRUPT                                                             04/10/2021 09:00:31 PAGE 1   
+
+
+C51 COMPILER V9.01, COMPILATION OF MODULE INTERRUPT
+OBJECT MODULE PLACED IN interrupt.OBJ
+COMPILER INVOKED BY: D:\Software\Keil\32\C51\BIN\C51.EXE interrupt.c OPTIMIZE(8,SPEED) BROWSE DEBUG OBJECTEXTEND PRINT(.
+                    -\Listings\interrupt.lst) TABS(2)
+
+line level    source
+
+   1          #include<interrupt.h>
+   2          #include"ds1302.h"
+   3          
+   4          sbit S5=P3^2;
+   5          sbit A=P0^2;
+   6          
+   7          void Delay10ms_interrupt()    //@11.0592MHz
+   8          {
+   9   1        unsigned char i, j;
+  10   1      
+  11   1        i = 108;
+  12   1        j = 145;
+  13   1        do
+  14   1        {
+  15   2          while (--j);
+  16   2        } while (--i);
+  17   1      }
+  18          
+  19          
+  20          void int0()   //判断3^2引脚
+  21          {
+  22   1        EA=1;
+  23   1        EX0=1;
+  24   1        IT0=1;    //置1时为下降沿触发、置0时为低电平触发
+  25   1      }
+  26          
+  27          void int1()   //判断3^3引脚 
+  28          {
+  29   1        EA=1;
+  30   1        EX1=1;
+  31   1        IT1=1;    
+  32   1      }
+  33          
+  34          void int0_intfun() interrupt 0 using 1//输入中断执行的程序
+  35          {
+  36   1            P2=0x80;
+  37   1            A=~A;
+  38   1            S5=1;
+  39   1      }
+  40          
+  41          void int1_intfun() interrupt 2 using 1  //输入中断执行的程序
+  42          {
+  43   1          unsigned int i;
+  44   1          for(i=0;i<7;i++)
+  45   1        {
+  46   2          P0=(0xbf>>i);
+  47   2          Delay10ms_interrupt();
+  48   2        }
+  49   1                                        
+  50   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =     75    ----
+C51 COMPILER V9.01   INTERRUPT                                                             04/10/2021 09:00:31 PAGE 2   
+
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

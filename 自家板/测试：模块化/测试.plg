@@ -1,0 +1,312 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Project:</h2>
+C:\Users\007\Desktop\µ•∆¨ª˙\≤‚ ‘£∫ƒ£øÈªØ\≤‚ ‘.uvproj
+Project File Date:  10/12/2020
+
+<h2>Output:</h2>
+compiling cJSON.c...
+cJSON.c(37): warning C318: can't open file 'locale.h'
+CJSON.C(104): warning C182: pointer to different objects
+CJSON.C(104): warning C182: pointer to different objects
+CJSON.C(131): warning C182: pointer to different objects
+CJSON.C(133): warning C259: pointer: different mspace
+CJSON.C(137): warning C182: pointer to different objects
+CJSON.C(153): warning C259: pointer: different mspace
+CJSON.C(196): warning C206: 'localeconv': missing function-prototype
+CJSON.C(196): error C214: illegal pointer conversion
+CJSON.C(197): error C230: 'lconv': unknown struct/union/enum tag
+CJSON.C(197): error C204: 'decimal_point': undefined member
+CJSON.C(2226): error C215: illegal type conversion
+cJSON.c - 4 Error(s), 8 Warning(s).
+Build target 'Target 1'
+compiling cJSON.c...
+cJSON.c(37): warning C318: can't open file 'locale.h'
+CJSON.C(104): warning C182: pointer to different objects
+CJSON.C(104): warning C182: pointer to different objects
+CJSON.C(131): warning C182: pointer to different objects
+CJSON.C(133): warning C259: pointer: different mspace
+CJSON.C(137): warning C182: pointer to different objects
+CJSON.C(153): warning C259: pointer: different mspace
+CJSON.C(196): warning C206: 'localeconv': missing function-prototype
+CJSON.C(196): error C214: illegal pointer conversion
+CJSON.C(197): error C230: 'lconv': unknown struct/union/enum tag
+CJSON.C(197): error C204: 'decimal_point': undefined member
+CJSON.C(2226): error C215: illegal type conversion
+Target not created
+Build target 'Target 1'
+compiling main.c...
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DELAY?MAIN
+Program Size: data=11.0 xdata=0 code=36
+creating hex file from "≤‚ ‘"...
+"≤‚ ‘" - 0 Error(s), 1 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DELAY?MAIN
+Program Size: data=11.0 xdata=0 code=36
+creating hex file from "≤‚ ‘"...
+"≤‚ ‘" - 0 Error(s), 1 Warning(s).
+compiling cJSON.c...
+cJSON.c(37): warning C318: can't open file 'locale.h'
+CJSON.C(104): warning C182: pointer to different objects
+CJSON.C(104): warning C182: pointer to different objects
+CJSON.C(131): warning C182: pointer to different objects
+CJSON.C(133): warning C259: pointer: different mspace
+CJSON.C(137): warning C182: pointer to different objects
+CJSON.C(153): warning C259: pointer: different mspace
+CJSON.C(196): warning C206: 'localeconv': missing function-prototype
+CJSON.C(196): error C214: illegal pointer conversion
+CJSON.C(197): error C230: 'lconv': unknown struct/union/enum tag
+CJSON.C(197): error C204: 'decimal_point': undefined member
+CJSON.C(2226): error C215: illegal type conversion
+cJSON.c - 4 Error(s), 8 Warning(s).
+Build target 'Target 1'
+compiling cJSON.c...
+cJSON.c(37): warning C318: can't open file 'locale.h'
+CJSON.C(104): warning C182: pointer to different objects
+CJSON.C(104): warning C182: pointer to different objects
+CJSON.C(131): warning C182: pointer to different objects
+CJSON.C(133): warning C259: pointer: different mspace
+CJSON.C(137): warning C182: pointer to different objects
+CJSON.C(153): warning C259: pointer: different mspace
+CJSON.C(196): warning C206: 'localeconv': missing function-prototype
+CJSON.C(196): error C214: illegal pointer conversion
+CJSON.C(197): error C230: 'lconv': unknown struct/union/enum tag
+CJSON.C(197): error C204: 'decimal_point': undefined member
+CJSON.C(2226): error C215: illegal type conversion
+Target not created
+Build target 'Target 1'
+compiling main.c...
+compiling cJSON.c...
+cJSON.c(37): warning C318: can't open file 'locale.h'
+CJSON.C(104): warning C182: pointer to different objects
+CJSON.C(104): warning C182: pointer to different objects
+CJSON.C(131): warning C182: pointer to different objects
+CJSON.C(133): warning C259: pointer: different mspace
+CJSON.C(137): warning C182: pointer to different objects
+CJSON.C(153): warning C259: pointer: different mspace
+CJSON.C(196): warning C206: 'localeconv': missing function-prototype
+CJSON.C(196): error C214: illegal pointer conversion
+CJSON.C(197): error C230: 'lconv': unknown struct/union/enum tag
+CJSON.C(197): error C204: 'decimal_point': undefined member
+CJSON.C(2226): error C215: illegal type conversion
+Target not created
+compiling cJSON.c...
+cJSON.c(37): warning C318: can't open file 'locale.h'
+CJSON.C(105): warning C182: pointer to different objects
+CJSON.C(105): warning C182: pointer to different objects
+CJSON.C(132): warning C182: pointer to different objects
+CJSON.C(134): warning C259: pointer: different mspace
+CJSON.C(138): warning C182: pointer to different objects
+CJSON.C(154): warning C259: pointer: different mspace
+CJSON.C(197): warning C206: 'localeconv': missing function-prototype
+CJSON.C(197): error C214: illegal pointer conversion
+CJSON.C(198): error C230: 'lconv': unknown struct/union/enum tag
+CJSON.C(198): error C204: 'decimal_point': undefined member
+CJSON.C(2227): error C215: illegal type conversion
+cJSON.c - 4 Error(s), 8 Warning(s).
+compiling cJSON.c...
+cJSON.c(37): warning C318: can't open file 'locale.h'
+CJSON.C(105): warning C182: pointer to different objects
+CJSON.C(105): warning C182: pointer to different objects
+CJSON.C(132): warning C182: pointer to different objects
+CJSON.C(134): warning C259: pointer: different mspace
+CJSON.C(138): warning C182: pointer to different objects
+CJSON.C(154): warning C259: pointer: different mspace
+CJSON.C(197): warning C206: 'localeconv': missing function-prototype
+CJSON.C(197): error C214: illegal pointer conversion
+CJSON.C(198): error C230: 'lconv': unknown struct/union/enum tag
+CJSON.C(198): error C204: 'decimal_point': undefined member
+CJSON.C(2227): error C215: illegal type conversion
+cJSON.c - 4 Error(s), 8 Warning(s).
+Build target 'Target 1'
+compiling cJSON.c...
+cJSON.c(37): warning C318: can't open file 'locale.h'
+CJSON.C(105): warning C182: pointer to different objects
+CJSON.C(105): warning C182: pointer to different objects
+CJSON.C(132): warning C182: pointer to different objects
+CJSON.C(134): warning C259: pointer: different mspace
+CJSON.C(138): warning C182: pointer to different objects
+CJSON.C(154): warning C259: pointer: different mspace
+CJSON.C(197): warning C206: 'localeconv': missing function-prototype
+CJSON.C(197): error C214: illegal pointer conversion
+CJSON.C(198): error C230: 'lconv': unknown struct/union/enum tag
+CJSON.C(198): error C204: 'decimal_point': undefined member
+CJSON.C(2227): error C215: illegal type conversion
+Target not created
+compiling main.c...
+main.c - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling cJSON.c...
+cJSON.c(37): warning C318: can't open file 'locale.h'
+CJSON.C(105): warning C182: pointer to different objects
+CJSON.C(105): warning C182: pointer to different objects
+CJSON.C(132): warning C182: pointer to different objects
+CJSON.C(134): warning C259: pointer: different mspace
+CJSON.C(138): warning C182: pointer to different objects
+CJSON.C(154): warning C259: pointer: different mspace
+CJSON.C(197): warning C206: 'localeconv': missing function-prototype
+CJSON.C(197): error C214: illegal pointer conversion
+CJSON.C(198): error C230: 'lconv': unknown struct/union/enum tag
+CJSON.C(198): error C204: 'decimal_point': undefined member
+CJSON.C(2227): error C215: illegal type conversion
+Target not created
+compiling cJSON.c...
+cJSON.c(37): warning C318: can't open file 'locale.h'
+CJSON.C(105): warning C182: pointer to different objects
+CJSON.C(105): warning C182: pointer to different objects
+CJSON.C(132): warning C182: pointer to different objects
+CJSON.C(134): warning C259: pointer: different mspace
+CJSON.C(138): warning C182: pointer to different objects
+CJSON.C(154): warning C259: pointer: different mspace
+CJSON.C(197): warning C206: 'localeconv': missing function-prototype
+CJSON.C(197): error C214: illegal pointer conversion
+CJSON.C(198): error C230: 'lconv': unknown struct/union/enum tag
+CJSON.C(198): error C204: 'decimal_point': undefined member
+CJSON.C(2227): error C215: illegal type conversion
+cJSON.c - 4 Error(s), 8 Warning(s).
+compiling cJSON.c...
+CJSON.C(105): warning C182: pointer to different objects
+CJSON.C(105): warning C182: pointer to different objects
+CJSON.C(132): warning C182: pointer to different objects
+CJSON.C(134): warning C259: pointer: different mspace
+CJSON.C(138): warning C182: pointer to different objects
+CJSON.C(154): warning C259: pointer: different mspace
+CJSON.C(197): warning C206: 'localeconv': missing function-prototype
+CJSON.C(197): error C214: illegal pointer conversion
+CJSON.C(198): error C230: 'lconv': unknown struct/union/enum tag
+CJSON.C(198): error C204: 'decimal_point': undefined member
+CJSON.C(2227): error C215: illegal type conversion
+cJSON.c - 4 Error(s), 7 Warning(s).
+compiling main.c...
+MAIN.C(2): error C141: syntax error near '1'
+MAIN.C(2): error C129: missing ';' before '<'
+main.c - 2 Error(s), 0 Warning(s).
+compiling main.c...
+MAIN.C(29): error C141: syntax error near '='
+MAIN.C(31): error C141: syntax error near 'cJSON'
+MAIN.C(31): error C202: 'json': undefined identifier
+MAIN.C(31): error C141: syntax error near 'data'
+MAIN.C(34): error C141: syntax error near 'char'
+MAIN.C(34): error C202: 'json_data': undefined identifier
+MAIN.C(35): error C202: 'json_data': undefined identifier
+MAIN.C(37): error C202: 'json_data': undefined identifier
+MAIN.C(39): error C202: 'json': undefined identifier
+MAIN.C(42): error C141: syntax error near ''
+main.c - 10 Error(s), 0 Warning(s).
+compiling main.c...
+MAIN.C(29): error C141: syntax error near '='
+MAIN.C(31): error C141: syntax error near 'cJSON'
+MAIN.C(31): error C202: 'json': undefined identifier
+MAIN.C(31): error C141: syntax error near 'data'
+MAIN.C(34): error C141: syntax error near 'char'
+MAIN.C(34): error C202: 'json_data': undefined identifier
+MAIN.C(35): error C202: 'json_data': undefined identifier
+MAIN.C(37): error C202: 'json_data': undefined identifier
+MAIN.C(39): error C202: 'json': undefined identifier
+main.c - 9 Error(s), 0 Warning(s).
+compiling main.c...
+MAIN.C(29): error C141: syntax error near '='
+MAIN.C(31): error C141: syntax error near 'cJSON'
+MAIN.C(31): error C202: 'json': undefined identifier
+MAIN.C(31): error C141: syntax error near 'data'
+MAIN.C(34): error C141: syntax error near 'char'
+MAIN.C(34): error C202: 'json_data': undefined identifier
+MAIN.C(35): error C202: 'json_data': undefined identifier
+MAIN.C(37): error C202: 'json_data': undefined identifier
+MAIN.C(39): error C202: 'json': undefined identifier
+main.c - 9 Error(s), 0 Warning(s).
+compiling main.c...
+MAIN.C(29): error C141: syntax error near '='
+main.c - 1 Error(s), 0 Warning(s).
+compiling main.c...
+MAIN.C(29): error C141: syntax error near '='
+main.c - 1 Error(s), 0 Warning(s).
+compiling main.c...
+MAIN.C(29): error C141: syntax error near '='
+MAIN.C(29): error C103: '<string>': unclosed string
+main.c(29): error C305: unterminated string/char const
+MAIN.C(32): error C141: syntax error near '}'
+MAIN.C(32): error C141: syntax error near ''
+main.c - 5 Error(s), 0 Warning(s).
+compiling main.c...
+MAIN.C(26): error C141: syntax error near '='
+main.c - 1 Error(s), 0 Warning(s).
+compiling cJSON.c...
+cJSON.c(37): warning C318: can't open file 'locale.h'
+CJSON.C(105): warning C182: pointer to different objects
+CJSON.C(105): warning C182: pointer to different objects
+CJSON.C(132): warning C182: pointer to different objects
+CJSON.C(134): warning C259: pointer: different mspace
+CJSON.C(138): warning C182: pointer to different objects
+CJSON.C(154): warning C259: pointer: different mspace
+CJSON.C(197): warning C206: 'localeconv': missing function-prototype
+CJSON.C(197): error C214: illegal pointer conversion
+CJSON.C(198): error C230: 'lconv': unknown struct/union/enum tag
+CJSON.C(198): error C204: 'decimal_point': undefined member
+CJSON.C(2227): error C215: illegal type conversion
+cJSON.c - 4 Error(s), 8 Warning(s).
+compiling cJSON.c...
+cJSON.c(37): warning C318: can't open file 'locale.h'
+CJSON.C(104): warning C182: pointer to different objects
+CJSON.C(104): warning C182: pointer to different objects
+CJSON.C(131): warning C182: pointer to different objects
+CJSON.C(133): warning C259: pointer: different mspace
+CJSON.C(137): warning C182: pointer to different objects
+CJSON.C(153): warning C259: pointer: different mspace
+CJSON.C(196): warning C206: 'localeconv': missing function-prototype
+CJSON.C(196): error C214: illegal pointer conversion
+CJSON.C(197): error C230: 'lconv': unknown struct/union/enum tag
+CJSON.C(197): error C204: 'decimal_point': undefined member
+CJSON.C(2226): error C215: illegal type conversion
+cJSON.c - 4 Error(s), 8 Warning(s).
+compiling cJSON.c...
+cJSON.c(37): warning C318: can't open file 'locale.h'
+CJSON.C(104): warning C182: pointer to different objects
+CJSON.C(104): warning C182: pointer to different objects
+CJSON.C(131): warning C182: pointer to different objects
+CJSON.C(133): warning C259: pointer: different mspace
+CJSON.C(137): warning C182: pointer to different objects
+CJSON.C(153): warning C259: pointer: different mspace
+CJSON.C(196): warning C206: 'localeconv': missing function-prototype
+CJSON.C(196): error C214: illegal pointer conversion
+CJSON.C(197): error C230: 'lconv': unknown struct/union/enum tag
+CJSON.C(197): error C204: 'decimal_point': undefined member
+CJSON.C(2226): error C215: illegal type conversion
+cJSON.c - 4 Error(s), 8 Warning(s).
+compiling cJSON.c...
+cJSON.c(37): warning C318: can't open file 'locale.h'
+CJSON.C(104): warning C182: pointer to different objects
+CJSON.C(104): warning C182: pointer to different objects
+CJSON.C(131): warning C182: pointer to different objects
+CJSON.C(133): warning C259: pointer: different mspace
+CJSON.C(137): warning C182: pointer to different objects
+CJSON.C(153): warning C259: pointer: different mspace
+CJSON.C(196): warning C206: 'localeconv': missing function-prototype
+CJSON.C(196): error C214: illegal pointer conversion
+CJSON.C(197): error C230: 'lconv': unknown struct/union/enum tag
+CJSON.C(197): error C204: 'decimal_point': undefined member
+CJSON.C(2226): error C215: illegal type conversion
+cJSON.c - 4 Error(s), 8 Warning(s).
+compiling main.c...
+main.c - 0 Error(s), 0 Warning(s).
+compiling cJSON.c...
+cJSON.c(37): warning C318: can't open file 'locale.h'
+CJSON.C(104): warning C182: pointer to different objects
+CJSON.C(104): warning C182: pointer to different objects
+CJSON.C(131): warning C182: pointer to different objects
+CJSON.C(133): warning C259: pointer: different mspace
+CJSON.C(137): warning C182: pointer to different objects
+CJSON.C(153): warning C259: pointer: different mspace
+CJSON.C(196): warning C206: 'localeconv': missing function-prototype
+CJSON.C(196): error C214: illegal pointer conversion
+CJSON.C(197): error C230: 'lconv': unknown struct/union/enum tag
+CJSON.C(197): error C204: 'decimal_point': undefined member
+CJSON.C(2226): error C215: illegal type conversion
+cJSON.c - 4 Error(s), 8 Warning(s).

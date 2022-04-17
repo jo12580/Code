@@ -1,0 +1,270 @@
+C51 COMPILER V9.01   MAIN                                                                  12/17/2021 13:06:14 PAGE 1   
+
+
+C51 COMPILER V9.01, COMPILATION OF MODULE MAIN
+OBJECT MODULE PLACED IN .\Objects\main.obj
+COMPILER INVOKED BY: D:\Software\Keil\32\C51\BIN\C51.EXE main.c OPTIMIZE(8,SPEED) BROWSE DEBUG OBJECTEXTEND PRINT(.\List
+                    -ings\main.lst) TABS(2) OBJECT(.\Objects\main.obj)
+
+line level    source
+
+   1          #include<reg52.h>
+   2          #include <74hc595.h>
+   3          #include <IIC-1602.h>
+   4          #include <HX711.h>
+   5          #include <jianpan.h>
+   6          #include<voice.h>
+   7          #include<stdio.h>
+   8          
+   9          sbit LED0=P0^0;  //
+  10          
+  11          void  delay(unsigned int i);
+  12          unsigned long HX711_Buffer;   //  
+  13              bit firstflag;    //  
+  14          
+  15              unsigned char count=20;//1次中断时间约为20ms，50次T1中断为1秒
+  16          
+  17          //============== 
+  18          void  Time1Iinitial()
+  19          {
+  20   1        TMOD=0x10;      //T1方式1
+  21   1         TH1 =0x00;       //初值
+  22   1         TL1=0x00;  
+  23   1         EA = 1;      //
+  24   1         ET1=1;       // 允许T1中断
+  25   1      //   TR1=1;     //启动T1 
+  26   1      }
+  27          
+  28          
+  29          //==============
+  30          
+  31          void Timer1_ISR (void) interrupt 3 
+  32          {
+  33   1      
+  34   1         TH1=0x00;        //重装初值
+  35   1         TL1=0x00;
+  36   1         count--;         //
+  37   1         if (count==0) //
+  38   1         {
+  39   2           count=20;
+  40   2           firstflag=0;
+  41   2         }
+  42   1      }
+  43          
+  44          
+  45          void main()
+  46          {   
+  47   1          unsigned char s; // 
+  48   1          unsigned char  Data_sw,Data_w,Data_q,Data_b,Data_s,Data_g; // 
+  49   1          unsigned char num,i;  
+  50   1          unsigned long  Weight,AD_MAOPI,AD_MAOPI_temp;  //
+  51   1          unsigned char temp[8];   //
+  52   1          int a=0,b=0;
+  53   1          s=0;
+  54   1          i=0;
+C51 COMPILER V9.01   MAIN                                                                  12/17/2021 13:06:14 PAGE 2   
+
+  55   1      
+  56   1        firstflag=0;
+  57   1        
+  58   1        Time1Iinitial();           // 
+  59   1        Lcd1602Iinitial();         //
+  60   1        disp_string(0,0,"weigh"); //
+  61   1        DispOneChar(0,1,'T');     //
+  62   1        display_date(12,34,56);   //
+  63   1          delay(40000);
+  64   1          delay(40000);
+  65   1          delay(40000);
+  66   1          delay(40000);
+  67   1          
+  68   1      //   AD_MAOPI=83886;  //
+  69   1        
+  70   1      while(1)
+  71   1      {
+  72   2      
+  73   2        TR1=0;    //启动T1 
+  74   2      //  LED0=~LED0;
+  75   2      //   HX711_Buffer = fun_total(HX711_Read_data); //
+  76   2        HX711_Buffer = HX711_Read();
+  77   2        LED0=~LED0;
+  78   2        HX711_Buffer = HX711_Buffer/100;         //
+  79   2      //  HX711_Buffer = HX711_Buffer%100000; //
+  80   2      
+  81   2      //  HX711_Buffer = 84708;
+  82   2        Data_sw=(HX711_Buffer/100000)%10;  //5
+  83   2        Data_w=(HX711_Buffer/10000)%10;  //5
+  84   2        Data_q=(HX711_Buffer/1000)%10;  //4
+  85   2        Data_b=(HX711_Buffer/100)%10;  //4
+  86   2        Data_s=(HX711_Buffer/10)%10;  //4;  //2
+  87   2        Data_g=HX711_Buffer%10;  //1
+  88   2      
+  89   2      //  DispOneChar(0,0,Data_w);   //
+  90   2      //  DispOneChar(1,0,Data_w);   //
+  91   2      //  DispOneChar(2,0,Data_w);   //
+  92   2      //  DispOneChar(3,0,Data_w);   //
+  93   2      //  DispOneChar(4,0,Data_w);   //
+  94   2      
+  95   2      
+  96   2        DispOneChar(0,0,Data_sw+0x30);   //
+  97   2        DispOneChar(1,0,Data_w+0x30); 
+  98   2        DispOneChar(2,0,Data_q+0x30); 
+  99   2        DispOneChar(3,0,Data_b+0x30); 
+ 100   2        DispOneChar(4,0,Data_s+0x30); 
+ 101   2        DispOneChar(5,0,Data_g+0x30); 
+ 102   2        
+ 103   2      //================================  
+ 104   2          HC595SendData(Data_sw,1);    // 
+ 105   2          HC595SendData(Data_w,1);
+ 106   2          HC595SendData(Data_q,1);
+ 107   2          HC595SendData(Data_b,1); 
+ 108   2          HC595SendData(Data_s,1);                                                                                
+             -                                                                                                                        
+             -                                                                                                                        
+             -                                                                                                                        
+             -                                                                                                                        
+             -                                                                                                                        
+             -                                                                                                
+ 109   2          HC595SendData(Data_g,1);
+ 110   2          
+C51 COMPILER V9.01   MAIN                                                                  12/17/2021 13:06:14 PAGE 3   
+
+ 111   2          RCK_595=0; //
+ 112   2          _nop_();  //
+ 113   2          _nop_();  //
+ 114   2          RCK_595=1;
+ 115   2          RCK_595=0;
+ 116   2      //-----------------------------------------------
+ 117   2       
+ 118   2          AD_MAOPI_temp=HX711_Buffer;   //
+ 119   2      //  HX711_Buffer = (HX711_Buffer-84950)*100/730;  // AD TO WEIGHT
+ 120   2          HX711_Buffer = (HX711_Buffer-AD_MAOPI)*100/1881.72;  //       // 38
+ 121   2      //    HX711_Buffer = (HX711_Buffer-AD_MAOPI)*100/718;  //    // 46
+ 122   2      //    HX711_Buffer = (HX711_Buffer-AD_MAOPI)*100/745;  //    // 45
+ 123   2          
+ 124   2        Weight=HX711_Buffer;
+ 125   2      
+ 126   2        Data_w=(Weight/10000)%10;  //5
+ 127   2        Data_q=(Weight/1000)%10;  //4
+ 128   2        Data_b=(Weight/100)%10;  //4
+ 129   2        Data_s=(Weight/10)%10;  //4;  //2
+ 130   2        Data_g=Weight%10;  //1
+ 131   2      
+ 132   2        if (Data_w==0){DispOneChar(0,1,' ');}else {DispOneChar(0,1,Data_w+0x30);}  //
+ 133   2        DispOneChar(1,1,Data_q+0x30); 
+ 134   2        DispOneChar(2,1,'.'); 
+ 135   2        DispOneChar(3,1,Data_b+0x30); 
+ 136   2        DispOneChar(4,1,Data_s+0x30); 
+ 137   2        DispOneChar(5,1,Data_g+0x30); 
+ 138   2        DispOneChar(6,1,'k'); 
+ 139   2        DispOneChar(7,1,'g'); 
+ 140   2      
+ 141   2         firstflag=1;     // 
+ 142   2      
+ 143   2         TR1=1;           // 
+ 144   2      while(firstflag)   // 
+ 145   2      
+ 146   2      {  
+ 147   3         num=KeyPro();  // 
+ 148   3      
+ 149   3      
+ 150   3      
+ 151   3        if(num!=0xff)  // 
+ 152   3         {  
+ 153   4           
+ 154   4            
+ 155   4            TR1=0;  // 
+ 156   4          if('a'==num)  
+ 157   4          { 
+ 158   5            {AD_MAOPI=AD_MAOPI_temp-1;  TR1=1;}// 
+ 159   5          }
+ 160   4          
+ 161   4          else
+ 162   4          {
+ 163   5           if(i==0)   disp_string(8,0,"     /kg");  // 
+ 164   5           
+ 165   5           if('='==num)// 
+ 166   5             {      
+ 167   6                  i=0;  // 
+ 168   6                  sscanf(temp,"%f",&a); // 
+ 169   6                  disp_string(8,0,temp);// 
+ 170   6                  
+ 171   6                  a=a*Weight/1000;  // 
+ 172   6                  sprintf(temp,"%8.2f",a);    // 
+C51 COMPILER V9.01   MAIN                                                                  12/17/2021 13:06:14 PAGE 4   
+
+ 173   6                  disp_string(8,1,temp);
+ 174   6               
+ 175   6                  b=(a/10)%10;voice(b+2);     //十  
+ 176   6                  b=a%10;     voice(b+2);
+ 177   6                              voice(14);
+ 178   6                  b=a*10%10;  voice(b+2);
+ 179   6                  b=a*100%10; voice(b+2);
+ 180   6                              voice(60);
+ 181   6                  firstflag=0;  // 
+ 182   6                  a=b=0;  // 
+ 183   6               
+ 184   6                  for(s=0;s<8;s++)  temp[s]=' ';  // 
+ 185   6                  TR1=1;  // 
+ 186   6             } 
+ 187   5      
+ 188   5           else if(i<8) // 
+ 189   5           {
+ 190   6                  if((1==i)&& (temp[0]=='0') )//
+ 191   6                    {
+ 192   7                       if(num=='.')  //
+ 193   7                          {
+ 194   8                             temp[1]='.'; //
+ 195   8      
+ 196   8                             DispOneChar(i+8,0,num);//                      
+ 197   8                             i++;
+ 198   8                          } //这里没有判断连续按小数点，如0.0.0
+ 199   7               
+ 200   7                       else
+ 201   7                           {
+ 202   8                              temp[0]=num; // 
+ 203   8                             }
+ 204   7                       }
+ 205   6                 
+ 206   6                  else                     
+ 207   6                      {
+ 208   7                            temp[i]=num;  // 
+ 209   7      
+ 210   7                        DispOneChar(i+8,0,num);// 
+ 211   7                            i++;   // 
+ 212   7                      }
+ 213   6             } //else if(i<8)的括号 
+ 214   5           }
+ 215   4        
+ 216   4           }//第一个if的括号 
+ 217   3         
+ 218   3           
+ 219   3           
+ 220   3         } //while(firstflag ) 的括号
+ 221   2      
+ 222   2          delay(40000);
+ 223   2      //    delay(40000);
+ 224   2      
+ 225   2          
+ 226   2      }}
+ 227           
+ 228          //---------延时函数-------------
+ 229          void  delay(unsigned int i)
+ 230          {
+ 231   1        while(i--);
+ 232   1      }
+
+
+C51 COMPILER V9.01   MAIN                                                                  12/17/2021 13:06:14 PAGE 5   
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =   1154    ----
+   CONSTANT SIZE    =     24    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =      5      33
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =      1    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

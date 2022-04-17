@@ -1,0 +1,135 @@
+C51 COMPILER V9.57.0.0   IIC_1602                                                          12/03/2021 17:05:27 PAGE 1   
+
+
+C51 COMPILER V9.57.0.0, COMPILATION OF MODULE IIC_1602
+OBJECT MODULE PLACED IN .\Objects\IIC-1602.obj
+COMPILER INVOKED BY: C:\Keil_v5\C51\BIN\C51.EXE IIC-1602.c OPTIMIZE(8,SPEED) BROWSE DEBUG OBJECTEXTEND PRINT(.\Listings\
+                    -IIC-1602.lst) TABS(2) OBJECT(.\Objects\IIC-1602.obj)
+
+line level    source
+
+   1          #include <reg52.h>
+   2          #include <IIC-1602.h>
+   3          
+   4          
+   5          //=============delay time=====================
+   6          void delay1ms(int i)  // 晶振频率=11.0592Mhz 单位延时1ms
+   7          {
+   8   1        int j,k;
+   9   1        for(j=0;j<i;j++)
+  10   1        for(k=0;k<110;k++);
+  11   1      }
+  12          
+  13          
+  14          void transfer(uchar data1)
+  15          {
+  16   1        uchar i;
+  17   1        for(i=0;i<8;i++)
+  18   1          {
+  19   2          scl_1602=0;
+  20   2          if(data1&0x80) sda_1602=1; else sda_1602=0;
+  21   2            scl_1602=1;
+  22   2            scl_1602=0;
+  23   2          data1=data1<<1;
+  24   2          }
+  25   1            sda_1602=0;
+  26   1            scl_1602=1;
+  27   1            scl_1602=0;
+  28   1      }
+  29          
+  30          
+  31          void start_flag()
+  32          {
+  33   1        scl_1602=1; //START FLAG
+  34   1        sda_1602=1; //START FLAG
+  35   1        sda_1602=0; //START FLAG
+  36   1      }
+  37          void stop_flag()
+  38          {
+  39   1        scl_1602=1; //STOP FLAG
+  40   1        sda_1602=0; //STOP FLAG
+  41   1        sda_1602=1; //STOP FLAG
+  42   1      }
+  43          
+  44          
+  45          //lcd初始化
+  46          void Lcd1602Iinitial()
+  47          {
+  48   1        start_flag();   //开始标志
+  49   1        transfer(0x7C); //选择SLAVE ADDRESS
+  50   1        transfer(0x00); //控制字节：Co=0,A0=0,表示以下传输的N 个字节是指令
+  51   1        transfer(0x28); // Function set 
+  52   1        delay1ms(5);
+  53   1        transfer(0x0c); // Display ON/OFF
+  54   1        delay1ms(5);
+C51 COMPILER V9.57.0.0   IIC_1602                                                          12/03/2021 17:05:27 PAGE 2   
+
+  55   1        transfer(0x01); // Clear display
+  56   1        delay1ms(10);
+  57   1        transfer(0x06); // set display mode
+  58   1        stop_flag();    //结束标志
+  59   1      }
+  60          
+  61          
+  62          /*在指定行和列位置显示指定的字母、数字（5*7 点阵的）*/
+  63          
+  64          void disp_string(uchar x,uchar y,uchar *s)
+  65            {    
+  66   1             
+  67   1        while (*s)
+  68   1         {    
+  69   2         DispOneChar(x,y,*s);    
+  70   2         s++;
+  71   2         x++;    
+  72   2         }
+  73   1        }
+  74          
+  75          
+  76          
+  77          
+  78          
+  79          /*=======================================================
+  80           显示光标定位
+  81          =======================================================*/
+  82          void Disp_XY( char posx,char posy)
+  83          {
+  84   1          unsigned char temp;
+  85   1          temp=posx;                          //&0x1f; 原为限制的条件
+  86   1          posy&=0x1;
+  87   1          if ( posy )temp|=0xc0;
+  88   1               else temp|=0x80;
+  89   1            transfer(temp);
+  90   1      }
+  91          
+  92          
+  93          
+  94          /*=======================================================
+  95           按指定位置显示一个字符
+  96          =======================================================*/
+  97          void DispOneChar(unsigned char x,unsigned char y,unsigned char Wdata)
+  98          {   
+  99   1        start_flag();
+ 100   1        transfer(0x7C); //选择SLAVE ADDRESS
+ 101   1        transfer(0x80); /*控制字节：Co=1,A0=0,表示以下传输的1 个字节是指令*/
+ 102   1          Disp_XY( x, y );                            // 定位显示地址
+ 103   1          transfer(0x40); /*控制字节：Co=0,A0=1,表示以下传输的n 个字节是数据*/
+ 104   1          transfer( Wdata );                      // 写字符
+ 105   1        stop_flag();
+ 106   1      }
+ 107          //=========================================================================
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =    230    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----       5
+   IDATA SIZE       =   ----    ----
+C51 COMPILER V9.57.0.0   IIC_1602                                                          12/03/2021 17:05:27 PAGE 3   
+
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

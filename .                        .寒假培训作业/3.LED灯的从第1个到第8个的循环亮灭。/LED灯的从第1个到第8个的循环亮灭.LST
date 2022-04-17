@@ -1,0 +1,80 @@
+C51 COMPILER V9.01   LED灯的从第1个到第8个的循环亮灭                                       01/04/2020 20:07:21 PAGE 1   
+
+
+C51 COMPILER V9.01, COMPILATION OF MODULE LED灯的从第1个到第8个的循环亮灭
+OBJECT MODULE PLACED IN LED灯的从第1个到第8个的循环亮灭.OBJ
+COMPILER INVOKED BY: C:\软件\C51\BIN\C51.EXE LED灯的从第1个到第8个的循环亮灭.c BROWSE DEBUG OBJECTEXTEND
+
+line level    source
+
+   1          #include<reg52.h>
+   2          typedef unsigned int u16;        
+   3          typedef unsigned char u8;
+   4          sbit a1=P2^0;
+   5          sbit a2=P2^1;
+   6          sbit a3=P2^2;
+   7          sbit a4=P2^3;
+   8          sbit a5=P2^4;
+   9          sbit a6=P2^5;
+  10          sbit a7=P2^6;
+  11          sbit a8=P2^7;
+  12          
+  13          void delay(u16 i)
+  14          {
+  15   1              while(i--);     
+  16   1      }
+  17          
+  18          void main()
+  19          {
+  20   1                              while(1000)
+  21   1                      {       
+  22   2                      delay(5000);
+  23   2                      a1=0;
+  24   2                      delay(5000);
+  25   2                      a2=0;
+  26   2                      delay(5000);
+  27   2                      a3=0;
+  28   2                      delay(5000);
+  29   2                      a4=0;
+  30   2                      delay(5000);
+  31   2                      a5=0;
+  32   2                      delay(5000);
+  33   2                      a6=0;
+  34   2                      delay(5000);
+  35   2                      a7=0;
+  36   2                      delay(5000);
+  37   2                      a8=0;
+  38   2                              delay(5000);
+  39   2                      a8=1;
+  40   2                              delay(5000);
+  41   2                      a7=1;
+  42   2                              delay(5000);
+  43   2                      a6=1;
+  44   2                                      delay(5000);
+  45   2                      a5=1;
+  46   2                                      delay(5000);
+  47   2                      a4=1;   
+  48   2                                      delay(5000);
+  49   2                      a3=1;   
+  50   2                                      delay(5000);
+  51   2                      a2=1;   
+  52   2                                      delay(5000);
+  53   2                      a1=1;           
+  54   2                      }        
+  55   1      }
+C51 COMPILER V9.01   LED灯的从第1个到第8个的循环亮灭                                       01/04/2020 20:07:21 PAGE 2   
+
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =     98    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

@@ -1,0 +1,130 @@
+BL51 BANKED LINKER/LOCATER V6.22                                                        10/24/2021  16:06:30  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.22, INVOKED BY:
+D:\SOFTWARE\KEIL\32\C51\BIN\BL51.EXE main.obj TO led and 数码管 PRINT (.\Listings\led and 数码管.m51) RAMSIZE (256)
+
+
+MEMORY MODEL: SMALL
+
+
+INPUT MODULES INCLUDED:
+  main.obj (MAIN)
+  D:\SOFTWARE\KEIL\32\C51\LIB\C51S.LIB (?C_STARTUP)
+  D:\SOFTWARE\KEIL\32\C51\LIB\C51S.LIB (?C?COPY)
+
+
+LINK MAP OF MODULE:  led and 数码管 (MAIN)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+            DATA    0008H     0026H     UNIT         ?DT?SHU?MAIN
+            IDATA   002EH     0001H     UNIT         ?STACK
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0003H     ABSOLUTE     
+            CODE    0003H     00F6H     UNIT         ?C?LIB_CODE
+            CODE    00F9H     003BH     UNIT         ?PR?SHU?MAIN
+            CODE    0134H     0024H     UNIT         ?CO?MAIN
+            CODE    0158H     000FH     UNIT         ?PR?_DELAY?MAIN
+            CODE    0167H     000EH     UNIT         ?PR?LED?MAIN
+            CODE    0175H     000CH     UNIT         ?C_C51STARTUP
+            CODE    0181H     0008H     UNIT         ?PR?MAIN?MAIN
+
+
+
+OVERLAY MAP OF MODULE:   led and 数码管 (MAIN)
+
+
+SEGMENT
+  +--> CALLED SEGMENT
+---------------------
+?C_C51STARTUP
+  +--> ?PR?MAIN?MAIN
+
+?PR?MAIN?MAIN
+  +--> ?PR?_DELAY?MAIN
+
+
+
+SYMBOL TABLE OF MODULE:  led and 数码管 (MAIN)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        MAIN
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  D:0080H         PUBLIC        P0
+BL51 BANKED LINKER/LOCATER V6.22                                                      10/24/2021  16:06:30  PAGE 2
+
+
+  D:00B0H         PUBLIC        P3
+  C:015CH         PUBLIC        _delay
+  C:0181H         PUBLIC        main
+  C:0167H         PUBLIC        led
+  C:0134H         SYMBOL        _?ix1000
+  C:00F9H         PUBLIC        shu
+  B:00B0H.3       PUBLIC        led1
+  B:00B0H.4       PUBLIC        led2
+  -------         PROC          MAIN
+  C:0181H         LINE#         10
+  C:0181H         LINE#         11
+  C:0181H         LINE#         12
+  C:0181H         LINE#         13
+  C:0181H         LINE#         15
+  C:0184H         LINE#         16
+  C:0187H         LINE#         17
+  -------         ENDPROC       MAIN
+  -------         PROC          LED
+  C:0167H         LINE#         20
+  C:0167H         LINE#         21
+  C:0167H         LINE#         22
+  C:0169H         LINE#         23
+  C:016CH         LINE#         24
+  C:016EH         LINE#         25
+  -------         ENDPROC       LED
+  -------         PROC          SHU
+  -------         DO            
+  D:0008H         SYMBOL        i
+  D:000AH         SYMBOL        a
+  -------         ENDDO         
+  C:00F9H         LINE#         28
+  C:00F9H         LINE#         29
+  C:00F9H         LINE#         30
+  C:010CH         LINE#         32
+  C:0111H         LINE#         33
+  C:0111H         LINE#         34
+  C:011CH         LINE#         35
+  C:011FH         LINE#         36
+  C:0122H         LINE#         37
+  C:0133H         LINE#         38
+  -------         ENDPROC       SHU
+  C:0158H         SYMBOL        L?0015
+  -------         PROC          L?0014
+  -------         ENDPROC       L?0014
+  C:0158H         SYMBOL        L?0015
+  -------         PROC          _DELAY
+  D:0006H         SYMBOL        i
+  C:015CH         LINE#         40
+  C:015CH         LINE#         41
+  C:015CH         LINE#         42
+  C:0166H         LINE#         43
+  -------         ENDPROC       _DELAY
+  -------         ENDMOD        MAIN
+
+  -------         MODULE        ?C?COPY
+  C:00D3H         PUBLIC        ?C?COPY
+  -------         ENDMOD        ?C?COPY
+BL51 BANKED LINKER/LOCATER V6.22                                                      10/24/2021  16:06:30  PAGE 3
+
+
+
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?SHU?MAIN
+
+Program Size: data=47.0 xdata=0 code=393
+LINK/LOCATE RUN COMPLETE.  1 WARNING(S),  0 ERROR(S)

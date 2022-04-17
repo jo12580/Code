@@ -1,0 +1,159 @@
+C51 COMPILER V9.01   MAIN                                                                  05/08/2021 16:24:02 PAGE 1   
+
+
+C51 COMPILER V9.01, COMPILATION OF MODULE MAIN
+OBJECT MODULE PLACED IN main.OBJ
+COMPILER INVOKED BY: D:\Software\Keil\32\C51\BIN\C51.EXE main.c OPTIMIZE(8,SPEED) BROWSE DEBUG OBJECTEXTEND PRINT(.\List
+                    -ings\main.lst) TABS(2)
+
+line level    source
+
+   1          #include "stc15f2k60s2.h"
+   2          
+   3          void new();
+   4          unsigned char key();
+   5          void delay(unsigned int i);
+   6          void Delay10ms()  ;
+   7          
+   8          void main()
+   9          { 
+  10   1        unsigned int S,i;
+  11   1        new();
+  12   1        while(1)
+  13   1        {
+  14   2          S=key();
+  15   2          if(S==7)
+  16   2          {
+  17   3            i=1;
+  18   3            while(!S);
+  19   3          }
+  20   2          if(i==1)
+  21   2          {
+  22   3            i=0;
+  23   3            P2=(P2&0x1f|0x80);
+  24   3            P0=0x11;
+  25   3          }
+  26   2        }
+  27   1      }
+  28          
+  29          void new()
+  30          {
+  31   1        P2 =(P2&0x1F|0x80);
+  32   1        P0=0xff;
+  33   1        P2 = (P2&0x1F|0xa0);
+  34   1        P0=0X00;
+  35   1        P2 = (P2&0x1F|0xc0);
+  36   1        P0=0x00;
+  37   1      }
+  38          
+  39          unsigned char key()
+  40          {
+  41   1        unsigned int S;
+  42   1        P44=0;P42=1;P3=0X7F;
+  43   1        if(P3!=0X7F)
+  44   1        {
+  45   2          Delay10ms();
+  46   2          P44=0;P42=1;P3=0X7F;
+  47   2          if(P3!=0X7F)
+  48   2          {   
+  49   3            switch(P3)
+  50   3            {
+  51   4              case 0x7e:S=7;break;
+  52   4              case 0x7d:S=6;break;
+  53   4              case 0x7b:S=5;break;
+  54   4              case 0x77:S=4;break;
+C51 COMPILER V9.01   MAIN                                                                  05/08/2021 16:24:02 PAGE 2   
+
+  55   4            }
+  56   3            while(P3!=0X7F)P3=0X7F;
+  57   3          }
+  58   2        }
+  59   1        
+  60   1        P44=1;P42=0;P3=0XbF;
+  61   1        if(P3!=0XbF)
+  62   1        {
+  63   2          Delay10ms();
+  64   2          P44=1;P42=0;P3=0XbF;
+  65   2          if(P3!=0XbF)
+  66   2          {
+  67   3            switch(P3)
+  68   3            {
+  69   4              case 0xbe:S=11;break;
+  70   4              case 0xbd:S=10;break;
+  71   4              case 0xbb:S=9;break;
+  72   4              case 0xb7:S=8;break;
+  73   4            }
+  74   3            while(P3!=0XbF)P3=0XbF;
+  75   3          }
+  76   2        }
+  77   1        
+  78   1        P44=1;P42=1;P3=0XdF;
+  79   1        if(P3!=0XdF)
+  80   1        {
+  81   2          Delay10ms();
+  82   2          P44=0;P42=1;P3=0XbF;
+  83   2          if(P3!=0XdF)
+  84   2          {
+  85   3            switch(P3)
+  86   3            {
+  87   4              case 0xde:S=15;break;
+  88   4              case 0xdd:S=14;break;
+  89   4              case 0xdb:S=13;break;
+  90   4              case 0xd7:S=12;break;
+  91   4            }
+  92   3            while(!P3);
+  93   3          }
+  94   2        }
+  95   1        
+  96   1        P44=1;P42=1;P3=0XeF;
+  97   1        if(P3!=0XeF)
+  98   1        {
+  99   2          Delay10ms();
+ 100   2          P44=0;P42=1;P3=0XeF;
+ 101   2          if(P3!=0XeF)
+ 102   2          {
+ 103   3            switch(P3)
+ 104   3            {
+ 105   4              case 0xee:S=19;break;
+ 106   4              case 0xed:S=18;break;
+ 107   4              case 0xeb:S=17;break;
+ 108   4              case 0xe7:S=16;break;
+ 109   4            }
+ 110   3            while(!P3);
+ 111   3          }
+ 112   2        }
+ 113   1          return S;
+ 114   1      }
+ 115          
+ 116          void Delay10ms()    //@11.0592MHz
+C51 COMPILER V9.01   MAIN                                                                  05/08/2021 16:24:02 PAGE 3   
+
+ 117          {
+ 118   1        unsigned char i, j;
+ 119   1      
+ 120   1        i = 108;
+ 121   1        j = 145;
+ 122   1        do
+ 123   1        {
+ 124   2          while (--j);
+ 125   2        } while (--i);
+ 126   1      }
+ 127          
+ 128          void delay(unsigned int i)
+ 129          {
+ 130   1        while(i--);
+ 131   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =    442    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----       4
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

@@ -1,0 +1,4 @@
+"main.obj",
+"voice.obj" 
+TO "1" 
+RAMSIZE(256) 

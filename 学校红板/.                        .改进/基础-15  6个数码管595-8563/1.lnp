@@ -1,0 +1,6 @@
+"main.obj",
+"74hc595.obj",
+"PCF8563.obj",
+"voice.obj" 
+TO "1" 
+RAMSIZE(256) 

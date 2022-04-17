@@ -1,0 +1,130 @@
+C51 COMPILER V9.01   MAIN                                                                  10/31/2021 17:08:37 PAGE 1   
+
+
+C51 COMPILER V9.01, COMPILATION OF MODULE MAIN
+OBJECT MODULE PLACED IN .\Objects\main.obj
+COMPILER INVOKED BY: D:\Software\Keil\32\C51\BIN\C51.EXE main.c OPTIMIZE(8,SPEED) BROWSE DEBUG OBJECTEXTEND PRINT(.\List
+                    -ings\main.lst) TABS(2) OBJECT(.\Objects\main.obj)
+
+line level    source
+
+   1          # include<reg52.h>
+   2          #include<voice.h>
+   3          sbit k1=P1^6;  //语音播放引脚定义 
+   4          sbit k2=P1^7;  //语音播放引脚定义 
+   5          sbit Led1=P3^3;
+   6          sbit Led2=P3^4;
+   7          
+   8          void  delay(unsigned int i);
+   9          
+  10          void main()
+  11          {
+  12   1        
+  13   1      //  voice(9);
+  14   1        
+  15   1        unsigned char i;
+  16   1        Led1=0;  Led2=1; P0=0;  delay(100); 
+  17   1        P0=0;
+  18   1        while (1)
+  19   1        {
+  20   2          for(i=0;i<64;i++)
+  21   2          {
+  22   3            voice(i);     //播放语音
+  23   3      //      voice(37);    //播放语音
+  24   3      //      voice(38);    //播放语音
+  25   3      //      voice(40);    //播放语音
+  26   3      //      voice(61);    //播放语音
+  27   3      //      voice(62);    //播放语音
+  28   3      //      voice(2);     //播放语音    
+  29   3            Led1=~Led1;   //
+  30   3            Led2=~Led2;   //  
+  31   3            P0=~P0;
+  32   3          }
+  33   2        }
+  34   1      }
+  35           
+  36          
+  37          void  delay(unsigned int i)
+  38          {
+  39   1        while(i--);
+  40   1      }
+  41          
+  42          //语音素材列表
+  43          //地址  内容
+  44          //1   无声音
+  45          //2   0
+  46          //3   1
+  47          //4   2
+  48          //5   3
+  49          //6   4
+  50          //7   5
+  51          //8   6
+  52          //9   7
+  53          //10  8
+  54          //11  9
+C51 COMPILER V9.01   MAIN                                                                  10/31/2021 17:08:37 PAGE 2   
+
+  55          //12  十
+  56          //13  百
+  57          //14  点
+  58          //15  分
+  59          //16  秒
+  60          //17  年
+  61          //18  月
+  62          //19  日
+  63          //20  星期
+  64          //21  度
+  65          //22  百分之
+  66          //23  现在北京时间是
+  67          //24  现在温度是
+  68          //25  现在湿度是
+  69          //26  音乐（铁路广播前的提示音）
+  70          //27  整
+  71          //28  今天
+  72          //29  上午
+  73          //30  下午
+  74          //31  晚上
+  75          //32  负
+  76          //33  滴（铃音，提示音）
+  77          //34  欢迎光临     
+  78          //35  米
+  79          //36  厘米
+  80          //37  广西师范大学
+  81          //38  电子工程学院
+  82          //39  电子科学与技术
+  83          //40  电子信息工程
+  84          //41  通信工程
+  85          //42  专业
+  86          //43  学号
+  87          //44  电子楼
+  88          //45  室
+  89          //46  大学生创新基地
+  90          //47  请设置参数
+  91          //48  请输入
+  92          //49  价格
+  93          //50  距离
+  94          //51  重量
+  95          //52  千
+  96          //53  克
+  97          //54  加减
+  98          //55  减
+  99          //56  乘
+ 100          //57  除
+ 101          //58  等于
+ 102          //59  恭喜中靶
+ 103          //60  元
+ 104          //61  每
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =     53    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----       1
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

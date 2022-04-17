@@ -1,0 +1,181 @@
+C51 COMPILER V9.01   Þô¼ü¿Ø_Æ                                                              02/25/2020 18:50:33 PAGE 1   
+
+
+C51 COMPILER V9.01, COMPILATION OF MODULE Þô¼ü¿Ø_Æ
+OBJECT MODULE PLACED IN Þô¼ü¿ØÖÆ.OBJ
+COMPILER INVOKED BY: C:\Èí¼þ\C51\BIN\C51.EXE Þô¼ü¿ØÖÆ.c BROWSE DEBUG OBJECTEXTEND
+
+line level    source
+
+   1          #include <reg52.h>                      
+   2          typedef unsigned int u16;         
+   3          typedef unsigned char u8;
+   4          sbit beep=P2^5;
+   5          
+   6          typedef unsigned char uchar       ;         //ÑÓ³Ù¶¨Òå
+   7          typedef unsigned int  uint      ;
+   8          void  delay(uint i);
+   9                                                                            
+  10          sbit LSA=P2^2;                                      //ÊýÂë¹Ü
+  11          sbit LSB=P2^3;
+  12          sbit LSC=P2^4;
+  13          u8 code sz0_7[8]={0x3f,0x06,0x5b,0x4f,0x66,0x6d,0x7d,0x07};//ÏÔÊ¾0~7µÄÖµ
+  14          u8 code xh031[8]={0x3f,0x3f,0x3f,0x3f,0x3f,0x3f,0x4f,0x06};//ÏÔÊ¾00000031
+  15                                                                              
+  16          sbit k1=P3^1;                       //Þô¼ü
+  17          sbit k2=P3^0;
+  18          sbit k3=P3^2;
+  19          sbit k4=P3^3;
+  20          
+  21                                                          void LED1()
+  22          {
+  23   1              u8 i;
+  24   1                       while (1)
+  25   1              {for(i=0;i<8;i++)
+  26   2              {
+  27   3                      switch(i)        //Î»Ñ¡£¬Ñ¡ÔñµãÁÁµÄÊýÂë¹Ü£¬
+  28   3                      {
+  29   4                         case(0):
+  30   4                                      LSA=1;LSB=1;LSC=1; break;//ÏÔÊ¾µÚ0Î»
+  31   4                              case(1):
+  32   4                                      LSA=0;LSB=1;LSC=1; break;//1
+  33   4                              case(2):
+  34   4                                      LSA=1;LSB=0;LSC=1; break;//2
+  35   4                              case(3):        
+  36   4                                      LSA=0;LSB=0;LSC=1; break;//3
+  37   4                              case(4):
+  38   4                                      LSA=1;LSB=1;LSC=0; break;//4
+  39   4                              case(5):
+  40   4                                      LSA=0;LSB=1;LSC=0; break;//5
+  41   4                              case(6):
+  42   4                                      LSA=1;LSB=0;LSC=0; break;//6
+  43   4                              case(7):
+  44   4                                      LSA=0;LSB=0;LSC=0; break;//7    
+  45   4                      }
+  46   3                      P0=sz0_7[i];//·¢ËÍ¶ÎÂë
+  47   3                      delay(100); //¼ä¸ôÒ»¶ÎÊ±¼äÉ¨Ãè  
+  48   3                      P0=0x00;//ÏûÒþ
+  49   3              }
+  50   2      }
+  51   1      }
+  52                                                          void LED2()
+  53          {
+  54   1              u8 i;
+  55   1                       while (1)
+C51 COMPILER V9.01   Þô¼ü¿Ø_Æ                                                              02/25/2020 18:50:33 PAGE 2   
+
+  56   1                       {
+  57   2              for(i=0;i<8;i++)
+  58   2              {
+  59   3                      switch(i)        //Î»Ñ¡£¬Ñ¡ÔñµãÁÁµÄÊýÂë¹Ü£¬
+  60   3                      {
+  61   4                         case(0):
+  62   4                                      LSA=1;LSB=1;LSC=1; break;//ÏÔÊ¾µÚ0Î»
+  63   4                              case(1):
+  64   4                                      LSA=0;LSB=1;LSC=1; break;//1
+  65   4                              case(2):
+  66   4                                      LSA=1;LSB=0;LSC=1; break;//2
+  67   4                              case(3):        
+  68   4                                      LSA=0;LSB=0;LSC=1; break;//3
+  69   4                              case(4):
+  70   4                                      LSA=1;LSB=1;LSC=0; break;//4
+  71   4                              case(5):
+  72   4                                      LSA=0;LSB=1;LSC=0; break;//5
+  73   4                              case(6):
+  74   4                                      LSA=1;LSB=0;LSC=0; break;//6
+  75   4                              case(7):
+  76   4                                      LSA=0;LSB=0;LSC=0; break;//7    
+  77   4                      }
+  78   3                      P0=xh031[i];//·¢ËÍ¶ÎÂë
+  79   3                      delay(100); //¼ä¸ôÒ»¶ÎÊ±¼äÉ¨Ãè  
+  80   3                      P0=0x00;//ÏûÒþ
+  81   3              }
+  82   2                }
+  83   1      }
+  84          
+  85          
+  86                                            void delay(u16 i)
+  87          {
+  88   1              while(i--);     
+  89   1      }
+  90          
+  91          void abc()
+  92                          {          while(1)
+  93   1                      {
+  94   2                      beep=~beep;
+  95   2                      delay(1000); //ÑÓÊ±´óÔ¼1ms   Í¨¹ýÐÞ¸Ä´ËÑÓÊ±Ê±¼ä´ïµ½²»Í¬µÄ·¢ÉùÐ§¹û       
+  96   2                      }
+  97   1                      }
+  98          
+  99           void main()
+ 100          {
+ 101   1                              if(k1==0)
+ 102   1              {       
+ 103   2              if(k1==0)                 //¼ì²â°´¼üK1ÊÇ·ñ°´ÏÂ
+ 104   2              {       
+ 105   3                      delay(1000);   //Ïû³ý¶¶¶¯ Ò»°ã´óÔ¼10ms
+ 106   3                      if(k1==0)        //ÔÙ´ÎÅÐ¶Ï°´¼üÊÇ·ñ°´ÏÂ
+ 107   3                      {
+ 108   4                      LED1();                                                                                                     //ÊýÂë¹ÜÏÔÊ¾º¯Êý    
+ 109   4                      }
+ 110   3                      while(!k1);      //¼ì²â°´¼üÊÇ·ñËÉ¿ª
+ 111   3              }                                                   
+ 112   2              }
+ 113   1      
+ 114   1                                              
+ 115   1                              if(k2==0)
+ 116   1              {                 
+ 117   2                      delay(1000);   //Ïû³ý¶¶¶¯ Ò»°ã´óÔ¼10ms
+C51 COMPILER V9.01   Þô¼ü¿Ø_Æ                                                              02/25/2020 18:50:33 PAGE 3   
+
+ 118   2                      if(k2==0)        //ÔÙ´ÎÅÐ¶Ï°´¼üÊÇ·ñ°´ÏÂ
+ 119   2                      {
+ 120   3                                 abc();
+ 121   3                      }
+ 122   2                      while(!k2);      //¼ì²â°´¼üÊÇ·ñËÉ¿ª
+ 123   2              
+ 124   2              }
+ 125   1      
+ 126   1                              if(k3==0)
+ 127   1                      {
+ 128   2                                      delay(1000);   //Ïû³ý¶¶¶¯ Ò»°ã´óÔ¼10ms
+ 129   2                      if(k3==0)        //ÔÙ´ÎÅÐ¶Ï°´¼üÊÇ·ñ°´ÏÂ
+ 130   2                      {
+ 131   3              beep=1;
+ 132   3                      }
+ 133   2                      while(!k3);      //¼ì²â°´¼üÊÇ·ñËÉ¿ª
+ 134   2                      } 
+ 135   1                      
+ 136   1      
+ 137   1      
+ 138   1      
+ 139   1                              if(k4==0)
+ 140   1              {       
+ 141   2               delay(1000);   //Ïû³ý¶¶¶¯ Ò»°ã´óÔ¼10ms
+ 142   2                      if(k4==0)        //ÔÙ´ÎÅÐ¶Ï°´¼üÊÇ·ñ°´ÏÂ
+ 143   2                      {
+ 144   3            LED2();
+ 145   3                      }
+ 146   2                      while(!k4);      //¼ì²â°´¼üÊÇ·ñËÉ¿ª
+ 147   2              }
+ 148   1      
+ 149   1      }
+ 150          
+ 151          
+ 152          
+ 153          
+ 154          
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =    317    ----
+   CONSTANT SIZE    =     16    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----       2
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

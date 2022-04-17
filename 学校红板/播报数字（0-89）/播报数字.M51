@@ -1,0 +1,296 @@
+BL51 BANKED LINKER/LOCATER V6.22                                                        12/18/2019  22:02:00  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.22, INVOKED BY:
+C:\软件\C51\BIN\BL51.EXE 播报数字.obj TO 播报数字 RAMSIZE (256)
+
+
+MEMORY MODEL: SMALL
+
+
+INPUT MODULES INCLUDED:
+  播报数字.obj (播报数譥)
+  C:\软件\C51\LIB\C51S.LIB (?C_STARTUP)
+  C:\软件\C51\LIB\C51S.LIB (?C_INIT)
+
+
+LINK MAP OF MODULE:  播报数字 (播报数譥)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+            DATA    0008H     0004H     UNIT         ?DT?播报数譥
+            IDATA   000CH     0001H     UNIT         ?STACK
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0003H     ABSOLUTE     
+                    0003H     07FDH                  *** GAP ***
+            CODE    0800H     03A2H     UNIT         ?PR?MAIN?播报数譥
+            CODE    0BA2H     008CH     UNIT         ?C_C51STARTUP
+            CODE    0C2EH     0051H     UNIT         ?PR?_MUSIC?播报数譥
+            CODE    0C7FH     000FH     UNIT         ?PR?_DELAY?播报数譥
+            CODE    0C8EH     0004H     UNIT         ?C_INITSEG
+
+
+
+OVERLAY MAP OF MODULE:   播报数字 (播报数譥)
+
+
+SEGMENT
+  +--> CALLED SEGMENT
+---------------------
+?C_C51STARTUP
+  +--> ?PR?MAIN?播报数譥
+  +--> ?C_INITSEG
+
+?PR?MAIN?播报数譥
+  +--> ?PR?_DELAY?播报数譥
+  +--> ?PR?_MUSIC?播报数譥
+
+?PR?_MUSIC?播报数譥
+  +--> ?PR?_DELAY?播报数譥
+
+
+
+SYMBOL TABLE OF MODULE:  播报数字 (播报数譥)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+BL51 BANKED LINKER/LOCATER V6.22                                                      12/18/2019  22:02:00  PAGE 2
+
+
+
+  -------         MODULE        播报数譥
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  D:0080H         PUBLIC        P0
+  D:0090H         PUBLIC        P1
+  D:00A0H         PUBLIC        P2
+  D:00B0H         PUBLIC        P3
+  D:00A8H         PUBLIC        IE
+  C:0C83H         PUBLIC        _delay
+  B:0080H.1       PUBLIC        a1
+  B:0090H.0       PUBLIC        b1
+  B:0080H.2       PUBLIC        a2
+  B:0090H.1       PUBLIC        b2
+  B:0080H.3       PUBLIC        a3
+  B:0090H.2       PUBLIC        b3
+  B:0080H.4       PUBLIC        a4
+  B:0090H.3       PUBLIC        b4
+  B:0080H.5       PUBLIC        a5
+  B:0090H.4       PUBLIC        b5
+  B:0080H.6       PUBLIC        a6
+  B:0090H.5       PUBLIC        b6
+  B:0080H.7       PUBLIC        a7
+  B:0090H.6       PUBLIC        b7
+  D:00B8H         PUBLIC        IP
+  B:0090H.7       PUBLIC        b8
+  B:0090H.6       PUBLIC        k1
+  C:0C37H         PUBLIC        _music
+  C:0800H         PUBLIC        main
+  D:0098H         PUBLIC        SCON
+  D:0088H         PUBLIC        TCON
+  B:00A0H.6       PUBLIC        dat
+  B:00A0H.7       PUBLIC        rest
+  B:00A0H.5       PUBLIC        busy
+  D:0008H         PUBLIC        a
+  D:0009H         PUBLIC        b
+  D:00C8H         PUBLIC        T2CON
+  D:000AH         PUBLIC        j
+  D:00D0H         PUBLIC        PSW
+  C:0C7FH         SYMBOL        L?0143
+  -------         PROC          L?0142
+  -------         ENDPROC       L?0142
+  C:0C7FH         SYMBOL        L?0143
+  -------         PROC          _DELAY
+  D:0006H         SYMBOL        i
+  C:0C83H         LINE#         43
+  C:0C83H         LINE#         44
+  C:0C83H         LINE#         45
+  C:0C8DH         LINE#         46
+  -------         ENDPROC       _DELAY
+  -------         PROC          MAIN
+  C:0800H         LINE#         50
+  C:0800H         LINE#         51
+  C:0800H         LINE#         52
+  C:0806H         LINE#         53
+  C:0806H         LINE#         54
+  C:080BH         LINE#         56
+  C:080BH         LINE#         57
+BL51 BANKED LINKER/LOCATER V6.22                                                      12/18/2019  22:02:00  PAGE 3
+
+
+  C:081FH         LINE#         58
+  C:0829H         LINE#         59
+  C:0835H         LINE#         60
+  C:0841H         LINE#         61
+  C:084DH         LINE#         62
+  C:0859H         LINE#         63
+  C:0865H         LINE#         64
+  C:0871H         LINE#         65
+  C:087DH         LINE#         67
+  C:0880H         LINE#         68
+  C:0882H         LINE#         69
+  C:0884H         LINE#         70
+  C:0886H         LINE#         71
+  C:0888H         LINE#         72
+  C:088AH         LINE#         73
+  C:088CH         LINE#         74
+  C:088EH         LINE#         75
+  C:089BH         LINE#         76
+  C:08B0H         LINE#         77
+  C:08B4H         LINE#         79
+  C:08BBH         LINE#         81
+  C:08BEH         LINE#         82
+  C:08C0H         LINE#         83
+  C:08C2H         LINE#         84
+  C:08C4H         LINE#         85
+  C:08C6H         LINE#         86
+  C:08C8H         LINE#         87
+  C:08CAH         LINE#         88
+  C:08CCH         LINE#         89
+  C:08D9H         LINE#         90
+  C:08F8H         LINE#         91
+  C:0904H         LINE#         93
+  C:090BH         LINE#         95
+  C:090EH         LINE#         96
+  C:0910H         LINE#         97
+  C:0912H         LINE#         98
+  C:0914H         LINE#         99
+  C:0916H         LINE#         100
+  C:0918H         LINE#         101
+  C:091AH         LINE#         102
+  C:091CH         LINE#         103
+  C:0929H         LINE#         104
+  C:0948H         LINE#         105
+  C:0954H         LINE#         107
+  C:095BH         LINE#         110
+  C:095EH         LINE#         111
+  C:0960H         LINE#         112
+  C:0962H         LINE#         113
+  C:0964H         LINE#         114
+  C:0966H         LINE#         115
+  C:0968H         LINE#         116
+  C:096AH         LINE#         117
+  C:096CH         LINE#         118
+  C:0979H         LINE#         119
+  C:0998H         LINE#         120
+  C:09A4H         LINE#         122
+  C:09ABH         LINE#         124
+BL51 BANKED LINKER/LOCATER V6.22                                                      12/18/2019  22:02:00  PAGE 4
+
+
+  C:09AEH         LINE#         125
+  C:09B0H         LINE#         126
+  C:09B2H         LINE#         127
+  C:09B4H         LINE#         128
+  C:09B6H         LINE#         129
+  C:09B8H         LINE#         130
+  C:09BAH         LINE#         131
+  C:09BCH         LINE#         132
+  C:09C9H         LINE#         133
+  C:09E8H         LINE#         134
+  C:09F4H         LINE#         136
+  C:09FBH         LINE#         139
+  C:09FEH         LINE#         140
+  C:0A00H         LINE#         141
+  C:0A02H         LINE#         142
+  C:0A04H         LINE#         143
+  C:0A06H         LINE#         144
+  C:0A08H         LINE#         145
+  C:0A0AH         LINE#         146
+  C:0A0CH         LINE#         147
+  C:0A19H         LINE#         148
+  C:0A38H         LINE#         149
+  C:0A44H         LINE#         151
+  C:0A4BH         LINE#         154
+  C:0A4EH         LINE#         155
+  C:0A50H         LINE#         156
+  C:0A52H         LINE#         157
+  C:0A54H         LINE#         158
+  C:0A56H         LINE#         159
+  C:0A58H         LINE#         160
+  C:0A5AH         LINE#         161
+  C:0A5CH         LINE#         162
+  C:0A69H         LINE#         163
+  C:0A88H         LINE#         164
+  C:0A94H         LINE#         166
+  C:0A9BH         LINE#         169
+  C:0A9EH         LINE#         170
+  C:0AA0H         LINE#         171
+  C:0AA2H         LINE#         172
+  C:0AA4H         LINE#         173
+  C:0AA6H         LINE#         174
+  C:0AA8H         LINE#         175
+  C:0AAAH         LINE#         176
+  C:0AACH         LINE#         177
+  C:0AB9H         LINE#         178
+  C:0AD8H         LINE#         179
+  C:0AE4H         LINE#         181
+  C:0AEBH         LINE#         184
+  C:0AEEH         LINE#         185
+  C:0AF0H         LINE#         186
+  C:0AF2H         LINE#         187
+  C:0AF4H         LINE#         188
+  C:0AF6H         LINE#         189
+  C:0AF8H         LINE#         190
+  C:0AFAH         LINE#         191
+  C:0AFCH         LINE#         192
+  C:0B09H         LINE#         193
+BL51 BANKED LINKER/LOCATER V6.22                                                      12/18/2019  22:02:00  PAGE 5
+
+
+  C:0B28H         LINE#         194
+  C:0B34H         LINE#         196
+  C:0B3BH         LINE#         199
+  C:0B3EH         LINE#         200
+  C:0B40H         LINE#         201
+  C:0B42H         LINE#         202
+  C:0B44H         LINE#         203
+  C:0B46H         LINE#         204
+  C:0B48H         LINE#         205
+  C:0B4AH         LINE#         206
+  C:0B4CH         LINE#         207
+  C:0B59H         LINE#         208
+  C:0B78H         LINE#         209
+  C:0B84H         LINE#         211
+  C:0B8BH         LINE#         214
+  C:0BA1H         LINE#         215
+  C:0BA1H         LINE#         217
+  -------         ENDPROC       MAIN
+  C:0C2EH         SYMBOL        L?0141
+  -------         PROC          L?0140
+  -------         ENDPROC       L?0140
+  C:0C2EH         SYMBOL        L?0141
+  -------         PROC          _MUSIC
+  D:0005H         SYMBOL        i
+  C:0C37H         LINE#         224
+  C:0C39H         LINE#         225
+  C:0C39H         LINE#         226
+  C:0C3BH         LINE#         227
+  C:0C3DH         LINE#         228
+  C:0C44H         LINE#         229
+  C:0C46H         LINE#         230
+  C:0C4DH         LINE#         231
+  C:0C4FH         LINE#         232
+  C:0C56H         LINE#         234
+  C:0C58H         LINE#         235
+  C:0C5FH         LINE#         237
+  C:0C68H         LINE#         238
+  C:0C68H         LINE#         239
+  C:0C6AH         LINE#         240
+  C:0C71H         LINE#         241
+  C:0C73H         LINE#         242
+  C:0C7AH         LINE#         243
+  C:0C7EH         LINE#         244
+  -------         ENDPROC       _MUSIC
+  -------         ENDMOD        播报数譥
+
+******************************************************************************
+* RESTRICTED VERSION WITH 0800H BYTE CODE SIZE LIMIT; USED: 0405H BYTE (50%) *
+******************************************************************************
+
+Program Size: data=13.0 xdata=0 code=1173
+LINK/LOCATE RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)

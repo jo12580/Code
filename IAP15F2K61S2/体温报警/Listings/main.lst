@@ -1,0 +1,248 @@
+C51 COMPILER V9.01   MAIN                                                                  04/30/2021 10:10:45 PAGE 1   
+
+
+C51 COMPILER V9.01, COMPILATION OF MODULE MAIN
+OBJECT MODULE PLACED IN main.OBJ
+COMPILER INVOKED BY: D:\Software\Keil\32\C51\BIN\C51.EXE main.c OPTIMIZE(8,SPEED) BROWSE DEBUG OBJECTEXTEND PRINT(.\List
+                    -ings\main.lst) TABS(2)
+
+line level    source
+
+   1          #include<stc15f2k60s2.h>
+   2          #include<intrins.h>
+   3          
+   4          #define uchar unsigned char
+   5          #define uint unsigned int
+   6            
+   7          sbit DQ=P1^4;
+   8          
+   9          uchar tab[]={0XC0,0XF9,0XA4,0XB0,0X99,0X92,0X82,0XF8,0X80,0X90,\
+  10                       0X40,0X79,0X24,0X30,0X19,0X12,0X02,0X78,0X00,0X10,0XBF,0XFF};
+  11          uchar num;
+  12          long Wendu;
+  13          
+  14          uchar DisplayData[9];
+  15          void Delayms(int ms);
+  16          void Delay500us();
+  17          void Delay100us();
+  18          void Delay80us();
+  19          void Init_DS18b20(void);
+  20          void DS18B20_WiteByte(unsigned char dat);
+  21          long TemperGet(void);
+  22          void datapros();
+  23          void Display();
+  24                       
+  25          void Delay100ms()   //@11.0592MHz
+  26          {
+  27   1        unsigned char i, j, k;
+  28   1      
+  29   1        _nop_();
+  30   1        _nop_();
+  31   1        i = 5;
+  32   1        j = 52;
+  33   1        k = 195;
+  34   1        do
+  35   1        {
+  36   2          do
+  37   2          {
+  38   3            while (--k);
+  39   3          } while (--j);
+  40   2        } while (--i);
+  41   1      }
+  42          
+  43          
+  44          void main()
+  45          {
+  46   1        while(1)
+  47   1        {
+  48   2          Display();
+  49   2          if((Wendu%100000/10000)==8)
+  50   2          {
+  51   3            P2=0XA0;
+  52   3            P0=0xff;
+  53   3            P2=0x80;
+  54   3            P0=0xff;
+C51 COMPILER V9.01   MAIN                                                                  04/30/2021 10:10:45 PAGE 2   
+
+  55   3            Delay100ms();
+  56   3            P2=0XA0;
+  57   3            P0=0x00;
+  58   3            P2=0x80;
+  59   3            P0=0x00;
+  60   3          }
+  61   2        }
+  62   1      }
+  63          
+  64          void Display()
+  65          {
+  66   1        unsigned int i;
+  67   1        datapros();
+  68   1        for(i=0;i<=5;i++)
+  69   1        {
+  70   2          P2=0xc0;
+  71   2          switch(i)
+  72   2          {
+  73   3            case 0:P0=0x01;break;
+  74   3            case 1:P0=0x02;break;
+  75   3            case 2:P0=0x04;break;
+  76   3            case 3:P0=0x08;break;
+  77   3            case 4:P0=0x10;break;
+  78   3            case 5:P0=0x20;break;
+  79   3            case 6:P0=0x40;break;
+  80   3            case 7:P0=0x80;break;
+  81   3          }
+  82   2          P2=0xe0;
+  83   2          P0= DisplayData[i];
+  84   2          Delayms(1); 
+  85   2          P0=0xff;  
+  86   2        }
+  87   1      }
+  88          
+  89          void datapros()   
+  90          {
+  91   1        Wendu=TemperGet();
+  92   1        DisplayData[5] = tab[Wendu%10];       
+  93   1        DisplayData[4] = tab[Wendu%100/10];        
+  94   1        DisplayData[3] = tab[Wendu%1000/100]; 
+  95   1        DisplayData[2] = tab[Wendu%10000/1000];         
+  96   1        DisplayData[1] = tab[Wendu%100000/10000+10];    
+  97   1        DisplayData[0] = tab[Wendu/100000]; 
+  98   1        DisplayData[6] = tab[1];      
+  99   1        DisplayData[7] = tab[1];  
+ 100   1      }
+ 101                      
+ 102          void Init_DS18b20(void)
+ 103          {
+ 104   1        DQ=0;
+ 105   1        Delay500us();
+ 106   1        DQ=1;
+ 107   1        Delay500us();
+ 108   1      }
+ 109          
+ 110          void DS18B20_WiteByte(unsigned char dat)
+ 111          {
+ 112   1        unsigned char i;
+ 113   1        for(i=0;i<8;i++)
+ 114   1        {
+ 115   2          DQ=0;
+ 116   2          DQ=dat&0x01;//1100 1100 & 0000 0001 = 0000 0000
+C51 COMPILER V9.01   MAIN                                                                  04/30/2021 10:10:45 PAGE 3   
+
+ 117   2          Delay80us();
+ 118   2          DQ=1;
+ 119   2          dat >>=1; //  0110 0110  //0011 0011 // 0000 0000
+ 120   2        }
+ 121   1      }
+ 122          
+ 123          unsigned char DS18B20_ReadByte(void)
+ 124          {
+ 125   1        unsigned char i;
+ 126   1        unsigned char dat;//0000 0000 
+ 127   1        
+ 128   1        for(i=0;i<8;i++)
+ 129   1        {
+ 130   2          DQ=0;
+ 131   2          dat >>=1;          // 0101 0000 
+ 132   2          DQ=1;
+ 133   2          if(DQ==1)
+ 134   2          {
+ 135   3            dat=dat|0x80;  // 0000 0000 | 1000 0000 = 1000 0000
+ 136   3          }
+ 137   2          Delay80us();
+ 138   2        }
+ 139   1        
+ 140   1        return dat;
+ 141   1      }
+ 142          
+ 143          long TemperGet(void)
+ 144          {
+ 145   1        unsigned char low,high;
+ 146   1        long temp;
+ 147   1          
+ 148   1        Init_DS18b20();
+ 149   1        DS18B20_WiteByte(0XCC);//1100 1100 
+ 150   1        DS18B20_WiteByte(0X44);
+ 151   1        Delay500us();
+ 152   1        
+ 153   1        Init_DS18b20();
+ 154   1        DS18B20_WiteByte(0XCC);
+ 155   1        DS18B20_WiteByte(0XBE);
+ 156   1        
+ 157   1        low=DS18B20_ReadByte();
+ 158   1        high=DS18B20_ReadByte();
+ 159   1        
+ 160   1      //  temp=high<<4;  //0000 1010;  1010 0000
+ 161   1      //  temp=temp|(low>>4);   // 1010 0110 ;;  0000 1010   1010 1010
+ 162   1      
+ 163   1      //0.0625  
+ 164   1        temp=(high&0x0f);  //0000 1010;  1010 0000
+ 165   1        temp <<=8;
+ 166   1        temp|=low;    // 1010 0110 ;;  0000 1010   1010 1010
+ 167   1        
+ 168   1        temp=temp*625;
+ 169   1        return temp;
+ 170   1      }
+ 171          
+ 172          void Delay80us()    //@11.0592MHz
+ 173          {
+ 174   1        unsigned char i, j;
+ 175   1      
+ 176   1        _nop_();
+ 177   1        i = 1;
+ 178   1        j = 217;
+C51 COMPILER V9.01   MAIN                                                                  04/30/2021 10:10:45 PAGE 4   
+
+ 179   1        do
+ 180   1        {
+ 181   2          while (--j);
+ 182   2        } while (--i);
+ 183   1      }
+ 184          
+ 185          void Delay100us()   //@11.0592MHz
+ 186          {
+ 187   1        unsigned char i, j;
+ 188   1      
+ 189   1        _nop_();
+ 190   1        _nop_();
+ 191   1        i = 2;
+ 192   1        j = 15;
+ 193   1        do
+ 194   1        {
+ 195   2          while (--j);
+ 196   2        } while (--i);
+ 197   1      }
+ 198          
+ 199          void Delay500us()   //@11.0592MHz
+ 200          {
+ 201   1        unsigned char i, j;
+ 202   1      
+ 203   1        _nop_();
+ 204   1        _nop_();
+ 205   1        i = 6;
+ 206   1        j = 93;
+ 207   1        do
+ 208   1        {
+ 209   2          while (--j);
+ 210   2        } while (--i);
+ 211   1      }
+ 212          
+ 213          void Delayms(int ms)
+ 214          {
+ 215   1        int i,j;
+ 216   1        for(i=0;i<ms;i++)
+ 217   1          for(j=845;j>0;j--);
+ 218   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =    713    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =     36      11
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

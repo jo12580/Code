@@ -1,0 +1,128 @@
+C51 COMPILER V9.57.0.0   LCD1602                                                           07/27/2019 18:07:32 PAGE 1   
+
+
+C51 COMPILER V9.57.0.0, COMPILATION OF MODULE LCD1602
+OBJECT MODULE PLACED IN .\Objects\lcd1602.obj
+COMPILER INVOKED BY: C:\Keil_v5\C51\BIN\C51.EXE lcd1602\lcd1602.c OPTIMIZE(8,SPEED) BROWSE INCDIR(.\pcf8563;.\lcd1602) D
+                    -EBUG OBJECTEXTEND PRINT(.\Listings\lcd1602.lst) OBJECT(.\Objects\lcd1602.obj)
+
+line level    source
+
+   1          #include "lcd1602.h"
+   2          #include "delay.h"
+   3          #include <reg52.h>
+   4          
+   5          //sbit rs=P1^0;
+   6          //sbit rw=P1^1;
+   7          //sbit en=P1^2;
+   8          
+   9          void write_com(uchar com)
+  10          {
+  11   1              uchar temp;
+  12   1              
+  13   1              en=0;
+  14   1              rs=0;
+  15   1              rw=0;
+  16   1              
+  17   1              temp=com&0xf0;
+  18   1              P1&=0x0f;
+  19   1              P1|=temp;
+  20   1              en=1;
+  21   1              en=0;
+  22   1      
+  23   1              temp=(com<<4)&0xf0;
+  24   1              P1&=0x0f;
+  25   1              P1|=temp;
+  26   1              en=1;
+  27   1              en=0;
+  28   1      }
+  29          
+  30          void readbusy(void)
+  31          {
+  32   1              P1|=0x80;  //为读取BF信号作准备
+  33   1              rw=1;
+  34   1              rs=0;
+  35   1              en=1;
+  36   1              while(P1&0x80);  //等待
+  37   1              en=0;
+  38   1      }
+  39          
+  40          void init_lcd1602(void)
+  41          {
+  42   1              delay15ms();
+  43   1              write_com(0x28);
+  44   1              delay5ms();
+  45   1              write_com(0x28);
+  46   1              delay5ms();
+  47   1              write_com(0x28);
+  48   1      
+  49   1              readbusy();
+  50   1              write_com(0x28);
+  51   1              readbusy();
+  52   1              write_com(0x08);
+  53   1              readbusy();
+  54   1              write_com(0x01);
+C51 COMPILER V9.57.0.0   LCD1602                                                           07/27/2019 18:07:32 PAGE 2   
+
+  55   1              readbusy();
+  56   1              write_com(0x06);
+  57   1              readbusy();
+  58   1              write_com(0x0c);
+  59   1      }
+  60          
+  61          void locate(uchar x,uchar y)
+  62          {
+  63   1              uchar ac;
+  64   1              if(y==0) ac=0x80+x;
+  65   1              else     ac=0xc0+x;
+  66   1              readbusy();
+  67   1              write_com(ac);
+  68   1      }
+  69          
+  70          void display_str(uchar *str)
+  71          {
+  72   1              uint i=0;
+  73   1      
+  74   1              while(str[i]!='\0')
+  75   1              {
+  76   2                      readbusy();
+  77   2                      write_data(str[i]);
+  78   2                      i++;
+  79   2              }
+  80   1      }
+  81          
+  82          void write_data(uchar dat)
+  83          {
+  84   1              uchar temp;
+  85   1              
+  86   1              en=0;
+  87   1              rs=1;
+  88   1              rw=0;
+  89   1              
+  90   1              temp=dat&0xf0;
+  91   1              P1&=0x0f;
+  92   1              P1|=temp;
+  93   1              en=1;
+  94   1              en=0;
+  95   1      
+  96   1              temp=(dat<<4)&0xf0;
+  97   1              P1&=0x0f;
+  98   1              P1|=temp;
+  99   1              en=1;
+ 100   1              en=0;
+ 101   1      }
+ 102          
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =    244    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----       5
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

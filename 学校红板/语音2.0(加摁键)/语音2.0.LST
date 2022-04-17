@@ -1,0 +1,130 @@
+C51 COMPILER V9.01   语音2_0                                                               03/14/2020 16:44:29 PAGE 1   
+
+
+C51 COMPILER V9.01, COMPILATION OF MODULE 语音2_0
+OBJECT MODULE PLACED IN 语音2.0.OBJ
+COMPILER INVOKED BY: C:\软件\C51\BIN\C51.EXE 语音2.0.c BROWSE DEBUG OBJECTEXTEND
+
+line level    source
+
+   1                  #include<reg52.h>
+   2          typedef unsigned char uchar       ;
+   3          typedef unsigned int  uint      ;
+   4          sbit k1=P1^6;  //语音播放引脚定义 
+   5          sbit k2=P1^7;  //语音播放引脚定义 
+   6          sbit k3=P1^0;  //语音播放引脚定义 
+   7          sbit Led1=P1^4;
+   8          sbit Led2=P1^5;
+   9          
+  10          sbit rest=P2^7; //语音芯片复位引脚定义
+  11          sbit  dat=P2^6;  //语音芯片数据线引脚定义
+  12          sbit busy=P2^5;  //语音芯片---引脚定义
+  13          uchar a,b=1;
+  14          void music(uchar i);
+  15          void  delay(uint i);
+  16          void main()
+  17          {
+  18   1                              
+  19   1                  Led1=0;
+  20   1                      Led2=1;
+  21   1                  P0=0;
+  22   1              
+  23   1              delay(100);     
+  24   1              while (1)  {
+  25   2      
+  26   2                       if(k1==0)
+  27   2      {music(26);
+  28   3      while(!busy);            //音乐
+  29   3      music(36) ;       //欢迎再次光临
+  30   3      while(!busy) ;
+  31   3      music(37)  ;}  //广西师范大学
+  32   2      
+  33   2      
+  34   2                   if(k2==0)
+  35   2      {music(26);
+  36   3      while(!busy);            //音乐
+  37   3      music(36);        //欢迎再次光临
+  38   3        while(!busy) ;
+  39   3      music(38)  ;  //电子工程学院
+  40   3        while(!busy)  ;
+  41   3      music(46) ;     }       //大学生创新基地
+  42   2      
+  43   2      
+  44   2                   if(k3==0)
+  45   2      {music(26);
+  46   3      while(!busy);            //音乐
+  47   3      music(28);               //今天是
+  48   3        while(!busy) ;
+  49   3      music(4);                //2
+  50   3        while(!busy) ;
+  51   3      music(2);                //0
+  52   3        while(!busy);
+  53   3      music(3);                //     1
+  54   3      while(!busy)  ;
+  55   3      music(11);               //     9
+C51 COMPILER V9.01   语音2_0                                                               03/14/2020 16:44:29 PAGE 2   
+
+  56   3      while(!busy);
+  57   3      music(17);               //年
+  58   3      while(!busy);
+  59   3      music(12);               //十
+  60   3      while(!busy) ;
+  61   3      music(3);                //一
+  62   3      while(!busy) ;
+  63   3      music(18);               //月
+  64   3      while(!busy) ;
+  65   3      music(4);                //二
+  66   3      while(!busy) ;
+  67   3      music(12);               //十 
+  68   3      while(!busy) ;
+  69   3      music(19);               //日
+  70   3      while(!busy) ;
+  71   3      music(34);               //欢迎光临本店
+  72   3      while(!busy) ;
+  73   3      music(35);      }        //欢迎使用本公司产品
+  74   2      
+  75   2         }    
+  76   1      }
+  77           
+  78          
+  79          void  delay(uint i)
+  80          {
+  81   1              while(i--);
+  82   1      }
+  83          
+  84          void music(uchar i)                                                             //语音函数的声明
+  85          {       
+  86   1              dat=0;  
+  87   1              rest=0;
+  88   1              delay(50);
+  89   1              rest=1;                                 
+  90   1              delay(50);
+  91   1              rest=0;
+  92   1          delay(50);
+  93   1              
+  94   1              dat=0;
+  95   1              delay(50);
+  96   1              
+  97   1              for(a=0;a<i;a++)
+  98   1             {
+  99   2                      dat=1;
+ 100   2                      delay(50);
+ 101   2                      dat=0;
+ 102   2                      delay(50);   
+ 103   2                 }
+ 104   1      }
+ 105                          
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =    254    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =      2    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

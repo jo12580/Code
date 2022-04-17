@@ -1,0 +1,145 @@
+C51 COMPILER V9.01   IIC_1602                                                              11/21/2021 11:01:11 PAGE 1   
+
+
+C51 COMPILER V9.01, COMPILATION OF MODULE IIC_1602
+OBJECT MODULE PLACED IN .\Objects\IIC-1602.obj
+COMPILER INVOKED BY: D:\Software\Keil\32\C51\BIN\C51.EXE IIC-1602.c OPTIMIZE(8,SPEED) BROWSE DEBUG OBJECTEXTEND PRINT(.\
+                    -Listings\IIC-1602.lst) TABS(2) OBJECT(.\Objects\IIC-1602.obj)
+
+line level    source
+
+   1          //#include <reg52.h>
+   2          #include <IIC-1602.h>
+   3          
+   4          
+   5          //=============delay time=====================
+   6          void delay1ms(int i)  // 晶振频率=11.0592Mhz 单位延时1ms
+   7          {
+   8   1        int j,k;
+   9   1        for(j=0;j<i;j++)
+  10   1        for(k=0;k<110;k++);
+  11   1      }
+  12          
+  13          
+  14          void transfer(int data1)
+  15          {
+  16   1        int i;
+  17   1        for(i=0;i<8;i++)
+  18   1          {
+  19   2          scl_1602=0;
+  20   2          if(data1&0x80) sda_1602=1; else sda_1602=0;
+  21   2            scl_1602=1;
+  22   2            scl_1602=0;
+  23   2          data1=data1<<1;
+  24   2          }
+  25   1            sda_1602=0;
+  26   1            scl_1602=1;
+  27   1            scl_1602=0;
+  28   1      }
+  29          void start_flag()
+  30          {
+  31   1        scl_1602=1; //START FLAG
+  32   1        sda_1602=1; //START FLAG
+  33   1        sda_1602=0; //START FLAG
+  34   1      }
+  35          void stop_flag()
+  36          {
+  37   1        scl_1602=1; //STOP FLAG
+  38   1        sda_1602=0; //STOP FLAG
+  39   1        sda_1602=1; //STOP FLAG
+  40   1      }
+  41          //lcd初始化
+  42          void Lcd1602Iinitial()
+  43          {
+  44   1        start_flag();   //开始标志
+  45   1        transfer(0x7C); //选择SLAVE ADDRESS
+  46   1        transfer(0x00); //控制字节：Co=0,A0=0,表示以下传输的N 个字节是指令
+  47   1        transfer(0x28); // Function set 
+  48   1        delay1ms(5);
+  49   1        transfer(0x0c); // Display ON/OFF
+  50   1        delay1ms(5);
+  51   1        transfer(0x01); // Clear display
+  52   1        delay1ms(10);
+  53   1        transfer(0x06); // set display mode
+  54   1        stop_flag();    //结束标志
+C51 COMPILER V9.01   IIC_1602                                                              11/21/2021 11:01:11 PAGE 2   
+
+  55   1      }
+  56          
+  57          
+  58          /*在指定行和列位置显示指定的字母、数字（5*7 点阵的）*/
+  59          
+  60          
+  61          //void disp_string(int column,int line,unsigned char *dp)
+  62          //{
+  63          //  int i;
+  64          //  start_flag();
+  65          //  transfer(0x7C); //选择SLAVE ADDRESS
+  66          //  transfer(0x80); /*控制字节：Co=1,A0=0,表示以下传输的1 个字节是指令*/
+  67          //  transfer(0x80+(line)*0x40+(column)); //设置DDRAM ADDRESS：第几行，第几列
+  68          //  transfer(0x40); /*控制字节：Co=0,A0=1,表示以下传输的n 个字节是数据*/
+  69          //  for(i=0;i<16;i++)
+  70          //  {
+  71          //    transfer(*dp);
+  72          //    dp=dp+1;
+  73          //  }
+  74          //  stop_flag();
+  75          //}
+  76          
+  77          void disp_string(uchar x,uchar y,uchar *s)
+  78            {    
+  79   1             
+  80   1        while (*s)
+  81   1         {    
+  82   2         DispOneChar(x,y,*s);    
+  83   2         s++;
+  84   2         x++;    
+  85   2         }
+  86   1        }
+  87          
+  88          
+  89          /*=======================================================
+  90           显示光标定位
+  91          =======================================================*/
+  92          void Disp_XY( char posx,char posy)
+  93          {
+  94   1          unsigned char temp;
+  95   1          temp=posx;                          //&0x1f; 原为限制的条件
+  96   1          posy&=0x1;
+  97   1          if ( posy )temp|=0xc0;
+  98   1               else temp|=0x80;
+  99   1            transfer(temp);
+ 100   1      }
+ 101          
+ 102          
+ 103          
+ 104          /*=======================================================
+ 105           按指定位置显示一个字符
+ 106          =======================================================*/
+ 107          void DispOneChar(unsigned char x,unsigned char y,unsigned char Wdata)
+ 108          {   
+ 109   1        start_flag();
+ 110   1        transfer(0x7C); //选择SLAVE ADDRESS
+ 111   1        transfer(0x80); /*控制字节：Co=1,A0=0,表示以下传输的1 个字节是指令*/
+ 112   1          Disp_XY( x, y );                            // 定位显示地址
+ 113   1          transfer(0x40); /*控制字节：Co=0,A0=1,表示以下传输的n 个字节是数据*/
+ 114   1          transfer( Wdata );                      // 写字符
+ 115   1        stop_flag();
+ 116   1      }
+C51 COMPILER V9.01   IIC_1602                                                              11/21/2021 11:01:11 PAGE 3   
+
+ 117          //=========================================================================
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =    253    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----       5
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

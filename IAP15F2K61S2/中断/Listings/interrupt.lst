@@ -1,0 +1,72 @@
+C51 COMPILER V9.01   INTERRUPT                                                             03/22/2021 22:40:22 PAGE 1   
+
+
+C51 COMPILER V9.01, COMPILATION OF MODULE INTERRUPT
+OBJECT MODULE PLACED IN interrupt.OBJ
+COMPILER INVOKED BY: D:\Software\Keil\32\C51\BIN\C51.EXE interrupt.c OPTIMIZE(8,SPEED) BROWSE DEBUG OBJECTEXTEND PRINT(.
+                    -\Listings\interrupt.lst) TABS(2)
+
+line level    source
+
+   1          #include <REGX52.H>
+   2          
+   3          void delay(unsigned int i)
+   4          {
+   5   1        while(i--);
+   6   1      }
+   7          
+   8          void int0()   //判断3^2引脚
+   9          {
+  10   1        EA=1;
+  11   1        EX0=1;
+  12   1        IT0=1;    //置1时为下降沿触发、置0时为低电平触发
+  13   1      }
+  14          
+  15          void int1()   //判断3^3引脚 
+  16          {
+  17   1        EA=1;
+  18   1        EX1=1;
+  19   1        IT1=1;    
+  20   1      }
+  21          
+  22          void int0_intfun() interrupt 0 using 1//输入中断执行的程序
+  23          {
+  24   1        unsigned int i;
+  25   1        for(i=0;i<7;i++)
+  26   1        {
+  27   2        P0=(0xfe<<i);
+  28   2            delay(50000);
+  29   2          delay(50000);
+  30   2          delay(50000);
+  31   2        }
+  32   1                                
+  33   1      }
+  34          
+  35          void int1_intfun() interrupt 2 using 1  //输入中断执行的程序
+  36          {
+  37   1          unsigned int i;
+  38   1          for(i=0;i<7;i++)
+  39   1        {
+  40   2          P0=(0xbf>>i);
+  41   2          delay(50000);
+  42   2          delay(50000);
+  43   2          delay(50000);
+  44   2        }
+  45   1                                        
+  46   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =    129    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----    ----
+C51 COMPILER V9.01   INTERRUPT                                                             03/22/2021 22:40:22 PAGE 2   
+
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

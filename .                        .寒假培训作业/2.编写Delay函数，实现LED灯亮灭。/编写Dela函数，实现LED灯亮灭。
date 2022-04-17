@@ -1,0 +1,23 @@
+#include<reg52.h>
+typedef unsigned char uchar	  ;
+typedef unsigned int  uint	;
+void  delay(uint i);
+sbit a=P1^4;
+sbit b=P1^5;
+void main()
+{			while(1){
+delay(50000);
+a=0x00;
+b=0x01;	
+delay(50000);
+a=0x01;
+b=0x00;
+			 }
+}
+
+
+void  delay(uint i)
+{
+	while(i--);
+}
+  

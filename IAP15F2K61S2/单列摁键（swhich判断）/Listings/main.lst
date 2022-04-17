@@ -1,0 +1,59 @@
+C51 COMPILER V9.01   MAIN                                                                  03/08/2021 20:05:38 PAGE 1   
+
+
+C51 COMPILER V9.01, COMPILATION OF MODULE MAIN
+OBJECT MODULE PLACED IN main.OBJ
+COMPILER INVOKED BY: D:\Software\Keil\32\C51\BIN\C51.EXE main.c OPTIMIZE(8,SPEED) BROWSE DEBUG OBJECTEXTEND PRINT(.\List
+                    -ings\main.lst) TABS(2)
+
+line level    source
+
+   1          #include<reg52.h>
+   2          #include"key.h"
+   3          
+   4          typedef unsigned int u16;   //对数据类型进行声明定义
+   5          typedef unsigned char u8;
+   6          
+   7          unsigned char key_scanf(void);
+   8          void key(unsigned char a );
+   9          void delay(unsigned int i);
+  10          
+  11          void main()
+  12          {
+  13   1        unsigned char temp;
+  14   1       while(1)
+  15   1          {
+  16   2              temp = key_scanf();
+  17   2              if(temp != 0xff)
+  18   2              {
+  19   3                  delay(5000);  //按键消抖
+  20   3                  temp = key_scanf();
+  21   3                  if(temp)
+  22   3                  {
+  23   4                      //进入按键处理函数
+  24   4                      key(temp);
+  25   4                      while(P3 != 0xff);  //等待按键释放                        
+  26   4                  }
+  27   3              }
+  28   2          }
+  29   1      
+  30   1      }
+  31          
+  32          void delay(unsigned int i)
+  33          {
+  34   1      while(i--);
+  35   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =     41    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

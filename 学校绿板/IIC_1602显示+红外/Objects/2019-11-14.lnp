@@ -1,0 +1,5 @@
+".\Objects\STARTUP.obj",
+".\Objects\74hc595.obj",
+".\Objects\main.obj" 
+TO ".\Objects\2019-11-14" 
+PRINT(".\Listings\2019-11-14.m51")

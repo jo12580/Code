@@ -1,0 +1,94 @@
+C51 COMPILER V9.01   LEDµƒ¡¡√∫Õ¿Æ_»                                                       01/12/2020 21:07:42 PAGE 1   
+
+
+C51 COMPILER V9.01, COMPILATION OF MODULE LEDµƒ¡¡√∫Õ¿Æ_»
+OBJECT MODULE PLACED IN LEDµƒ¡¡√∫Õ¿Æ∞».OBJ
+COMPILER INVOKED BY: C:\»Ìº˛\C51\BIN\C51.EXE LEDµƒ¡¡√∫Õ¿Æ∞».c BROWSE DEBUG OBJECTEXTEND
+
+line level    source
+
+   1          #include<reg52.h>
+   2          typedef unsigned char uchar       ;
+   3          typedef unsigned int  uint      ;
+   4          sbit k1=P1^6;  //”Ô“Ù≤•∑≈“˝Ω≈∂®“Â 
+   5          sbit k2=P1^7;  //”Ô“Ù≤•∑≈“˝Ω≈∂®“Â 
+   6          sbit Led1=P1^4;
+   7          sbit Led2=P1^5;
+   8          
+   9          sbit rest=P2^7; //”Ô“Ù–æ∆¨∏¥Œª“˝Ω≈∂®“Â
+  10          sbit  dat=P2^6;  //”Ô“Ù–æ∆¨ ˝æ›œﬂ“˝Ω≈∂®“Â
+  11          sbit busy=P2^5;  //”Ô“Ù–æ∆¨---“˝Ω≈∂®“Â
+  12          uchar a,b=1;
+  13          void music(uchar i);
+  14          void  delay(uint i);
+  15          
+  16          void main()
+  17                  {
+  18   1              uchar i=1;
+  19   1                  Led1=0;
+  20   1                      Led2=1;
+  21   1                  P0=0;
+  22   1              
+  23   1              delay(100);     
+  24   1              while (1)
+  25   1                      {
+  26   2                              delay(5000); 
+  27   2                              music(34); 
+  28   2                              while (!busy);
+  29   2                              delay(5000);    
+  30   2                              Led1=~Led1;
+  31   2                              delay(5000); 
+  32   2                              Led2=~Led2;     
+  33   2                      }
+  34   1              }
+  35           
+  36          
+  37          
+  38          
+  39          void  delay(uint i)
+  40                  {
+  41   1              while(i--);
+  42   1              }
+  43                                                  
+  44          
+  45                                                                        //¥À÷–º‰ø…“‘º””Ô“Ù≤•±®ƒ⁄»›     
+  46          
+  47          
+  48          
+  49          void music(uchar i)                             //∂®“Âmusic£®”Ô“Ù£©∫Ø ˝
+  50                  {       
+  51   1              dat=0;  
+  52   1              rest=0;
+  53   1              delay(50);
+  54   1              rest=1;                                 
+  55   1              delay(50);
+C51 COMPILER V9.01   LEDµƒ¡¡√∫Õ¿Æ_»                                                       01/12/2020 21:07:42 PAGE 2   
+
+  56   1              rest=0;
+  57   1          delay(50);
+  58   1              
+  59   1              dat=0;
+  60   1              delay(50);
+  61   1              
+  62   1              for(a=0;a<i;a++)
+  63   1             {
+  64   2                      dat=1;
+  65   2                      delay(50);
+  66   2                      dat=0;
+  67   2                      delay(50);   
+  68   2                 }
+  69   1              }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =    113    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =      2       1
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

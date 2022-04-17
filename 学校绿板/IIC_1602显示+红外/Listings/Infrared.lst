@@ -1,0 +1,180 @@
+C51 COMPILER V9.01   INFRARED                                                              06/16/2020 21:38:56 PAGE 1   
+
+
+C51 COMPILER V9.01, COMPILATION OF MODULE INFRARED
+OBJECT MODULE PLACED IN .\Objects\Infrared.obj
+COMPILER INVOKED BY: F:\K4\C51\BIN\C51.EXE Infrared.c BROWSE DEBUG OBJECTEXTEND PRINT(.\Listings\Infrared.lst) OBJECT(.\
+                    -Objects\Infrared.obj)
+
+line level    source
+
+   1             /***************************************************
+   2          
+   3          文件名：Infrared.c
+   4          日期  ：2010年11月11日
+   5          原始作者：钟远琅、苏检德
+   6          最后修改：
+   7          修改人：
+   8          描述  ：
+   9          
+  10          ****************************************************/
+  11          #include        "Infrared.h"
+  12          #include        "Delay.h"
+  13          #include<reg52.h>
+  14          
+  15          
+  16          
+  17          //定义全局变量
+  18          unsigned char   G_cmd_infrared = 0xFF;
+  19           sbit LED2=P1^5;
+  20          
+  21          //引脚配置
+  22          sbit DATA_infrared = P3^2;
+  23          
+  24          
+  25          code    unsigned char   KeyValue_Infrared[31] = {
+  26                                                                                                  0xC0,0xE0,0xD0,0xF0,//电源，显示，红外耳机，静音
+  27                                                                                                  0x40,0x60,0x50,0x70,//1，2，3，时钟
+  28                                                                                                  0x80,0xA0,0x90,0xB0,//4，5，6，浏览
+  29                                                                                                  0x00,0x20,0x10,0x30,//7，8，9，彩色制式
+  30                                                                                                  0x84,0xC4,0xA4,0xE4,//-/--，0，智能降噪，伴音制式
+  31                                                                                                  0x04,0x24,0x64,//游戏，TV/AV，屏幕保护
+  32                                                                                                  0xD4,0x28,0x68,//图像，美化画面，重低音
+  33                                                                                                  0x14,//节目+
+  34                                                                                                  0x88,0x48,0xC8,//音量-，菜单，音量+
+  35                                                                                                  0x08//节目-
+  36                                                                                          };      
+  37          
+  38          
+  39          
+  40          //code  unsigned char   KeyValue_Infrared[31] = {       
+  41          //                                                                                      0xC4,0x40,0x60,0x50,0x80,//0,1,2,3,4,
+  42          //                                                                                      0xA0,0x90,0x00,0x20,0x10,//5,6,7,8,9
+  43          //                                                                                      0xC0,0xE0,0xD0,0xF0,//电源10，显示11，红外耳机12，静音13
+  44          //                                                                                      0x70,0xB0,0x30,0xE4,//时钟14,浏览15,彩色制式16，伴音制式17
+  45          //                                                                                      0x04,0x24,0x64,//游戏18，TV/AV19，屏幕保护20
+  46          //                                                                                      0xD4,0x28,0x68,//图像21，美化画面22，重低音23
+  47          //                                                                                      0x84,0xA4,//-/--24，智能降噪25
+  48          //                                                                                      0x14,//节目+26
+  49          //                                                                                      0x88,0x48,0xC8,//音量-27，菜单28，音量+29
+  50          //                                                                                      0x08//节目-30
+  51          //                                                                              };
+  52          //外部函数定义
+  53          /*********************************
+  54          函数名称：ReadByte_Infrared
+C51 COMPILER V9.01   INFRARED                                                              06/16/2020 21:38:56 PAGE 2   
+
+  55          函数功能：读取红外遥控器的一个字节命令码
+  56          输入参数：null
+  57          返回参数：uchar cmd_infrared
+  58          全局变量：null
+  59          说        明：
+  60                                  帧格式：
+  61                                  <-  8.5ms  -><-4.2ms-><-  8位引导码  -><-   中间间隔   -><-    8位命令码    ->
+  62                                                           ________         ___                      ____________     ________     _________                  _________
+  63                                  |___________|            |___|   |····|___|            |___|            |___|                 |····|
+  64          
+  65          
+  66                                  8位引导码固定为0x1B,格式为:
+  67          
+  68                                  <- 520us -><- 520us ->          <- 520us -><-    1560us    ->
+  69                                                      _________                                   _________________
+  70                                  |__________|             |              |__________|                     |
+  71                                          信号“0”                                             信号“1”
+  72          
+  73                                  8位命令码和8位命令码反码的格式和8位地址码一样
+  74          
+  75          
+  76          
+  77          ************************************/
+  78          void IrInit()
+  79          {
+  80   1              IT0=1;//下降沿触发
+  81   1              EX0=1;//打开中断0允许
+  82   1              EA=1;   //打开总中断
+  83   1      
+  84   1              DATA_infrared=1;//初始化端口
+  85   1      }
+  86          unsigned char ReadByte_Infrared()
+  87          {
+  88   1              unsigned char i = 0;
+  89   1              unsigned cmd_infrared = 0x06;
+  90   1      //      unsigned cmd_temp = 0xFF;
+  91   1      //      //检测起始码，9ms低电平和4.5ms高电平
+  92   1              for(i = 7;i > 0;i --)
+  93   1              {
+  94   2               Delay_20_us(50);//延时1ms
+  95   2                      if(DATA_infrared)       return POWER_INFRARED;//如果数据线为“1”，说明出错，返回一个错误码     
+  96   2              }
+  97   1              
+  98   1              while( !DATA_infrared);//等待高电平出现
+  99   1              
+ 100   1              for(i = 7;i > 0;i --)
+ 101   1              {
+ 102   2                      Delay_20_us(25);//延时500us
+ 103   2                      if(DATA_infrared)       return ERROR_INFRARED;//如果数据线为“0”，说明出错，返回一个错误码             
+ 104   2              }
+ 105   1              
+ 106   1      
+ 107   1                      LED2= ~LED2;//test
+ 108   1              
+ 109   1              //开始检测引导码
+ 110   1      //      for(i = 8;i > 0;i --)
+ 111   1      //      {
+ 112   1      //              cmd_infrared <<= 1;//MSB先出，因此先左移，以防MSB被移出去
+ 113   1      //              while(DATA_infrared);//等待低电平出现
+ 114   1      //              
+ 115   1      //              while( ! DATA_infrared);//等待高电平出现
+ 116   1      //              
+C51 COMPILER V9.01   INFRARED                                                              06/16/2020 21:38:56 PAGE 3   
+
+ 117   1      //              Delay_20_us(30);//延时600us，保证跳过信号“0”的高电平部分，但又不能超过下一位的低电平部分
+ 118   1      //              if(DATA_infrared)       cmd_infrared |= 0x01;//如果数据线为“1”，则记录“1”                   
+ 119   1      //      }
+ 120   1      //
+ 121   1      //      if(cmd_infrared != 0x1B)                        return ERROR_INFRARED;
+ 122   1      //
+ 123   1      //      //检测连个码之间的间隔
+ 124   1      //      while(DATA_infrared);//等待低电平出现   
+ 125   1      //      while( ! DATA_infrared);//等待高电平出现
+ 126   1      ////
+ 127   1      //      //开始检测命令码
+ 128   1              for(i = 8;i > 0;i --)
+ 129   1              {
+ 130   2                      cmd_infrared <<= 1;//MSB先出，因此先左移，以防MSB被移出去
+ 131   2                      while(DATA_infrared);//等待低电平出现
+ 132   2                      
+ 133   2                      while( ! DATA_infrared);//等待高电平出现
+ 134   2                      
+ 135   2                      Delay_20_us(30);//延时600us，保证跳过信号“0”的高电平部分，但又不能超过下一位的低电平部分
+ 136   2                      if(DATA_infrared)       cmd_infrared |= 0x01;//如果数据线为“1”，则记录“1”                   
+ 137   2              }
+ 138   1      
+ 139   1      //      for(i = 0;i < 31;i ++)
+ 140   1      //      {
+ 141   1      //              if(cmd_infrared == KeyValue_Infrared[i])
+ 142   1      //              {
+ 143   1      //                      cmd_infrared = i;
+ 144   1      //                      break;  
+ 145   1      //                      
+ 146   1      //              }
+ 147   1      //      }
+ 148   1                              return  cmd_infrared;
+ 149   1              
+ 150   1                       
+ 151   1      
+ 152   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =    117    ----
+   CONSTANT SIZE    =     31    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =      1       3
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

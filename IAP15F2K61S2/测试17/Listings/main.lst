@@ -1,0 +1,264 @@
+C51 COMPILER V9.01   MAIN                                                                  05/08/2021 20:44:45 PAGE 1   
+
+
+C51 COMPILER V9.01, COMPILATION OF MODULE MAIN
+OBJECT MODULE PLACED IN main.OBJ
+COMPILER INVOKED BY: D:\Software\Keil\32\C51\BIN\C51.EXE main.c OPTIMIZE(8,SPEED) BROWSE DEBUG OBJECTEXTEND PRINT(.\List
+                    -ings\main.lst) TABS(2)
+
+line level    source
+
+   1          /*******************************************************************************  
+   2          * 文件名称：蓝桥杯单片机基础入门视频--第六讲：时钟芯片DS1302
+   3          * 实验目的：蓝桥杯单片机开发板外设模块：时钟芯片DS1302
+   4          * 程序说明：如需了解有关本程序配套视频讲解，及比赛经验分享\
+   5          *          欢迎访问淘宝店铺网址：shop117015787.taobao.com
+   6          * 作    者：大科电子工作室
+   7          * 日期版本：2019-1/V1.0
+   8          *******************************************************************************/
+   9          #include<stc15f2k60s2.h>
+  10          #include<intrins.h>
+  11          
+  12          #define uchar unsigned char
+  13          #define uint unsigned int
+  14            
+  15          sbit SCK=P1^7;
+  16          sbit SDA=P2^3;
+  17          sbit RST=P1^3;
+  18          
+  19          uchar tab[]={0XC0,0XF9,0XA4,0XB0,0X99,0X92,0X82,0XF8,0X80,0X90,0XBF,0XFF};
+  20          uchar yi,er,san,si,wu,liu,qi,ba;
+  21          bit S4,S5,S6,S7;
+  22          uchar num;
+  23          
+  24          uchar Init_Time[]={50,59,23,16,10,2,19};
+  25          uchar shijian[7];
+  26          
+  27          void Allinit(void);
+  28          void Delayms(int ms);
+  29          void Display1(uchar yi,uchar er);
+  30          void Display2(uchar san,uchar si);
+  31          void Display3(uchar wu,uchar liu);
+  32          void Display4(uchar qi,uchar ba);
+  33          
+  34          void DS1302_Init(void);
+  35          void DS1302_Get(void);
+  36          
+  37          void main(void)
+  38          {
+  39   1        Allinit();
+  40   1        DS1302_Init();
+  41   1        yi=0;er=8;san=10;si=5;wu=9;liu=10;qi=5;ba=0;
+  42   1        while(1)
+  43   1        {
+  44   2          DS1302_Get();
+  45   2          yi=shijian[2]/10;er=shijian[2]%10;san=10;
+  46   2          si=shijian[1]/10;wu=shijian[1]%10;liu=10;
+  47   2          qi=shijian[0]/10;ba=shijian[0]%10;
+  48   2          Display1(yi,er);
+  49   2          Display2(san,si);
+  50   2          Display3(wu,liu);
+  51   2          Display4(qi,ba);
+  52   2        }
+  53   1      }
+  54          
+C51 COMPILER V9.01   MAIN                                                                  05/08/2021 20:44:45 PAGE 2   
+
+  55          void Write_Byte(unsigned temp)
+  56          {
+  57   1        unsigned char i;
+  58   1        for(i=0;i<8;i++)
+  59   1        {
+  60   2          SCK=0;
+  61   2          SDA=temp&0x01;
+  62   2          temp>>=1;
+  63   2          SCK=1;
+  64   2        }
+  65   1      }
+  66          
+  67          void Write_DS1302(unsigned char address,unsigned char dat)
+  68          {
+  69   1        RST=0;
+  70   1        _nop_();
+  71   1        SCK=0;
+  72   1        _nop_();
+  73   1        RST=1;  
+  74   1        Write_Byte(address);
+  75   1        Write_Byte((dat/10<<4)|(dat%10)); 
+  76   1      }
+  77          
+  78          unsigned char Read_DS1302(unsigned char address)
+  79          {
+  80   1        unsigned char i,temp=0x00,dat1,dat2;
+  81   1        RST=0;
+  82   1        _nop_();
+  83   1        SCK=0;
+  84   1        _nop_();
+  85   1        RST=1;  
+  86   1        Write_Byte(address);
+  87   1        
+  88   1        for(i=0;i<8;i++)
+  89   1        {
+  90   2          SCK=0;
+  91   2          temp>>=1;
+  92   2          if(SDA)temp|=0x80;
+  93   2          SCK=1;
+  94   2        }
+  95   1        
+  96   1        RST=0;  _nop_();
+  97   1        SCK=0;  _nop_();
+  98   1        SCK=1;  _nop_();
+  99   1        SDA=0;  _nop_();
+ 100   1        SDA=1;  _nop_();
+ 101   1        dat1=temp/16;
+ 102   1        dat2=temp%16;
+ 103   1        temp=10*dat1+dat2;
+ 104   1        return temp;
+ 105   1      }
+ 106          
+ 107          void DS1302_Init()
+ 108          {
+ 109   1        unsigned char i,add;
+ 110   1        add=0x80;
+ 111   1        Write_DS1302(0x8e,0x00);
+ 112   1        for(i=0;i<=7;i++)
+ 113   1        {
+ 114   2          Write_DS1302(add,Init_Time[i]);
+ 115   2          add=add+2;
+ 116   2        }
+C51 COMPILER V9.01   MAIN                                                                  05/08/2021 20:44:45 PAGE 3   
+
+ 117   1        Write_DS1302(0x8e,0xff);
+ 118   1      }
+ 119          
+ 120          void DS1302_Get()
+ 121          {
+ 122   1        unsigned char i,add;
+ 123   1        add=0x81;
+ 124   1        Write_DS1302(0x8e,0x00);
+ 125   1        for(i=0;i<=7;i++)
+ 126   1        {
+ 127   2          shijian[i]=Read_DS1302(add);
+ 128   2          add=add+2;
+ 129   2        }
+ 130   1        Write_DS1302(0x8e,0xff);
+ 131   1      }
+ 132          
+ 133          void Display1(uchar yi,uchar er)
+ 134          {
+ 135   1        P2=0XC0;
+ 136   1        P0=0X01;
+ 137   1        P2=0XE0;
+ 138   1        P0=tab[yi];
+ 139   1        Delayms(1);
+ 140   1        
+ 141   1        P2=0XC0;
+ 142   1        P0=0X02;
+ 143   1        P2=0XE0;
+ 144   1        P0=tab[er];
+ 145   1        Delayms(1);
+ 146   1      }
+ 147          
+ 148          void Display2(uchar san,uchar si)
+ 149          {
+ 150   1        P2=0XC0;
+ 151   1        P0=0X04;
+ 152   1        P2=0XE0;
+ 153   1        P0=tab[san];
+ 154   1        Delayms(1);
+ 155   1        
+ 156   1        P2=0XC0;
+ 157   1        P0=0X08;
+ 158   1        P2=0XE0;
+ 159   1        P0=tab[si];
+ 160   1        Delayms(1);
+ 161   1      }
+ 162          
+ 163          void Display3(uchar wu,uchar liu)
+ 164          {
+ 165   1        P2=0XC0;
+ 166   1        P0=0X10;
+ 167   1        P2=0XE0;
+ 168   1        P0=tab[wu];
+ 169   1        Delayms(1);
+ 170   1        
+ 171   1        P2=0XC0;
+ 172   1        P0=0X20;
+ 173   1        P2=0XE0;
+ 174   1        P0=tab[liu];
+ 175   1        Delayms(1);
+ 176   1      }
+ 177          
+ 178          void Display4(uchar qi,uchar ba)
+C51 COMPILER V9.01   MAIN                                                                  05/08/2021 20:44:45 PAGE 4   
+
+ 179          {
+ 180   1        P2=0XC0;
+ 181   1        P0=0X40;
+ 182   1        P2=0XE0;
+ 183   1        P0=tab[qi];
+ 184   1        Delayms(1);
+ 185   1        
+ 186   1        P2=0XC0;
+ 187   1        P0=0X80;
+ 188   1        P2=0XE0;
+ 189   1        P0=tab[ba];
+ 190   1        Delayms(1);
+ 191   1      }
+ 192          
+ 193          void Allinit(void)
+ 194          {
+ 195   1        P2=0XA0;//打开控制蜂鸣器的573
+ 196   1        P0=0X00;//关闭蜂鸣器继电器
+ 197   1        
+ 198   1        P2=0XC0;//打开控制数码管位选的573
+ 199   1        P0=0XFF;//选中所有数码管
+ 200   1        P2=0XE0;//打开控制数码管段选的573
+ 201   1        P0=0XFF;//关闭所有的数码管
+ 202   1        
+ 203   1        P2=0X80;//打开控制LED的573
+ 204   1        P0=0XFF;//关闭所有的LED
+ 205   1      }
+ 206          
+ 207          void Delayms(int ms)
+ 208          {
+ 209   1        int i,j;
+ 210   1        for(i=0;i<ms;i++)
+ 211   1          for(j=845;j>0;j--);
+ 212   1      }
+ 213          
+ 214          /*
+ 215          void Delay1ms(int ms)   //@11.0592MHz
+ 216          {
+ 217            unsigned char i, j,k;
+ 218          
+ 219            for(k=0;k<ms;k++)
+ 220            {
+ 221              _nop_();
+ 222              _nop_();
+ 223              _nop_();
+ 224              i = 11;
+ 225              j = 190;
+ 226              do
+ 227              {
+ 228                while (--j);
+ 229              } while (--i);
+ 230            }
+ 231          }
+ 232          */
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =    532    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =     35       4
+C51 COMPILER V9.01   MAIN                                                                  05/08/2021 20:44:45 PAGE 5   
+
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =      4    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

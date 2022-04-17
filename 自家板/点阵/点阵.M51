@@ -1,0 +1,209 @@
+BL51 BANKED LINKER/LOCATER V6.22                                                        12/02/2019  19:00:21  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.22, INVOKED BY:
+C:\软件\C51\BIN\BL51.EXE 点阵.obj TO 点阵 RAMSIZE (256)
+
+
+MEMORY MODEL: SMALL
+
+
+INPUT MODULES INCLUDED:
+  点阵.obj (点誣)
+  C:\软件\C51\LIB\C51S.LIB (?C_STARTUP)
+  C:\软件\C51\LIB\C51S.LIB (?C_INIT)
+
+
+LINK MAP OF MODULE:  点阵 (点誣)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+            DATA    0008H     0028H     UNIT         ?DT?点誣
+            DATA    0030H     0001H     UNIT         _DATA_GROUP_
+            IDATA   0031H     0001H     UNIT         ?STACK
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0003H     ABSOLUTE     
+                    0003H     07FDH                  *** GAP ***
+            CODE    0800H     008CH     UNIT         ?C_C51STARTUP
+            CODE    088CH     0084H     UNIT         ?PR?MAIN?点誣
+            CODE    0910H     0037H     UNIT         ?PR?_HC595SENDBYTE?点誣
+            CODE    0947H     0033H     UNIT         ?C_INITSEG
+            CODE    097AH     000BH     UNIT         ?PR?_DELAY?点誣
+
+
+
+OVERLAY MAP OF MODULE:   点阵 (点誣)
+
+
+SEGMENT                           DATA_GROUP 
+  +--> CALLED SEGMENT           START    LENGTH
+-----------------------------------------------
+?C_C51STARTUP                   -----    -----
+  +--> ?PR?MAIN?点誣
+  +--> ?C_INITSEG
+
+?PR?MAIN?点誣                   0030H    0001H
+  +--> ?PR?_HC595SENDBYTE?点誣
+
+?PR?_HC595SENDBYTE?点誣         -----    -----
+  +--> ?PR?_DELAY?点誣
+
+
+
+SYMBOL TABLE OF MODULE:  点阵 (点誣)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+BL51 BANKED LINKER/LOCATER V6.22                                                      12/02/2019  19:00:21  PAGE 2
+
+
+
+  -------         MODULE        点誣
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  D:0080H         PUBLIC        P0
+  B:00B0H.6       PUBLIC        SRCLK
+  D:00B0H         PUBLIC        P3
+  C:097AH         PUBLIC        _delay
+  B:00B0H.1       PUBLIC        k1
+  B:00B0H.0       PUBLIC        k2
+  B:00B0H.2       PUBLIC        k3
+  B:00B0H.3       PUBLIC        k4
+  C:088CH         PUBLIC        main
+  B:00B0H.5       PUBLIC        RCLK
+  D:0008H         PUBLIC        ledduan
+  D:0010H         PUBLIC        xl
+  D:0018H         PUBLIC        ou
+  B:00B0H.4       PUBLIC        SER
+  D:0020H         PUBLIC        xt
+  C:0921H         PUBLIC        _Hc595SendByte
+  D:0028H         PUBLIC        ledwei
+  -------         PROC          _DELAY
+  D:0006H         SYMBOL        i
+  C:097AH         LINE#         24
+  C:097AH         LINE#         25
+  C:097AH         LINE#         26
+  C:0984H         LINE#         27
+  -------         ENDPROC       _DELAY
+  C:0910H         SYMBOL        L?0037
+  -------         PROC          L?0036
+  -------         ENDPROC       L?0036
+  C:0910H         SYMBOL        L?0037
+  -------         PROC          _HC595SENDBYTE
+  D:0007H         SYMBOL        dat
+  -------         DO            
+  D:0006H         SYMBOL        a
+  -------         ENDDO         
+  C:0921H         LINE#         35
+  C:0921H         LINE#         36
+  C:0921H         LINE#         38
+  C:0923H         LINE#         39
+  C:0925H         LINE#         40
+  C:0927H         LINE#         41
+  C:0927H         LINE#         42
+  C:0932H         LINE#         43
+  C:0936H         LINE#         45
+  C:0938H         LINE#         46
+  C:0939H         LINE#         47
+  C:093AH         LINE#         48
+  C:093CH         LINE#         49
+  C:0940H         LINE#         51
+  C:0942H         LINE#         52
+  C:0943H         LINE#         53
+  C:0944H         LINE#         54
+  C:0946H         LINE#         55
+  -------         ENDPROC       _HC595SENDBYTE
+  -------         PROC          MAIN
+  -------         DO            
+BL51 BANKED LINKER/LOCATER V6.22                                                      12/02/2019  19:00:21  PAGE 3
+
+
+  D:0030H         SYMBOL        i
+  D:0030H         SYMBOL        i
+  D:0030H         SYMBOL        i
+  D:0030H         SYMBOL        i
+  -------         ENDDO         
+  -------         DO            
+  D:0030H         SYMBOL        i
+  D:0030H         SYMBOL        i
+  D:0030H         SYMBOL        i
+  -------         ENDDO         
+  -------         DO            
+  D:0030H         SYMBOL        i
+  D:0030H         SYMBOL        i
+  -------         ENDDO         
+  -------         DO            
+  D:0030H         SYMBOL        i
+  -------         ENDDO         
+  C:088CH         LINE#         57
+  C:088CH         LINE#         58
+  C:088CH         LINE#         59
+  C:088FH         LINE#         60
+  C:088FH         LINE#         61
+  C:088FH         LINE#         62
+  C:088FH         LINE#         63
+  C:0892H         LINE#         64
+  C:0895H         LINE#         65
+  C:0895H         LINE#         66
+  C:089DH         LINE#         67
+  C:089FH         LINE#         68
+  C:089FH         LINE#         69
+  C:08A2H         LINE#         70
+  C:08ADH         LINE#         71
+  C:08ADH         LINE#         72
+  C:08ADH         LINE#         80
+  C:08B0H         LINE#         81
+  C:08B0H         LINE#         82
+  C:08B0H         LINE#         83
+  C:08B0H         LINE#         84
+  C:08B3H         LINE#         85
+  C:08B6H         LINE#         86
+  C:08B6H         LINE#         87
+  C:08BEH         LINE#         88
+  C:08C0H         LINE#         89
+  C:08C0H         LINE#         90
+  C:08C3H         LINE#         91
+  C:08CEH         LINE#         92
+  C:08CEH         LINE#         93
+  C:08CEH         LINE#         100
+  C:08D1H         LINE#         101
+  C:08D1H         LINE#         102
+  C:08D1H         LINE#         103
+  C:08D1H         LINE#         104
+  C:08D4H         LINE#         105
+  C:08D7H         LINE#         106
+  C:08D7H         LINE#         107
+  C:08DFH         LINE#         108
+  C:08E1H         LINE#         109
+BL51 BANKED LINKER/LOCATER V6.22                                                      12/02/2019  19:00:21  PAGE 4
+
+
+  C:08E1H         LINE#         110
+  C:08E4H         LINE#         111
+  C:08EFH         LINE#         112
+  C:08EFH         LINE#         114
+  C:08EFH         LINE#         119
+  C:08F2H         LINE#         120
+  C:08F2H         LINE#         121
+  C:08F2H         LINE#         122
+  C:08F2H         LINE#         123
+  C:08F5H         LINE#         124
+  C:08F8H         LINE#         125
+  C:08F8H         LINE#         126
+  C:0900H         LINE#         127
+  C:0902H         LINE#         128
+  C:0902H         LINE#         129
+  C:0905H         LINE#         130
+  -------         ENDPROC       MAIN
+  -------         ENDMOD        点誣
+
+******************************************************************************
+* RESTRICTED VERSION WITH 0800H BYTE CODE SIZE LIMIT; USED: 00F8H BYTE (12%) *
+******************************************************************************
+
+Program Size: data=50.0 xdata=0 code=392
+LINK/LOCATE RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)

@@ -1,0 +1,24 @@
+C51 COMPILER V9.01   ²¥±¨Êý×_                                                              12/18/2019 22:02:00 PAGE 1   
+
+
+C51 COMPILER V9.01, COMPILATION OF MODULE ²¥±¨Êý×_
+OBJECT MODULE PLACED IN ²¥±¨Êý×Ö.OBJ
+COMPILER INVOKED BY: C:\Èí¼þ\C51\BIN\C51.EXE ²¥±¨Êý×Ö.c BROWSE DEBUG OBJECTEXTEND
+
+line level    source
+
+*** WARNING C235 IN LINE 225 OF ²¥±¨Ê×Ö.C: parameter 1: different types
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =   1026    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =      4    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  1 WARNING(S),  0 ERROR(S)

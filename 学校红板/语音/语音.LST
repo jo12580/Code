@@ -1,0 +1,84 @@
+C51 COMPILER V9.01   语音                                                                  01/03/2020 23:42:22 PAGE 1   
+
+
+C51 COMPILER V9.01, COMPILATION OF MODULE 语音
+OBJECT MODULE PLACED IN 语音.OBJ
+COMPILER INVOKED BY: C:\软件\C51\BIN\C51.EXE 语音.c BROWSE DEBUG OBJECTEXTEND
+
+line level    source
+
+   1          #include<reg52.h>
+   2          typedef unsigned char uchar       ;
+   3          typedef unsigned int  uint      ;
+   4          sbit k1=P1^6;  //语音播放引脚定义 
+   5          sbit k2=P1^7;  //语音播放引脚定义 
+   6          sbit Led1=P1^4;
+   7          sbit Led2=P1^5;
+   8          
+   9          sbit rest=P2^7; //语音芯片复位引脚定义
+  10          sbit  dat=P2^6;  //语音芯片数据线引脚定义
+  11          sbit busy=P2^5;  //语音芯片---引脚定义
+  12          uchar a,b=1;
+  13          void music(uchar i);
+  14          void  delay(uint i);
+  15          void main()
+  16          {
+  17   1              uchar i=1;
+  18   1                  Led1=0;
+  19   1                      Led2=1;
+  20   1                  P0=0;
+  21   1              
+  22   1              delay(100);     
+  23   1              while (1)
+  24   1              
+  25   1                      {
+  26   2                              music(36); 
+  27   2                              while (!busy);  
+  28   2                              Led1=~Led1;
+  29   2                              Led2=~Led2;     
+  30   2                      }
+  31   1      }
+  32           
+  33          
+  34          void  delay(uint i)
+  35          {
+  36   1              while(i--);
+  37   1      }
+  38          
+  39          void music(uchar i)                                                                        //语音函数的声明
+  40          {       
+  41   1              dat=0;  
+  42   1              rest=0;
+  43   1              delay(50);
+  44   1              rest=1;                                 
+  45   1              delay(50);
+  46   1              rest=0;
+  47   1          delay(50);
+  48   1              
+  49   1              dat=0;
+  50   1              delay(50);
+  51   1              
+  52   1              for(a=0;a<i;a++)
+  53   1             {
+  54   2                      dat=1;
+  55   2                      delay(50);
+C51 COMPILER V9.01   语音                                                                  01/03/2020 23:42:22 PAGE 2   
+
+  56   2                      dat=0;
+  57   2                      delay(50);   
+  58   2                 }
+  59   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =     92    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =      2       1
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

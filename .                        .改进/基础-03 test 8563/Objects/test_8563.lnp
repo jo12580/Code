@@ -1,0 +1,5 @@
+".\Objects\STARTUP.obj",
+".\Objects\main.obj",
+".\Objects\PCF8563.obj" 
+TO ".\Objects\test_8563" 
+PRINT(".\Listings\test_8563.m51") RAMSIZE(256) 

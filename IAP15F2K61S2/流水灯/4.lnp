@@ -1,0 +1,4 @@
+"ds1302.obj",
+"main.obj" 
+TO "4.1" 
+RAMSIZE(256) 

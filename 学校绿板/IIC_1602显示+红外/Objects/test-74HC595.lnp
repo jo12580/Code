@@ -1,0 +1,5 @@
+".\Objects\STARTUP.obj",
+".\Objects\main.obj",
+".\Objects\IIC-1602.obj" 
+TO ".\Objects\test-74HC595" 
+PRINT(".\Listings\test-74HC595.m51") RAMSIZE(256) 

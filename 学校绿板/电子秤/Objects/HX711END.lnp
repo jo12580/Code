@@ -1,0 +1,8 @@
+".\Objects\STARTUP.obj",
+".\Objects\74hc595.obj",
+".\Objects\HX711.obj",
+".\Objects\IIC-1602.obj",
+".\Objects\jianpan.obj",
+".\Objects\main.obj" 
+TO ".\Objects\HX711END" 
+PRINT(".\Listings\HX711END.m51") RAMSIZE(256) 

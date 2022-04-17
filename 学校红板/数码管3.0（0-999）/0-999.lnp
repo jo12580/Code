@@ -1,0 +1,4 @@
+"main.obj",
+"74hc595.obj" 
+TO "0-999" 
+RAMSIZE(256) 

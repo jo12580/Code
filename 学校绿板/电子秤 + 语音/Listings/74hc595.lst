@@ -1,0 +1,91 @@
+C51 COMPILER V9.01   74HC595                                                               12/17/2021 13:01:01 PAGE 1   
+
+
+C51 COMPILER V9.01, COMPILATION OF MODULE 74HC595
+OBJECT MODULE PLACED IN .\Objects\74hc595.obj
+COMPILER INVOKED BY: D:\Software\Keil\32\C51\BIN\C51.EXE 74hc595.c OPTIMIZE(8,SPEED) BROWSE DEBUG OBJECTEXTEND PRINT(.\L
+                    -istings\74hc595.lst) TABS(2) OBJECT(.\Objects\74hc595.obj)
+
+line level    source
+
+   1          #include "reg52.h"
+   2          #include "intrins.h"
+   3          #include "74hc595.h"
+   4          
+   5          
+   6          unsigned char code led_code[] =    //
+   7          //{0xff,0xff,0x01,0x02,0x04,
+   8          //0x08,0x10,0x20,0x40,0x80};  //
+   9          
+  10          { 0xC0, 0xF9, 0xA4, 0xB0, 0x99, 0x92, 
+  11          0x82, 0xF8, 0x80, 0x90, 0x88, 0x83, 
+  12          0xC6, 0xA1, 0x86, 0x8E, 0xBF, 0x7F };//
+  13          
+  14          
+  15          void HC595SendData(unsigned char SendVal,unsigned char ctr)
+  16          {  
+  17   1        unsigned char i,m;
+  18   1        m=led_code[SendVal];
+  19   1      
+  20   1        if(ctr==2) m=m&0xdf;  //
+  21   1            
+  22   1        for(i=0;i<8;i++) 
+  23   1        {
+  24   2            SCK_595=0;
+  25   2          if(m&0x80)   //
+  26   2          DATA_595=1;                                                                                             
+             -                                                                                                                  //set 
+             -dataline high  0X80  最高位与SendVal左移的最高位 进行逻辑运算
+  27   2          else 
+  28   2          DATA_595=0;
+  29   2          m=m<<1;   //
+  30   2          SCK_595=1;  
+  31   2          _nop_();   //
+  32   2          _nop_();   //
+  33   2        }  
+  34   1      }
+  35          
+  36          
+  37          
+  38          
+  39          void display_date(unsigned char year,month,day)
+  40          { 
+  41   1        unsigned char year_h,year_l,month_h,month_l,day_h,day_l;
+  42   1        
+  43   1        year_h=year/10;
+  44   1        year_l=year%10;
+  45   1        month_h=month/10;
+  46   1        month_l=month%10;
+  47   1        day_h=day/10;
+  48   1        day_l=day%10;
+  49   1        
+  50   1        HC595SendData(year_h,1);
+  51   1        HC595SendData(year_l,1);
+  52   1        HC595SendData(month_h,1); 
+C51 COMPILER V9.01   74HC595                                                               12/17/2021 13:01:01 PAGE 2   
+
+  53   1        HC595SendData(month_l,1);
+  54   1        HC595SendData(day_h,1);
+  55   1        HC595SendData(day_l,1);
+  56   1      
+  57   1        RCK_595=0; //set dataline low
+  58   1        _nop_();  //短暂延时
+  59   1        _nop_();  //短暂延时
+  60   1        RCK_595=1;
+  61   1      }
+  62          
+  63          
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =    149    ----
+   CONSTANT SIZE    =     18    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----       7
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

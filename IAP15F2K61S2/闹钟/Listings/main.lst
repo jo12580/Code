@@ -1,0 +1,113 @@
+C51 COMPILER V9.01   MAIN                                                                  05/08/2021 19:38:17 PAGE 1   
+
+
+C51 COMPILER V9.01, COMPILATION OF MODULE MAIN
+OBJECT MODULE PLACED IN main.OBJ
+COMPILER INVOKED BY: D:\Software\Keil\32\C51\BIN\C51.EXE main.c OPTIMIZE(8,SPEED) BROWSE DEBUG OBJECTEXTEND PRINT(.\List
+                    -ings\main.lst) TABS(2)
+
+line level    source
+
+   1          #include "reg52.h"       //此文件中定义了单片机的一些特殊功能寄存器
+   2          #include "ds1302.h" 
+   3          
+   4          typedef unsigned int u16;   //对数据类型进行声明定义
+   5          typedef unsigned char u8;
+   6          
+   7          sbit S7  = P3^0;
+   8          sbit a=P0^2;
+   9          sbit beep=P0^6;
+  10          
+  11          
+  12          void delay(u16 i)
+  13          {
+  14   1        while(i--); 
+  15   1      }
+  16          
+  17          void Display()
+  18          {
+  19   1        u16 i;
+  20   1        for(i=0;i<=7;i++)
+  21   1        {
+  22   2          P2=0xc0;
+  23   2          switch(i)
+  24   2          {
+  25   3            case 0:P0=0x01;break;
+  26   3            case 1:P0=0x02;break;
+  27   3            case 2:P0=0x04;break;
+  28   3            case 3:P0=0x08;break;
+  29   3            case 4:P0=0x10;break;
+  30   3            case 5:P0=0x20;break;
+  31   3            case 6:P0=0x40;break;
+  32   3            case 7:P0=0x80;break;
+  33   3          }
+  34   2          P2=0xe0;
+  35   2          if(S7==1)               //不摁下显示时间
+  36   2          {
+  37   3          P0=DisplayData[i];
+  38   3          delay(100);  
+  39   3          P0=0xff;  
+  40   3          }
+  41   2          else                   //摁下显示日历
+  42   2          {
+  43   3          P0=DisplayData[i+8];
+  44   3          delay(100);  
+  45   3          P0=0xff;
+  46   3          }
+  47   2        }
+  48   1      }
+  49          
+  50          void LED()
+  51          {
+  52   1        int i;
+  53   1          if(DisplayData[7]==0xF9)  
+  54   1          {
+C51 COMPILER V9.01   MAIN                                                                  05/08/2021 19:38:17 PAGE 2   
+
+  55   2            P2=0x80;
+  56   2            for(i=0;i<7;i++)
+  57   2            {
+  58   3              P0=(0x80>>i);
+  59   3              delay(50000);
+  60   3            }
+  61   2            P0=0xff;
+  62   2          }
+  63   1      }
+  64          
+  65          void voice()
+  66          {
+  67   1          if(DisplayData[3]==0x92&&DisplayData[4]==0xF9&&DisplayData[7]==0xC0)
+  68   1          {
+  69   2            P2=0xa0;
+  70   2            beep=1;
+  71   2            delay(5000);
+  72   2            beep=0;
+  73   2          }
+  74   1      }
+  75          
+  76          void main()
+  77          { 
+  78   1        Ds1302Init();    //第一次初始化后就可以注释该条语句，这样下次重启就不会再次初始化了
+  79   1        while(1)
+  80   1        {
+  81   2          datapros();  //数据处理函数
+  82   2          Display();   //数码管显示函数
+  83   2          LED();
+  84   2          voice();
+  85   2        }   
+  86   1      }
+  87          
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =    229    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

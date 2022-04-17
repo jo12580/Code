@@ -1,0 +1,108 @@
+C51 COMPILER V9.01   VOICE                                                                 01/04/2020 23:36:25 PAGE 1   
+
+
+C51 COMPILER V9.01, COMPILATION OF MODULE VOICE
+OBJECT MODULE PLACED IN voice.OBJ
+COMPILER INVOKED BY: C:\软件\C51\BIN\C51.EXE voice.c BROWSE DEBUG OBJECTEXTEND
+
+line level    source
+
+   1          #include<voice.h>
+   2          
+   3          void  delay_us(unsigned int i)
+   4          {
+   5   1              while(i--);
+   6   1      }
+   7          
+   8          void voice(unsigned char i)
+   9          {       
+  10   1              unsigned char a;
+  11   1              dat=0;  
+  12   1              rest=0;
+  13   1              delay_us(50);
+  14   1              rest=1;                                 
+  15   1              delay_us(50);
+  16   1              rest=0;
+  17   1          delay_us(50);
+  18   1              dat=0;
+  19   1              delay_us(50);
+  20   1              
+  21   1              for(a=0;a<i;a++)
+  22   1             {
+  23   2                      dat=1;
+  24   2                      delay_us(50);
+  25   2                      dat=0;
+  26   2                      delay_us(50);   
+  27   2                 }
+  28   1              while (!busy);    
+  29   1      }
+  30          //语音素材列表
+  31          //地址  内容
+  32          //1             无声音
+  33          //2             0
+  34          //3             1
+  35          //4             2
+  36          //5             3
+  37          //6             4
+  38          //7             5
+  39          //8             6
+  40          //9             7
+  41          //10    8
+  42          //11    9
+  43          //12    十
+  44          //13    百
+  45          //14    点
+  46          //15    分
+  47          //16    秒
+  48          //17    年
+  49          //18    月
+  50          //19    日
+  51          //20    星期
+  52          //21    度
+  53          //22    百分之
+  54          //23    现在北京时间是
+  55          //24    现在温度是
+C51 COMPILER V9.01   VOICE                                                                 01/04/2020 23:36:25 PAGE 2   
+
+  56          //25    现在湿度是
+  57          //26    音乐（铁路广播前的提示音）
+  58          //27    整
+  59          //28    今天是
+  60          //29    上午
+  61          //30    下午
+  62          //31    晚上
+  63          //32    负
+  64          //33    滴（铃音，提示音）
+  65          //34    欢迎光临本店
+  66          //35    欢迎使用本公司产品
+  67          //36    欢迎再次光临
+  68          //37    广西师范大学
+  69          //38    电子工程学院
+  70          //39    电子科学与技术
+  71          //40    电子信息工程
+  72          //41    通信工程
+  73          //42    专业
+  74          //43    学号
+  75          //44    电子楼
+  76          //45    室
+  77          //46    大学生创新基地
+  78          //47    请设置参数
+  79          //48    请输入
+  80          //49    价格
+  81          //50    当前距离
+  82          //51    重量
+  83          //52    千克
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =     62    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

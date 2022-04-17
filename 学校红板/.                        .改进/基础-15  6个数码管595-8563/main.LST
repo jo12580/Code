@@ -1,0 +1,88 @@
+C51 COMPILER V9.01   MAIN                                                                  01/04/2020 23:36:23 PAGE 1   
+
+
+C51 COMPILER V9.01, COMPILATION OF MODULE MAIN
+OBJECT MODULE PLACED IN main.OBJ
+COMPILER INVOKED BY: C:\软件\C51\BIN\C51.EXE main.c BROWSE DEBUG OBJECTEXTEND
+
+line level    source
+
+   1          //---------------------------
+   2          //
+   3          //---------------------------
+   4          #include<reg52.h>
+   5          #include <PCF8563.h>
+   6          #include<voice.h>
+   7          #include "74hc595.h"
+   8          typedef unsigned char uchar ;
+   9          typedef unsigned int  uint      ;
+  10          sbit key_play=P1^6;  //语音播放引脚定义 
+  11          sbit led0=P1^4;
+  12          sbit led1=P1^5;
+  13          
+  14          extern unsigned char year,mon,day,hou,min,sec,week,last_sec;
+  15          
+  16          //=============================
+  17          void main()
+  18          {
+  19   1                      year=0x19; //给定今天日期初值
+  20   1                      mon=0x12;  //
+  21   1                      day=0x03;  //
+  22   1                      hou=0x22;  //给定今天时间初值
+  23   1                      min=0x25;  //
+  24   1                      sec=0x52;  //
+  25   1                      week=0x02; //
+  26   1              
+  27   1              led0=0;
+  28   1              led1=1;
+  29   1              
+  30   1              write_time_8563();               //写日期初值,数据放于 time[7] 
+  31   1              read_time_8563();               //读日期,数据放于 year,mon,day,hou,min,sec,week
+  32   1              while(1)
+  33   1              {       last_sec=sec;
+  34   2                      read_time_8563(); // year,mon,day,hou,min,sec
+  35   2                      if(last_sec!=sec)   //
+  36   2                      {
+  37   3                              led0=~led0;
+  38   3                              led1=~led1;
+  39   3                              display_time(hou,min,sec,week);
+  40   3      //====================================
+  41   3                              voice(hou/10+2);
+  42   3            if(hou>10){               voice(12); } //十
+  43   3                              voice(hou%10+2);
+  44   3                              voice(14);  //                                          
+  45   3      
+  46   3      //=====================================                 
+  47   3                              voice(min/10+2);
+  48   3            if(min>10){               voice(12); } //十
+  49   3                              voice(min%10+2);
+  50   3                              voice(15);  //                  
+  51   3      //===============================                       
+  52   3                              voice(sec/10+2);
+  53   3            if(sec>10){               voice(12); } //十
+  54   3                              voice(sec%10+2);
+  55   3                              voice(16);  //秒
+C51 COMPILER V9.01   MAIN                                                                  01/04/2020 23:36:23 PAGE 2   
+
+  56   3      
+  57   3                              
+  58   3                      }
+  59   2                      
+  60   2              }
+  61   1      }
+  62          
+  63          //---------------------------
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =    200    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

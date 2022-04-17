@@ -1,0 +1,96 @@
+C51 COMPILER V9.01   HX711                                                                 11/21/2021 11:05:27 PAGE 1   
+
+
+C51 COMPILER V9.01, COMPILATION OF MODULE HX711
+OBJECT MODULE PLACED IN .\Objects\HX711.obj
+COMPILER INVOKED BY: D:\Software\Keil\32\C51\BIN\C51.EXE HX711.c OPTIMIZE(8,SPEED) BROWSE DEBUG OBJECTEXTEND PRINT(.\Lis
+                    -tings\HX711.lst) TABS(2) OBJECT(.\Objects\HX711.obj)
+
+line level    source
+
+   1          #include "HX711.h"
+   2          
+   3          
+   4          //****************************************************
+   5          //延时函数
+   6          //****************************************************
+   7          void Delay__hx711_us(void)
+   8          {
+   9   1        _nop_();
+  10   1        _nop_();
+  11   1      
+  12   1      }
+  13          
+  14          //****************************************************
+  15          //读取HX711
+  16          //****************************************************
+  17          unsigned long HX711_Read(void)  //增益128
+  18          {
+  19   1        
+  20   1        
+  21   1        unsigned long count; 
+  22   1        unsigned char i; 
+  23   1        unsigned int j=1;
+  24   1          HX711_DOUT=1; 
+  25   1          Delay__hx711_us();
+  26   1          HX711_SCK=0; 
+  27   1          count=0; 
+  28   1      //    while(HX711_DOUT }; 
+  29   1          while(HX711_DOUT && j ) {j++;}; ///
+  30   1          for(i=0;i<24;i++)
+  31   1                 
+  32   1        { 
+  33   2            HX711_SCK=1; 
+  34   2            count=count<<1; 
+  35   2          HX711_SCK=0; 
+  36   2            if(HX711_DOUT)
+  37   2            count++; 
+  38   2        } 
+  39   1        HX711_SCK=1; 
+  40   1        count=count^0x800000;///
+  41   1        Delay__hx711_us();
+  42   1        HX711_SCK=0;  
+  43   1        return(count);
+  44   1          
+  45   1      }
+  46          
+  47          
+  48          //unsigned long  fun_total(unsigned long  * array)    //滤除不正常值
+  49          //{
+  50          //  unsigned long  min,max;
+  51          //  unsigned long  total = 0;//返回的平均值
+  52          //  unsigned char i;  
+  53          //  min=HX711_Read();
+  54          ////  min=min>>4;
+C51 COMPILER V9.01   HX711                                                                 11/21/2021 11:05:27 PAGE 2   
+
+  55          //  max=min;
+  56          //  for(i=0; i<10; i++)
+  57          //  {
+  58          //    array[i]=HX711_Read();
+  59          ////    array[i]=array[i]>>4;
+  60          //    if( array[i] < min )  min = array[i]; 
+  61          //    if( array[i] > max )  max = array[i]; 
+  62          //    total += array[i];
+  63          //  }
+  64          //  total = total - min - max;
+  65          //  total = total / 8.0 ;
+  66          //  return total;
+  67          //}
+  68          
+  69          
+  70          
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =     79    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

@@ -1,0 +1,179 @@
+C51 COMPILER V9.01   MAIN                                                                  12/05/2021 22:01:07 PAGE 1   
+
+
+C51 COMPILER V9.01, COMPILATION OF MODULE MAIN
+OBJECT MODULE PLACED IN .\Objects\main.obj
+COMPILER INVOKED BY: D:\Software\Keil\32\C51\BIN\C51.EXE main.c OPTIMIZE(8,SPEED) BROWSE DEBUG OBJECTEXTEND PRINT(.\List
+                    -ings\main.lst) TABS(2) OBJECT(.\Objects\main.obj)
+
+line level    source
+
+   1          #include<reg52.h>
+   2          #include <IIC-1602.h>
+   3          //#include"infrared.h"
+   4          //#include"delay.h"
+   5          
+   6          void  delay(unsigned int i);
+   7          sbit LED1=P3^4;  //主要做测试程序用
+   8          sbit IRIN=P3^2;
+   9          
+  10          unsigned char IrValue[6];
+  11          unsigned char  Time;
+  12          code unsigned cmd_infrareed[]={0x19,0x45,0x46,0x47,0x44,0x40,0x43,0x07,0x15,0x09,0x16,0x0b,0x18,0x08,0x1c,
+             -0x5a,0x52}; // 0~9   A~G
+  13          
+  14          void IrInit()  // 外部中断0初始化
+  15          {
+  16   1        IT0=1;//下降沿触发
+  17   1        EX0=1;//打开中断0允许
+  18   1        EA=1; //打开总中断
+  19   1        IRIN=1;//初始化端口
+  20   1      }
+  21          
+  22          void main()
+  23          {  
+  24   1        IrInit();  // 外部中断0初始化
+  25   1        Lcd1602Iinitial();
+  26   1        DispOneChar(0,0,'1');        //显示一个字符
+  27   1        disp_string(0,0,"123456");       //显示一个字符串
+  28   1        delay(40000);
+  29   1        disp_string(0,0,"      ");       //显示多个看不见的空格，相当于清屏
+  30   1      while(1)
+  31   1      {
+  32   2            
+  33   2          switch(IrValue[2])
+  34   2             {
+  35   3               case(0x19): disp_string(0,1," 0");  //按键0
+  36   3                      break;            
+  37   3               case(0x45): disp_string(0,1," 1");  //按键1
+  38   3                      break;           
+  39   3               case(0x46): disp_string(0,1," 2");  //按键2 
+  40   3                      break;            
+  41   3               case(0x47): disp_string(0,1," 3");  //按键3
+  42   3                      break;            
+  43   3               case(0x44):  disp_string(0,1," 4");  //按键4
+  44   3                      break;           
+  45   3               case(0x40):  disp_string(0,1," 5");  //按键5
+  46   3                      break;            
+  47   3               case(0x43):  disp_string(0,1," 6");  //按键6
+  48   3                      break;            
+  49   3               case(0x07):  disp_string(0,1," 7");  //按键7
+  50   3                      break;            
+  51   3               case(0x15):  disp_string(0,1," 8");  //按键8
+  52   3                      break;            
+  53   3               case(0x09):  disp_string(0,1," 9");  //按键9
+C51 COMPILER V9.01   MAIN                                                                  12/05/2021 22:01:07 PAGE 2   
+
+  54   3                      break;            
+  55   3               case(0x16):  disp_string(0,1," *");  //按键*
+  56   3                      break;            
+  57   3               case(0x0d):  disp_string(0,1," #");  //按键#
+  58   3                      break;            
+  59   3               case(0x18):  disp_string(0,1," ^");  //按键^
+  60   3                      break;            
+  61   3               case(0x08):  disp_string(0,1," <");  //按键 <
+  62   3                      break;            
+  63   3                   case(0x1c):disp_string(0,1,"ok");  //按键ok
+  64   3                      break;            
+  65   3               case(0x5a):  disp_string(0,1," >");  //按键>
+  66   3                      break;            
+  67   3               case(0x52):  disp_string(0,1," V");  //按键V
+  68   3                      break;            
+  69   3        }  
+  70   2          DispOneChar(4,1,IrValue[2]/16+0X30);  //显示命令码  为什么要加上0x30
+  71   2          
+  72   2          if( IrValue[2]%16<10 )   // 小于10的是数字0-9,否则是字母，abcdefg
+  73   2            {DispOneChar(5,1,IrValue[2]%16+0X30);}  //显示十位值  为什么要加上0x30
+  74   2          else
+  75   2            {DispOneChar(5,1,IrValue[2]%16+0X37);}  //显示个位值  为什么要加上0x37
+  76   2            
+  77   2          LED1= ~LED1;
+  78   2          delay(40000);
+  79   2      
+  80   2        
+  81   2      }}
+  82          
+  83          void ReadIr() interrupt 0   //外部中断零服务程序
+  84          {
+  85   1        unsigned int  j,k;
+  86   1        unsigned char  err;
+  87   1        Time=0;          
+  88   1        delay(700); //7ms
+  89   1        if(IRIN==0)   //确认是否真的接收到正确的信号
+  90   1        {  
+  91   2          
+  92   2          err=1000;       //1000*10us=10ms,超过说明接收到错误的信号
+  93   2          /*当两个条件都为真是循环，如果有一个条件为假的时候跳出循环，免得程序出错的时
+  94   2          侯，程序死在这里*/  
+  95   2          while((IRIN==0)&&(err>0)) //等待前面9ms的低电平过去     
+  96   2          {     
+  97   3            delay(1);
+  98   3            err--;
+  99   3          } 
+ 100   2          if(IRIN==1)     //如果正确等到9ms低电平
+ 101   2          {
+ 102   3            err=500;
+ 103   3            while((IRIN==1)&&(err>0))    //等待4.5ms的起始高电平过去
+ 104   3            {
+ 105   4              delay(1);
+ 106   4              err--;
+ 107   4            }
+ 108   3            for(k=0;k<4;k++)    //共有4组数据
+ 109   3            {       
+ 110   4              for(j=0;j<8;j++)  //接收一组数据
+ 111   4              {
+ 112   5      
+ 113   5                err=60;   
+ 114   5                while((IRIN==0)&&(err>0))//等待信号前面的560us低电平过去
+ 115   5                {
+C51 COMPILER V9.01   MAIN                                                                  12/05/2021 22:01:07 PAGE 3   
+
+ 116   6                  delay(1);
+ 117   6                  err--;
+ 118   6                }
+ 119   5                err=500;
+ 120   5                while((IRIN==1)&&(err>0))  //计算高电平的时间长度。
+ 121   5                {
+ 122   6                  delay(10);   //0.1ms
+ 123   6                  Time++;
+ 124   6                  err--;
+ 125   6                  if(Time>30)
+ 126   6                  {
+ 127   7                    return;
+ 128   7                  }
+ 129   6                }
+ 130   5                IrValue[k]>>=1;  //k表示第几组数据
+ 131   5                if(Time>=8)     //如果高电平出现大于565us，那么是1
+ 132   5                {
+ 133   6                  IrValue[k]|=0x80;
+ 134   6                }
+ 135   5                Time=0;   //用完时间要重新赋值              
+ 136   5              }
+ 137   4            }
+ 138   3          }
+ 139   2          if(IrValue[2]!=~IrValue[3])
+ 140   2          {
+ 141   3            return;
+ 142   3          }
+ 143   2        }     
+ 144   1      }
+ 145           
+ 146          //---------延时函数-------------
+ 147          void  delay(unsigned int i)
+ 148          {
+ 149   1        while(i--);
+ 150   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =    575    ----
+   CONSTANT SIZE    =     99    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =      7       5
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

@@ -1,0 +1,130 @@
+BL51 BANKED LINKER/LOCATER V6.22                                                        01/08/2020  21:05:09  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.22, INVOKED BY:
+C:\软件\C51\BIN\BL51.EXE 数码管显示学号后3位.obj TO 数码管显示学号后3位。 RAMSIZE (256)
+
+
+MEMORY MODEL: SMALL
+
+
+INPUT MODULES INCLUDED:
+  数码管显示学号后3位.obj (数_牍_显示学号篲3位)
+  C:\软件\C51\LIB\C51S.LIB (?C_STARTUP)
+
+
+LINK MAP OF MODULE:  数码管显示学号后3位。 (数_牍_显示学号篲3位)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+            IDATA   0008H     0001H     UNIT         ?STACK
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0003H     ABSOLUTE     
+                    0003H     07FDH                  *** GAP ***
+            CODE    0800H     0038H     UNIT         ?PR?MAIN?数_牍_显示学号篲3位
+            CODE    0838H     000FH     UNIT         ?PR?_DELAY?数_牍_显示学号篲3位
+            CODE    0847H     000CH     UNIT         ?C_C51STARTUP
+
+
+
+OVERLAY MAP OF MODULE:   数码管显示学号后3位。 (数_牍_显示学号篲3位)
+
+
+SEGMENT
+  +--> CALLED SEGMENT
+---------------------
+?C_C51STARTUP
+  +--> ?PR?MAIN?数_牍_显示学号篲3位
+
+?PR?MAIN?数_牍_显示学号篲3位
+  +--> ?PR?_DELAY?数_牍_显示学号篲3位
+
+
+
+SYMBOL TABLE OF MODULE:  数码管显示学号后3位。 (数_牍_显示学号篲3位)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        数_牍_显示学号篲3位
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  D:0080H         PUBLIC        P0
+  D:0090H         PUBLIC        P1
+  D:00B0H         PUBLIC        P3
+  D:00A8H         PUBLIC        IE
+  C:083CH         PUBLIC        _delay
+  B:0080H.1       PUBLIC        a1
+BL51 BANKED LINKER/LOCATER V6.22                                                      01/08/2020  21:05:09  PAGE 2
+
+
+  B:0080H.2       PUBLIC        a2
+  B:0080H.3       PUBLIC        a3
+  B:0080H.4       PUBLIC        a4
+  B:0080H.5       PUBLIC        a5
+  B:0080H.6       PUBLIC        a6
+  B:0080H.7       PUBLIC        a7
+  D:00B8H         PUBLIC        IP
+  C:0800H         PUBLIC        main
+  D:0098H         PUBLIC        SCON
+  D:0088H         PUBLIC        TCON
+  D:00C8H         PUBLIC        T2CON
+  D:00D0H         PUBLIC        PSW
+  C:0838H         SYMBOL        L?0009
+  -------         PROC          L?0008
+  -------         ENDPROC       L?0008
+  C:0838H         SYMBOL        L?0009
+  -------         PROC          _DELAY
+  D:0006H         SYMBOL        i
+  C:083CH         LINE#         13
+  C:083CH         LINE#         14
+  C:083CH         LINE#         15
+  C:0846H         LINE#         16
+  -------         ENDPROC       _DELAY
+  -------         PROC          MAIN
+  C:0800H         LINE#         18
+  C:0800H         LINE#         19
+  C:0800H         LINE#         20
+  C:0800H         LINE#         21
+  C:0800H         LINE#         22
+  C:0803H         LINE#         23
+  C:0805H         LINE#         24
+  C:0807H         LINE#         25
+  C:0809H         LINE#         26
+  C:080BH         LINE#         27
+  C:080DH         LINE#         28
+  C:080FH         LINE#         29
+  C:0811H         LINE#         30
+  C:0814H         LINE#         31
+  C:0817H         LINE#         32
+  C:0819H         LINE#         33
+  C:081BH         LINE#         34
+  C:081DH         LINE#         35
+  C:081FH         LINE#         36
+  C:0821H         LINE#         37
+  C:0823H         LINE#         38
+  C:0825H         LINE#         39
+  C:0828H         LINE#         40
+  C:082AH         LINE#         41
+  C:082CH         LINE#         42
+  C:082EH         LINE#         43
+  C:0830H         LINE#         44
+  C:0832H         LINE#         45
+  C:0834H         LINE#         46
+  C:0836H         LINE#         48
+  -------         ENDPROC       MAIN
+  -------         ENDMOD        数_牍_显示学号篲3位
+
+BL51 BANKED LINKER/LOCATER V6.22                                                      01/08/2020  21:05:09  PAGE 3
+
+
+******************************************************************************
+* RESTRICTED VERSION WITH 0800H BYTE CODE SIZE LIMIT; USED: 0047H BYTE ( 3%) *
+******************************************************************************
+
+Program Size: data=9.0 xdata=0 code=86
+LINK/LOCATE RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)

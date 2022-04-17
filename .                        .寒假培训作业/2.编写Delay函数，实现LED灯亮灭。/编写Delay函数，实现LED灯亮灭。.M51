@@ -1,0 +1,97 @@
+BL51 BANKED LINKER/LOCATER V6.22                                                        01/08/2020  21:00:48  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.22, INVOKED BY:
+C:\Èí¼þ\C51\BIN\BL51.EXE ±àÐ´Delayº¯Êý£¬ÊµÏÖLEDµÆÁÁÃð.obj TO ±àÐ´Delayº¯Êý£¬ÊµÏÖLEDµÆÁÁÃð¡£ RAMSIZE (256)
+
+
+MEMORY MODEL: SMALL
+
+
+INPUT MODULES INCLUDED:
+  ±àÐ´Delayº¯Êý£¬ÊµÏÖLEDµÆÁÁÃð.obj (±àÐ´DELAYº_Êý£¬ÊµÏ_LEDµÆÁÁÃð)
+  C:\Èí¼þ\C51\LIB\C51S.LIB (?C_STARTUP)
+
+
+LINK MAP OF MODULE:  ±àÐ´Delayº¯Êý£¬ÊµÏÖLEDµÆÁÁÃð¡£ (±àÐ´DELAYº_Êý£¬ÊµÏ_LEDµÆÁÁÃð)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+            IDATA   0008H     0001H     UNIT         ?STACK
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0003H     ABSOLUTE     
+                    0003H     07FDH                  *** GAP ***
+            CODE    0800H     0018H     UNIT         ?PR?MAIN?±àÐ´DELAYº_Êý£¬ÊµÏ_LEDµÆÁÁÃð
+            CODE    0818H     000CH     UNIT         ?C_C51STARTUP
+            CODE    0824H     000BH     UNIT         ?PR?_DELAY?±àÐ´DELAYº_Êý£¬ÊµÏ_LEDµÆÁÁÃð
+
+
+
+OVERLAY MAP OF MODULE:   ±àÐ´Delayº¯Êý£¬ÊµÏÖLEDµÆÁÁÃð¡£ (±àÐ´DELAYº_Êý£¬ÊµÏ_LEDµÆÁÁÃð)
+
+
+SEGMENT
+  +--> CALLED SEGMENT
+---------------------
+?C_C51STARTUP
+  +--> ?PR?MAIN?±àÐ´DELAYº_Êý£¬ÊµÏ_LEDµÆÁÁÃð
+
+?PR?MAIN?±àÐ´DELAYº_Êý£¬ÊµÏ_LEDµÆÁÁÃð
+  +--> ?PR?_DELAY?±àÐ´DELAYº_Êý£¬ÊµÏ_LEDµÆÁÁÃð
+
+
+
+SYMBOL TABLE OF MODULE:  ±àÐ´Delayº¯Êý£¬ÊµÏÖLEDµÆÁÁÃð¡£ (±àÐ´DELAYº_Êý£¬ÊµÏ_LEDµÆÁÁÃð)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        ±àÐ´DELAYº_Êý£¬ÊµÏ_LEDµÆÁÁÃð
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  D:0090H         PUBLIC        P1
+  D:00A0H         PUBLIC        P2
+  D:00B0H         PUBLIC        P3
+  D:00A8H         PUBLIC        IE
+  C:0824H         PUBLIC        _delay
+  D:00B8H         PUBLIC        IP
+BL51 BANKED LINKER/LOCATER V6.22                                                      01/08/2020  21:00:48  PAGE 2
+
+
+  C:0800H         PUBLIC        main
+  D:0098H         PUBLIC        SCON
+  D:0088H         PUBLIC        TCON
+  B:00A0H.0       PUBLIC        a
+  B:00A0H.1       PUBLIC        b
+  D:00C8H         PUBLIC        T2CON
+  D:00D0H         PUBLIC        PSW
+  -------         PROC          MAIN
+  C:0800H         LINE#         9
+  C:0800H         LINE#         10
+  C:0800H         LINE#         11
+  C:0807H         LINE#         12
+  C:0809H         LINE#         13
+  C:080BH         LINE#         14
+  C:0812H         LINE#         15
+  C:0814H         LINE#         16
+  C:0816H         LINE#         17
+  -------         ENDPROC       MAIN
+  -------         PROC          _DELAY
+  D:0006H         SYMBOL        i
+  C:0824H         LINE#         21
+  C:0824H         LINE#         22
+  C:0824H         LINE#         23
+  C:082EH         LINE#         24
+  -------         ENDPROC       _DELAY
+  -------         ENDMOD        ±àÐ´DELAYº_Êý£¬ÊµÏ_LEDµÆÁÁÃð
+
+******************************************************************************
+* RESTRICTED VERSION WITH 0800H BYTE CODE SIZE LIMIT; USED: 0023H BYTE ( 1%) *
+******************************************************************************
+
+Program Size: data=9.0 xdata=0 code=50
+LINK/LOCATE RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)

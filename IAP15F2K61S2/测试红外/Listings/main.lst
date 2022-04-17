@@ -1,0 +1,186 @@
+C51 COMPILER V9.01   MAIN                                                                  04/10/2021 16:45:58 PAGE 1   
+
+
+C51 COMPILER V9.01, COMPILATION OF MODULE MAIN
+OBJECT MODULE PLACED IN main.OBJ
+COMPILER INVOKED BY: D:\Software\Keil\32\C51\BIN\C51.EXE main.c OPTIMIZE(8,SPEED) BROWSE DEBUG OBJECTEXTEND PRINT(.\List
+                    -ings\main.lst) TABS(2)
+
+line level    source
+
+   1          #include "reg52.h"       //此文件中定义了单片机的一些特殊功能寄存器
+   2            
+   3          typedef unsigned int u16;   //对数据类型进行声明定义
+   4          typedef unsigned char u8;
+   5          
+   6          sbit IRIN=P1^1;
+   7          sbit a=P3^2;
+   8          
+   9          u8 IrValue[6];
+  10          u8 Time;
+  11          
+  12          u8 DisplayData[8];
+  13          u8 code smgduan[19]={ 0xC0, 0xF9, 0xA4, 0xB0, 0x99, 0x92, 0x82, 0xF8, 0x80, 0x90, 0x88, 
+  14          0x83, 0xC6, 0xA1, 0x86, 0x8E, 0xBF, 0x7F };
+  15          //0、1、2、3、4、5、6、7、8、9、A、b、C、d、E、F、H的显示码
+  16          
+  17          void delay(u16 i)
+  18          {
+  19   1        while(i--); 
+  20   1      }
+  21          void Delay500us()   //@12.000MHz
+  22          {
+  23   1        unsigned char i, j;
+  24   1      
+  25   1        i = 6;
+  26   1        j = 211;
+  27   1        do
+  28   1        {
+  29   2          while (--j);
+  30   2        } while (--i);
+  31   1      }
+  32          
+  33          /*******************************************************************************
+  34          * 函数名         :DigDisplay()
+  35          * 函数功能     :数码管显示函数
+  36          * 输入           : 无
+  37          * 输出           : 无
+  38          *******************************************************************************/
+  39          void Display()
+  40          {
+  41   1        u16 i;
+  42   1        for(i=0;i<=2;i++)
+  43   1        {
+  44   2          P2=0xc0;
+  45   2          switch(i)
+  46   2          {
+  47   3            case 0:P0=0x01;break;
+  48   3            case 1:P0=0x02;break;
+  49   3            case 2:P0=0x04;break;
+  50   3          }
+  51   2          P2=0xe0;
+  52   2          P0= DisplayData[i];
+  53   2          Delay500us(); 
+  54   2          P0=0xff;  
+C51 COMPILER V9.01   MAIN                                                                  04/10/2021 16:45:58 PAGE 2   
+
+  55   2        }
+  56   1      }
+  57          
+  58          
+  59          /*******************************************************************************
+  60          * 函数名         : IrInit()
+  61          * 函数功能       : 初始化红外线接收
+  62          * 输入           : 无
+  63          * 输出           : 无
+  64          *******************************************************************************/
+  65          
+  66          void IrInit()
+  67          {
+  68   1        IT0=1;//下降沿触发
+  69   1        EX0=1;//打开中断0允许
+  70   1        EA=1; //打开总中断
+  71   1        IRIN=1;//初始化端口
+  72   1          a=IRIN;
+  73   1      }
+  74          
+  75          void main()
+  76          { 
+  77   1        IrInit();
+  78   1        
+  79   1        while(1)
+  80   1        { 
+  81   2            a=IRIN;
+  82   2          DisplayData[0] = smgduan[IrValue[2]/16];
+  83   2          DisplayData[1] = smgduan[IrValue[2]%16];
+  84   2          DisplayData[2] = smgduan[16];
+  85   2          Display();  
+  86   2        }   
+  87   1      }
+  88          
+  89          /*******************************************************************************
+  90          * 函数名         : ReadIr()
+  91          * 函数功能       : 读取红外数值的中断函数
+  92          * 输入           : 无
+  93          * 输出           : 无
+  94          *******************************************************************************/
+  95          void ReadIr() interrupt 0
+  96          {
+  97   1        u8 j,k;
+  98   1        u16 err;
+  99   1          a=IRIN;
+ 100   1        Time=0; 
+ 101   1        IRIN=1;//初始化端口 
+ 102   1        delay(700); //7ms
+ 103   1        if(IRIN==0)   //确认是否真的接收到正确的信号
+ 104   1        {  
+ 105   2          
+ 106   2          err=1000;       //1000*10us=10ms,超过说明接收到错误的信号
+ 107   2          /*当两个条件都为真是循环，如果有一个条件为假的时候跳出循环，免得程序出错的时
+ 108   2          侯，程序死在这里*/  
+ 109   2          while((IRIN==0)&&(err>0)) //等待前面9ms的低电平过去     
+ 110   2          {     
+ 111   3            delay(1);
+ 112   3            err--;
+ 113   3          } 
+ 114   2          if(IRIN==1)     //如果正确等到9ms低电平
+ 115   2          {
+ 116   3            err=500;
+C51 COMPILER V9.01   MAIN                                                                  04/10/2021 16:45:58 PAGE 3   
+
+ 117   3            while((IRIN==1)&&(err>0))    //等待4.5ms的起始高电平过去
+ 118   3            {
+ 119   4              delay(1);
+ 120   4              err--;
+ 121   4            }
+ 122   3            for(k=0;k<4;k++)    //共有4组数据
+ 123   3            {       
+ 124   4              for(j=0;j<8;j++)  //接收一组数据
+ 125   4              {
+ 126   5      
+ 127   5                err=60;   
+ 128   5                while((IRIN==0)&&(err>0))//等待信号前面的560us低电平过去
+ 129   5                {
+ 130   6                  delay(1);
+ 131   6                  err--;
+ 132   6                }
+ 133   5                err=500;
+ 134   5                while((IRIN==1)&&(err>0))  //计算高电平的时间长度。
+ 135   5                {
+ 136   6                  delay(10);   //0.1ms
+ 137   6                  Time++;
+ 138   6                  err--;
+ 139   6                  if(Time>30)
+ 140   6                  {
+ 141   7                    return;
+ 142   7                  }
+ 143   6                }
+ 144   5                IrValue[k]>>=1;  //k表示第几组数据
+ 145   5                if(Time>=8)     //如果高电平出现大于565us，那么是1
+ 146   5                {
+ 147   6                  IrValue[k]|=0x80;
+ 148   6                }
+ 149   5                Time=0;   //用完时间要重新赋值              
+ 150   5              }
+ 151   4            }
+ 152   3          }
+ 153   2          if(IrValue[2]!=~IrValue[3])
+ 154   2          {
+ 155   3            return;
+ 156   3          }
+ 157   2        }     
+ 158   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =    370    ----
+   CONSTANT SIZE    =     19    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =     15       1
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

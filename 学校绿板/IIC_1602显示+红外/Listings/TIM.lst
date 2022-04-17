@@ -1,0 +1,98 @@
+C51 COMPILER V9.01   TIM                                                                   06/17/2020 10:39:26 PAGE 1   
+
+
+C51 COMPILER V9.01, COMPILATION OF MODULE TIM
+OBJECT MODULE PLACED IN .\Objects\TIM.obj
+COMPILER INVOKED BY: F:\K4\C51\BIN\C51.EXE TIM.c BROWSE DEBUG OBJECTEXTEND PRINT(.\Listings\TIM.lst) OBJECT(.\Objects\TI
+                    -M.obj)
+
+line level    source
+
+   1          #include"tim.h"
+   2          #include"reg52.h"
+   3          #include"intrins.h"
+   4          extern delay(unsigned int i)
+   5          void ReadIr() interrupt 0
+*** ERROR C127 IN LINE 5 OF TIM.C: '_delay': invalid storage class
+*** ERROR C141 IN LINE 5 OF TIM.C: syntax error near 'void'
+*** ERROR C127 IN LINE 5 OF TIM.C: 'ReadIr': invalid storage class
+*** ERROR C141 IN LINE 5 OF TIM.C: syntax error near 'interrupt'
+   6          {
+   7                  unsigned int  j,k;
+*** ERROR C127 IN LINE 7 OF TIM.C: 'j': invalid storage class
+*** ERROR C127 IN LINE 7 OF TIM.C: 'k': invalid storage class
+   8                  unsigned char  err;
+*** ERROR C132 IN LINE 8 OF TIM.C: 'err': not in formal parameter list
+   9                  Time=0;                                  
+*** ERROR C244 IN LINE 9 OF TIM.C: 'Time': can't initialize, bad type or class
+*** ERROR C132 IN LINE 9 OF TIM.C: 'Time': not in formal parameter list
+  10                  delay(700);     //7ms
+*** ERROR C141 IN LINE 10 OF TIM.C: syntax error near '700'
+*** ERROR C132 IN LINE 10 OF TIM.C: 'delay': not in formal parameter list
+  11                  if(IRIN==0)             //确认是否真的接收到正确的信号
+*** ERROR C141 IN LINE 11 OF TIM.C: syntax error near 'if'
+*** ERROR C141 IN LINE 11 OF TIM.C: syntax error near '==', expected ')'
+  12                  {        
+  13                          
+  14                          err=1000;                               //1000*10us=10ms,超过说明接收到错误的信号
+  15                          /*当两个条件都为真是循环，如果有一个条件为假的时候跳出循环，免得程序出错的时
+  16                          侯，程序死在这里*/      
+  17                          while((IRIN==0)&&(err>0))       //等待前面9ms的低电平过去               
+*** ERROR C141 IN LINE 17 OF TIM.C: syntax error near 'while'
+*** ERROR C141 IN LINE 17 OF TIM.C: syntax error near '==', expected ')'
+*** ERROR C141 IN LINE 17 OF TIM.C: syntax error near '>', expected ')'
+  18                          {                       
+  19                                  delay(1);
+*** ERROR C141 IN LINE 19 OF TIM.C: syntax error near '1'
+  20                                  err--;
+*** ERROR C129 IN LINE 20 OF TIM.C: missing ';' before '--'
+  21                          } 
+  22                          if(IRIN==1)                     //如果正确等到9ms低电平
+  23                          {
+  24                                  err=500;
+  25                                  while((IRIN==1)&&(err>0))                //等待4.5ms的起始高电平过去
+  26                                  {
+  27                                          delay(1);
+  28                                          err--;
+  29                                  }
+  30                                  for(k=0;k<4;k++)                //共有4组数据
+  31                                  {                               
+  32                                          for(j=0;j<8;j++)        //接收一组数据
+  33                                          {
+  34          
+  35                                                  err=60;         
+  36                                                  while((IRIN==0)&&(err>0))//等待信号前面的560us低电平过去
+C51 COMPILER V9.01   TIM                                                                   06/17/2020 10:39:26 PAGE 2   
+
+  37                                                  {
+  38                                                          delay(1);
+  39                                                          err--;
+  40                                                  }
+  41                                                  err=500;
+  42                                                  while((IRIN==1)&&(err>0))        //计算高电平的时间长度。
+  43                                                  {
+  44                                                          delay(10);       //0.1ms
+  45                                                          Time++;
+  46                                                          err--;
+  47                                                          if(Time>30)
+  48                                                          {
+  49                                                                  return;
+  50                                                          }
+  51                                                  }
+  52                                                  IrValue[k]>>=1;  //k表示第几组数据
+  53                                                  if(Time>=8)                     //如果高电平出现大于565us，那么是1
+  54                                                  {
+  55                                                          IrValue[k]|=0x80;
+  56                                                  }
+  57                                                  Time=0;         //用完时间要重新赋值                                                    
+  58                                          }
+  59                                  }
+  60                          }
+  61                          if(IrValue[2]!=~IrValue[3])
+  62                          {
+  63                                  return;
+  64                          }
+  65                  }                       
+  66          }
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  18 ERROR(S)

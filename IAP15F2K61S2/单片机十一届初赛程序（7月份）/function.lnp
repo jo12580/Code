@@ -1,0 +1,5 @@
+"STARTUP.obj",
+"mian.obj",
+"iic.obj" 
+TO "function" 
+PRINT(".\Listings\function.m51") RAMSIZE(256) 
