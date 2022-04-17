@@ -1,0 +1,6 @@
+-c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I .\User -I .\Libraries\CMSIS -I .\Libraries\STM32F10x_StdPeriph_Driver\inc -I .\APP\led -I .\Public -I .\APP\key -I .\APP\exti -I .\APP\time -I .\APP\pwm -I .\APP\beep -I .\APP\iic
+-I D:\Software\Data\Desktop\TFmini\TFmini_¼¤¹â²â¾à_IIC\RTE
+-I D:\Software\Keil\32\ARM\PACK\Keil\STM32F1xx_DFP\1.0.5\Device\Include
+-I D:\Software\Keil\32\ARM\CMSIS\Include
+-D__UVISION_VERSION="518" -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER -DSTM32F10X_HD
+-o .\obj\misc.o --omf_browse .\obj\misc.crf --depend .\obj\misc.d "Libraries\STM32F10x_StdPeriph_Driver\src\misc.c"

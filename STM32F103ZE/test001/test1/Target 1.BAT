@@ -1,0 +1,18 @@
+SET PATH=D:\Software\Keil\32\ARM\ARMCC\Bin;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.5\bin;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.5\libnvvp;D:\Software\VMware16.1.1\bin\;D:\Software\Python\Python-3.9.5 interpreter\Scripts\;D:\Software\Python\Python-3.9.5 interpreter\;C:\Users\007\AppData\Local\Programs\Python\Python39\Scripts\;C:\Users\007\AppData\Local\Programs\Python\Python39\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;D:\Software\MATLAB R2016b\runtime\win64;D:\Software\MATLAB R2016b\bin;D:\Software\MATLAB R2016b\polyspace\bin;D:\Software\Data\SQL Server 2012\X\110\Tools\Binn\;D:\Software\Data\SQL Server 2012\S\110\Tools\Binn\;D:\Software\Data\SQL Server 2012\S\110\DTS\Binn\;D:\Software\Data\SQL Server 2012\X\110\Tools\Binn\ManagementStudio\;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Common7\IDE\PrivateAssemblies\;D:\Software\Data\SQL Server 2012\X\110\DTS\Binn\;D:\Software\Data\SQL Server 2012\X\Client SDK\ODBC\130\Tools\Binn\;D:\Software\Data\SQL Server 2012\X\140\Tools\Binn\;D:\Software\Data\SQL Server 2012\X\140\DTS\Binn\;D:\Software\Data\SQL Server 2012\X\140\Tools\Binn\ManagementStudio\;D:\Software\Markdown\数据导出导入;D:\So;tware\GIT\bin;D:\Software\GIT\Git\cmd;D:\Software\GIT\git-lfs-windows-v3.0.1\Git LFS;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\Nsight Compute 2021.3.1\;C:\;D:\Software\Machine Learning\Anaconda;D:\Software\Machine Learning\Anaconda\Library\mingw-w64\bin;D:\Software\Machine Learning\Anaconda\Library\usr\bin;D:\Software\Machine Learning\Anaconda\Library\bin;D:\Software\Machine Learning\Anaconda\Scripts;.;C:\Users\007\AppData\Local\Microsoft\WindowsApps;D:\Software\Python\pycharm2021\PyCharm 2021.1.1\bin;;D:\Software\band-zip\;D:\Software\Visual Studio Code\bin;D:\Software\Visual Studio Code\mingw64\MinGW\bin;D:\Software\Quartus II 18.0\Quartus II 18.0\ModelSim\modelsim_ae\win32aloem;D:\Software\Quartus_II_13.0\modelsim_ase\win32aloem;D:\Software\Machine Learning\ffmpeg\bin;".;C:\Program Files\Java\jdk1.8.0_221\bin;C:\Program Files\Java\jdk1.8.0_221\jre\bin";
+SET CPU_TYPE=STM32F103ZE
+SET CPU_VENDOR=STMicroelectronics
+SET UV2_TARGET=Target 1
+SET CPU_CLOCK=0x00B71B00
+"D:\Software\Keil\32\ARM\ARMCC\Bin\ArmCC" --Via ".\objects\main.__i"
+"D:\Software\Keil\32\ARM\ARMCC\Bin\ArmCC" --Via ".\objects\key.__i"
+"D:\Software\Keil\32\ARM\ARMCC\Bin\ArmCC" --Via ".\objects\led.__i"
+"D:\Software\Keil\32\ARM\ARMCC\Bin\ArmCC" --Via ".\objects\systick.__i"
+"D:\Software\Keil\32\ARM\ARMCC\Bin\ArmCC" --Via ".\objects\misc.__i"
+"D:\Software\Keil\32\ARM\ARMCC\Bin\ArmCC" --Via ".\objects\stm32f10x_gpio.__i"
+"D:\Software\Keil\32\ARM\ARMCC\Bin\ArmCC" --Via ".\objects\stm32f10x_rcc.__i"
+"D:\Software\Keil\32\ARM\ARMCC\Bin\ArmCC" --Via ".\objects\core_cm3.__i"
+"D:\Software\Keil\32\ARM\ARMCC\Bin\ArmCC" --Via ".\objects\stm32f10x_it.__i"
+"D:\Software\Keil\32\ARM\ARMCC\Bin\ArmCC" --Via ".\objects\system_stm32f10x.__i"
+"D:\Software\Keil\32\ARM\ARMCC\Bin\ArmAsm" --Via ".\objects\startup_stm32f10x_hd._ia"
+"D:\Software\Keil\32\ARM\ARMCC\Bin\ArmLink" --Via ".\Objects\12.lnp"
+"D:\Software\Keil\32\ARM\ARMCC\Bin\fromelf.exe" ".\Objects\12.28" --i32combined --output ".\Objects\12.hex"

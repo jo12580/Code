@@ -1,0 +1,15 @@
+..\output\lcm240128.o: LCM240128.c
+..\output\lcm240128.o: ..\CMSIS\stm32f10x.h
+..\output\lcm240128.o: ..\CMSIS\core_cm3.h
+..\output\lcm240128.o: D:\Software\Keil\32\ARM\ARMCC\Bin\..\include\stdint.h
+..\output\lcm240128.o: ..\CMSIS\system_stm32f10x.h
+..\output\lcm240128.o: ..\USER\stm32f10x_conf.h
+..\output\lcm240128.o: ..\FWlib\inc\stm32f10x_gpio.h
+..\output\lcm240128.o: ..\CMSIS\stm32f10x.h
+..\output\lcm240128.o: ..\FWlib\inc\stm32f10x_rcc.h
+..\output\lcm240128.o: ..\FWlib\inc\stm32f10x_spi.h
+..\output\lcm240128.o: ..\FWlib\inc\stm32f10x_usart.h
+..\output\lcm240128.o: sys.h
+..\output\lcm240128.o: SysTickDelay.h
+..\output\lcm240128.o: LCM240128.h
+..\output\lcm240128.o: lcd_graph.h

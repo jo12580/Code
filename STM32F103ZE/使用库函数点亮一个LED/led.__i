@@ -1,0 +1,6 @@
+-c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I .\User -I .\Libraries\CMSIS -I .\Libraries\STM32F10x_StdPeriph_Driver\inc -I .\APP\led
+-I "E:\desktop file\32\使用库函数点亮一个LED\RTE"
+-I D:\Software\Keil\32\ARM\PACK\Keil\STM32F1xx_DFP\1.0.5\Device\Include
+-I D:\Software\Keil\32\ARM\CMSIS\Include
+-D__UVISION_VERSION="518" -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER -DSTM32F10X_HD
+-o .\led.o --omf_browse .\led.crf --depend .\led.d "APP\led\led.c"

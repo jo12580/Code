@@ -1,0 +1,1900 @@
+<html>
+<body>
+<pre>
+<h1>礦ision Build Log</h1>
+<h2>Project:</h2>
+F:\小项目\采集卡\显示屏\自己写6963\程序\USER\STM32-DEMO.uvproj
+Project File Date:  12/26/2014
+
+<h2>Output:</h2>
+Build target 'lcd240128'
+compiling main.c...
+compiling LCM240128.c...
+LCM240128.c(301): warning:  #177-D: variable "i" was declared but never referenced
+LCM240128.c(302): warning:  #177-D: variable "n" was declared but never referenced
+linking...
+Program Size: Code=4402 RO-data=8506 RW-data=512 ZI-data=1024  
+"..\Output\STM32-DEMO.axf" - 0 Error(s), 2 Warning(s).
+Build target 'lcd240128'
+linking...
+Program Size: Code=4402 RO-data=8506 RW-data=512 ZI-data=1024  
+"..\Output\STM32-DEMO.axf" - 0 Error(s), 0 Warning(s).
+Load "..\\Output\\STM32-DEMO.AXF" 
+Set JLink Project File to "F:\小项目\采集卡\显示屏\自己写6963\程序\USER\JLinkSettings.ini"
+* JLink Info: Device "STM32F103VE" selected (512 KB flash, 64 KB RAM).
+ 
+JLink info:
+------------
+DLL: V4.54a, compiled Sep 17 2012 15:58:45
+Firmware: J-Link ARM V8 compiled Sep 20 2013 15:09:45
+Hardware: V8.00
+S/N : 17935099 
+Feature(s) : RDI,FlashDL,FlashBP,JFlash 
+ 
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
+ROMTableAddr = 0xE00FF003
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
+ 
+Target info:
+------------
+Device: STM32F103VE
+VTarget = 3.338V
+State of Pins: 
+TCK: 1, TDI: 0, TDO: 1, TMS: 0, TRES: 1, TRST: 1
+Hardware-Breakpoints: 6
+Software-Breakpoints: 8192
+Watchpoints:          4
+JTAG speed: 2000 kHz
+ 
+Full Chip Erase Done.
+Programming Done.
+Verify OK.
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
+Application running ...
+Build target 'lcd240128'
+compiling main.c...
+linking...
+Program Size: Code=4418 RO-data=8506 RW-data=512 ZI-data=1024  
+"..\Output\STM32-DEMO.axf" - 0 Error(s), 0 Warning(s).
+Load "..\\Output\\STM32-DEMO.AXF" 
+Set JLink Project File to "F:\小项目\采集卡\显示屏\自己写6963\程序\USER\JLinkSettings.ini"
+* JLink Info: Device "STM32F103VE" selected (512 KB flash, 64 KB RAM).
+ 
+JLink info:
+------------
+DLL: V4.54a, compiled Sep 17 2012 15:58:45
+Firmware: J-Link ARM V8 compiled Sep 20 2013 15:09:45
+Hardware: V8.00
+S/N : 17935099 
+Feature(s) : RDI,FlashDL,FlashBP,JFlash 
+ 
+* JLink Info: STM32F1xxx: Can not attach to CPU. Trying connect under reset.
+**JLink Warning: RESET (pin 15) high, but should be low. Please check target hardware.
+***JLink Error: Supply voltage too low (1 Volt is required, Measured: 0.0 Volt).
+Please check target power.
+Load "..\\Output\\STM32-DEMO.AXF" 
+Set JLink Project File to "F:\小项目\采集卡\显示屏\自己写6963\程序\USER\JLinkSettings.ini"
+* JLink Info: Device "STM32F103VE" selected (512 KB flash, 64 KB RAM).
+ 
+JLink info:
+------------
+DLL: V4.54a, compiled Sep 17 2012 15:58:45
+Firmware: J-Link ARM V8 compiled Sep 20 2013 15:09:45
+Hardware: V8.00
+S/N : 17935099 
+Feature(s) : RDI,FlashDL,FlashBP,JFlash 
+ 
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
+ROMTableAddr = 0xE00FF003
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
+ 
+Target info:
+------------
+Device: STM32F103VE
+VTarget = 3.332V
+State of Pins: 
+TCK: 1, TDI: 0, TDO: 1, TMS: 0, TRES: 1, TRST: 1
+Hardware-Breakpoints: 6
+Software-Breakpoints: 8192
+Watchpoints:          4
+JTAG speed: 2000 kHz
+ 
+Full Chip Erase Done.
+Programming Done.
+Verify OK.
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
+Application running ...
+Build target 'lcd240128'
+compiling main.c...
+linking...
+Program Size: Code=4418 RO-data=8506 RW-data=512 ZI-data=1024  
+"..\Output\STM32-DEMO.axf" - 0 Error(s), 0 Warning(s).
+Load "..\\Output\\STM32-DEMO.AXF" 
+Set JLink Project File to "F:\小项目\采集卡\显示屏\自己写6963\程序\USER\JLinkSettings.ini"
+* JLink Info: Device "STM32F103VE" selected (512 KB flash, 64 KB RAM).
+ 
+JLink info:
+------------
+DLL: V4.54a, compiled Sep 17 2012 15:58:45
+Firmware: J-Link ARM V8 compiled Sep 20 2013 15:09:45
+Hardware: V8.00
+S/N : 17935099 
+Feature(s) : RDI,FlashDL,FlashBP,JFlash 
+ 
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
+ROMTableAddr = 0xE00FF003
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
+ 
+Target info:
+------------
+Device: STM32F103VE
+VTarget = 3.338V
+State of Pins: 
+TCK: 1, TDI: 0, TDO: 1, TMS: 0, TRES: 1, TRST: 1
+Hardware-Breakpoints: 6
+Software-Breakpoints: 8192
+Watchpoints:          4
+JTAG speed: 2000 kHz
+ 
+Full Chip Erase Done.
+Programming Done.
+Verify OK.
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
+Application running ...
+Build target 'lcd240128'
+compiling main.c...
+linking...
+Program Size: Code=4418 RO-data=8506 RW-data=416 ZI-data=1024  
+"..\Output\STM32-DEMO.axf" - 0 Error(s), 0 Warning(s).
+Build target 'lcd240128'
+compiling main.c...
+linking...
+Program Size: Code=4418 RO-data=8506 RW-data=416 ZI-data=1024  
+"..\Output\STM32-DEMO.axf" - 0 Error(s), 0 Warning(s).
+Build target 'lcd240128'
+compiling LCM240128.c...
+LCM240128.c(301): warning:  #177-D: variable "i" was declared but never referenced
+LCM240128.c(303): warning:  #550-D: variable "address_a" was set but never used
+LCM240128.c(303): warning:  #550-D: variable "address_b" was set but never used
+linking...
+Program Size: Code=4434 RO-data=8506 RW-data=416 ZI-data=1024  
+"..\Output\STM32-DEMO.axf" - 0 Error(s), 3 Warning(s).
+Build target 'lcd240128'
+compiling LCM240128.c...
+LCM240128.c(301): warning:  #177-D: variable "i" was declared but never referenced
+linking...
+Program Size: Code=4434 RO-data=8506 RW-data=416 ZI-data=1024  
+"..\Output\STM32-DEMO.axf" - 0 Error(s), 1 Warning(s).
+Build target 'lcd240128'
+compiling LCM240128.c...
+LCM240128.c(301): warning:  #177-D: variable "i" was declared but never referenced
+linking...
+Program Size: Code=4442 RO-data=8506 RW-data=416 ZI-data=1024  
+"..\Output\STM32-DEMO.axf" - 0 Error(s), 1 Warning(s).
+Build target 'lcd240128'
+compiling main.c...
+LCM240128.h(94): error:  #79: expected a type specifier
+main.c(44): error:  #165: too few arguments in function call
+main.c(45): error:  #167: argument of type "int" is incompatible with parameter of type "uint8_t (*)[32]"
+main.c(45): error:  #165: too few arguments in function call
+compiling LCM240128.c...
+LCM240128.h(94): error:  #79: expected a type specifier
+LCM240128.c(301): warning:  #177-D: variable "i" was declared but never referenced
+LCM240128.c(325): error:  #79: expected a type specifier
+LCM240128.c(325): error:  #141-D: unnamed prototyped parameters not allowed when body is present
+Target not created
+Build target 'lcd240128'
+compiling main.c...
+LCM240128.h(94): error:  #79: expected a type specifier
+main.c(44): error:  #165: too few arguments in function call
+main.c(45): error:  #167: argument of type "int" is incompatible with parameter of type "uint8_t (*)[32]"
+main.c(45): error:  #165: too few arguments in function call
+compiling LCM240128.c...
+LCM240128.h(94): error:  #79: expected a type specifier
+LCM240128.c(325): error:  #79: expected a type specifier
+LCM240128.c(325): error:  #141-D: unnamed prototyped parameters not allowed when body is present
+Target not created
+Build target 'lcd240128'
+compiling main.c...
+compiling LCM240128.c...
+linking...
+Program Size: Code=4410 RO-data=8506 RW-data=416 ZI-data=1024  
+"..\Output\STM32-DEMO.axf" - 0 Error(s), 0 Warning(s).
+Load "..\\Output\\STM32-DEMO.AXF" 
+Set JLink Project File to "F:\小项目\采集卡\显示屏\自己写6963\程序\USER\JLinkSettings.ini"
+* JLink Info: Device "STM32F103VE" selected (512 KB flash, 64 KB RAM).
+ 
+JLink info:
+------------
+DLL: V4.54a, compiled Sep 17 2012 15:58:45
+Firmware: J-Link ARM V8 compiled Sep 20 2013 15:09:45
+Hardware: V8.00
+S/N : 17935099 
+Feature(s) : RDI,FlashDL,FlashBP,JFlash 
+ 
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
+ROMTableAddr = 0xE00FF003
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
+ 
+Target info:
+------------
+Device: STM32F103VE
+VTarget = 3.332V
+State of Pins: 
+TCK: 1, TDI: 0, TDO: 1, TMS: 0, TRES: 1, TRST: 1
+Hardware-Breakpoints: 6
+Software-Breakpoints: 8192
+Watchpoints:          4
+JTAG speed: 2000 kHz
+ 
+Full Chip Erase Done.
+Programming Done.
+Verify OK.
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
+Application running ...
+Build target 'lcd240128'
+compiling main.c...
+linking...
+Program Size: Code=4434 RO-data=8506 RW-data=416 ZI-data=1024  
+"..\Output\STM32-DEMO.axf" - 0 Error(s), 0 Warning(s).
+Load "..\\Output\\STM32-DEMO.AXF" 
+Set JLink Project File to "F:\小项目\采集卡\显示屏\自己写6963\程序\USER\JLinkSettings.ini"
+* JLink Info: Device "STM32F103VE" selected (512 KB flash, 64 KB RAM).
+ 
+JLink info:
+------------
+DLL: V4.54a, compiled Sep 17 2012 15:58:45
+Firmware: J-Link ARM V8 compiled Sep 20 2013 15:09:45
+Hardware: V8.00
+S/N : 17935099 
+Feature(s) : RDI,FlashDL,FlashBP,JFlash 
+ 
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
+ROMTableAddr = 0xE00FF003
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
+ 
+Target info:
+------------
+Device: STM32F103VE
+VTarget = 3.332V
+State of Pins: 
+TCK: 1, TDI: 0, TDO: 1, TMS: 0, TRES: 1, TRST: 1
+Hardware-Breakpoints: 6
+Software-Breakpoints: 8192
+Watchpoints:          4
+JTAG speed: 2000 kHz
+ 
+Full Chip Erase Done.
+Programming Done.
+Verify OK.
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
+Application running ...
+Build target 'lcd240128'
+compiling main.c...
+linking...
+Program Size: Code=4418 RO-data=8506 RW-data=416 ZI-data=1024  
+"..\Output\STM32-DEMO.axf" - 0 Error(s), 0 Warning(s).
+Load "..\\Output\\STM32-DEMO.AXF" 
+Set JLink Project File to "F:\小项目\采集卡\显示屏\自己写6963\程序\USER\JLinkSettings.ini"
+* JLink Info: Device "STM32F103VE" selected (512 KB flash, 64 KB RAM).
+ 
+JLink info:
+------------
+DLL: V4.54a, compiled Sep 17 2012 15:58:45
+Firmware: J-Link ARM V8 compiled Sep 20 2013 15:09:45
+Hardware: V8.00
+S/N : 17935099 
+Feature(s) : RDI,FlashDL,FlashBP,JFlash 
+ 
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
+ROMTableAddr = 0xE00FF003
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
+ 
+Target info:
+------------
+Device: STM32F103VE
+VTarget = 3.338V
+State of Pins: 
+TCK: 1, TDI: 0, TDO: 1, TMS: 0, TRES: 1, TRST: 1
+Hardware-Breakpoints: 6
+Software-Breakpoints: 8192
+Watchpoints:          4
+JTAG speed: 2000 kHz
+ 
+Full Chip Erase Done.
+Programming Done.
+Verify OK.
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
+Application running ...
+Build target 'lcd240128'
+compiling main.c...
+linking...
+Program Size: Code=4418 RO-data=8506 RW-data=416 ZI-data=1024  
+"..\Output\STM32-DEMO.axf" - 0 Error(s), 0 Warning(s).
+Load "..\\Output\\STM32-DEMO.AXF" 
+Set JLink Project File to "F:\小项目\采集卡\显示屏\自己写6963\程序\USER\JLinkSettings.ini"
+* JLink Info: Device "STM32F103VE" selected (512 KB flash, 64 KB RAM).
+ 
+JLink info:
+------------
+DLL: V4.54a, compiled Sep 17 2012 15:58:45
+Firmware: J-Link ARM V8 compiled Sep 20 2013 15:09:45
+Hardware: V8.00
+S/N : 17935099 
+Feature(s) : RDI,FlashDL,FlashBP,JFlash 
+ 
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
+ROMTableAddr = 0xE00FF003
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
+ 
+Target info:
+------------
+Device: STM32F103VE
+VTarget = 3.338V
+State of Pins: 
+TCK: 1, TDI: 0, TDO: 1, TMS: 0, TRES: 1, TRST: 1
+Hardware-Breakpoints: 6
+Software-Breakpoints: 8192
+Watchpoints:          4
+JTAG speed: 2000 kHz
+ 
+Full Chip Erase Done.
+Programming Done.
+Verify OK.
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
+Application running ...
+Build target 'lcd240128'
+compiling main.c...
+linking...
+Program Size: Code=4442 RO-data=8506 RW-data=416 ZI-data=1024  
+"..\Output\STM32-DEMO.axf" - 0 Error(s), 0 Warning(s).
+Build target 'lcd240128'
+compiling main.c...
+linking...
+Program Size: Code=4446 RO-data=8506 RW-data=416 ZI-data=1024  
+"..\Output\STM32-DEMO.axf" - 0 Error(s), 0 Warning(s).
+Load "..\\Output\\STM32-DEMO.AXF" 
+Set JLink Project File to "F:\小项目\采集卡\显示屏\自己写6963\程序\USER\JLinkSettings.ini"
+* JLink Info: Device "STM32F103VE" selected (512 KB flash, 64 KB RAM).
+ 
+JLink info:
+------------
+DLL: V4.54a, compiled Sep 17 2012 15:58:45
+Firmware: J-Link ARM V8 compiled Sep 20 2013 15:09:45
+Hardware: V8.00
+S/N : 17935099 
+Feature(s) : RDI,FlashDL,FlashBP,JFlash 
+ 
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
+ROMTableAddr = 0xE00FF003
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
+ 
+Target info:
+------------
+Device: STM32F103VE
+VTarget = 3.338V
+State of Pins: 
+TCK: 1, TDI: 0, TDO: 1, TMS: 0, TRES: 1, TRST: 1
+Hardware-Breakpoints: 6
+Software-Breakpoints: 8192
+Watchpoints:          4
+JTAG speed: 2000 kHz
+ 
+Full Chip Erase Done.
+Programming Done.
+Verify OK.
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
+Application running ...
+Build target 'lcd240128'
+compiling main.c...
+linking...
+Program Size: Code=4434 RO-data=8506 RW-data=416 ZI-data=1024  
+"..\Output\STM32-DEMO.axf" - 0 Error(s), 0 Warning(s).
+Load "..\\Output\\STM32-DEMO.AXF" 
+Set JLink Project File to "F:\小项目\采集卡\显示屏\自己写6963\程序\USER\JLinkSettings.ini"
+* JLink Info: Device "STM32F103VE" selected (512 KB flash, 64 KB RAM).
+ 
+JLink info:
+------------
+DLL: V4.54a, compiled Sep 17 2012 15:58:45
+Firmware: J-Link ARM V8 compiled Sep 20 2013 15:09:45
+Hardware: V8.00
+S/N : 17935099 
+Feature(s) : RDI,FlashDL,FlashBP,JFlash 
+ 
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
+ROMTableAddr = 0xE00FF003
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
+ 
+Target info:
+------------
+Device: STM32F103VE
+VTarget = 3.338V
+State of Pins: 
+TCK: 1, TDI: 0, TDO: 1, TMS: 0, TRES: 1, TRST: 1
+Hardware-Breakpoints: 6
+Software-Breakpoints: 8192
+Watchpoints:          4
+JTAG speed: 2000 kHz
+ 
+Full Chip Erase Done.
+Programming Done.
+Verify OK.
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
+Application running ...
+Build target 'lcd240128'
+compiling main.c...
+linking...
+Program Size: Code=4434 RO-data=8506 RW-data=416 ZI-data=1024  
+"..\Output\STM32-DEMO.axf" - 0 Error(s), 0 Warning(s).
+Load "..\\Output\\STM32-DEMO.AXF" 
+Set JLink Project File to "F:\小项目\采集卡\显示屏\自己写6963\程序\USER\JLinkSettings.ini"
+* JLink Info: Device "STM32F103VE" selected (512 KB flash, 64 KB RAM).
+ 
+JLink info:
+------------
+DLL: V4.54a, compiled Sep 17 2012 15:58:45
+Firmware: J-Link ARM V8 compiled Sep 20 2013 15:09:45
+Hardware: V8.00
+S/N : 17935099 
+Feature(s) : RDI,FlashDL,FlashBP,JFlash 
+ 
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
+ROMTableAddr = 0xE00FF003
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
+ 
+Target info:
+------------
+Device: STM32F103VE
+VTarget = 3.332V
+State of Pins: 
+TCK: 1, TDI: 0, TDO: 1, TMS: 0, TRES: 1, TRST: 1
+Hardware-Breakpoints: 6
+Software-Breakpoints: 8192
+Watchpoints:          4
+JTAG speed: 2000 kHz
+ 
+Full Chip Erase Done.
+Programming Done.
+Verify OK.
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
+Application running ...
+Build target 'lcd240128'
+compiling main.c...
+linking...
+Program Size: Code=4450 RO-data=8506 RW-data=416 ZI-data=1024  
+"..\Output\STM32-DEMO.axf" - 0 Error(s), 0 Warning(s).
+Load "..\\Output\\STM32-DEMO.AXF" 
+Set JLink Project File to "F:\小项目\采集卡\显示屏\自己写6963\程序\USER\JLinkSettings.ini"
+* JLink Info: Device "STM32F103VE" selected (512 KB flash, 64 KB RAM).
+ 
+JLink info:
+------------
+DLL: V4.54a, compiled Sep 17 2012 15:58:45
+Firmware: J-Link ARM V8 compiled Sep 20 2013 15:09:45
+Hardware: V8.00
+S/N : 17935099 
+Feature(s) : RDI,FlashDL,FlashBP,JFlash 
+ 
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
+ROMTableAddr = 0xE00FF003
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
+ 
+Target info:
+------------
+Device: STM32F103VE
+VTarget = 3.338V
+State of Pins: 
+TCK: 1, TDI: 0, TDO: 1, TMS: 0, TRES: 1, TRST: 1
+Hardware-Breakpoints: 6
+Software-Breakpoints: 8192
+Watchpoints:          4
+JTAG speed: 2000 kHz
+ 
+Full Chip Erase Done.
+Programming Done.
+Verify OK.
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
+Application running ...
+Build target 'lcd240128'
+compiling main.c...
+linking...
+Program Size: Code=4474 RO-data=8506 RW-data=416 ZI-data=1024  
+"..\Output\STM32-DEMO.axf" - 0 Error(s), 0 Warning(s).
+Load "..\\Output\\STM32-DEMO.AXF" 
+Set JLink Project File to "F:\小项目\采集卡\显示屏\自己写6963\程序\USER\JLinkSettings.ini"
+* JLink Info: Device "STM32F103VE" selected (512 KB flash, 64 KB RAM).
+ 
+JLink info:
+------------
+DLL: V4.54a, compiled Sep 17 2012 15:58:45
+Firmware: J-Link ARM V8 compiled Sep 20 2013 15:09:45
+Hardware: V8.00
+S/N : 17935099 
+Feature(s) : RDI,FlashDL,FlashBP,JFlash 
+ 
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
+ROMTableAddr = 0xE00FF003
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
+ 
+Target info:
+------------
+Device: STM32F103VE
+VTarget = 3.338V
+State of Pins: 
+TCK: 1, TDI: 0, TDO: 1, TMS: 0, TRES: 1, TRST: 1
+Hardware-Breakpoints: 6
+Software-Breakpoints: 8192
+Watchpoints:          4
+JTAG speed: 2000 kHz
+ 
+Full Chip Erase Done.
+Programming Done.
+Verify OK.
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
+Application running ...
+Build target 'lcd240128'
+compiling main.c...
+linking...
+Program Size: Code=4474 RO-data=8506 RW-data=416 ZI-data=1024  
+"..\Output\STM32-DEMO.axf" - 0 Error(s), 0 Warning(s).
+Load "..\\Output\\STM32-DEMO.AXF" 
+Set JLink Project File to "F:\小项目\采集卡\显示屏\自己写6963\程序\USER\JLinkSettings.ini"
+* JLink Info: Device "STM32F103VE" selected (512 KB flash, 64 KB RAM).
+ 
+JLink info:
+------------
+DLL: V4.54a, compiled Sep 17 2012 15:58:45
+Firmware: J-Link ARM V8 compiled Sep 20 2013 15:09:45
+Hardware: V8.00
+S/N : 17935099 
+Feature(s) : RDI,FlashDL,FlashBP,JFlash 
+ 
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
+ROMTableAddr = 0xE00FF003
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
+ 
+Target info:
+------------
+Device: STM32F103VE
+VTarget = 3.338V
+State of Pins: 
+TCK: 1, TDI: 0, TDO: 1, TMS: 0, TRES: 1, TRST: 1
+Hardware-Breakpoints: 6
+Software-Breakpoints: 8192
+Watchpoints:          4
+JTAG speed: 2000 kHz
+ 
+Full Chip Erase Done.
+Programming Done.
+Verify OK.
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
+Application running ...
+Build target 'lcd240128'
+compiling main.c...
+linking...
+Program Size: Code=4474 RO-data=8506 RW-data=416 ZI-data=1024  
+"..\Output\STM32-DEMO.axf" - 0 Error(s), 0 Warning(s).
+Load "..\\Output\\STM32-DEMO.AXF" 
+Set JLink Project File to "F:\小项目\采集卡\显示屏\自己写6963\程序\USER\JLinkSettings.ini"
+* JLink Info: Device "STM32F103VE" selected (512 KB flash, 64 KB RAM).
+ 
+JLink info:
+------------
+DLL: V4.54a, compiled Sep 17 2012 15:58:45
+Firmware: J-Link ARM V8 compiled Sep 20 2013 15:09:45
+Hardware: V8.00
+S/N : 17935099 
+Feature(s) : RDI,FlashDL,FlashBP,JFlash 
+ 
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
+ROMTableAddr = 0xE00FF003
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
+ 
+Target info:
+------------
+Device: STM32F103VE
+VTarget = 3.338V
+State of Pins: 
+TCK: 1, TDI: 0, TDO: 1, TMS: 0, TRES: 1, TRST: 1
+Hardware-Breakpoints: 6
+Software-Breakpoints: 8192
+Watchpoints:          4
+JTAG speed: 2000 kHz
+ 
+Full Chip Erase Done.
+Programming Done.
+Verify OK.
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
+Application running ...
+Build target 'lcd240128'
+compiling main.c...
+linking...
+Program Size: Code=4462 RO-data=8506 RW-data=416 ZI-data=1024  
+"..\Output\STM32-DEMO.axf" - 0 Error(s), 0 Warning(s).
+Load "..\\Output\\STM32-DEMO.AXF" 
+Set JLink Project File to "F:\小项目\采集卡\显示屏\自己写6963\程序\USER\JLinkSettings.ini"
+* JLink Info: Device "STM32F103VE" selected (512 KB flash, 64 KB RAM).
+ 
+JLink info:
+------------
+DLL: V4.54a, compiled Sep 17 2012 15:58:45
+Firmware: J-Link ARM V8 compiled Sep 20 2013 15:09:45
+Hardware: V8.00
+S/N : 17935099 
+Feature(s) : RDI,FlashDL,FlashBP,JFlash 
+ 
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
+ROMTableAddr = 0xE00FF003
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
+ 
+Target info:
+------------
+Device: STM32F103VE
+VTarget = 3.338V
+State of Pins: 
+TCK: 1, TDI: 0, TDO: 1, TMS: 0, TRES: 1, TRST: 1
+Hardware-Breakpoints: 6
+Software-Breakpoints: 8192
+Watchpoints:          4
+JTAG speed: 2000 kHz
+ 
+Full Chip Erase Done.
+Programming Done.
+Verify OK.
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
+Application running ...
+Build target 'lcd240128'
+compiling main.c...
+linking...
+Program Size: Code=4462 RO-data=8506 RW-data=416 ZI-data=1024  
+"..\Output\STM32-DEMO.axf" - 0 Error(s), 0 Warning(s).
+Load "..\\Output\\STM32-DEMO.AXF" 
+Set JLink Project File to "F:\小项目\采集卡\显示屏\自己写6963\程序\USER\JLinkSettings.ini"
+* JLink Info: Device "STM32F103VE" selected (512 KB flash, 64 KB RAM).
+ 
+JLink info:
+------------
+DLL: V4.54a, compiled Sep 17 2012 15:58:45
+Firmware: J-Link ARM V8 compiled Sep 20 2013 15:09:45
+Hardware: V8.00
+S/N : 17935099 
+Feature(s) : RDI,FlashDL,FlashBP,JFlash 
+ 
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
+ROMTableAddr = 0xE00FF003
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
+ 
+Target info:
+------------
+Device: STM32F103VE
+VTarget = 3.338V
+State of Pins: 
+TCK: 1, TDI: 0, TDO: 1, TMS: 0, TRES: 1, TRST: 1
+Hardware-Breakpoints: 6
+Software-Breakpoints: 8192
+Watchpoints:          4
+JTAG speed: 2000 kHz
+ 
+Full Chip Erase Done.
+Programming Done.
+Verify OK.
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
+Application running ...
+Build target 'lcd240128'
+compiling main.c...
+linking...
+Program Size: Code=4490 RO-data=8506 RW-data=416 ZI-data=1024  
+"..\Output\STM32-DEMO.axf" - 0 Error(s), 0 Warning(s).
+Load "..\\Output\\STM32-DEMO.AXF" 
+Set JLink Project File to "F:\小项目\采集卡\显示屏\自己写6963\程序\USER\JLinkSettings.ini"
+* JLink Info: Device "STM32F103VE" selected (512 KB flash, 64 KB RAM).
+ 
+JLink info:
+------------
+DLL: V4.54a, compiled Sep 17 2012 15:58:45
+Firmware: J-Link ARM V8 compiled Sep 20 2013 15:09:45
+Hardware: V8.00
+S/N : 17935099 
+Feature(s) : RDI,FlashDL,FlashBP,JFlash 
+ 
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
+ROMTableAddr = 0xE00FF003
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
+ 
+Target info:
+------------
+Device: STM32F103VE
+VTarget = 3.338V
+State of Pins: 
+TCK: 1, TDI: 0, TDO: 1, TMS: 0, TRES: 1, TRST: 1
+Hardware-Breakpoints: 6
+Software-Breakpoints: 8192
+Watchpoints:          4
+JTAG speed: 2000 kHz
+ 
+Full Chip Erase Done.
+Programming Done.
+Verify OK.
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
+Application running ...
+Build target 'lcd240128'
+compiling main.c...
+linking...
+Program Size: Code=4590 RO-data=8506 RW-data=416 ZI-data=1024  
+"..\Output\STM32-DEMO.axf" - 0 Error(s), 0 Warning(s).
+Load "..\\Output\\STM32-DEMO.AXF" 
+Set JLink Project File to "F:\小项目\采集卡\显示屏\自己写6963\程序\USER\JLinkSettings.ini"
+* JLink Info: Device "STM32F103VE" selected (512 KB flash, 64 KB RAM).
+ 
+JLink info:
+------------
+DLL: V4.54a, compiled Sep 17 2012 15:58:45
+Firmware: J-Link ARM V8 compiled Sep 20 2013 15:09:45
+Hardware: V8.00
+S/N : 17935099 
+Feature(s) : RDI,FlashDL,FlashBP,JFlash 
+ 
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
+ROMTableAddr = 0xE00FF003
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
+ 
+Target info:
+------------
+Device: STM32F103VE
+VTarget = 3.338V
+State of Pins: 
+TCK: 1, TDI: 0, TDO: 1, TMS: 0, TRES: 1, TRST: 1
+Hardware-Breakpoints: 6
+Software-Breakpoints: 8192
+Watchpoints:          4
+JTAG speed: 2000 kHz
+ 
+Full Chip Erase Done.
+Programming Done.
+Verify OK.
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
+Application running ...
+Build target 'lcd240128'
+compiling main.c...
+linking...
+Program Size: Code=4586 RO-data=8506 RW-data=416 ZI-data=1024  
+"..\Output\STM32-DEMO.axf" - 0 Error(s), 0 Warning(s).
+Load "..\\Output\\STM32-DEMO.AXF" 
+Set JLink Project File to "F:\小项目\采集卡\显示屏\自己写6963\程序\USER\JLinkSettings.ini"
+* JLink Info: Device "STM32F103VE" selected (512 KB flash, 64 KB RAM).
+ 
+JLink info:
+------------
+DLL: V4.54a, compiled Sep 17 2012 15:58:45
+Firmware: J-Link ARM V8 compiled Sep 20 2013 15:09:45
+Hardware: V8.00
+S/N : 17935099 
+Feature(s) : RDI,FlashDL,FlashBP,JFlash 
+ 
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
+ROMTableAddr = 0xE00FF003
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
+ 
+Target info:
+------------
+Device: STM32F103VE
+VTarget = 3.338V
+State of Pins: 
+TCK: 1, TDI: 0, TDO: 1, TMS: 0, TRES: 1, TRST: 1
+Hardware-Breakpoints: 6
+Software-Breakpoints: 8192
+Watchpoints:          4
+JTAG speed: 2000 kHz
+ 
+Full Chip Erase Done.
+Programming Done.
+Verify OK.
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
+Application running ...
+Build target 'lcd240128'
+compiling main.c...
+linking...
+Program Size: Code=4678 RO-data=8506 RW-data=416 ZI-data=1024  
+"..\Output\STM32-DEMO.axf" - 0 Error(s), 0 Warning(s).
+Load "..\\Output\\STM32-DEMO.AXF" 
+Set JLink Project File to "F:\小项目\采集卡\显示屏\自己写6963\程序\USER\JLinkSettings.ini"
+* JLink Info: Device "STM32F103VE" selected (512 KB flash, 64 KB RAM).
+ 
+JLink info:
+------------
+DLL: V4.54a, compiled Sep 17 2012 15:58:45
+Firmware: J-Link ARM V8 compiled Sep 20 2013 15:09:45
+Hardware: V8.00
+S/N : 17935099 
+Feature(s) : RDI,FlashDL,FlashBP,JFlash 
+ 
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
+ROMTableAddr = 0xE00FF003
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
+ 
+Target info:
+------------
+Device: STM32F103VE
+VTarget = 3.338V
+State of Pins: 
+TCK: 1, TDI: 0, TDO: 1, TMS: 0, TRES: 1, TRST: 1
+Hardware-Breakpoints: 6
+Software-Breakpoints: 8192
+Watchpoints:          4
+JTAG speed: 2000 kHz
+ 
+Full Chip Erase Done.
+Programming Done.
+Verify OK.
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
+Application running ...
+Build target 'lcd240128'
+compiling main.c...
+linking...
+Program Size: Code=4678 RO-data=8506 RW-data=416 ZI-data=1024  
+"..\Output\STM32-DEMO.axf" - 0 Error(s), 0 Warning(s).
+Build target 'lcd240128'
+compiling main.c...
+linking...
+Program Size: Code=4690 RO-data=8506 RW-data=448 ZI-data=1024  
+"..\Output\STM32-DEMO.axf" - 0 Error(s), 0 Warning(s).
+Build target 'lcd240128'
+compiling main.c...
+main.c(80): error:  #20: identifier "DIA" is undefined
+Target not created
+Build target 'lcd240128'
+compiling main.c...
+linking...
+Program Size: Code=4722 RO-data=8506 RW-data=448 ZI-data=1024  
+"..\Output\STM32-DEMO.axf" - 0 Error(s), 0 Warning(s).
+Load "..\\Output\\STM32-DEMO.AXF" 
+Set JLink Project File to "F:\小项目\采集卡\显示屏\自己写6963\程序\USER\JLinkSettings.ini"
+* JLink Info: Device "STM32F103VE" selected (512 KB flash, 64 KB RAM).
+ 
+JLink info:
+------------
+DLL: V4.54a, compiled Sep 17 2012 15:58:45
+Firmware: J-Link ARM V8 compiled Sep 20 2013 15:09:45
+Hardware: V8.00
+S/N : 17935099 
+Feature(s) : RDI,FlashDL,FlashBP,JFlash 
+ 
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
+ROMTableAddr = 0xE00FF003
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
+ 
+Target info:
+------------
+Device: STM32F103VE
+VTarget = 3.338V
+State of Pins: 
+TCK: 1, TDI: 0, TDO: 1, TMS: 0, TRES: 1, TRST: 1
+Hardware-Breakpoints: 6
+Software-Breakpoints: 8192
+Watchpoints:          4
+JTAG speed: 2000 kHz
+ 
+Full Chip Erase Done.
+Programming Done.
+Verify OK.
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
+Application running ...
+Build target 'lcd240128'
+compiling main.c...
+linking...
+Program Size: Code=4722 RO-data=8506 RW-data=448 ZI-data=1024  
+"..\Output\STM32-DEMO.axf" - 0 Error(s), 0 Warning(s).
+Load "..\\Output\\STM32-DEMO.AXF" 
+Set JLink Project File to "F:\小项目\采集卡\显示屏\自己写6963\程序\USER\JLinkSettings.ini"
+* JLink Info: Device "STM32F103VE" selected (512 KB flash, 64 KB RAM).
+ 
+JLink info:
+------------
+DLL: V4.54a, compiled Sep 17 2012 15:58:45
+Firmware: J-Link ARM V8 compiled Sep 20 2013 15:09:45
+Hardware: V8.00
+S/N : 17935099 
+Feature(s) : RDI,FlashDL,FlashBP,JFlash 
+ 
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
+ROMTableAddr = 0xE00FF003
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
+ 
+Target info:
+------------
+Device: STM32F103VE
+VTarget = 3.332V
+State of Pins: 
+TCK: 1, TDI: 0, TDO: 1, TMS: 0, TRES: 1, TRST: 1
+Hardware-Breakpoints: 6
+Software-Breakpoints: 8192
+Watchpoints:          4
+JTAG speed: 2000 kHz
+ 
+Full Chip Erase Done.
+Programming Done.
+Verify OK.
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
+Application running ...
+Build target 'lcd240128'
+compiling main.c...
+linking...
+Program Size: Code=4754 RO-data=8506 RW-data=448 ZI-data=1024  
+"..\Output\STM32-DEMO.axf" - 0 Error(s), 0 Warning(s).
+Load "..\\Output\\STM32-DEMO.AXF" 
+Set JLink Project File to "F:\小项目\采集卡\显示屏\自己写6963\程序\USER\JLinkSettings.ini"
+* JLink Info: Device "STM32F103VE" selected (512 KB flash, 64 KB RAM).
+ 
+JLink info:
+------------
+DLL: V4.54a, compiled Sep 17 2012 15:58:45
+Firmware: J-Link ARM V8 compiled Sep 20 2013 15:09:45
+Hardware: V8.00
+S/N : 17935099 
+Feature(s) : RDI,FlashDL,FlashBP,JFlash 
+ 
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
+ROMTableAddr = 0xE00FF003
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
+ 
+Target info:
+------------
+Device: STM32F103VE
+VTarget = 3.338V
+State of Pins: 
+TCK: 1, TDI: 0, TDO: 1, TMS: 0, TRES: 1, TRST: 1
+Hardware-Breakpoints: 6
+Software-Breakpoints: 8192
+Watchpoints:          4
+JTAG speed: 2000 kHz
+ 
+Full Chip Erase Done.
+Programming Done.
+Verify OK.
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
+Application running ...
+Build target 'lcd240128'
+compiling main.c...
+linking...
+Program Size: Code=4738 RO-data=8506 RW-data=448 ZI-data=1024  
+"..\Output\STM32-DEMO.axf" - 0 Error(s), 0 Warning(s).
+Load "..\\Output\\STM32-DEMO.AXF" 
+Set JLink Project File to "F:\小项目\采集卡\显示屏\自己写6963\程序\USER\JLinkSettings.ini"
+* JLink Info: Device "STM32F103VE" selected (512 KB flash, 64 KB RAM).
+ 
+JLink info:
+------------
+DLL: V4.54a, compiled Sep 17 2012 15:58:45
+Firmware: J-Link ARM V8 compiled Sep 20 2013 15:09:45
+Hardware: V8.00
+S/N : 17935099 
+Feature(s) : RDI,FlashDL,FlashBP,JFlash 
+ 
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
+ROMTableAddr = 0xE00FF003
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
+ 
+Target info:
+------------
+Device: STM32F103VE
+VTarget = 3.338V
+State of Pins: 
+TCK: 1, TDI: 0, TDO: 1, TMS: 0, TRES: 1, TRST: 1
+Hardware-Breakpoints: 6
+Software-Breakpoints: 8192
+Watchpoints:          4
+JTAG speed: 2000 kHz
+ 
+Full Chip Erase Done.
+Programming Done.
+Verify OK.
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
+Application running ...
+Build target 'lcd240128'
+compiling main.c...
+linking...
+Program Size: Code=4754 RO-data=8506 RW-data=448 ZI-data=1024  
+"..\Output\STM32-DEMO.axf" - 0 Error(s), 0 Warning(s).
+Load "..\\Output\\STM32-DEMO.AXF" 
+Set JLink Project File to "F:\小项目\采集卡\显示屏\自己写6963\程序\USER\JLinkSettings.ini"
+* JLink Info: Device "STM32F103VE" selected (512 KB flash, 64 KB RAM).
+ 
+JLink info:
+------------
+DLL: V4.54a, compiled Sep 17 2012 15:58:45
+Firmware: J-Link ARM V8 compiled Sep 20 2013 15:09:45
+Hardware: V8.00
+S/N : 17935099 
+Feature(s) : RDI,FlashDL,FlashBP,JFlash 
+ 
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
+ROMTableAddr = 0xE00FF003
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
+ 
+Target info:
+------------
+Device: STM32F103VE
+VTarget = 3.338V
+State of Pins: 
+TCK: 1, TDI: 0, TDO: 1, TMS: 0, TRES: 1, TRST: 1
+Hardware-Breakpoints: 6
+Software-Breakpoints: 8192
+Watchpoints:          4
+JTAG speed: 2000 kHz
+ 
+Full Chip Erase Done.
+Programming Done.
+Verify OK.
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
+Application running ...
+Build target 'lcd240128'
+compiling main.c...
+linking...
+Program Size: Code=4754 RO-data=8506 RW-data=448 ZI-data=1024  
+"..\Output\STM32-DEMO.axf" - 0 Error(s), 0 Warning(s).
+Load "..\\Output\\STM32-DEMO.AXF" 
+Set JLink Project File to "F:\小项目\采集卡\显示屏\自己写6963\程序\USER\JLinkSettings.ini"
+* JLink Info: Device "STM32F103VE" selected (512 KB flash, 64 KB RAM).
+ 
+JLink info:
+------------
+DLL: V4.54a, compiled Sep 17 2012 15:58:45
+Firmware: J-Link ARM V8 compiled Sep 20 2013 15:09:45
+Hardware: V8.00
+S/N : 17935099 
+Feature(s) : RDI,FlashDL,FlashBP,JFlash 
+ 
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
+ROMTableAddr = 0xE00FF003
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
+ 
+Target info:
+------------
+Device: STM32F103VE
+VTarget = 3.338V
+State of Pins: 
+TCK: 1, TDI: 0, TDO: 1, TMS: 0, TRES: 1, TRST: 1
+Hardware-Breakpoints: 6
+Software-Breakpoints: 8192
+Watchpoints:          4
+JTAG speed: 2000 kHz
+ 
+Full Chip Erase Done.
+Programming Done.
+Verify OK.
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
+Application running ...
+Build target 'lcd240128'
+compiling main.c...
+linking...
+Program Size: Code=4826 RO-data=8506 RW-data=448 ZI-data=1024  
+"..\Output\STM32-DEMO.axf" - 0 Error(s), 0 Warning(s).
+Load "..\\Output\\STM32-DEMO.AXF" 
+Set JLink Project File to "F:\小项目\采集卡\显示屏\自己写6963\程序\USER\JLinkSettings.ini"
+* JLink Info: Device "STM32F103VE" selected (512 KB flash, 64 KB RAM).
+ 
+JLink info:
+------------
+DLL: V4.54a, compiled Sep 17 2012 15:58:45
+Firmware: J-Link ARM V8 compiled Sep 20 2013 15:09:45
+Hardware: V8.00
+S/N : 17935099 
+Feature(s) : RDI,FlashDL,FlashBP,JFlash 
+ 
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
+ROMTableAddr = 0xE00FF003
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
+ 
+Target info:
+------------
+Device: STM32F103VE
+VTarget = 3.338V
+State of Pins: 
+TCK: 1, TDI: 0, TDO: 1, TMS: 0, TRES: 1, TRST: 1
+Hardware-Breakpoints: 6
+Software-Breakpoints: 8192
+Watchpoints:          4
+JTAG speed: 2000 kHz
+ 
+Full Chip Erase Done.
+Programming Done.
+Verify OK.
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
+Application running ...
+Build target 'lcd240128'
+compiling main.c...
+linking...
+Program Size: Code=4826 RO-data=8506 RW-data=456 ZI-data=1024  
+"..\Output\STM32-DEMO.axf" - 0 Error(s), 0 Warning(s).
+Build target 'lcd240128'
+compiling main.c...
+linking...
+Program Size: Code=4826 RO-data=8506 RW-data=456 ZI-data=1024  
+"..\Output\STM32-DEMO.axf" - 0 Error(s), 0 Warning(s).
+Build target 'lcd240128'
+compiling main.c...
+linking...
+Program Size: Code=4830 RO-data=8506 RW-data=456 ZI-data=1024  
+"..\Output\STM32-DEMO.axf" - 0 Error(s), 0 Warning(s).
+Build target 'lcd240128'
+compiling main.c...
+linking...
+Program Size: Code=4874 RO-data=8506 RW-data=456 ZI-data=1024  
+"..\Output\STM32-DEMO.axf" - 0 Error(s), 0 Warning(s).
+Build target 'lcd240128'
+compiling main.c...
+linking...
+Program Size: Code=4914 RO-data=8506 RW-data=456 ZI-data=1024  
+"..\Output\STM32-DEMO.axf" - 0 Error(s), 0 Warning(s).
+Build target 'lcd240128'
+compiling main.c...
+linking...
+Program Size: Code=4918 RO-data=8506 RW-data=456 ZI-data=1024  
+"..\Output\STM32-DEMO.axf" - 0 Error(s), 0 Warning(s).
+Build target 'lcd240128'
+compiling main.c...
+main.c(110): error:  #29: expected an expression
+main.c(111): error:  #29: expected an expression
+main.c(112): error:  #29: expected an expression
+main.c(145): error:  #147-D: declaration is incompatible with "void pro_num(uint16_t, uint8_t *, uint8_t)" (declared at line 16)
+Target not created
+Build target 'lcd240128'
+compiling main.c...
+main.c(110): error:  #29: expected an expression
+main.c(110): error:  #140: too many arguments in function call
+main.c(111): error:  #29: expected an expression
+main.c(111): error:  #140: too many arguments in function call
+main.c(112): error:  #29: expected an expression
+main.c(112): error:  #140: too many arguments in function call
+main.c(145): error:  #147-D: declaration is incompatible with "void pro_num(uint16_t, uint8_t *, uint8_t)" (declared at line 16)
+Target not created
+Build target 'lcd240128'
+compiling main.c...
+main.c(110): error:  #29: expected an expression
+main.c(111): error:  #29: expected an expression
+main.c(112): error:  #29: expected an expression
+Target not created
+Build target 'lcd240128'
+compiling main.c...
+linking...
+Program Size: Code=4974 RO-data=8506 RW-data=456 ZI-data=1024  
+"..\Output\STM32-DEMO.axf" - 0 Error(s), 0 Warning(s).
+Load "..\\Output\\STM32-DEMO.AXF" 
+Set JLink Project File to "F:\小项目\采集卡\显示屏\自己写6963\程序\USER\JLinkSettings.ini"
+* JLink Info: Device "STM32F103VE" selected (512 KB flash, 64 KB RAM).
+ 
+JLink info:
+------------
+DLL: V4.54a, compiled Sep 17 2012 15:58:45
+Firmware: J-Link ARM V8 compiled Sep 20 2013 15:09:45
+Hardware: V8.00
+S/N : 17935099 
+Feature(s) : RDI,FlashDL,FlashBP,JFlash 
+ 
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
+ROMTableAddr = 0xE00FF003
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
+ 
+Target info:
+------------
+Device: STM32F103VE
+VTarget = 3.332V
+State of Pins: 
+TCK: 1, TDI: 0, TDO: 1, TMS: 0, TRES: 1, TRST: 1
+Hardware-Breakpoints: 6
+Software-Breakpoints: 8192
+Watchpoints:          4
+JTAG speed: 2000 kHz
+ 
+Full Chip Erase Done.
+Programming Done.
+Verify OK.
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
+Application running ...
+Build target 'lcd240128'
+compiling main.c...
+linking...
+Program Size: Code=4970 RO-data=8506 RW-data=456 ZI-data=1024  
+"..\Output\STM32-DEMO.axf" - 0 Error(s), 0 Warning(s).
+Load "..\\Output\\STM32-DEMO.AXF" 
+Set JLink Project File to "F:\小项目\采集卡\显示屏\自己写6963\程序\USER\JLinkSettings.ini"
+* JLink Info: Device "STM32F103VE" selected (512 KB flash, 64 KB RAM).
+ 
+JLink info:
+------------
+DLL: V4.54a, compiled Sep 17 2012 15:58:45
+Firmware: J-Link ARM V8 compiled Sep 20 2013 15:09:45
+Hardware: V8.00
+S/N : 17935099 
+Feature(s) : RDI,FlashDL,FlashBP,JFlash 
+ 
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
+ROMTableAddr = 0xE00FF003
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
+ 
+Target info:
+------------
+Device: STM32F103VE
+VTarget = 3.338V
+State of Pins: 
+TCK: 1, TDI: 0, TDO: 1, TMS: 0, TRES: 1, TRST: 1
+Hardware-Breakpoints: 6
+Software-Breakpoints: 8192
+Watchpoints:          4
+JTAG speed: 2000 kHz
+ 
+Full Chip Erase Done.
+Programming Done.
+Verify OK.
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
+Application running ...
+Build target 'lcd240128'
+compiling main.c...
+main.c(125): error:  #20: identifier "IB" is undefined
+Target not created
+Build target 'lcd240128'
+compiling main.c...
+linking...
+Program Size: Code=5022 RO-data=8506 RW-data=460 ZI-data=1028  
+"..\Output\STM32-DEMO.axf" - 0 Error(s), 0 Warning(s).
+Load "..\\Output\\STM32-DEMO.AXF" 
+Set JLink Project File to "F:\小项目\采集卡\显示屏\自己写6963\程序\USER\JLinkSettings.ini"
+* JLink Info: Device "STM32F103VE" selected (512 KB flash, 64 KB RAM).
+ 
+JLink info:
+------------
+DLL: V4.54a, compiled Sep 17 2012 15:58:45
+Firmware: J-Link ARM V8 compiled Sep 20 2013 15:09:45
+Hardware: V8.00
+S/N : 17935099 
+Feature(s) : RDI,FlashDL,FlashBP,JFlash 
+ 
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
+ROMTableAddr = 0xE00FF003
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
+ 
+Target info:
+------------
+Device: STM32F103VE
+VTarget = 3.332V
+State of Pins: 
+TCK: 1, TDI: 0, TDO: 1, TMS: 0, TRES: 1, TRST: 1
+Hardware-Breakpoints: 6
+Software-Breakpoints: 8192
+Watchpoints:          4
+JTAG speed: 2000 kHz
+ 
+Full Chip Erase Done.
+Programming Done.
+Verify OK.
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
+Application running ...
+Build target 'lcd240128'
+compiling main.c...
+linking...
+Program Size: Code=5022 RO-data=8506 RW-data=460 ZI-data=1028  
+"..\Output\STM32-DEMO.axf" - 0 Error(s), 0 Warning(s).
+Load "..\\Output\\STM32-DEMO.AXF" 
+Set JLink Project File to "F:\小项目\采集卡\显示屏\自己写6963\程序\USER\JLinkSettings.ini"
+* JLink Info: Device "STM32F103VE" selected (512 KB flash, 64 KB RAM).
+ 
+JLink info:
+------------
+DLL: V4.54a, compiled Sep 17 2012 15:58:45
+Firmware: J-Link ARM V8 compiled Sep 20 2013 15:09:45
+Hardware: V8.00
+S/N : 17935099 
+Feature(s) : RDI,FlashDL,FlashBP,JFlash 
+ 
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
+ROMTableAddr = 0xE00FF003
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
+ 
+Target info:
+------------
+Device: STM32F103VE
+VTarget = 3.338V
+State of Pins: 
+TCK: 1, TDI: 0, TDO: 1, TMS: 0, TRES: 1, TRST: 1
+Hardware-Breakpoints: 6
+Software-Breakpoints: 8192
+Watchpoints:          4
+JTAG speed: 2000 kHz
+ 
+Full Chip Erase Done.
+Programming Done.
+Verify OK.
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
+Application running ...
+Build target 'lcd240128'
+compiling main.c...
+linking...
+Program Size: Code=5022 RO-data=8506 RW-data=460 ZI-data=1028  
+"..\Output\STM32-DEMO.axf" - 0 Error(s), 0 Warning(s).
+Load "..\\Output\\STM32-DEMO.AXF" 
+Set JLink Project File to "F:\小项目\采集卡\显示屏\自己写6963\程序\USER\JLinkSettings.ini"
+* JLink Info: Device "STM32F103VE" selected (512 KB flash, 64 KB RAM).
+ 
+JLink info:
+------------
+DLL: V4.54a, compiled Sep 17 2012 15:58:45
+Firmware: J-Link ARM V8 compiled Sep 20 2013 15:09:45
+Hardware: V8.00
+S/N : 17935099 
+Feature(s) : RDI,FlashDL,FlashBP,JFlash 
+ 
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
+ROMTableAddr = 0xE00FF003
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
+ 
+Target info:
+------------
+Device: STM32F103VE
+VTarget = 3.338V
+State of Pins: 
+TCK: 1, TDI: 0, TDO: 1, TMS: 0, TRES: 1, TRST: 1
+Hardware-Breakpoints: 6
+Software-Breakpoints: 8192
+Watchpoints:          4
+JTAG speed: 2000 kHz
+ 
+Full Chip Erase Done.
+Programming Done.
+Verify OK.
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
+Application running ...
+Build target 'lcd240128'
+compiling main.c...
+main.c(121): error:  #20: identifier "U" is undefined
+main.c(122): error:  #40: expected an identifier
+main.c(122): error:  #40: expected an identifier
+main.c(122): error:  #92: identifier-list parameters may only be used in a function definition
+Target not created
+Load "..\\Output\\STM32-DEMO.AXF" 
+_____^
+*** error 56: cannot open file
+Build target 'lcd240128'
+compiling main.c...
+linking...
+Program Size: Code=5018 RO-data=8506 RW-data=460 ZI-data=1028  
+"..\Output\STM32-DEMO.axf" - 0 Error(s), 0 Warning(s).
+Load "..\\Output\\STM32-DEMO.AXF" 
+Set JLink Project File to "F:\小项目\采集卡\显示屏\自己写6963\程序\USER\JLinkSettings.ini"
+* JLink Info: Device "STM32F103VE" selected (512 KB flash, 64 KB RAM).
+ 
+JLink info:
+------------
+DLL: V4.54a, compiled Sep 17 2012 15:58:45
+Firmware: J-Link ARM V8 compiled Sep 20 2013 15:09:45
+Hardware: V8.00
+S/N : 17935099 
+Feature(s) : RDI,FlashDL,FlashBP,JFlash 
+ 
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
+ROMTableAddr = 0xE00FF003
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
+ 
+Target info:
+------------
+Device: STM32F103VE
+VTarget = 3.338V
+State of Pins: 
+TCK: 1, TDI: 0, TDO: 1, TMS: 0, TRES: 1, TRST: 1
+Hardware-Breakpoints: 6
+Software-Breakpoints: 8192
+Watchpoints:          4
+JTAG speed: 2000 kHz
+ 
+Full Chip Erase Done.
+Programming Done.
+Verify OK.
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
+Application running ...
+Build target 'lcd240128'
+compiling main.c...
+linking...
+Program Size: Code=5086 RO-data=8506 RW-data=460 ZI-data=1028  
+"..\Output\STM32-DEMO.axf" - 0 Error(s), 0 Warning(s).
+Load "..\\Output\\STM32-DEMO.AXF" 
+Set JLink Project File to "F:\小项目\采集卡\显示屏\自己写6963\程序\USER\JLinkSettings.ini"
+* JLink Info: Device "STM32F103VE" selected (512 KB flash, 64 KB RAM).
+ 
+JLink info:
+------------
+DLL: V4.54a, compiled Sep 17 2012 15:58:45
+Firmware: J-Link ARM V8 compiled Sep 20 2013 15:09:45
+Hardware: V8.00
+S/N : 17935099 
+Feature(s) : RDI,FlashDL,FlashBP,JFlash 
+ 
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
+ROMTableAddr = 0xE00FF003
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
+ 
+Target info:
+------------
+Device: STM32F103VE
+VTarget = 3.338V
+State of Pins: 
+TCK: 1, TDI: 0, TDO: 1, TMS: 0, TRES: 1, TRST: 1
+Hardware-Breakpoints: 6
+Software-Breakpoints: 8192
+Watchpoints:          4
+JTAG speed: 2000 kHz
+ 
+Full Chip Erase Done.
+Programming Done.
+Verify OK.
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
+Application running ...
+Build target 'lcd240128'
+compiling main.c...
+linking...
+Program Size: Code=5086 RO-data=8506 RW-data=460 ZI-data=1028  
+"..\Output\STM32-DEMO.axf" - 0 Error(s), 0 Warning(s).
+Load "..\\Output\\STM32-DEMO.AXF" 
+Set JLink Project File to "F:\小项目\采集卡\显示屏\自己写6963\程序\USER\JLinkSettings.ini"
+* JLink Info: Device "STM32F103VE" selected (512 KB flash, 64 KB RAM).
+ 
+JLink info:
+------------
+DLL: V4.54a, compiled Sep 17 2012 15:58:45
+Firmware: J-Link ARM V8 compiled Sep 20 2013 15:09:45
+Hardware: V8.00
+S/N : 17935099 
+Feature(s) : RDI,FlashDL,FlashBP,JFlash 
+ 
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
+ROMTableAddr = 0xE00FF003
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
+ 
+Target info:
+------------
+Device: STM32F103VE
+VTarget = 3.338V
+State of Pins: 
+TCK: 1, TDI: 0, TDO: 1, TMS: 0, TRES: 1, TRST: 1
+Hardware-Breakpoints: 6
+Software-Breakpoints: 8192
+Watchpoints:          4
+JTAG speed: 2000 kHz
+ 
+Full Chip Erase Done.
+Programming Done.
+Verify OK.
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
+Application running ...
+Build target 'lcd240128'
+compiling main.c...
+linking...
+Program Size: Code=5086 RO-data=8506 RW-data=460 ZI-data=1028  
+"..\Output\STM32-DEMO.axf" - 0 Error(s), 0 Warning(s).
+Load "..\\Output\\STM32-DEMO.AXF" 
+Set JLink Project File to "F:\小项目\采集卡\显示屏\自己写6963\程序\USER\JLinkSettings.ini"
+* JLink Info: Device "STM32F103VE" selected (512 KB flash, 64 KB RAM).
+ 
+JLink info:
+------------
+DLL: V4.54a, compiled Sep 17 2012 15:58:45
+Firmware: J-Link ARM V8 compiled Sep 20 2013 15:09:45
+Hardware: V8.00
+S/N : 17935099 
+Feature(s) : RDI,FlashDL,FlashBP,JFlash 
+ 
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
+ROMTableAddr = 0xE00FF003
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
+ 
+Target info:
+------------
+Device: STM32F103VE
+VTarget = 3.338V
+State of Pins: 
+TCK: 1, TDI: 0, TDO: 1, TMS: 0, TRES: 1, TRST: 1
+Hardware-Breakpoints: 6
+Software-Breakpoints: 8192
+Watchpoints:          4
+JTAG speed: 2000 kHz
+ 
+Full Chip Erase Done.
+Programming Done.
+Verify OK.
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
+Application running ...

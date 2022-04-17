@@ -1,0 +1,16 @@
+--cpu Cortex-M3
+".\main.o"
+".\key.o"
+".\led.o"
+".\systick.o"
+".\misc.o"
+".\stm32f10x_gpio.o"
+".\stm32f10x_rcc.o"
+".\core_cm3.o"
+".\stm32f10x_it.o"
+".\system_stm32f10x.o"
+".\startup_stm32f10x_hd.o"
+--strict --scatter ".\12.sct"
+--summary_stderr --info summarysizes --map --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list ".\12.map" -o .\12.28

@@ -1,0 +1,12 @@
+..\output\systickdelay.o: SysTickDelay.c
+..\output\systickdelay.o: SysTickDelay.h
+..\output\systickdelay.o: ..\CMSIS\stm32f10x.h
+..\output\systickdelay.o: ..\CMSIS\core_cm3.h
+..\output\systickdelay.o: D:\Software\Keil\32\ARM\ARMCC\Bin\..\include\stdint.h
+..\output\systickdelay.o: ..\CMSIS\system_stm32f10x.h
+..\output\systickdelay.o: ..\USER\stm32f10x_conf.h
+..\output\systickdelay.o: ..\FWlib\inc\stm32f10x_gpio.h
+..\output\systickdelay.o: ..\CMSIS\stm32f10x.h
+..\output\systickdelay.o: ..\FWlib\inc\stm32f10x_rcc.h
+..\output\systickdelay.o: ..\FWlib\inc\stm32f10x_spi.h
+..\output\systickdelay.o: ..\FWlib\inc\stm32f10x_usart.h

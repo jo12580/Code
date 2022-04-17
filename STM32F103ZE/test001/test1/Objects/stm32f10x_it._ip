@@ -1,0 +1,6 @@
+Libraries\stm32f10x_it.c -E -c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I .\Libraries -I .\use -I .\Libraries\STM32F10x_StdPeriph_Driver\inc
+-I "E:\desktop file\32\test1\RTE"
+-I D:\Software\Keil\32\ARM\PACK\Keil\STM32F1xx_DFP\1.0.5\Device\Include
+-I D:\Software\Keil\32\ARM\CMSIS\Include
+-D__UVISION_VERSION="518" -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER -DSTM32F10X_HD
+-o .\objects\stm32f10x_it.i --list_dir ".\\Objects\\" --list
