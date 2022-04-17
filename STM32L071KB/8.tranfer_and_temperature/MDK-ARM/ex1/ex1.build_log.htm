@@ -1,0 +1,64 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: ¦ÌVision V5.18.0.0
+Copyright (C) 2016 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: 006 007, 008, LIC=14HV2-9XDTS-NNLAF-6IKJI-L22W6-N1LQC
+ 
+Tool Versions:
+Toolchain:       MDK-ARM Standard  Version: 5.18
+Toolchain Path:  D:\Software\Keil\32\ARM\ARMCC\Bin
+C Compiler:      Armcc.exe V5.06 update 1 (build 61)
+Assembler:       Armasm.exe V5.06 update 1 (build 61)
+Linker/Locator:  ArmLink.exe V5.06 update 1 (build 61)
+Library Manager: ArmAr.exe V5.06 update 1 (build 61)
+Hex Converter:   FromElf.exe V5.06 update 1 (build 61)
+CPU DLL:         SARMCM3.DLL V5.18
+Dialog DLL:      DARMCM1.DLL V1.12.0.0
+Target DLL:      CMSIS_AGDI.dll V1.25.7.0
+Dialog DLL:      TARMCM1.DLL V1.9.0.0
+ 
+<h2>Project:</h2>
+E:\desktop file\32\STM32L071KB\8.tranfer_and_temperature\MDK-ARM\ex1.uvprojx
+Project File Date:  02/13/2022
+
+<h2>Output:</h2>
+*** Using Compiler 'V5.06 update 1 (build 61)', folder: 'D:\Software\Keil\32\ARM\ARMCC\Bin'
+Build target 'ex1'
+compiling main.c...
+../Src/main.c(110): warning:  #177-D: variable "len" was declared but never referenced
+      uint16_t len = 0;
+../Src/main.c(111): warning:  #177-D: variable "rx" was declared but never referenced
+  		uint8_t rx = 0;
+../Src/main.c(112): warning:  #177-D: variable "tx" was declared but never referenced
+  		uint8_t tx = 0x55;
+../Src/main.c(113): warning:  #177-D: variable "cntr" was declared but never referenced
+  		uint8_t cntr = 0;
+../Src/main.c: 4 warnings, 0 errors
+linking...
+Program Size: Code=14386 RO-data=2682 RW-data=112 ZI-data=1056  
+FromELF: creating hex file...
+"ex1\ex1.axf" - 0 Error(s), 4 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: ARM
+                http://www.keil.com/pack/ARM.CMSIS.4.5.0.pack
+                ARM::CMSIS:CORE:4.3.0
+                CMSIS (Cortex Microcontroller Software Interface Standard)
+   * Component: CORE Version: 4.3.0
+
+<h2>Collection of Component include folders:</h2>
+  E:\desktop file\32\STM32L071KB\8.tranfer_and_temperature\MDK-ARM\RTE
+  D:\Software\Keil\32\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include
+  D:\Software\Keil\32\ARM\PACK\Keil\STM32L0xx_DFP\2.0.1\Drivers\CMSIS\Device\ST\STM32L0xx\Include
+
+<h2>Collection of Component Files used:</h2>
+
+   * Component: ARM::CMSIS:CORE:4.3.0
+Build Time Elapsed:  00:00:02
+</pre>
+</body>
+</html>

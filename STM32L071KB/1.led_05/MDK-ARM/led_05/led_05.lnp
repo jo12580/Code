@@ -1,0 +1,26 @@
+--cpu Cortex-M0+
+"led_05\startup_stm32l071xx.o"
+"led_05\main.o"
+"led_05\stm32l0xx_it.o"
+"led_05\stm32l0xx_hal_msp.o"
+"led_05\stm32l0xx_hal_tim.o"
+"led_05\stm32l0xx_hal_tim_ex.o"
+"led_05\stm32l0xx_hal.o"
+"led_05\stm32l0xx_hal_i2c.o"
+"led_05\stm32l0xx_hal_i2c_ex.o"
+"led_05\stm32l0xx_hal_rcc.o"
+"led_05\stm32l0xx_hal_rcc_ex.o"
+"led_05\stm32l0xx_hal_flash_ramfunc.o"
+"led_05\stm32l0xx_hal_flash.o"
+"led_05\stm32l0xx_hal_flash_ex.o"
+"led_05\stm32l0xx_hal_gpio.o"
+"led_05\stm32l0xx_hal_dma.o"
+"led_05\stm32l0xx_hal_pwr.o"
+"led_05\stm32l0xx_hal_pwr_ex.o"
+"led_05\stm32l0xx_hal_cortex.o"
+"led_05\stm32l0xx_hal_exti.o"
+"led_05\system_stm32l0xx.o"
+--library_type=microlib --strict --scatter "led_05\led_05.sct"
+--summary_stderr --info summarysizes --map --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "led_05.map" -o led_05\led_05.axf

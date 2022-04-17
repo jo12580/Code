@@ -1,0 +1,6 @@
+--c99 -c --cpu Cortex-M0+ -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32L0xx_HAL_Driver/Inc -I ../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I ../Drivers/CMSIS/Include
+-I "E:\desktop file\32\stm32l0\11.timer_led\MDK-ARM\RTE"
+-I D:\Software\Keil\32\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include
+-I D:\Software\Keil\32\ARM\PACK\Keil\STM32L0xx_DFP\2.0.1\Drivers\CMSIS\Device\ST\STM32L0xx\Include
+-D__UVISION_VERSION="518" -D_RTE_ -DSTM32L071xx -DUSE_HAL_DRIVER -DSTM32L071xx -DUSE_HAL_DRIVER -DSTM32L071xx
+-o ex1\main.o --omf_browse ex1\main.crf --depend ex1\main.d "../Src/main.c"
