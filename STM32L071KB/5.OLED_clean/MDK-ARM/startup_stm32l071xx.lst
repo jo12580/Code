@@ -384,18 +384,18 @@ ARM Macro Assembler    Page 6
               00000000 
               00000000 
 Command Line: --debug --xref --diag_suppress=9931 --cpu=Cortex-M0+ --apcs=inter
-work --depend=ex1\startup_stm32l071xx.d -oex1\startup_stm32l071xx.o -I"E:\deskt
-op file\32\stm32l0\5.OLED_clean\MDK-ARM\RTE" -ID:\Software\Keil\32\ARM\PACK\ARM
-\CMSIS\4.5.0\CMSIS\Include -ID:\Software\Keil\32\ARM\PACK\Keil\STM32L0xx_DFP\2.
-0.1\Drivers\CMSIS\Device\ST\STM32L0xx\Include --predefine="__MICROLIB SETA 1" -
+work --depend=ex1\startup_stm32l071xx.d -oex1\startup_stm32l071xx.o -IE:\deskto
+p_file\32\STM32L071KB\5.OLED_clean\MDK-ARM\RTE -ID:\Software\Keil\32\ARM\PACK\A
+RM\CMSIS\4.5.0\CMSIS\Include -ID:\Software\Keil\32\ARM\PACK\Keil\STM32L0xx_DFP\
+2.0.1\Drivers\CMSIS\Device\ST\STM32L0xx\Include --predefine="__MICROLIB SETA 1"
 
 
 
 ARM Macro Assembler    Page 7 
 
 
--predefine="__UVISION_VERSION SETA 518" --predefine="_RTE_ SETA 1" --predefine=
-"STM32L071xx SETA 1" --list=startup_stm32l071xx.lst startup_stm32l071xx.s
+ --predefine="__UVISION_VERSION SETA 518" --predefine="_RTE_ SETA 1" --predefin
+e="STM32L071xx SETA 1" --list=startup_stm32l071xx.lst startup_stm32l071xx.s
 
 
 
