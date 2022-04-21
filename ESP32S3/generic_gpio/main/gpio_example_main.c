@@ -92,16 +92,16 @@ void init()
 void app_main(void)
 {
     init();
-    int cnt = 0;
+    int cnt[3];
     while(1)    //五颜六色的随机出现
     {
-        printf("cnt: %d\n", cnt);
-        vTaskDelay(1000 / portTICK_RATE_MS);
-        cnt=rand()%2+0;
-        gpio_set_level(GPIO_OUTPUT_IO_0, cnt);  //设置引脚的电平，cnt取0、1
-        cnt=rand()%2+0;
-        gpio_set_level(GPIO_OUTPUT_IO_1, cnt);
-        cnt=rand()%2+0;
-        gpio_set_level(GPIO_OUTPUT_IO_2, cnt);
+        printf("cnt: %d,%d,%d\n", cnt[0],cnt[1],cnt[2]);
+        vTaskDelay(100);//vTaskDelay(1);为10ms
+        cnt[0]=rand()%2+0;
+        gpio_set_level(GPIO_OUTPUT_IO_0, cnt[0]);  //设置引脚的电平，cnt取0、1
+        cnt[1]=rand()%2+0;
+        gpio_set_level(GPIO_OUTPUT_IO_1, cnt[1]);
+        cnt[2]=rand()%2+0;
+        gpio_set_level(GPIO_OUTPUT_IO_2, cnt[2]);
     }
 }
