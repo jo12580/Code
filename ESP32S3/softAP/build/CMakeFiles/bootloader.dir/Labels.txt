@@ -1,0 +1,13 @@
+# Target labels
+ bootloader
+# Source files and their labels
+E:/desktop_file/32/ESP32S3/softAP/build/CMakeFiles/bootloader
+E:/desktop_file/32/ESP32S3/softAP/build/CMakeFiles/bootloader.rule
+E:/desktop_file/32/ESP32S3/softAP/build/CMakeFiles/bootloader-complete.rule
+E:/desktop_file/32/ESP32S3/softAP/build/bootloader-prefix/src/bootloader-stamp/bootloader-build.rule
+E:/desktop_file/32/ESP32S3/softAP/build/bootloader-prefix/src/bootloader-stamp/bootloader-configure.rule
+E:/desktop_file/32/ESP32S3/softAP/build/bootloader-prefix/src/bootloader-stamp/bootloader-download.rule
+E:/desktop_file/32/ESP32S3/softAP/build/bootloader-prefix/src/bootloader-stamp/bootloader-install.rule
+E:/desktop_file/32/ESP32S3/softAP/build/bootloader-prefix/src/bootloader-stamp/bootloader-mkdir.rule
+E:/desktop_file/32/ESP32S3/softAP/build/bootloader-prefix/src/bootloader-stamp/bootloader-patch.rule
+E:/desktop_file/32/ESP32S3/softAP/build/bootloader-prefix/src/bootloader-stamp/bootloader-update.rule

@@ -1,8 +1,8 @@
 {
     "project_name":       "bootloader",
     "project_path":       "D:/Software/Visual_Studio_Code/ESP-ide/Espressif/frameworks/esp-idf-v4.4/components/bootloader/subproject",
-    "build_dir":          "E:/desktop_file/32/ESP32S3/sample_project/build/bootloader",
-    "config_file":        "E:/desktop_file/32/ESP32S3/sample_project/sdkconfig",
+    "build_dir":          "E:/desktop_file/32/ESP32S3/test01/sample_project/build/bootloader",
+    "config_file":        "E:/desktop_file/32/ESP32S3/test01/sample_project/sdkconfig",
     "config_defaults":    "",
     "app_elf":            "bootloader.elf",
     "app_bin":            "bootloader.bin",

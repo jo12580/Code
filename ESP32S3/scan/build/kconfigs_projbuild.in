@@ -1,0 +1,6 @@
+source "D:/Software/Visual_Studio_Code/ESP-ide/Espressif/frameworks/esp-idf-v4.4/components/app_update/Kconfig.projbuild"
+source "D:/Software/Visual_Studio_Code/ESP-ide/Espressif/frameworks/esp-idf-v4.4/components/bootloader/Kconfig.projbuild"
+source "D:/Software/Visual_Studio_Code/ESP-ide/Espressif/frameworks/esp-idf-v4.4/components/esp_rom/Kconfig.projbuild"
+source "D:/Software/Visual_Studio_Code/ESP-ide/Espressif/frameworks/esp-idf-v4.4/components/esptool_py/Kconfig.projbuild"
+source "D:/Software/Visual_Studio_Code/ESP-ide/Espressif/frameworks/esp-idf-v4.4/components/partition_table/Kconfig.projbuild"
+source "E:/desktop_file/32/ESP32S3/scan/main/Kconfig.projbuild"

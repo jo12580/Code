@@ -1,4 +1,4 @@
-# Install script for directory: E:/desktop_file/32/ESP32S3/sample_project/main
+# Install script for directory: E:/desktop_file/32/ESP32S3/test01/sample_project/main
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

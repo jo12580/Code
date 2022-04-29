@@ -42,11 +42,10 @@ static void blink_led(void)
 
 static void configure_led(void)
 {
-    ESP_LOGI(TAG, "Example configured to blink addressable LED! 123");
+    // ESP_LOGI(TAG, "Example configured to blink addressable LED! 123");
         /* LED strip initialization with the GPIO and pixels number*/
     pStrip_a = led_strip_init(CONFIG_BLINK_LED_RMT_CHANNEL, BLINK_GPIO, 1);
-        /* Set all LED off to clear all pixels */
-    pStrip_a->clear(pStrip_a, 50);
+    pStrip_a->clear(pStrip_a, 50); /* Set all LED off to clear all pixels */
 }
 
 #elif CONFIG_BLINK_LED_GPIO
@@ -59,10 +58,9 @@ static void blink_led(void)
 
 static void configure_led(void)
 {
-    ESP_LOGI(TAG, "Example configured to blink GPIO LED!");
+    // ESP_LOGI(TAG, "Example configured to blink GPIO LED!");
     gpio_reset_pin(BLINK_GPIO);
-    /* Set the GPIO as a push/pull output */
-    gpio_set_direction(BLINK_GPIO, GPIO_MODE_OUTPUT);
+    gpio_set_direction(BLINK_GPIO, GPIO_MODE_OUTPUT); /* Set the GPIO as a push/pull output */
 }
 
 #endif
@@ -72,13 +70,14 @@ void app_main(void)
 
     /* Configure the peripheral according to the LED type */
     configure_led();
-
-    while (1) 
+    while (1)
     {
         ESP_LOGI(TAG, "Turning the LED %s!", s_led_state == true ? "ON" : "OFF");
         blink_led();
-        /* Toggle the LED state */
-        s_led_state = !s_led_state;
+        s_led_state = !s_led_state;/* Toggle the LED state */
         vTaskDelay(CONFIG_BLINK_PERIOD / portTICK_PERIOD_MS);
+        // gpio_set_level(BLINK_GPIO, s_led_state);
+        // vTaskDelay(CONFIG_BLINK_PERIOD / portTICK_PERIOD_MS);
+        // gpio_set_level(BLINK_GPIO, 1);
     }
 }

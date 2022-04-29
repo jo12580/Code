@@ -46,6 +46,9 @@ static void example_ledc_init(void)
 void app_main(void)
 {
     example_ledc_init(); // Set the LEDC peripheral configuration
-    ESP_ERROR_CHECK(ledc_set_duty(LEDC_MODE, LEDC_CHANNEL, LEDC_DUTY)); // Set duty to 50%
-    ESP_ERROR_CHECK(ledc_update_duty(LEDC_MODE, LEDC_CHANNEL));// Update duty to apply the new value
+    // ESP_ERROR_CHECK(ledc_set_duty(LEDC_MODE, LEDC_CHANNEL, LEDC_DUTY)); // Set duty to 50%
+    // ESP_ERROR_CHECK(ledc_update_duty(LEDC_MODE, LEDC_CHANNEL));// Update duty to apply the new value
+   
+    ledc_set_duty(LEDC_MODE, LEDC_CHANNEL, LEDC_DUTY);  //…Ë÷√50%’ºø’±»
+    ledc_update_duty(LEDC_MODE, LEDC_CHANNEL);
 }
