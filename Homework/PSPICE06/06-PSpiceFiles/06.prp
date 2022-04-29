@@ -1,0 +1,27 @@
+("Q2N3904"
+    ("Creator"	"Device property file created by Property Controller")
+    ("device_info"
+        ("SYMBOL_NAME"	"npn")
+        ("MODEL_TYPE"	"4")
+    )
+    ("model_params"
+        ("level_0"
+        )
+    )
+    ("device_pre_smoke"
+        ("TERM_IC"	"C")
+        ("TERM_IB"	"B")
+        ("NODE_VC"	"C")
+        ("NODE_VB"	"B")
+        ("NODE_VE"	"E")
+        ("DERATE_TYPE"	"NPN")
+    )
+    ("device_max_ops"
+        ("VCB"	"60")
+        ("VCE"	"40")
+        ("VEB"	"6")
+        ("TJ"	"150")
+        ("RJC"	"83.3")
+        ("RCA"	"116.7")
+    )
+)

@@ -1,0 +1,13 @@
+* source BEHAVIOR MODEL CREATION
+X_INTEG1    IN_ABM OUT_M Expression_element_INTEG1 
+E_ABM1         OUT_ABM 0 VALUE { 2*SDT(V(IN_ABM))    }
+V_V1         IN_ABM 0  
++SIN 0 1 10 0 0 0
+
+.subckt Expression_element_INTEG1 in out  
+G_INTEG1         0 $$U_INTEG1 VALUE {V(in)} 
+C_INTEG1         $$U_INTEG1 0 {1/2} 
+R_INTEG1         $$U_INTEG1 0 1G 
+E_INTEG1         out 0 VALUE {V($$U_INTEG1)} 
+.IC         V($$U_INTEG1) = 0V
+.ends Expression_element_INTEG1

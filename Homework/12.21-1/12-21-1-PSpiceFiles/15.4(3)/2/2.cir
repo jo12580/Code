@@ -1,0 +1,20 @@
+** Profile: "15.4(3)-2"  [ D:\Software\Cadence_PSpice\Project\12.21-1\12-21-1-pspicefiles\15.4(3)\2.sim ] 
+
+** Creating circuit file "2.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of D:\Software\Cadence_PSpice\Cadence\SPB_Data\cdssetup\OrCAD_PSpice\17.2.0\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.TRAN  0 10m 0 0.01m 
+.FOUR 20k 9 V([VOUT]) 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\15.4(3).net" 
+
+
+.END

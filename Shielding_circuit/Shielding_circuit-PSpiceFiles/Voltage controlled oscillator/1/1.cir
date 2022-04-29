@@ -1,0 +1,19 @@
+** Profile: "Voltage controlled oscillator-1"  [ E:\Data\Simulation_Project\Shielding_circuit\Shielding_circuit-PSpiceFiles\Voltage controlled oscillator\1.sim ] 
+
+** Creating circuit file "1.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\Users\007\cdssetup\OrCAD_PSpice\17.2.0\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.TRAN  0 10m 0 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\Voltage controlled oscillator.net" 
+
+
+.END

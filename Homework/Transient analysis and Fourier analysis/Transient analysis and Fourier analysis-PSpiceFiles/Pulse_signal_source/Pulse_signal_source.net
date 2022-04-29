@@ -1,0 +1,7 @@
+* source TRANSIENT ANALYSIS AND FOURIER ANALYSIS
+V_V4         PULSE1 0  
++PULSE 0 5 2m 1u 1u 0.5m 1m
+V_v5         PULSE2 0  
++PULSE 0 5 2m 1m 1m 1u 2m
+V_V6         PULSE3 0  
++PULSE 5 0 1m 1u 1m 1u 1m

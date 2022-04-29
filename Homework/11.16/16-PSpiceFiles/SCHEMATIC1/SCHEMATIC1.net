@@ -1,0 +1,18 @@
+* source 16
+E_E1         OUT 0 VALUE { V(IN, 0)*2 }
+E_E2         OUT1 0 VALUE { if(v(in1)>4,0,5) }
+E_E3         OUT11 0 VALUE { pwrs(v(in11),3) }
+E_E5         OUT12 0 VALUE { abs(v(in12)) }
+V_V1         IN 0  
++SIN 0 1 1k 0 0 0
+V_V2         IN11 0  
++SIN 0 6 1k 0 0 0
+V_V3         IN1 0  
++SIN 0 6 1k 0 0 0
+V_V4         IN2 0  AC 1
++SIN 0 1 1k 0 0 0
+V_V5         IN12 0  
++SIN 0 6 1k 0 0 0
+R_R1         IN2 OUT2  1k TC=0,0 
+C_C1         0 OUT2  1n  TC=0,0 
+E_LAPLACE1         N00542 0 LAPLACE {V(IN2)} {(1)/(1 + 0.001*s)}

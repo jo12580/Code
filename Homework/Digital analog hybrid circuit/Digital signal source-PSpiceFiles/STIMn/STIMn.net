@@ -1,0 +1,39 @@
+* source DIGITAL SIGNAL SOURCE
+U_DSTM1         STIM(4,1111)
++ $G_DPWR $G_DGND
++ A0 A1 A2 A3 
++ IO_STM
++ IO_LEVEL=0
++ TIMESTEP=1u 
++ 0s 0000  
++ 10c 0011  
++ 20c 0110  
++ 40c 1100 
++ 60c 1010  
++ 100c 0101  
+U_DSTM2         STIM(4,4)
++ $G_DPWR $G_DGND
++ B0 B1 B2 B3 
++ IO_STM
++ IO_LEVEL=0
++ TIMESTEP=1u 
++ 0s 0  
++ 10c 3  
++ 20c 6  
++ 40c B 
++ 60c 9  
++ 100c 5  
+U_DSTM3         STIM(4,1111)
++ $G_DPWR $G_DGND
++ C0 C1 C2 C3 
++ IO_STM
++ IO_LEVEL=0
++ TIMESTEP=1u 
++ 0s 0000  
++ REPEAT -1 TIMES  
++ 10c 0011  
++ 20c 0110 
++ 40c 1100  
++ 60c 1010  
++ 100c 0101  
++ ENDREPEAT  

@@ -1,0 +1,91 @@
+
+**** 12/06/21 20:12:16 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-1"  [ D:\Software\Capture_PSpice\Project\Digital analog hybrid circuit\Digital signal source-PSpiceFiles\SCH
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "1.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\SPB_Data\cdssetup\OrCAD_PSpice\17.2.0\PSpice.ini file:
+.lib "nomd.lib" 
+
+*Analysis directives: 
+.TRAN  0 5m 0 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source DIGITAL SIGNAL SOURCE
+U_DSTM1         STIM(1,1) $G_DPWR $G_DGND OUT1 IO_STM IO_LEVEL=0 
++ 0 0
++ +0.2m 1
++REPEAT FOREVER
++ +0.8m 0
++  +0.2m 1
++ ENDREPEAT
+U_DSTM2         STIM(1,1) $G_DPWR $G_DGND OUT2 IO_STM IO_LEVEL=0 
++ 0 1
++ +1m 0
++REPEAT FOREVER
++ +0.6m 1
++  +0.4m 0
++ ENDREPEAT
+
+**** RESUMING 1.cir ****
+.END
+
+**** 12/06/21 20:12:16 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-1"  [ D:\Software\Capture_PSpice\Project\Digital analog hybrid circuit\Digital signal source-PSpiceFiles\SCH
+
+
+ ****     Digital IO  MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               IO_STM          
+        DRVL    0            
+        DRVH    0            
+       DtoA1 DtoA_STM        
+       DtoA2 DtoA_STM        
+       DtoA3 DtoA_STM        
+       DtoA4 DtoA_STM        
+       TPWRT  100.000000E+03 
+
+
+
+          JOB CONCLUDED
+
+**** 12/06/21 20:12:16 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-1"  [ D:\Software\Capture_PSpice\Project\Digital analog hybrid circuit\Digital signal source-PSpiceFiles\SCH
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  Total job time                    =         .05
+

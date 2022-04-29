@@ -1,0 +1,190 @@
+(ExpressProject "Transient analysis and Fourier analysis"
+  (ProjectVersion "19981106")
+  (ProjectType "Analog or A/D Mixed Mode")
+  (Folder "Design Resources"
+    (Folder "Library")
+    (NoModify)
+    (File ".\transient analysis and fourier analysis.dsn"
+      (Type "Schematic Design"))
+    (BuildFileAddedOrDeleted "x")
+    (CompileFileAddedOrDeleted "x")
+    (PSPICE_Regenerate_Netlist_Flag "FALSE")
+    (RootChangedForceReNetlist "x"))
+  (Folder "Outputs"
+    (File
+       ".\transient analysis and fourier analysis-pspicefiles\transient_analysis\transient_analysis.net"
+      (Type "Report"))
+    (File
+       ".\transient analysis and fourier analysis-pspicefiles\transient_signal_source\transient_signal_source.net"
+      (Type "Report"))
+    (File
+       ".\transient analysis and fourier analysis-pspicefiles\pulse_signal_source\pulse_signal_source.net"
+      (Type "Report"))
+    (File
+       ".\transient analysis and fourier analysis-pspicefiles\exponential_signal_source\exponential_signal_source.net"
+      (Type "Report"))
+    (File
+       ".\transient analysis and fourier analysis-pspicefiles\piecewise_linear_signal_source\piecewise_linear_signal_source.net"
+      (Type "Report"))
+    (File
+       ".\transient analysis and fourier analysis-pspicefiles\periodic_piecewise_linear_signa\periodic_piecewise_linear_signa.net"
+      (Type "Report"))
+    (File
+       ".\transient analysis and fourier analysis-pspicefiles\fourier_analysis\fourier_analysis.net"
+      (Type "Report")))
+  (Folder "PSpice Resources"
+    (Folder "Simulation Profiles"
+      (File.PSpice.{09528990-3187-11D2-BC7B-00A0C90CBF91}
+         ".\transient analysis and fourier analysis-pspicefiles\transient_analysis\transient_analysis.sim"
+        (DisplayName "Transient_analysis-Transient_analysis")
+        (Type "PSpice Profile"))
+      (File.PSpice.{09528990-3187-11D2-BC7B-00A0C90CBF91}
+         ".\transient analysis and fourier analysis-pspicefiles\transient_signal_source\2.sim"
+        (DisplayName "Transient_signal_source-2")
+        (Type "PSpice Profile"))
+      (File.PSpice.{09528990-3187-11D2-BC7B-00A0C90CBF91}
+         ".\transient analysis and fourier analysis-pspicefiles\pulse_signal_source\3.sim"
+        (DisplayName "Pulse_signal_source-3")
+        (Type "PSpice Profile"))
+      (File.PSpice.{09528990-3187-11D2-BC7B-00A0C90CBF91}
+         ".\transient analysis and fourier analysis-pspicefiles\exponential_signal_source\4.sim"
+        (DisplayName "Exponential_signal_source-4")
+        (Type "PSpice Profile"))
+      (File.PSpice.{09528990-3187-11D2-BC7B-00A0C90CBF91}
+         ".\transient analysis and fourier analysis-pspicefiles\piecewise_linear_signal_source\5.sim"
+        (DisplayName "Piecewise_linear_signal_source-5")
+        (Type "PSpice Profile"))
+      (File.PSpice.{09528990-3187-11D2-BC7B-00A0C90CBF91}
+         ".\transient analysis and fourier analysis-pspicefiles\periodic_piecewise_linear_signa\6.sim"
+        (DisplayName "Periodic_piecewise_linear_signa-6")
+        (Type "PSpice Profile"))
+      (ActiveProfile
+         ".\transient analysis and fourier analysis-pspicefiles\fourier_analysis\7.sim")
+      (File.PSpice.{09528990-3187-11D2-BC7B-00A0C90CBF91}
+         ".\transient analysis and fourier analysis-pspicefiles\fourier_analysis\7.sim"
+        (DisplayName "Fourier_analysis-7")
+        (Type "PSpice Profile")))
+    (Folder "Model Libraries"
+      (Sort User))
+    (Folder "Stimulus Files"
+      (Sort User))
+    (Folder "Include Files"
+      (Sort User)))
+  (DefaultLibraryBrowseDirectory "library\PSpice")
+  (PartMRUSelector
+    (VPULSE
+      (FullPartName "VPULSE.Normal")
+      (LibraryName
+         "D:\SOFTWARE\CAPTURE_PSPICE\TOOLS\CAPTURE\LIBRARY\PSPICE\SOURCE.OLB")
+      (DeviceIndex "0"))
+    (VSIN
+      (FullPartName "VSIN.Normal")
+      (LibraryName
+         "D:\SOFTWARE\CAPTURE_PSPICE\TOOLS\CAPTURE\LIBRARY\PSPICE\SOURCE.OLB")
+      (DeviceIndex "0"))
+    (VAC
+      (FullPartName "VAC.Normal")
+      (LibraryName
+         "D:\SOFTWARE\CAPTURE_PSPICE\TOOLS\CAPTURE\LIBRARY\PSPICE\SOURCE.OLB")
+      (DeviceIndex "0"))
+    (0
+      (LibraryName
+         "D:\SOFTWARE\CAPTURE_PSPICE\TOOLS\CAPTURE\LIBRARY\CAPSYM.OLB")
+      (DeviceIndex "0"))
+    (R
+      (FullPartName "R.Normal")
+      (LibraryName
+         "D:\SOFTWARE\CAPTURE_PSPICE\TOOLS\CAPTURE\LIBRARY\PSPICE\ANALOG.OLB")
+      (DeviceIndex "0"))
+    (VPWL_RE_N_TIMES
+      (FullPartName "VPWL_RE_N_TIMES.Normal")
+      (LibraryName
+         "D:\SOFTWARE\CAPTURE_PSPICE\TOOLS\CAPTURE\LIBRARY\PSPICE\SOURCE.OLB")
+      (DeviceIndex "0"))
+    (VPWL_RE_FOREVER
+      (FullPartName "VPWL_RE_FOREVER.Normal")
+      (LibraryName
+         "D:\SOFTWARE\CAPTURE_PSPICE\TOOLS\CAPTURE\LIBRARY\PSPICE\SOURCE.OLB")
+      (DeviceIndex "0"))
+    (VPWL
+      (FullPartName "VPWL.Normal")
+      (LibraryName
+         "D:\SOFTWARE\CAPTURE_PSPICE\TOOLS\CAPTURE\LIBRARY\PSPICE\SOURCE.OLB")
+      (DeviceIndex "0"))
+    (VEXP
+      (FullPartName "VEXP.Normal")
+      (LibraryName
+         "D:\SOFTWARE\CAPTURE_PSPICE\TOOLS\CAPTURE\LIBRARY\PSPICE\SOURCE.OLB")
+      (DeviceIndex "0"))
+    (VCC
+      (LibraryName
+         "D:\SOFTWARE\CAPTURE_PSPICE\TOOLS\CAPTURE\LIBRARY\CAPSYM.OLB")
+      (DeviceIndex "0"))
+    (IPULSE
+      (FullPartName "IPULSE.Normal")
+      (LibraryName
+         "D:\SOFTWARE\CAPTURE_PSPICE\TOOLS\CAPTURE\LIBRARY\PSPICE\SOURCE.OLB")
+      (DeviceIndex "0"))
+    (C
+      (FullPartName "C.Normal")
+      (LibraryName
+         "D:\SOFTWARE\CAPTURE_PSPICE\TOOLS\CAPTURE\LIBRARY\PSPICE\FILTSUB.OLB")
+      (DeviceIndex "0"))
+    (c
+      (FullPartName "c.Normal")
+      (LibraryName
+         "D:\SOFTWARE\CAPTURE_PSPICE\TOOLS\CAPTURE\LIBRARY\PSPICE\ANALOG_P.OLB")
+      (DeviceIndex "0"))
+    (VDC
+      (FullPartName "VDC.Normal")
+      (LibraryName
+         "D:\SOFTWARE\CAPTURE_PSPICE\TOOLS\CAPTURE\LIBRARY\PSPICE\SOURCE.OLB")
+      (DeviceIndex "0")))
+  (MPSSessionName "007")
+  (GlobalState
+    (FileView
+      (Path "Design Resources")
+      (Path "Design Resources"
+         "D:\Software\Capture_PSpice\Project\Transient analysis and Fourier analysis\transient analysis and fourier analysis.dsn")
+      (Path "Design Resources"
+         "D:\Software\Capture_PSpice\Project\Transient analysis and Fourier analysis\transient analysis and fourier analysis.dsn"
+         "Fourier_analysis")
+      (Path "Design Resources"
+         "D:\Software\Capture_PSpice\Project\Transient analysis and Fourier analysis\transient analysis and fourier analysis.dsn"
+         "Exponential_signal_source")
+      (Path "Design Resources"
+         "D:\Software\Capture_PSpice\Project\Transient analysis and Fourier analysis\transient analysis and fourier analysis.dsn"
+         "Periodic_piecewise_linear_signa")
+      (Path "Design Resources"
+         "D:\Software\Capture_PSpice\Project\Transient analysis and Fourier analysis\transient analysis and fourier analysis.dsn"
+         "Piecewise_linear_signal_source")
+      (Path "Design Resources"
+         "D:\Software\Capture_PSpice\Project\Transient analysis and Fourier analysis\transient analysis and fourier analysis.dsn"
+         "Pulse_signal_source")
+      (Path "Design Resources"
+         "D:\Software\Capture_PSpice\Project\Transient analysis and Fourier analysis\transient analysis and fourier analysis.dsn"
+         "Transient_analysis")
+      (Path "Design Resources"
+         "D:\Software\Capture_PSpice\Project\Transient analysis and Fourier analysis\transient analysis and fourier analysis.dsn"
+         "Transient_signal_source")
+      (Path "Outputs")
+      (Select "Design Resources"
+         "D:\Software\Capture_PSpice\Project\Transient analysis and Fourier analysis\transient analysis and fourier analysis.dsn"
+         "Fourier_analysis" "PAGE7"))
+    (HierarchyView)
+    (Doc
+      (Type "COrCapturePMDoc")
+      (Frame
+        (Placement "44 0 1 -1 -1 -8 -31 0 200 0 282"))
+      (Tab 0))
+    (Doc
+      (Type "COrSchematicDoc")
+      (Frame
+        (Placement "44 2 3 -1 -1 -8 -31 0 1036 0 321")
+        (Scroll "334 190")
+        (Zoom "200")
+        (Occurrence "/"))
+      (Path
+         "D:\SOFTWARE\CAPTURE_PSPICE\PROJECT\TRANSIENT ANALYSIS AND FOURIER ANALYSIS\TRANSIENT ANALYSIS AND FOURIER ANALYSIS.DSN")
+      (Schematic "Fourier_analysis")
+      (Page "PAGE7"))))

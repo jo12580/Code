@@ -1,0 +1,7 @@
+* source BEHAVIOR MODEL CREATION
+E_LIMIT1         LIMIT 0 VALUE {LIMIT(V(IN),-2,5)}
+E_GLIMIT1         GLIMIT 0 VALUE {LIMIT(V(IN)*100,-2,5)}
+E_SLIMIT1         SOFTLIM 0 VALUE {(((5)+(-2))/2) + ((((5)-(-2))/2) * 
++ TANH((100)*(V(IN)-(((5)+(-2))/2))/((((5)-(-2))/2))))}
+V_V1         IN 0  
++SIN 0 6 1k 0 0 0

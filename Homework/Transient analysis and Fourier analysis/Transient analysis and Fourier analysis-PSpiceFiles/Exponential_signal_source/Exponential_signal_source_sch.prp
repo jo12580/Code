@@ -1,0 +1,85 @@
+("FILE_TYPE"	"PMAP File"
+    ("devices"
+        ("VEXP")
+    )
+    ("instances"
+        ("V2"
+            ("device_name"	"VEXP")
+            ("pspice_path"	"V_V2")
+            ("level"	"0")
+            ("model_params"
+                ("TD2"
+                    ("value"	"10m")
+                    ("pspice_param"	"TD2")
+                )
+                ("TD1"
+                    ("value"	"2m")
+                    ("pspice_param"	"TD1")
+                )
+                ("V1"
+                    ("value"	"0")
+                    ("pspice_param"	"V1")
+                )
+                ("V2"
+                    ("value"	"-5")
+                    ("pspice_param"	"V2")
+                )
+                ("TC1"
+                    ("value"	"4m")
+                    ("pspice_param"	"TC1")
+                )
+                ("TC2"
+                    ("value"	"2m")
+                    ("pspice_param"	"TC2")
+                )
+                ("AC"
+                    ("value"	"")
+                    ("pspice_param"	"AC")
+                )
+                ("DC"
+                    ("value"	"")
+                    ("pspice_param"	"DC")
+                )
+            )
+        )
+        ("V1"
+            ("device_name"	"VEXP")
+            ("pspice_path"	"V_V1")
+            ("level"	"0")
+            ("model_params"
+                ("TC2"
+                    ("value"	"2m")
+                    ("pspice_param"	"TC2")
+                )
+                ("TC1"
+                    ("value"	"1m")
+                    ("pspice_param"	"TC1")
+                )
+                ("V2"
+                    ("value"	"5")
+                    ("pspice_param"	"V2")
+                )
+                ("V1"
+                    ("value"	"0")
+                    ("pspice_param"	"V1")
+                )
+                ("TD1"
+                    ("value"	"2m")
+                    ("pspice_param"	"TD1")
+                )
+                ("TD2"
+                    ("value"	"10m")
+                    ("pspice_param"	"TD2")
+                )
+                ("AC"
+                    ("value"	"")
+                    ("pspice_param"	"AC")
+                )
+                ("DC"
+                    ("value"	"")
+                    ("pspice_param"	"DC")
+                )
+            )
+        )
+    )
+)

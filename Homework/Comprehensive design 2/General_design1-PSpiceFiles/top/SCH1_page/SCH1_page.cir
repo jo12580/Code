@@ -1,0 +1,21 @@
+** Profile: "top-SCH1_page"  [ D:\Software\Cadence_PSpice\Project\Comprehensive design 2\general_design1-pspicefiles\top\sch1_page.sim ] 
+
+** Creating circuit file "SCH1_page.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of D:\Software\Cadence_PSpice\Cadence\SPB_Data\cdssetup\OrCAD_PSpice\17.2.0\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.TRAN  0 350m 300m 0.001m 
+.OPTIONS ADVCONV
+.OPTIONS DIGINITSTATE= 0
+.AUTOCONVERGE ITL1=1000 ITL2=1000 ITL4=1000 RELTOL=0.05 ABSTOL=1.0E-6 VNTOL=.001 PIVTOL=1.0E-10 
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\top.net" 
+
+
+.END

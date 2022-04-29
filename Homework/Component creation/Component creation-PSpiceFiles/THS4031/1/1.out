@@ -1,0 +1,217 @@
+
+**** 11/22/21 10:44:50 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-1"  [ D:\Software\Capture_PSpice\Project\Component creation\Component creation-PSpiceFiles\SCHEMATIC1\1.sim 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "1.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+.LIB "D:/Software/Capture_PSpice/Module/THS4031/ths4031.lib" 
+* From [PSPICE NETLIST] section of C:\SPB_Data\cdssetup\OrCAD_PSpice\17.2.0\PSpice.ini file:
+.lib "nomd.lib" 
+
+*Analysis directives: 
+.TRAN  0 10m 0 0.01m 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source COMPONENT CREATION
+X_U1         N00195 N00191 VCC VSS OUT THS4031 
+V_V1         IN 0  
++SIN 0 10m 1k 0 0 0
+R_R1         IN N00191  1k TC=0,0 
+R_R2         N00191 OUT  2k TC=0,0 
+R_R3         0 N00195  680 TC=0,0 
+V_V2         VCC 0 10
+V_V3         VSS 0 -10
+
+**** RESUMING 1.cir ****
+.END
+
+**** 11/22/21 10:44:50 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-1"  [ D:\Software\Capture_PSpice\Project\Component creation\Component creation-PSpiceFiles\SCHEMATIC1\1.sim 
+
+
+ ****     Diode MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U1.D1N        
+          IS   10.000000E-15 
+           N    1.836        
+         ISR    1.565000E-09 
+         IKF     .04417      
+          BV   30            
+         IBV   10.000000E-06 
+          RS   45            
+          TT   11.540000E-09 
+         CJO    2.000000E-12 
+          VJ     .5          
+           M     .3333       
+
+
+**** 11/22/21 10:44:50 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-1"  [ D:\Software\Capture_PSpice\Project\Component creation\Component creation-PSpiceFiles\SCHEMATIC1\1.sim 
+
+
+ ****     BJT MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U1.NPN_IN     X_U1.NPN        X_U1.PNP        
+               NPN             NPN             PNP             
+       LEVEL    1               1               1            
+          IS  170.000000E-18  170.000000E-18  296.000000E-18 
+          BF  400             100             100            
+          NF    1               1               1            
+         VAF  100             100             100            
+         IKF     .0389           .0389           .021        
+         ISE    7.600000E-18    7.600000E-18  494.000000E-18 
+          NE    1.13489         1.13489         1.49168      
+          BR    1.11868         1.11868          .491925     
+          NR    1               1               1            
+         VAR    4.46837         4.46837         2.35634      
+         IKR    8               8               8            
+         ISC    8.000000E-15    8.000000E-15    8.000000E-15 
+          NC    1.8             1.8             1.8          
+         ISS    0               0               0            
+          RB   25             250             250            
+          RE     .122            .122            .122        
+          RC   20             200             200            
+         CJE  120.200000E-15  120.200000E-15  120.200000E-15 
+         VJE    1.0888          1.0888           .940007     
+         MJE     .381406         .381406         .55         
+         CJC  133.800000E-15  133.800000E-15  133.800000E-15 
+         VJC     .589703         .589703         .588526     
+         MJC     .265838         .265838         .55         
+        XCJC    1               1               1            
+         CJS    0               0               0            
+         VJS     .75             .75             .75         
+          FC     .1              .1              .1          
+          TF   12.130000E-12   12.130000E-12   12.130000E-12 
+         XTF  272.204         272.204         141.135        
+         VTF   10              10               6.82756      
+         ITF     .147            .147            .267        
+          TR    3.000000E-09    3.000000E-09    3.000000E-09 
+         XTB    1               1               1            
+         XTI    5               5               5            
+          KF  275.000000E-15    0               0            
+          AF    1               1               1            
+          CN    2.42            2.42            2.2          
+           D     .87             .87             .52         
+
+
+**** 11/22/21 10:44:50 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-1"  [ D:\Software\Capture_PSpice\Project\Component creation\Component creation-PSpiceFiles\SCHEMATIC1\1.sim 
+
+
+ ****     Capacitor MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U1.Ct         
+           C    1            
+         TC1   -2.500000E-03 
+
+
+**** 11/22/21 10:44:50 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-1"  [ D:\Software\Capture_PSpice\Project\Component creation\Component creation-PSpiceFiles\SCHEMATIC1\1.sim 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(   IN)    0.0000  (  OUT)-214.1E-06  (  VCC)   10.0000  (  VSS)  -10.0000      
+
+(N00191)    -.0021 (N00195)    -.0021 (X_U1.08)   -8.1995                       
+
+(X_U1.09)   -9.0020                   (X_U1.10)     .0176                       
+
+(X_U1.11)   -9.7612                   (X_U1.12)   -9.7615                       
+
+(X_U1.13)     .0123                   (X_U1.14)    -.7753                       
+
+(X_U1.15)     .0485                   (X_U1.16)    -.0489                       
+
+(X_U1.17)    -.7562                   (X_U1.18)     .0176                       
+
+(X_U1.19)     .0176                   (X_U1.20)-204.7E-06                       
+
+(X_U1.22)    -.0021                   (X_U1.31)-214.1E-06                       
+
+(X_U1.32)-204.7E-06                   (X_U1.33)    8.7670                       
+
+(X_U1.34)    8.7705                   (X_U1.35)     .7888                       
+
+(X_U1.Vref)    8.0000                 
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1        -2.088E-06
+    V_V2        -7.637E-03
+    V_V3         7.639E-03
+    X_U1.V1     -1.986E-05
+
+    TOTAL POWER DISSIPATION   1.53E-01  WATTS
+
+
+
+          JOB CONCLUDED
+
+**** 11/22/21 10:44:50 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-1"  [ D:\Software\Capture_PSpice\Project\Component creation\Component creation-PSpiceFiles\SCHEMATIC1\1.sim 
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  Total job time (using Solver 1)   =         .09
+

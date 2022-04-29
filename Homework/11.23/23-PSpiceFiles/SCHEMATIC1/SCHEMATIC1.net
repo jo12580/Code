@@ -1,0 +1,9 @@
+* source 23
+X_U1         IN 0 OUT 0 N01913 N02009 +VS -VS AD627A
+V_V1         +VS 0 +12
+V_V2         -VS 0 -12
+R_R1         N02009 N01913  40.2k TC=0,0 
+C_C1         +VS 0  0.1u  TC=0,0 
+C_C2         -VS 0  0.1u  TC=0,0 
+V_V3         IN 0  AC 1
++SIN 0 100m 1k 0 0 0

@@ -1,0 +1,20 @@
+.ALIASES
+X_U1A           U1A(CLK=CLK CLRbar=CLR J=$D_HI K=$D_HI Q=Q0 Qbar=M_UN0001 VCC=$G_DPWR GND=$G_DGND ) CN
++@13_4.1(sch_1):INS38@7400.74107.Normal(chips)
+X_U1B           U1B(CLK=CLK CLRbar=CLR J=Q0 K=Q0 Q=Q1 Qbar=M_UN0002 VCC=$G_DPWR GND=$G_DGND ) CN
++@13_4.1(sch_1):INS91@7400.74107.Normal(chips)
+X_U2A           U2A(CLK=CLK CLRbar=CLR J=N00723 K=N00723 Q=Q2 Qbar=M_UN0003 VCC=$G_DPWR GND=$G_DGND ) CN
++@13_4.1(sch_1):INS144@7400.74107.Normal(chips)
+X_U2B           U2B(CLK=CLK CLRbar=CLR J=N00701 K=N00701 Q=Q3 Qbar=M_UN0004 VCC=$G_DPWR GND=$G_DGND ) CN
++@13_4.1(sch_1):INS197@7400.74107.Normal(chips)
+X_U3A           U3A(A=Q0 B=Q1 Y=N00723 VCC=$G_DPWR GND=$G_DGND ) CN @13_4.1(sch_1):INS281@7400.7408.Normal(chips)
+U_DSTM1          DSTM1(VCC=$G_DPWR GND=$G_DGND 1=CLK ) CN @13_4.1(sch_1):INS376@DATACONV.DigClock.Normal(chips)
+U_DSTM2          DSTM2(pin1=CLR ) CN @13_4.1(sch_1):INS399@SOURCE.STIM1.Normal(chips)
+X_U4A           U4A(A=Q0 B=Q1 C=Q2 Y=N00701 VCC=$G_DPWR GND=$G_DGND ) CN @13_4.1(sch_1):INS629@7400.7411.Normal(chips)
+_    _(CLK=CLK)
+_    _(CLR=CLR)
+_    _(Q0=Q0)
+_    _(Q1=Q1)
+_    _(Q2=Q2)
+_    _(Q3=Q3)
+.ENDALIASES

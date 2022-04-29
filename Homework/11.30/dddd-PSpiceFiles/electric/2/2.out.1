@@ -1,0 +1,54 @@
+
+**** 11/30/21 11:04:44 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "electric-2"  [ G:\030\11.30\dddd-PSpiceFiles\electric\2.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "2.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\SPB_Data\cdssetup\OrCAD_PSpice\17.2.0\PSpice.ini file:
+.lib "nomd.lib" 
+
+*Analysis directives: 
+.TRAN  0 10ms 0 0.01m 
+.FOUR 1k 9 v([out1)v(out2]) 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\electric.net" 
+
+
+
+**** INCLUDING electric.net ****
+* source DDDD
+V_V1         V+ 0 12Vdc
+V_V2         V- 0 -12Vdc
+R_A1_R1         A1_N01011 OUT1  160k TC=0,0 
+X_A1_U1A         A1_N01113 A1_N01011 V+ V- OUT1 AD648A
+R_A1_R3         0 A1_N01113  910k TC=0,0 
+R_A1_R2         A1_N01113 OUT1  160k TC=0,0 
+C_A1_C1         0 A1_N01011  0.01u  TC=0,0 
+R_A2_R1         A2_N01011 OUT2  100k TC=0,0 
+X_A2_U1A         A2_N01113 A2_N01011 V+ V- OUT2 AD648A
+R_A2_R3         0 A2_N01113  910k TC=0,0 
+R_A2_R2         A2_N01113 OUT2  160k TC=0,0 
+C_A2_C1         0 A2_N01011  0.01u  TC=0,0 
+.IC         V(A1_N01011 )=0
+.IC         V(A2_N01011 )=0
+
+**** RESUMING 2.cir ****
+.END
+
+ERROR(ORPSIM-15090): FOUR device out1 is undefined
+

@@ -1,0 +1,11 @@
+.ALIASES
+V_V4            V4(+=PULSE1 -=0 ) CN @TRANSIENT ANALYSIS AND FOURIER
++ANALYSIS.Pulse_signal_source(sch_1):INS651@SOURCE.VPULSE.Normal(chips)
+V_v5            v5(+=PULSE2 -=0 ) CN @TRANSIENT ANALYSIS AND FOURIER
++ANALYSIS.Pulse_signal_source(sch_1):INS697@SOURCE.VPULSE.Normal(chips)
+V_V6            V6(+=PULSE3 -=0 ) CN @TRANSIENT ANALYSIS AND FOURIER
++ANALYSIS.Pulse_signal_source(sch_1):INS743@SOURCE.VPULSE.Normal(chips)
+_    _(PULSE1=PULSE1)
+_    _(PULSE2=PULSE2)
+_    _(PULSE3=PULSE3)
+.ENDALIASES

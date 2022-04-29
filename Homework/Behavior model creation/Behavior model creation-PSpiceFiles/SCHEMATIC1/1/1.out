@@ -1,0 +1,112 @@
+
+**** 11/15/21 18:50:34 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-1"  [ D:\Software\Capture_PSpice\Project\Behavior model creation\Behavior model creation-PSpiceFiles\SCHEMAT
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "1.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\SPB_Data\cdssetup\OrCAD_PSpice\17.2.0\PSpice.ini file:
+.lib "nomd.lib" 
+
+*Analysis directives: 
+.OP
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source BEHAVIOR MODEL CREATION
+V_CONST1         IN1 0 DC 8
+V_CONST2         IN2 0 DC 3
+E_SUM1         OUT1 0 VALUE {V(IN2)+V(IN1)}
+E_MULT1         OUT3 0 VALUE {V(OUT1)*V(OUT2)}
+E_DIFF1         OUT2 0 VALUE {V(IN2,IN1)}
+E_GAIN1         OUT4 0 VALUE {-2 * V(OUT3)}
+
+**** RESUMING 1.cir ****
+.END
+
+**** 11/15/21 18:50:34 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-1"  [ D:\Software\Capture_PSpice\Project\Behavior model creation\Behavior model creation-PSpiceFiles\SCHEMAT
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(  IN1)    8.0000  (  IN2)    3.0000  ( OUT1)   11.0000  ( OUT2)   -5.0000      
+
+( OUT3)  -55.0000  ( OUT4)  110.0000  
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_CONST1     0.000E+00
+    V_CONST2     0.000E+00
+
+    TOTAL POWER DISSIPATION   0.00E+00  WATTS
+
+
+**** 11/15/21 18:50:34 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-1"  [ D:\Software\Capture_PSpice\Project\Behavior model creation\Behavior model creation-PSpiceFiles\SCHEMAT
+
+
+ ****     OPERATING POINT INFORMATION      TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+
+
+
+**** VOLTAGE-CONTROLLED VOLTAGE SOURCES
+
+
+NAME         E_SUM1      E_MULT1     E_DIFF1     E_GAIN1   
+V-SOURCE     1.100E+01  -5.500E+01  -5.000E+00   1.100E+02
+I-SOURCE     0.000E+00   0.000E+00   0.000E+00   0.000E+00
+
+          JOB CONCLUDED
+
+**** 11/15/21 18:50:34 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-1"  [ D:\Software\Capture_PSpice\Project\Behavior model creation\Behavior model creation-PSpiceFiles\SCHEMAT
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  Total job time (using Solver 1)   =        0.00
+

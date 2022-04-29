@@ -1,0 +1,43 @@
+
+**** 11/15/21 20:49:51 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "Mathematical_operation_element-4"  [ D:\Software\Capture_PSpice\Project\Behavior model creation\Behavior model creation
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "4.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\SPB_Data\cdssetup\OrCAD_PSpice\17.2.0\PSpice.ini file:
+.lib "nomd.lib" 
+
+*Analysis directives: 
+.AC LIN 1 0.1 100K
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\Mathematical_operation_element.net" 
+
+
+
+**** INCLUDING Mathematical_operation_element.net ****
+* source BEHAVIOR MODEL CREATION
+V_V1         N00123 0 DC 0Vdc AC 1Vac 
+R_R1         N00123 OUTA  1k TC=0,0 
+C_C1         0 OUTA  10u  TC=0,0 
+E_LAPLACE1         OUTB 0 LAPLACE {V(N00123)} {(1)/(1 + 0.01*)}
+----------------------------------------------$
+ERROR(ORPSIM-16045): Invalid transfer function
+
+**** RESUMING 4.cir ****
+.END
+

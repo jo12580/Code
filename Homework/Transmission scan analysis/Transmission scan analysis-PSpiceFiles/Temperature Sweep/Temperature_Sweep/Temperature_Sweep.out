@@ -1,0 +1,84 @@
+
+**** 10/18/21 21:53:21 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "Temperature Sweep-Temperature_Sweep"  [ D:\Software\Capture_PSpice\Project\Transmission scan analysis\Transmission scan
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "Temperature_Sweep.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\SPB_Data\cdssetup\OrCAD_PSpice\17.2.0\PSpice.ini file:
+.lib "nomd.lib" 
+
+*Analysis directives: 
+.DC LIN TEMP -40 125 1 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\Temperature Sweep.net" 
+
+
+
+**** INCLUDING "Temperature Sweep.net" ****
+* source TRANSMISSION SCAN ANALYSIS
+V_V1         N00092 0 1Vdc
+R_R1         N00092 N00099  100 TC=0,0 
+D_D1         N00099 0 D1N4148 
+
+**** RESUMING Temperature_Sweep.cir ****
+.END
+
+**** 10/18/21 21:53:21 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "Temperature Sweep-Temperature_Sweep"  [ D:\Software\Capture_PSpice\Project\Transmission scan analysis\Transmission scan
+
+
+ ****     Diode MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               D1N4148         
+          IS    2.682000E-09 
+           N    1.836        
+         ISR    1.565000E-09 
+         IKF     .04417      
+          BV  100            
+         IBV  100.000000E-06 
+          RS     .5664       
+          TT   11.540000E-09 
+         CJO    4.000000E-12 
+          VJ     .5          
+           M     .3333       
+
+
+
+          JOB CONCLUDED
+
+**** 10/18/21 21:53:21 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "Temperature Sweep-Temperature_Sweep"  [ D:\Software\Capture_PSpice\Project\Transmission scan analysis\Transmission scan
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  Total job time (using Solver 1)   =         .05
+

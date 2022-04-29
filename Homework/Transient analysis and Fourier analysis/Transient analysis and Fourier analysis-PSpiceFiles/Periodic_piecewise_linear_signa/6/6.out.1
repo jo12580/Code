@@ -1,0 +1,45 @@
+
+**** 11/01/21 21:51:25 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "Periodic_piecewise_linear_signa-6"  [ D:\Software\Capture_PSpice\Project\Transient analysis and Fourier analysis\Transi
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "6.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\SPB_Data\cdssetup\OrCAD_PSpice\17.2.0\PSpice.ini file:
+.lib "nomd.lib" 
+
+*Analysis directives: 
+.TRAN  0 50ms 0 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\Periodic_piecewise_linear_signa.net" 
+
+
+
+**** INCLUDING Periodic_piecewise_linear_signa.net ****
+* source TRANSIENT ANALYSIS AND FOURIER ANALYSIS
+V_V11         PWL-RE-FOR-1 0   PWL TIME_SCALE_FACTOR=1 VALUE_SCALE_FACTOR=1 
++ REPEAT FOREVER 
++ (1m,0)  (2m,5) 
++ (3m,-5)  (4m,0) 
++ 0 
+--$
+ERROR(ORPSIM-16355): Time must be increasing
++ ENDREPEAT
+
+**** RESUMING 6.cir ****
+.END
+

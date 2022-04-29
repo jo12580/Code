@@ -1,0 +1,19 @@
+** Profile: "Equivalent_element-6"  [ D:\Software\Capture_PSpice\Project\Behavior model creation\Behavior model creation-PSpiceFiles\Equivalent_element\6.sim ] 
+
+** Creating circuit file "6.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\SPB_Data\cdssetup\OrCAD_PSpice\17.2.0\PSpice.ini file:
+.lib "nomd.lib" 
+
+*Analysis directives: 
+.TRAN  0 10MS 0 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\Equivalent_element.net" 
+
+
+.END

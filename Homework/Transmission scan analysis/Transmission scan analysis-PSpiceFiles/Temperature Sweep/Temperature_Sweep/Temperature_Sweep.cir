@@ -1,0 +1,19 @@
+** Profile: "Temperature Sweep-Temperature_Sweep"  [ D:\Software\Capture_PSpice\Project\Transmission scan analysis\Transmission scan analysis-PSpiceFiles\Temperature Sweep\Temperature_Sweep.sim ] 
+
+** Creating circuit file "Temperature_Sweep.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\SPB_Data\cdssetup\OrCAD_PSpice\17.2.0\PSpice.ini file:
+.lib "nomd.lib" 
+
+*Analysis directives: 
+.DC LIN TEMP -40 125 1 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\Temperature Sweep.net" 
+
+
+.END

@@ -1,0 +1,196 @@
+
+**** 11/28/21 20:55:46 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "Circuit_module-1"  [ D:\Software\Capture_PSpice\Project\Layer circuit design\Layer circuit design-PSpiceFiles\Circuit_m
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "1.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\SPB_Data\cdssetup\OrCAD_PSpice\17.2.0\PSpice.ini file:
+.lib "nomd.lib" 
+
+*Analysis directives: 
+.AC DEC 100 100 10meg
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\Circuit_module.net" 
+
+
+
+**** INCLUDING Circuit_module.net ****
+* source LAYER CIRCUIT DESIGN
+R_R1         N00385 IN1+  100 TC=0,0 
+R_R2         0 IN1-  100 TC=0,0 
+R_R3         OUT1 N00229  1k TC=0,0 
+R_R4         IN2- N00389  100 TC=0,0 
+R_R5         OUT2 N00262  1k TC=0,0 
+C_C1         IN1- N00229  10u  TC=0,0 
+C_C2         IN2- N00262  10u  TC=0,0 
+V_V1         VCC 0 +12
+V_V2         VEE 0 -12
+V_V3         N00385 0 DC 0Vdc AC 1 
+V_V4         N00389 0 DC 0Vdc AC 1 
+M_A1_M2         A1_N03029 A1_N03075 A1_N03161 A1_N03161 M2SK1044
+R_A1_R5         VEE OUT1  1k TC=0,0 
+R_A1_R6         A1_N02857 VCC  1k TC=0,0 
+R_A1_R3         VEE A1_N03161  200 TC=0,0 
+R_A1_R2         A1_OUT+ VCC  5k TC=0,0 
+R_A1_R7         0 A1_N03075  10k TC=0,0 
+M_A1_M3         A1_N03075 A1_N03075 A1_N03167 A1_N03167 M2SK1044
+M_A1_M1         A1_OUT- IN1+ A1_N03029 A1_N03029 M2SK1044
+R_A1_R4         VEE A1_N03167  1k TC=0,0 
+C_A1_C1         A1_N02857 VCC  10u  TC=0,0 
+M_A1_M5         OUT1 A1_OUT- A1_N02857 A1_N02857 M2SJ114
+M_A1_M6         A1_OUT+ IN1- A1_N03029 A1_N03029 M2SK1044
+R_A1_R1         A1_OUT- VCC  5k TC=0,0 
+M_A2_M2         A2_N03029 A2_N03075 A2_N03161 A2_N03161 M2SK1044
+R_A2_R5         VEE OUT2  1k TC=0,0 
+R_A2_R6         A2_N02857 VCC  1k TC=0,0 
+R_A2_R3         VEE A2_N03161  200 TC=0,0 
+R_A2_R2         A2_OUT+ VCC  5k TC=0,0 
+R_A2_R7         0 A2_N03075  10k TC=0,0 
+M_A2_M3         A2_N03075 A2_N03075 A2_N03167 A2_N03167 M2SK1044
+M_A2_M1         A2_OUT- 0 A2_N03029 A2_N03029 M2SK1044
+R_A2_R4         VEE A2_N03167  1k TC=0,0 
+C_A2_C1         A2_N02857 VCC  10u  TC=0,0 
+M_A2_M5         OUT2 A2_OUT- A2_N02857 A2_N02857 M2SJ114
+M_A2_M6         A2_OUT+ IN2- A2_N03029 A2_N03029 M2SK1044
+R_A2_R1         A2_OUT- VCC  5k TC=0,0 
+
+**** RESUMING 1.cir ****
+.END
+
+**** 11/28/21 20:55:46 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "Circuit_module-1"  [ D:\Software\Capture_PSpice\Project\Layer circuit design\Layer circuit design-PSpiceFiles\Circuit_m
+
+
+ ****     MOSFET MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               M2SK1044        M2SJ114         
+               NMOS            PMOS            
+       LEVEL    3               3            
+           L    2.000000E-06    2.000000E-06 
+           W    3.8             1.1          
+         VTO    3.293           -.9423       
+          KP    1.022000E-06  540.100000E-09 
+       GAMMA    0               0            
+         PHI     .6              .6          
+      LAMBDA    0               0            
+          RD    1.413                        
+          RS     .02             .02         
+          RG                   28.78         
+          RB    1.000000E-03     .01886      
+         RDS  800.000000E+03  160.000000E+03 
+          IS   10.000000E-15   16.480000E-09 
+          JS    0               0            
+           N                    1.62         
+          PB     .3905           .8          
+        PBSW     .3905           .8          
+         CBD    2.781000E-09  746.200000E-12 
+          CJ    0               0            
+        CJSW    0               0            
+          MJ     .7919                       
+        CGSO  366.900000E-12  593.200000E-12 
+        CGDO   24.340000E-12  250.400000E-12 
+        CGBO    0               0            
+         TOX    2.000000E-06    2.000000E-06 
+          XJ    0               0            
+          UO                  300            
+       UCRIT   10.000000E+03   10.000000E+03 
+       DELTA    0               0            
+         ETA    0               0            
+      DIOMOD    1               1            
+         VFB    0               0            
+        LETA    0               0            
+        WETA    0               0            
+          U0    0               0            
+        TEMP    0               0            
+         VDD    5               5            
+       XPART    0               0            
+
+
+**** 11/28/21 20:55:46 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "Circuit_module-1"  [ D:\Software\Capture_PSpice\Project\Layer circuit design\Layer circuit design-PSpiceFiles\Circuit_m
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(  VCC)   12.0000  (  VEE)  -12.0000  ( IN1+)    0.0000  ( IN1-)    0.0000      
+
+( IN2-)    0.0000  ( OUT1)   -3.7394  ( OUT2)   -3.7394  (N00229)   -3.7394     
+
+(N00262)   -3.7394 (N00385)    0.0000 (N00389)    0.0000 (A1_OUT+)    2.5618    
+
+(A1_OUT-)    2.5618                   (A2_OUT+)    2.5618                       
+
+(A2_OUT-)    2.5618                   (A1_N02857)    3.7394                     
+
+(A1_N03029)   -3.3370                 (A1_N03075)   -7.8896                     
+
+(A1_N03161)  -11.2450                 (A1_N03167)  -11.2110                     
+
+(A2_N02857)    3.7394                 (A2_N03029)   -3.3370                     
+
+(A2_N03075)   -7.8896                 (A2_N03161)  -11.2450                     
+
+(A2_N03167)  -11.2110                 
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1        -2.407E-02
+    V_V2         2.565E-02
+    V_V3         0.000E+00
+    V_V4         0.000E+00
+
+    TOTAL POWER DISSIPATION   5.97E-01  WATTS
+
+
+
+          JOB CONCLUDED
+
+**** 11/28/21 20:55:46 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "Circuit_module-1"  [ D:\Software\Capture_PSpice\Project\Layer circuit design\Layer circuit design-PSpiceFiles\Circuit_m
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  Total job time (using Solver 1)   =         .11
+

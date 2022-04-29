@@ -1,0 +1,19 @@
+** Profile: "Static operating point analysis-1_OP"  [ D:\Software\Capture_PSpice\Project\Static operating point analysis circuit\Static operating point analysis circuit-PSpiceFiles\Static operating point analysis\1_OP.sim ] 
+
+** Creating circuit file "1_OP.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\SPB_Data\cdssetup\OrCAD_PSpice\17.2.0\PSpice.ini file:
+.lib "nomd.lib" 
+
+*Analysis directives: 
+.OP
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\Static operating point analysis.net" 
+
+
+.END

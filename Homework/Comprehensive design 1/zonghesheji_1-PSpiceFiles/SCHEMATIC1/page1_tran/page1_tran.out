@@ -1,0 +1,202 @@
+
+**** 11/17/21 15:35:01 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-page1_tran"  [ D:\Software\Capture_PSpice\Project\Comprehensive design\zonghesheji_1-pspicefiles\schematic1\
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "page1_tran.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\SPB_Data\cdssetup\OrCAD_PSpice\17.2.0\PSpice.ini file:
+.lib "nomd.lib" 
+
+*Analysis directives: 
+.TRAN  0 10m 0 0.01m 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source ZONGHESHEJI_1
+R_R16         OUT2 VCC  70k TC=0,0 
+R_R15         0 OUT2  70k TC=0,0 
+R_R10         0 N12598  30k TC=0,0 
+Q_Q4         0 OUT2 N12466 Q2N3905
+R_R19         0 0  6k TC=0,0 
+V_V2         VCC 0 12Vdc
+R_R11         N12984 N12728  90 TC=0,0 
+R_R6         VCC N12644  60k TC=0,0 
+R_R7         N129300 0  5k TC=0,0 
+R_R17         N12644 N129300  5k TC=0,0 
+C_C2         OUT1 N12546  10u  TC=0,0 
+C_C3         0 N12984  50u  TC=0,0 
+R_R14         N13034 N127442  200 TC=0,0 
+C_C1         N12670 N12598  10u  TC=0,0 
+R_R18         0 0  5k TC=0,0 
+R_R8         VCC N12444  5k TC=0,0 
+C_C6         N12466 OUT3  200u  TC=0,0 
+R_R1         N12598 VCC  120k TC=0,0 
+R_R3         0 N12984  1k TC=0,0 
+R_R9         N13034 0  1k TC=0,0 
+Q_Q1         OUT1 N12598 N12728 Q2N3904
+R_R2         OUT1 VCC  5.1k TC=0,0 
+Q_Q2         N12444 N12644 N127442 Q2N3904
+C_C4         N12644 N12546  10u  TC=0,0 
+V_V1         N12670 0  
++SIN 0 20m 1k 0 0 0
+R_R4         0 N12546  2k TC=0,0 
+D_D1         N125841 OUT2 D1N4148_1 
+C_C5         0 N13034  50u  TC=0,0 
+C_C7         N12444 OUT2  20u  TC=0,0 
+D_D2         OUT2 N125841 D1N4148_1 
+Q_Q3         VCC OUT2 N12466 Q2N3904
+R_R12         0 OUT3  2k TC=0,0 
+.PARAM  rar=10k
+
+**** RESUMING page1_tran.cir ****
+.END
+
+**** 11/17/21 15:35:01 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-page1_tran"  [ D:\Software\Capture_PSpice\Project\Comprehensive design\zonghesheji_1-pspicefiles\schematic1\
+
+
+ ****     Diode MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               D1N4148_1       
+          IS    2.682000E-09 
+           N    1.836        
+         ISR    1.565000E-09 
+         IKF     .04417      
+          BV  100            
+         IBV  100.000000E-06 
+          RS     .5664       
+          TT   11.540000E-09 
+         CJO    4.000000E-12 
+          VJ     .5          
+           M     .3333       
+
+
+**** 11/17/21 15:35:01 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-page1_tran"  [ D:\Software\Capture_PSpice\Project\Comprehensive design\zonghesheji_1-pspicefiles\schematic1\
+
+
+ ****     BJT MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               Q2N3905         Q2N3904         
+               PNP             NPN             
+       LEVEL    1               1            
+          IS    1.410000E-15    6.734000E-15 
+          BF   90.35          416.4          
+          NF    1               1            
+         VAF   18.7            74.03         
+         IKF     .08             .06678      
+         ISE                    6.734000E-15 
+          NE                    1.259        
+          BR    5.502            .7371       
+          NR    1               1            
+         ISS    0               0            
+          RB   10              10            
+          RE    0               0            
+          RC    2.5             1            
+         CJE    8.063000E-12    4.493000E-12 
+         VJE     .75             .75         
+         MJE     .3677           .2593       
+         CJC    9.728000E-12    3.638000E-12 
+         VJC     .75             .75         
+         MJC     .5776           .3085       
+        XCJC    1               1            
+         CJS    0               0            
+         VJS     .75             .75         
+          TF  179.300000E-12  301.200000E-12 
+         XTF    6               2            
+         VTF    4               4            
+         ITF     .4              .4          
+          TR   35.050000E-09  239.500000E-09 
+         XTB    1.5             1.5          
+          KF    0               0            
+          AF    1               1            
+          CN    2.2             2.42         
+           D     .52             .87         
+
+
+**** 11/17/21 15:35:01 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-page1_tran"  [ D:\Software\Capture_PSpice\Project\Comprehensive design\zonghesheji_1-pspicefiles\schematic1\
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(  VCC)   12.0000  ( OUT1)    5.0420  ( OUT2)    6.0000  ( OUT3)    0.0000      
+
+(N12444)    7.8455 (N12466)    5.8769 (N12546)    0.0000 (N12598)    2.1705     
+
+(N12644)    1.6631 (N12670)    0.0000 (N12728)    1.4975 (N12984)    1.3739     
+
+(N13034)     .8369 (N125841)    6.0000                   (N127442)    1.0043    
+
+(N129300)     .8315                   
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V2        -2.535E-03
+    V_V1         0.000E+00
+
+    TOTAL POWER DISSIPATION   3.04E-02  WATTS
+
+
+
+          JOB CONCLUDED
+
+**** 11/17/21 15:35:01 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-page1_tran"  [ D:\Software\Capture_PSpice\Project\Comprehensive design\zonghesheji_1-pspicefiles\schematic1\
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  Total job time (using Solver 1)   =         .11
+

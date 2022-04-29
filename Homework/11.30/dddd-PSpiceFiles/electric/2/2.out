@@ -1,0 +1,247 @@
+
+**** 11/30/21 11:08:02 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "electric-2"  [ G:\030\11.30\dddd-PSpiceFiles\electric\2.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "2.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\SPB_Data\cdssetup\OrCAD_PSpice\17.2.0\PSpice.ini file:
+.lib "nomd.lib" 
+
+*Analysis directives: 
+.TRAN  0 50ms 0 0.01m 
+.FOUR 1k 9 v([OUT1]) v([OUT2]) 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\electric.net" 
+
+
+
+**** INCLUDING electric.net ****
+* source DDDD
+V_V1         V+ 0 12Vdc
+V_V2         V- 0 -12Vdc
+R_A1_R1         A1_N01011 OUT1  160k TC=0,0 
+X_A1_U1A         A1_N01113 A1_N01011 V+ V- OUT1 AD648A
+R_A1_R3         0 A1_N01113  910k TC=0,0 
+R_A1_R2         A1_N01113 OUT1  160k TC=0,0 
+C_A1_C1         0 A1_N01011  0.01u  TC=0,0 
+R_A2_R1         A2_N01011 OUT2  100k TC=0,0 
+X_A2_U1A         A2_N01113 A2_N01011 V+ V- OUT2 AD648A
+R_A2_R3         0 A2_N01113  910k TC=0,0 
+R_A2_R2         A2_N01113 OUT2  160k TC=0,0 
+C_A2_C1         0 A2_N01011  0.01u  TC=0,0 
+.IC         V(A1_N01011 )=0
+.IC         V(A2_N01011 )=0
+
+**** RESUMING 2.cir ****
+.END
+
+**** 11/30/21 11:08:02 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "electric-2"  [ G:\030\11.30\dddd-PSpiceFiles\electric\2.sim ] 
+
+
+ ****     Diode MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_A1_U1A.dx     X_A1_U1A.dy     X_A2_U1A.dx     X_A2_U1A.dy     
+          IS  800.000000E-18  800.000000E-18  800.000000E-18  800.000000E-18 
+          RS                    1.000000E-03                    1.000000E-03 
+         CJO                   10.000000E-12                   10.000000E-12 
+
+
+**** 11/30/21 11:08:02 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "electric-2"  [ G:\030\11.30\dddd-PSpiceFiles\electric\2.sim ] 
+
+
+ ****     Junction FET MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_A1_U1A.jx     X_A2_U1A.jx     
+               NJF             NJF             
+         VTO   -1              -1            
+        BETA  548.300000E-06  548.300000E-06 
+          IS    2.500000E-12    2.500000E-12 
+
+
+**** 11/30/21 11:08:02 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "electric-2"  [ G:\030\11.30\dddd-PSpiceFiles\electric\2.sim ] 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(   V+)   12.0000  (   V-)  -12.0000  ( OUT1) 102.1E-06  ( OUT2) 102.1E-06      
+
+(A1_N01011) 1.312E-12                 (A1_N01113) 89.27E-06                     
+
+(A2_N01011) 2.078E-12                 (A2_N01113) 89.27E-06                     
+
+(X_A1_U1A.6)-1.605E-09                (X_A1_U1A.7) 102.1E-06                    
+
+(X_A1_U1A.8) 102.1E-06                (X_A1_U1A.9)    0.0000                    
+
+(X_A2_U1A.6)-1.605E-09                (X_A2_U1A.7) 102.1E-06                    
+
+(X_A2_U1A.8) 102.1E-06                (X_A2_U1A.9)    0.0000                    
+
+(X_A1_U1A.10)     .7971               (X_A1_U1A.11)   11.8560                   
+
+(X_A1_U1A.12)   11.8560               (X_A1_U1A.53)   10.0000                   
+
+(X_A1_U1A.54)  -10.0000               (X_A1_U1A.90) 718.8E-09                   
+
+(X_A1_U1A.91)   15.0000               (X_A1_U1A.92)  -15.0000                   
+
+(X_A1_U1A.99)    0.0000               (X_A2_U1A.10)     .7971                   
+
+(X_A2_U1A.11)   11.8560               (X_A2_U1A.12)   11.8560                   
+
+(X_A2_U1A.53)   10.0000               (X_A2_U1A.54)  -10.0000                   
+
+(X_A2_U1A.90) 1.102E-06               (X_A2_U1A.91)   15.0000                   
+
+(X_A2_U1A.92)  -15.0000               (X_A2_U1A.99)    0.0000               
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1        -3.623E-04
+    V_V2         3.620E-04
+    X_A1_U1A.vb  -1.605E-14
+    X_A1_U1A.vc   1.000E-11
+    X_A1_U1A.ve   1.137E-11
+    X_A1_U1A.vlim   7.188E-10
+    X_A1_U1A.vlp  -1.500E-11
+    X_A1_U1A.vln  -1.500E-11
+    X_A2_U1A.vb  -1.605E-14
+    X_A2_U1A.vc   1.000E-11
+    X_A2_U1A.ve   1.137E-11
+    X_A2_U1A.vlim   1.102E-09
+    X_A2_U1A.vlp  -1.500E-11
+    X_A2_U1A.vln  -1.500E-11
+
+    TOTAL POWER DISSIPATION   8.69E-03  WATTS
+
+
+**** 11/30/21 11:08:02 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "electric-2"  [ G:\030\11.30\dddd-PSpiceFiles\electric\2.sim ] 
+
+
+ ****     FOURIER ANALYSIS                 TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+FOURIER COMPONENTS OF TRANSIENT RESPONSE V(OUT1)
+
+
+
+ DC COMPONENT =   1.0791E+01
+
+ HARMONIC   FREQUENCY     FOURIER     NORMALIZED     PHASE     NORMALIZED
+    NO         (HZ)      COMPONENT     COMPONENT     (DEG)     PHASE (DEG)
+
+     1    1.0000E+03   1.1393E-05   1.0000E+00  -1.7267E+02   0.0000E+00
+     2    2.0000E+03   5.7514E-06   5.0483E-01  -1.7374E+02   1.7159E+02
+     3    3.0000E+03   3.8346E-06   3.3658E-01  -1.7240E+02   3.4559E+02
+     4    4.0000E+03   2.8425E-06   2.4950E-01  -1.7141E+02   5.1926E+02
+     5    5.0000E+03   2.3036E-06   2.0220E-01  -1.6953E+02   6.9380E+02
+     6    6.0000E+03   1.9414E-06   1.7040E-01  -1.6698E+02   8.6902E+02
+     7    7.0000E+03   1.6847E-06   1.4787E-01  -1.6536E+02   1.0433E+03
+     8    8.0000E+03   1.4788E-06   1.2980E-01  -1.6289E+02   1.2184E+03
+     9    9.0000E+03   1.2999E-06   1.1410E-01  -1.6352E+02   1.3905E+03
+
+
+     TOTAL HARMONIC DISTORTION =   7.4300E+01 PERCENT
+
+**** 11/30/21 11:08:02 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "electric-2"  [ G:\030\11.30\dddd-PSpiceFiles\electric\2.sim ] 
+
+
+ ****     FOURIER ANALYSIS                 TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+FOURIER COMPONENTS OF TRANSIENT RESPONSE V(OUT2)
+
+
+
+ DC COMPONENT =  -8.4481E+00
+
+ HARMONIC   FREQUENCY     FOURIER     NORMALIZED     PHASE     NORMALIZED
+    NO         (HZ)      COMPONENT     COMPONENT     (DEG)     PHASE (DEG)
+
+     1    1.0000E+03   4.5966E+00   1.0000E+00   1.1137E+02   0.0000E+00
+     2    2.0000E+03   4.3321E+00   9.4246E-01   1.3273E+02  -9.0005E+01
+     3    3.0000E+03   3.9115E+00   8.5096E-01   1.5408E+02  -1.8002E+02
+     4    4.0000E+03   3.3635E+00   7.3173E-01   1.7541E+02  -2.7006E+02
+     5    5.0000E+03   2.7246E+00   5.9275E-01  -1.6330E+02  -7.2013E+02
+     6    6.0000E+03   2.0370E+00   4.4315E-01  -1.4206E+02  -8.1027E+02
+     7    7.0000E+03   1.3443E+00   2.9245E-01  -1.2098E+02  -9.0055E+02
+     8    8.0000E+03   6.8882E-01   1.4985E-01  -1.0038E+02  -9.9131E+02
+     9    9.0000E+03   1.0901E-01   2.3716E-02  -8.6981E+01  -1.0893E+03
+
+
+     TOTAL HARMONIC DISTORTION =   1.6745E+02 PERCENT
+
+
+          JOB CONCLUDED
+
+**** 11/30/21 11:08:02 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "electric-2"  [ G:\030\11.30\dddd-PSpiceFiles\electric\2.sim ] 
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  Total job time (using Solver 1)   =         .36
+

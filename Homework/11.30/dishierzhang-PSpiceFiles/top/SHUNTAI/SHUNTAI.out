@@ -1,0 +1,178 @@
+
+**** 11/30/21 09:22:35 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "top-SHUNTAI"  [ F:\251\dishierzhang-PSpiceFiles\top\SHUNTAI.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "SHUNTAI.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\SPB_Data\cdssetup\OrCAD_PSpice\17.2.0\PSpice.ini file:
+.lib "nomd.lib" 
+
+*Analysis directives: 
+.TRAN  0 100m 0 0.001m 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\top.net" 
+
+
+
+**** INCLUDING top.net ****
+* source DISHIERZHANG
+V_V1         V+ 0 12Vdc
+V_V2         V- 0 -12Vdc
+R_a1_R3         0 a1_N00230  910k TC=0,0 
+R_a1_R2         a1_N00230 OUT1  160k TC=0,0 
+R_a1_R1         a1_N00184 OUT1  160k TC=0,0 
+C_a1_C1         0 a1_N00184  0.01u  TC=0,0 
+X_a1_U1A         a1_N00230 a1_N00184 V+ V- OUT1 AD648A
+R_a2_R3         0 a2_N00230  910k TC=0,0 
+R_a2_R2         a2_N00230 OUT2  160k TC=0,0 
+R_a2_R1         a2_N00184 OUT2  100k TC=0,0 
+C_a2_C1         0 a2_N00184  0.01u  TC=0,0 
+X_a2_U1A         a2_N00230 a2_N00184 V+ V- OUT2 AD648A
+.IC         V(a1_N00184 )=0
+.IC         V(a2_N00184 )=0
+
+**** RESUMING SHUNTAI.cir ****
+.END
+
+**** 11/30/21 09:22:35 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "top-SHUNTAI"  [ F:\251\dishierzhang-PSpiceFiles\top\SHUNTAI.sim ] 
+
+
+ ****     Diode MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_a1_U1A.dx     X_a1_U1A.dy     X_a2_U1A.dx     X_a2_U1A.dy     
+          IS  800.000000E-18  800.000000E-18  800.000000E-18  800.000000E-18 
+          RS                    1.000000E-03                    1.000000E-03 
+         CJO                   10.000000E-12                   10.000000E-12 
+
+
+**** 11/30/21 09:22:35 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "top-SHUNTAI"  [ F:\251\dishierzhang-PSpiceFiles\top\SHUNTAI.sim ] 
+
+
+ ****     Junction FET MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_a1_U1A.jx     X_a2_U1A.jx     
+               NJF             NJF             
+         VTO   -1              -1            
+        BETA  548.300000E-06  548.300000E-06 
+          IS    2.500000E-12    2.500000E-12 
+
+
+**** 11/30/21 09:22:35 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "top-SHUNTAI"  [ F:\251\dishierzhang-PSpiceFiles\top\SHUNTAI.sim ] 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(   V+)   12.0000  (   V-)  -12.0000  ( OUT1) 102.1E-06  ( OUT2) 102.1E-06      
+
+(a1_N00184) 1.312E-12                 (a1_N00230) 89.27E-06                     
+
+(a2_N00184) 2.078E-12                 (a2_N00230) 89.27E-06                     
+
+(X_a1_U1A.6)-1.605E-09                (X_a1_U1A.7) 102.1E-06                    
+
+(X_a1_U1A.8) 102.1E-06                (X_a1_U1A.9)    0.0000                    
+
+(X_a2_U1A.6)-1.605E-09                (X_a2_U1A.7) 102.1E-06                    
+
+(X_a2_U1A.8) 102.1E-06                (X_a2_U1A.9)    0.0000                    
+
+(X_a1_U1A.10)     .7971               (X_a1_U1A.11)   11.8560                   
+
+(X_a1_U1A.12)   11.8560               (X_a1_U1A.53)   10.0000                   
+
+(X_a1_U1A.54)  -10.0000               (X_a1_U1A.90) 718.8E-09                   
+
+(X_a1_U1A.91)   15.0000               (X_a1_U1A.92)  -15.0000                   
+
+(X_a1_U1A.99)    0.0000               (X_a2_U1A.10)     .7971                   
+
+(X_a2_U1A.11)   11.8560               (X_a2_U1A.12)   11.8560                   
+
+(X_a2_U1A.53)   10.0000               (X_a2_U1A.54)  -10.0000                   
+
+(X_a2_U1A.90) 1.102E-06               (X_a2_U1A.91)   15.0000                   
+
+(X_a2_U1A.92)  -15.0000               (X_a2_U1A.99)    0.0000               
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1        -3.623E-04
+    V_V2         3.620E-04
+    X_a1_U1A.vb  -1.605E-14
+    X_a1_U1A.vc   1.000E-11
+    X_a1_U1A.ve   1.137E-11
+    X_a1_U1A.vlim   7.188E-10
+    X_a1_U1A.vlp  -1.500E-11
+    X_a1_U1A.vln  -1.500E-11
+    X_a2_U1A.vb  -1.605E-14
+    X_a2_U1A.vc   1.000E-11
+    X_a2_U1A.ve   1.137E-11
+    X_a2_U1A.vlim   1.102E-09
+    X_a2_U1A.vlp  -1.500E-11
+    X_a2_U1A.vln  -1.500E-11
+
+    TOTAL POWER DISSIPATION   8.69E-03  WATTS
+
+
+
+          JOB CONCLUDED
+
+**** 11/30/21 09:22:35 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "top-SHUNTAI"  [ F:\251\dishierzhang-PSpiceFiles\top\SHUNTAI.sim ] 
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  Total job time (using Solver 1)   =        4.35
+

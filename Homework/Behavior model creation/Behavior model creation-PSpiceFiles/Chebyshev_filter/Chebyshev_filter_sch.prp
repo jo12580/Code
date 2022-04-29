@@ -1,0 +1,138 @@
+("FILE_TYPE"	"PMAP File"
+    ("devices"
+        ("VAC")
+        ("LOPASS")
+        ("HIPASS")
+        ("BANDPASS")
+        ("BANDREJ")
+    )
+    ("instances"
+        ("V1"
+            ("device_name"	"VAC")
+            ("pspice_path"	"V_V1")
+            ("level"	"0")
+            ("model_params"
+                ("DC"
+                    ("value"	"0Vdc")
+                    ("pspice_param"	"DC")
+                )
+                ("ACMAG"
+                    ("value"	"1Vac")
+                    ("pspice_param"	"AC")
+                )
+                ("ACPHASE"
+                    ("value"	"")
+                    ("pspice_param"	"ACPHASE")
+                )
+            )
+        )
+        ("LOPASS1"
+            ("device_name"	"LOPASS")
+            ("pspice_path"	"E_LOPASS1")
+            ("level"	"0")
+            ("model_params"
+                ("STOP"
+                    ("value"	"100dB")
+                    ("pspice_param"	"STOP")
+                )
+                ("RIPPLE"
+                    ("value"	"1dB")
+                    ("pspice_param"	"RIPPLE")
+                )
+                ("FP"
+                    ("value"	"10Hz")
+                    ("pspice_param"	"FP")
+                )
+                ("FS"
+                    ("value"	"100Hz")
+                    ("pspice_param"	"FS")
+                )
+            )
+        )
+        ("HIPASS1"
+            ("device_name"	"HIPASS")
+            ("pspice_path"	"E_HIPASS1")
+            ("level"	"0")
+            ("model_params"
+                ("RIPPLE"
+                    ("value"	"3dB")
+                    ("pspice_param"	"RIPPLE")
+                )
+                ("FS"
+                    ("value"	"200Hz")
+                    ("pspice_param"	"FS")
+                )
+                ("FP"
+                    ("value"	"50Hz")
+                    ("pspice_param"	"FP")
+                )
+                ("STOP"
+                    ("value"	"50dB")
+                    ("pspice_param"	"STOP")
+                )
+            )
+        )
+        ("BPASS1"
+            ("device_name"	"BANDPASS")
+            ("pspice_path"	"E_BPASS1")
+            ("level"	"0")
+            ("model_params"
+                ("F3"
+                    ("value"	"10000Hz")
+                    ("pspice_param"	"F3")
+                )
+                ("F1"
+                    ("value"	"300Hz")
+                    ("pspice_param"	"F1")
+                )
+                ("F2"
+                    ("value"	"1000Hz")
+                    ("pspice_param"	"F2")
+                )
+                ("F0"
+                    ("value"	"100Hz")
+                    ("pspice_param"	"F0")
+                )
+                ("RIPPLE"
+                    ("value"	"1dB")
+                    ("pspice_param"	"RIPPLE")
+                )
+                ("STOP"
+                    ("value"	"50dB")
+                    ("pspice_param"	"STOP")
+                )
+            )
+        )
+        ("BREJ1"
+            ("device_name"	"BANDREJ")
+            ("pspice_path"	"E_BREJ1")
+            ("level"	"0")
+            ("model_params"
+                ("F1"
+                    ("value"	"200Hz")
+                    ("pspice_param"	"F1")
+                )
+                ("F3"
+                    ("value"	"10000Hz")
+                    ("pspice_param"	"F3")
+                )
+                ("RIPPLE"
+                    ("value"	"1dB")
+                    ("pspice_param"	"RIPPLE")
+                )
+                ("STOP"
+                    ("value"	"50dB")
+                    ("pspice_param"	"STOP")
+                )
+                ("F0"
+                    ("value"	"10Hz")
+                    ("pspice_param"	"F0")
+                )
+                ("F2"
+                    ("value"	"300Hz")
+                    ("pspice_param"	"F2")
+                )
+            )
+        )
+    )
+)

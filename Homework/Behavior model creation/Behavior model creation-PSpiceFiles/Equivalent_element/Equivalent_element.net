@@ -1,0 +1,4 @@
+* source BEHAVIOR MODEL CREATION
+V_V1         IN_EV 0  
++SIN 0 1 1K 0 0 0
+E_E1         OUT_EV 0 VALUE { 2*V(IN_EV) }

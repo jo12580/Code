@@ -1,0 +1,86 @@
+("FILE_TYPE"	"PMAP File"
+    ("devices"
+        ("INTEG")
+        ("ABM")
+        ("VSIN")
+    )
+    ("instances"
+        ("INTEG1"
+            ("device_name"	"INTEG")
+            ("pspice_path"	"E_INTEG1")
+            ("level"	"0")
+            ("model_params"
+                ("GAIN"
+                    ("value"	"2")
+                    ("pspice_param"	"GAIN")
+                )
+                ("IC"
+                    ("value"	"0V")
+                    ("pspice_param"	"IC")
+                )
+            )
+        )
+        ("ABM1"
+            ("device_name"	"ABM")
+            ("pspice_path"	"E_ABM1")
+            ("level"	"0")
+            ("model_params"
+                ("EXP1"
+                    ("value"	"2*SDT(V(IN_ABM))")
+                    ("pspice_param"	"EXP1")
+                )
+                ("EXP4"
+                    ("value"	"")
+                    ("pspice_param"	"EXP4")
+                )
+                ("EXP3"
+                    ("value"	"")
+                    ("pspice_param"	"EXP3")
+                )
+                ("EXP2"
+                    ("value"	"")
+                    ("pspice_param"	"EXP2")
+                )
+            )
+        )
+        ("V1"
+            ("device_name"	"VSIN")
+            ("pspice_path"	"V_V1")
+            ("level"	"0")
+            ("model_params"
+                ("VOFF"
+                    ("value"	"0")
+                    ("pspice_param"	"VOFF")
+                )
+                ("VAMPL"
+                    ("value"	"1")
+                    ("pspice_param"	"VAMPL")
+                )
+                ("FREQ"
+                    ("value"	"10")
+                    ("pspice_param"	"FREQ")
+                )
+                ("PHASE"
+                    ("value"	"0")
+                    ("pspice_param"	"PHASE")
+                )
+                ("DF"
+                    ("value"	"0")
+                    ("pspice_param"	"DF")
+                )
+                ("TD"
+                    ("value"	"0")
+                    ("pspice_param"	"TD")
+                )
+                ("AC"
+                    ("value"	"")
+                    ("pspice_param"	"AC")
+                )
+                ("DC"
+                    ("value"	"")
+                    ("pspice_param"	"DC")
+                )
+            )
+        )
+    )
+)

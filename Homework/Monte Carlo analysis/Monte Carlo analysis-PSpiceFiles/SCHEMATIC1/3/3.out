@@ -1,0 +1,558 @@
+
+**** 11/08/21 22:34:38 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-3"  [ D:\Software\Capture_PSpice\Project\Monte Carlo analysis\Monte Carlo analysis-PSpiceFiles\SCHEMATIC1\3.
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "3.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\SPB_Data\cdssetup\OrCAD_PSpice\17.2.0\PSpice.ini file:
+.lib "nomd.lib" 
+
+*Analysis directives: 
+.AC DEC 100 0.1 10K
+.WCASE AC V([OUT]) YMAX VARY BOTH  HI 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source MONTE CARLO ANALYSIS
+V_V2         +12V 0 12Vdc
+V_V3         -12V 0 -12Vdc
+X_U1         N00283 N00287 +12V -12V OUT uA741
+R_R1         0 N00287 R_R1 1k TC=0,0 
+.model        R_R1 RES R=1 DEV=10% TC1=0 TC2=0
+R_R4         N00279 N00283 R_R4 1k TC=0,0 
+.model        R_R4 RES R=1 DEV=10% TC1=0 TC2=0
+R_R3         N00272 N00279 R_R3 1k TC=0,0 
+.model        R_R3 RES R=1 DEV=10% TC1=0 TC2=0
+R_R2         N00287 OUT R_R2 1k TC=0,0 
+.model        R_R2 RES R=1 DEV=10% TC1=0 TC2=0
+C_C2         0 N00283 C_C2 1u  TC=0,0 
+.model        C_C2 CAP C=1 DEV=5% TC1=0 TC2=0 VC1=0 VC2=0
+C_C1         OUT N00279 C_C1 1u  TC=0,0 
+.model        C_C1 CAP C=1 DEV=5% TC1=0 TC2=0 VC1=0 VC2=0
+V_V1         0 N00272 DC 0Vdc AC 1Vac 
+
+**** RESUMING 3.cir ****
+.END
+
+**** 11/08/21 22:34:38 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-3"  [ D:\Software\Capture_PSpice\Project\Monte Carlo analysis\Monte Carlo analysis-PSpiceFiles\SCHEMATIC1\3.
+
+
+ ****     Diode MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U1.dx         X_U1.dy         
+          IS  800.000000E-18  800.000000E-18 
+          RS    1               1.000000E-03 
+         CJO                   10.000000E-12 
+
+
+**** 11/08/21 22:34:38 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-3"  [ D:\Software\Capture_PSpice\Project\Monte Carlo analysis\Monte Carlo analysis-PSpiceFiles\SCHEMATIC1\3.
+
+
+ ****     BJT MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U1.qx         
+               NPN             
+       LEVEL    1            
+          IS  800.000000E-18 
+          BF   93.75         
+          NF    1            
+          BR    1            
+          NR    1            
+         ISS    0            
+          RE    0            
+          RC    0            
+         CJE    0            
+         VJE     .75         
+         CJC    0            
+         VJC     .75         
+         MJC     .33         
+        XCJC    1            
+         CJS    0            
+         VJS     .75         
+          KF    0            
+          AF    1            
+          CN    2.42         
+           D     .87         
+
+
+**** 11/08/21 22:34:38 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-3"  [ D:\Software\Capture_PSpice\Project\Monte Carlo analysis\Monte Carlo analysis-PSpiceFiles\SCHEMATIC1\3.
+
+
+ ****     Resistor MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               R_R1            R_R4            R_R3            R_R2            
+           R    1               1               1               1            
+
+
+**** 11/08/21 22:34:38 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-3"  [ D:\Software\Capture_PSpice\Project\Monte Carlo analysis\Monte Carlo analysis-PSpiceFiles\SCHEMATIC1\3.
+
+
+ ****     Capacitor MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               C_C2            C_C1            
+           C    1               1            
+
+
+**** 11/08/21 22:34:38 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-3"  [ D:\Software\Capture_PSpice\Project\Monte Carlo analysis\Monte Carlo analysis-PSpiceFiles\SCHEMATIC1\3.
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+                      SENSITIVITY NOMINAL
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(  OUT)-200.6E-06  ( +12V)   12.0000  ( -12V)  -12.0000  (N00272)    0.0000     
+
+(N00279)-79.73E-06 (N00283)-159.5E-06 (N00287)-140.2E-06 (X_U1.6) 19.43E-09     
+
+(X_U1.7)-203.6E-06 (X_U1.8)-203.6E-06 (X_U1.9)    0.0000 (X_U1.10)    -.6078    
+
+(X_U1.11)   11.9600                   (X_U1.12)   11.9600                       
+
+(X_U1.13)    -.5939                   (X_U1.14)    -.5940                       
+
+(X_U1.53)   11.0000                   (X_U1.54)  -11.0000                       
+
+(X_U1.90)-60.43E-06                   (X_U1.91)   40.0000                       
+
+(X_U1.92)  -40.0000                   (X_U1.99)    0.0000                   
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V2        -1.337E-03
+    V_V3         1.337E-03
+    V_V1         7.973E-08
+    X_U1.vb      1.943E-13
+    X_U1.vc      1.100E-11
+    X_U1.ve      1.251E-11
+    X_U1.vlim   -6.043E-08
+    X_U1.vlp    -4.000E-11
+    X_U1.vln    -4.000E-11
+
+    TOTAL POWER DISSIPATION   3.21E-02  WATTS
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(  OUT)-200.6E-06  ( +12V)   12.0000  ( -12V)  -12.0000  (N00272)    0.0000     
+
+(N00279)-79.73E-06 (N00283)-159.5E-06 (N00287)-140.2E-06 (X_U1.6) 19.50E-09     
+
+(X_U1.7)-203.6E-06 (X_U1.8)-203.6E-06 (X_U1.9)    0.0000 (X_U1.10)    -.6078    
+
+(X_U1.11)   11.9600                   (X_U1.12)   11.9600                       
+
+(X_U1.13)    -.5939                   (X_U1.14)    -.5940                       
+
+(X_U1.53)   11.0000                   (X_U1.54)  -11.0000                       
+
+(X_U1.90)-60.43E-06                   (X_U1.91)   40.0000                       
+
+(X_U1.92)  -40.0000                   (X_U1.99)    0.0000                   
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V2        -1.337E-03
+    V_V3         1.337E-03
+    V_V1         7.973E-08
+    X_U1.vb      1.950E-13
+    X_U1.vc      1.100E-11
+    X_U1.ve      1.251E-11
+    X_U1.vlim   -6.043E-08
+    X_U1.vlp    -4.000E-11
+    X_U1.vln    -4.000E-11
+
+    TOTAL POWER DISSIPATION   3.21E-02  WATTS
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(  OUT)-200.6E-06  ( +12V)   12.0000  ( -12V)  -12.0000  (N00272)    0.0000     
+
+(N00279)-79.73E-06 (N00283)-159.5E-06 (N00287)-140.2E-06 (X_U1.6) 19.50E-09     
+
+(X_U1.7)-203.6E-06 (X_U1.8)-203.6E-06 (X_U1.9)    0.0000 (X_U1.10)    -.6078    
+
+(X_U1.11)   11.9600                   (X_U1.12)   11.9600                       
+
+(X_U1.13)    -.5939                   (X_U1.14)    -.5940                       
+
+(X_U1.53)   11.0000                   (X_U1.54)  -11.0000                       
+
+(X_U1.90)-60.43E-06                   (X_U1.91)   40.0000                       
+
+(X_U1.92)  -40.0000                   (X_U1.99)    0.0000                   
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V2        -1.337E-03
+    V_V3         1.337E-03
+    V_V1         7.973E-08
+    X_U1.vb      1.950E-13
+    X_U1.vc      1.100E-11
+    X_U1.ve      1.251E-11
+    X_U1.vlim   -6.043E-08
+    X_U1.vlp    -4.000E-11
+    X_U1.vln    -4.000E-11
+
+    TOTAL POWER DISSIPATION   3.21E-02  WATTS
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(  OUT)-200.5E-06  ( +12V)   12.0000  ( -12V)  -12.0000  (N00272)    0.0000     
+
+(N00279)-79.73E-06 (N00283)-159.5E-06 (N00287)-140.2E-06 (X_U1.6) 19.49E-09     
+
+(X_U1.7)-203.5E-06 (X_U1.8)-203.5E-06 (X_U1.9)    0.0000 (X_U1.10)    -.6078    
+
+(X_U1.11)   11.9600                   (X_U1.12)   11.9600                       
+
+(X_U1.13)    -.5939                   (X_U1.14)    -.5940                       
+
+(X_U1.53)   11.0000                   (X_U1.54)  -11.0000                       
+
+(X_U1.90)-60.29E-06                   (X_U1.91)   40.0000                       
+
+(X_U1.92)  -40.0000                   (X_U1.99)    0.0000                   
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V2        -1.337E-03
+    V_V3         1.337E-03
+    V_V1         7.973E-08
+    X_U1.vb      1.949E-13
+    X_U1.vc      1.100E-11
+    X_U1.ve      1.251E-11
+    X_U1.vlim   -6.029E-08
+    X_U1.vlp    -4.000E-11
+    X_U1.vln    -4.000E-11
+
+    TOTAL POWER DISSIPATION   3.21E-02  WATTS
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(  OUT)-200.8E-06  ( +12V)   12.0000  ( -12V)  -12.0000  (N00272)    0.0000     
+
+(N00279)-79.73E-06 (N00283)-159.5E-06 (N00287)-140.3E-06 (X_U1.6) 19.52E-09     
+
+(X_U1.7)-203.8E-06 (X_U1.8)-203.8E-06 (X_U1.9)    0.0000 (X_U1.10)    -.6078    
+
+(X_U1.11)   11.9600                   (X_U1.12)   11.9600                       
+
+(X_U1.13)    -.5939                   (X_U1.14)    -.5940                       
+
+(X_U1.53)   11.0000                   (X_U1.54)  -11.0000                       
+
+(X_U1.90)-60.51E-06                   (X_U1.91)   40.0000                       
+
+(X_U1.92)  -40.0000                   (X_U1.99)    0.0000                   
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V2        -1.337E-03
+    V_V3         1.337E-03
+    V_V1         7.973E-08
+    X_U1.vb      1.952E-13
+    X_U1.vc      1.100E-11
+    X_U1.ve      1.251E-11
+    X_U1.vlim   -6.051E-08
+    X_U1.vlp    -4.000E-11
+    X_U1.vln    -4.000E-11
+
+    TOTAL POWER DISSIPATION   3.21E-02  WATTS
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(  OUT)-200.8E-06  ( +12V)   12.0000  ( -12V)  -12.0000  (N00272)    0.0000     
+
+(N00279)-79.81E-06 (N00283)-159.5E-06 (N00287)-140.3E-06 (X_U1.6) 19.52E-09     
+
+(X_U1.7)-203.8E-06 (X_U1.8)-203.8E-06 (X_U1.9)    0.0000 (X_U1.10)    -.6078    
+
+(X_U1.11)   11.9600                   (X_U1.12)   11.9600                       
+
+(X_U1.13)    -.5939                   (X_U1.14)    -.5940                       
+
+(X_U1.53)   11.0000                   (X_U1.54)  -11.0000                       
+
+(X_U1.90)-60.51E-06                   (X_U1.91)   40.0000                       
+
+(X_U1.92)  -40.0000                   (X_U1.99)    0.0000                   
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V2        -1.337E-03
+    V_V3         1.337E-03
+    V_V1         7.973E-08
+    X_U1.vb      1.952E-13
+    X_U1.vc      1.100E-11
+    X_U1.ve      1.251E-11
+    X_U1.vlim   -6.051E-08
+    X_U1.vlp    -4.000E-11
+    X_U1.vln    -4.000E-11
+
+    TOTAL POWER DISSIPATION   3.21E-02  WATTS
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(  OUT)-200.7E-06  ( +12V)   12.0000  ( -12V)  -12.0000  (N00272)    0.0000     
+
+(N00279)-79.73E-06 (N00283)-159.5E-06 (N00287)-140.2E-06 (X_U1.6) 19.51E-09     
+
+(X_U1.7)-203.7E-06 (X_U1.8)-203.7E-06 (X_U1.9)    0.0000 (X_U1.10)    -.6078    
+
+(X_U1.11)   11.9600                   (X_U1.12)   11.9600                       
+
+(X_U1.13)    -.5939                   (X_U1.14)    -.5940                       
+
+(X_U1.53)   11.0000                   (X_U1.54)  -11.0000                       
+
+(X_U1.90)-60.43E-06                   (X_U1.91)   40.0000                       
+
+(X_U1.92)  -40.0000                   (X_U1.99)    0.0000                   
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V2        -1.337E-03
+    V_V3         1.337E-03
+    V_V1         7.973E-08
+    X_U1.vb      1.951E-13
+    X_U1.vc      1.100E-11
+    X_U1.ve      1.251E-11
+    X_U1.vlim   -6.043E-08
+    X_U1.vlp    -4.000E-11
+    X_U1.vln    -4.000E-11
+
+    TOTAL POWER DISSIPATION   3.21E-02  WATTS
+
+
+
+Mean Deviation = -707.0100E-06
+Sigma          =    2.7296E-03
+
+ RUN                    MAX DEVIATION FROM NOMINAL
+
+C_C2 C_C2 C            3.9933E-03  (1.46 sigma)  lower  at F =  158.49
+                        (  -1.9886% change per 1% change in Model Parameter)
+
+R_R2 R_R2 R            3.1724E-03  (1.16 sigma)  higher  at F =  141.25
+                        (   1.4475% change per 1% change in Model Parameter)
+
+R_R1 R_R1 R            3.1636E-03  (1.16 sigma)  lower  at F =  141.25
+                        (  -1.4434% change per 1% change in Model Parameter)
+
+C_C1 C_C1 C            2.5971E-03  ( .95 sigma)  higher  at F =  131.83
+                        (   1.1501% change per 1% change in Model Parameter)
+
+R_R4 R_R4 R            2.0846E-03  ( .76 sigma)  lower  at F =  173.78
+                        (  -1.1559% change per 1% change in Model Parameter)
+
+R_R3 R_R3 R          770.0900E-06  ( .28 sigma)  lower  at F =  223.87
+                        (   -.6601% change per 1% change in Model Parameter)
+
+
+**** 11/08/21 22:34:38 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-3"  [ D:\Software\Capture_PSpice\Project\Monte Carlo analysis\Monte Carlo analysis-PSpiceFiles\SCHEMATIC1\3.
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+                      WORST CASE ALL DEVICES
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(  OUT)-188.4E-06  ( +12V)   12.0000  ( -12V)  -12.0000  (N00272)    0.0000     
+
+(N00279)-71.75E-06 (N00283)-143.5E-06 (N00287)-124.2E-06 (X_U1.6) 18.32E-09     
+
+(X_U1.7)-191.3E-06 (X_U1.8)-191.3E-06 (X_U1.9)    0.0000 (X_U1.10)    -.6078    
+
+(X_U1.11)   11.9600                   (X_U1.12)   11.9600                       
+
+(X_U1.13)    -.5939                   (X_U1.14)    -.5939                       
+
+(X_U1.53)   11.0000                   (X_U1.54)  -11.0000                       
+
+(X_U1.90)-58.29E-06                   (X_U1.91)   40.0000                       
+
+(X_U1.92)  -40.0000                   (X_U1.99)    0.0000                   
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V2        -1.337E-03
+    V_V3         1.337E-03
+    V_V1         7.973E-08
+    X_U1.vb      1.832E-13
+    X_U1.vc      1.100E-11
+    X_U1.ve      1.251E-11
+    X_U1.vlim   -5.829E-08
+    X_U1.vlp    -4.000E-11
+    X_U1.vln    -4.000E-11
+
+    TOTAL POWER DISSIPATION   3.21E-02  WATTS
+
+
+**** 11/08/21 22:34:38 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-3"  [ D:\Software\Capture_PSpice\Project\Monte Carlo analysis\Monte Carlo analysis-PSpiceFiles\SCHEMATIC1\3.
+
+
+ ****     UPDATED MODEL PARAMETERS         TEMPERATURE =   27.000 DEG C
+
+                      WORST CASE ALL DEVICES
+
+******************************************************************************
+
+
+
+Device       MODEL        PARAMETER    NEW VALUE    
+C_C2         C_C2         C                .95          (Decreased)  
+C_C1         C_C1         C               1.05          (Increased)  
+R_R1         R_R1         R                .9           (Decreased)  
+R_R4         R_R4         R                .9           (Decreased)  
+R_R3         R_R3         R                .9           (Decreased)  
+R_R2         R_R2         R               1.1           (Increased)  
+    
+
+**** 11/08/21 22:34:38 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-3"  [ D:\Software\Capture_PSpice\Project\Monte Carlo analysis\Monte Carlo analysis-PSpiceFiles\SCHEMATIC1\3.
+
+
+ ****     SORTED DEVIATIONS OF V(OUT)      TEMPERATURE =   27.000 DEG C
+
+                      WORST CASE SUMMARY
+
+******************************************************************************
+
+
+
+
+
+Mean Deviation =    1.8604
+Sigma          =    0     
+
+ RUN                    MAX DEVIATION FROM NOMINAL
+
+WORST CASE ALL DEVICES
+                        1.8604  higher  at F =  169.82
+                        ( 200.11% of Nominal)
+
+
+
+          JOB CONCLUDED
+
+**** 11/08/21 22:34:38 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-3"  [ D:\Software\Capture_PSpice\Project\Monte Carlo analysis\Monte Carlo analysis-PSpiceFiles\SCHEMATIC1\3.
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  Total job time (using Solver 1)   =         .11
+

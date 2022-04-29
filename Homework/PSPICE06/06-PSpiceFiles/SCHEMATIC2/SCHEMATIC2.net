@@ -1,0 +1,12 @@
+* source 06
+V_V1         IN 0  
++SIN 0 5 1K 0 0 0
+Q_Q1         VCC N00645 OUT Q2N3904
+Q_Q2         VEE N00666 OUT Q2N3906
+R_R1         0 OUT  1k TC=0,0 
+V_V2         VCC 0 12Vdc
+V_V3         VEE 0 -12Vdc
+R_R2         N00666 VEE  2k TC=0,0 
+R_R3         N00645 VCC  2k TC=0,0 
+D_D3         N00645 IN D1N4148 
+D_D4         IN N00666 D1N4148 

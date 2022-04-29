@@ -1,0 +1,12 @@
+* source SHIELDING_CIRCUIT
+X_U1         0 N00198 OUT1 VCC N00106 N00198 N00277 VCC 555B
+C_C3         0 N00106  1n  TC=0,0 
+R_R3         N00277 N00198  5.1k TC=0,0 
+C_C1         0 N00277  1000p  TC=0,0 
+R_R4         N01818 N00277  1k TC=0,0 
+R_R2         N00538 N00277  1k TC=0,0 
+R_R1         N00538 VCC  10k TC=0,0 
+C_C2         OUT2 N00538  33u  TC=0,0 
+Q_Q1         VCC N01818 OUT2 Q2N3414
+R_R5         OUT2 0  1k TC=0,0 
+V_V1         VCC 0 +5Vdc

@@ -1,0 +1,88 @@
+
+**** 11/15/21 19:17:21 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "Limiter_element-2"  [ D:\Software\Capture_PSpice\Project\Behavior model creation\Behavior model creation-PSpiceFiles\Li
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "2.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\SPB_Data\cdssetup\OrCAD_PSpice\17.2.0\PSpice.ini file:
+.lib "nomd.lib" 
+
+*Analysis directives: 
+.TRAN  0 2m 0 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\Limiter_element.net" 
+
+
+
+**** INCLUDING Limiter_element.net ****
+* source BEHAVIOR MODEL CREATION
+E_LIMIT1         LIMIT 0 VALUE {LIMIT(V(IN),-2,5)}
+E_GLIMIT1         GLIMIT 0 VALUE {LIMIT(V(IN)*100,-2,5)}
+E_SLIMIT1         SOFTLIM 0 VALUE {(((5)+(-2))/2) + ((((5)-(-2))/2) * 
++ TANH((100)*(V(IN)-(((5)+(-2))/2))/((((5)-(-2))/2))))}
+V_V1         IN 0  
++SIN 0 6 1k 0 0 0
+
+**** RESUMING 2.cir ****
+.END
+
+**** 11/15/21 19:17:21 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "Limiter_element-2"  [ D:\Software\Capture_PSpice\Project\Behavior model creation\Behavior model creation-PSpiceFiles\Li
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(   IN)    0.0000  (LIMIT)    0.0000  (GLIMIT)    0.0000 (SOFTLIM)   -2.0000    
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1         0.000E+00
+
+    TOTAL POWER DISSIPATION   0.00E+00  WATTS
+
+
+
+          JOB CONCLUDED
+
+**** 11/15/21 19:17:21 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "Limiter_element-2"  [ D:\Software\Capture_PSpice\Project\Behavior model creation\Behavior model creation-PSpiceFiles\Li
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  Total job time (using Solver 1)   =         .02
+

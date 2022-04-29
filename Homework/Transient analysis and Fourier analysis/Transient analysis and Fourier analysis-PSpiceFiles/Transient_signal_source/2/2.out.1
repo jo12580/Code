@@ -1,0 +1,49 @@
+
+**** 11/01/21 20:52:37 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "Transient_signal_source-2"  [ D:\Software\Capture_PSpice\Project\Transient analysis and Fourier analysis\Transient anal
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "2.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\SPB_Data\cdssetup\OrCAD_PSpice\17.2.0\PSpice.ini file:
+.lib "nomd.lib" 
+
+*Analysis directives: 
+.TRAN  0 10u 0 0.001 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\Transient_signal_source.net" 
+
+
+
+**** INCLUDING Transient_signal_source.net ****
+* source TRANSIENT ANALYSIS AND FOURIER ANALYSIS
+V_V1         SIN1 0  AC <AC>
+-------------------------$
+ERROR(ORPSIM-16492): Missing value
++SIN 0 2 1k 0 0 0
+V_V2         SIN2 0  AC <AC>
+-------------------------$
+ERROR(ORPSIM-16492): Missing value
++SIN 2 2 500 0 200 0
+V_V3         SIN3 0  AC <AC>
+-------------------------$
+ERROR(ORPSIM-16492): Missing value
++SIN 0 1 1k 1m -200 90
+
+**** RESUMING 2.cir ****
+.END
+

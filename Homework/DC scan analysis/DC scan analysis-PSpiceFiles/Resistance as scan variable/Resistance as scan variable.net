@@ -1,0 +1,5 @@
+* source DC SCAN ANALYSIS
+R_R1         IN OUT  1k TC=0,0 
+R_R2         0 OUT  {rvar} TC=0,0 
+V_V1         IN 0 12Vdc
+.PARAM  rvar=2k

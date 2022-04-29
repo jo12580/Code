@@ -1,0 +1,178 @@
+
+**** 11/30/21 11:11:03 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "top-EEE"  [ G:\030\11.30\dddd-pspicefiles\top\eee.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "EEE.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\SPB_Data\cdssetup\OrCAD_PSpice\17.2.0\PSpice.ini file:
+.lib "nomd.lib" 
+
+*Analysis directives: 
+.TRAN  0 100m 0 0.001m 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\top.net" 
+
+
+
+**** INCLUDING top.net ****
+* source DDDD
+R_U1_R1         U1_N01011 OUT1  160k TC=0,0 
+X_U1_U1A         U1_N01113 U1_N01011 V+ V- OUT1 AD648A
+R_U1_R2         U1_N01113 OUT1  160k TC=0,0 
+R_U1_R3         0 U1_N01113  910k TC=0,0 
+C_U1_C1         0 U1_N01011  0.01u  TC=0,0 
+R_U2_R1         U2_N01011 OUT2  100k TC=0,0 
+X_U2_U1A         U2_N01113 U2_N01011 V+ V- OUT2 AD648A
+R_U2_R2         U2_N01113 OUT2  160k TC=0,0 
+R_U2_R3         0 U2_N01113  910k TC=0,0 
+C_U2_C1         0 U2_N01011  0.01u  TC=0,0 
+V_V1         V+ 0 12Vdc
+V_V2         V- 0 -12Vdc
+.IC         V(U1_N01011 )=0
+.IC         V(U2_N01011 )=0
+
+**** RESUMING EEE.cir ****
+.END
+
+**** 11/30/21 11:11:03 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "top-EEE"  [ G:\030\11.30\dddd-pspicefiles\top\eee.sim ] 
+
+
+ ****     Diode MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U1_U1A.dx     X_U1_U1A.dy     X_U2_U1A.dx     X_U2_U1A.dy     
+          IS  800.000000E-18  800.000000E-18  800.000000E-18  800.000000E-18 
+          RS                    1.000000E-03                    1.000000E-03 
+         CJO                   10.000000E-12                   10.000000E-12 
+
+
+**** 11/30/21 11:11:03 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "top-EEE"  [ G:\030\11.30\dddd-pspicefiles\top\eee.sim ] 
+
+
+ ****     Junction FET MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U1_U1A.jx     X_U2_U1A.jx     
+               NJF             NJF             
+         VTO   -1              -1            
+        BETA  548.300000E-06  548.300000E-06 
+          IS    2.500000E-12    2.500000E-12 
+
+
+**** 11/30/21 11:11:03 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "top-EEE"  [ G:\030\11.30\dddd-pspicefiles\top\eee.sim ] 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(   V+)   12.0000  (   V-)  -12.0000  ( OUT1) 102.1E-06  ( OUT2) 102.1E-06      
+
+(U1_N01011) 1.312E-12                 (U1_N01113) 89.27E-06                     
+
+(U2_N01011) 2.078E-12                 (U2_N01113) 89.27E-06                     
+
+(X_U1_U1A.6)-1.605E-09                (X_U1_U1A.7) 102.1E-06                    
+
+(X_U1_U1A.8) 102.1E-06                (X_U1_U1A.9)    0.0000                    
+
+(X_U2_U1A.6)-1.605E-09                (X_U2_U1A.7) 102.1E-06                    
+
+(X_U2_U1A.8) 102.1E-06                (X_U2_U1A.9)    0.0000                    
+
+(X_U1_U1A.10)     .7971               (X_U1_U1A.11)   11.8560                   
+
+(X_U1_U1A.12)   11.8560               (X_U1_U1A.53)   10.0000                   
+
+(X_U1_U1A.54)  -10.0000               (X_U1_U1A.90) 718.8E-09                   
+
+(X_U1_U1A.91)   15.0000               (X_U1_U1A.92)  -15.0000                   
+
+(X_U1_U1A.99)    0.0000               (X_U2_U1A.10)     .7971                   
+
+(X_U2_U1A.11)   11.8560               (X_U2_U1A.12)   11.8560                   
+
+(X_U2_U1A.53)   10.0000               (X_U2_U1A.54)  -10.0000                   
+
+(X_U2_U1A.90) 1.102E-06               (X_U2_U1A.91)   15.0000                   
+
+(X_U2_U1A.92)  -15.0000               (X_U2_U1A.99)    0.0000               
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1        -3.623E-04
+    V_V2         3.620E-04
+    X_U1_U1A.vb  -1.605E-14
+    X_U1_U1A.vc   1.000E-11
+    X_U1_U1A.ve   1.137E-11
+    X_U1_U1A.vlim   7.188E-10
+    X_U1_U1A.vlp  -1.500E-11
+    X_U1_U1A.vln  -1.500E-11
+    X_U2_U1A.vb  -1.605E-14
+    X_U2_U1A.vc   1.000E-11
+    X_U2_U1A.ve   1.137E-11
+    X_U2_U1A.vlim   1.102E-09
+    X_U2_U1A.vlp  -1.500E-11
+    X_U2_U1A.vln  -1.500E-11
+
+    TOTAL POWER DISSIPATION   8.69E-03  WATTS
+
+
+
+          JOB CONCLUDED
+
+**** 11/30/21 11:11:03 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "top-EEE"  [ G:\030\11.30\dddd-pspicefiles\top\eee.sim ] 
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  Total job time (using Solver 1)   =        4.38
+

@@ -1,0 +1,7 @@
+* source AC SWEEP
+V_V1         IN1 0 DC 0Vdc AC 1Vac 
+V_V2         IN2 0 DC 0Vdc AC 1Vac 
+C_C1         0 OUT1  1p  TC=0,0 
+R_R1         IN1 OUT1  1k TC=0,0 
+C_C2         IN2 OUT2  1u  TC=0,0 
+R_R2         0 OUT2  1meg TC=0,0 

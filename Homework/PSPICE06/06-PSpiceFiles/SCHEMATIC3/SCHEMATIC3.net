@@ -1,0 +1,5 @@
+* source 06
+V_V1         PULSE1 0  
++PULSE 0 5 1m 0.5m 0.5m 1u 1ms
+V_V2         PULSE2 0  
++PULSE 0 5 1u 1u 1m 1u 1ms

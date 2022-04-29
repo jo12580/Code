@@ -1,0 +1,16 @@
+.ALIASES
+V_V1            V1(+=IN -=0 ) CN @06.SCHEMATIC1(sch_1):INS14305@SOURCE.VSIN.Normal(chips)
+R_Rb1           Rb1(1=N14526 2=VCC ) CN @06.SCHEMATIC1(sch_1):INS14342@ANALOG.R.Normal(chips)
+R_Rb2           Rb2(1=0 2=N14526 ) CN @06.SCHEMATIC1(sch_1):INS14358@ANALOG.R.Normal(chips)
+R_Rc            Rc(1=N14585 2=VCC ) CN @06.SCHEMATIC1(sch_1):INS14374@ANALOG.R.Normal(chips)
+R_Re            Re(1=0 2=N14589 ) CN @06.SCHEMATIC1(sch_1):INS14390@ANALOG.R.Normal(chips)
+R_RL            RL(1=0 2=OUT ) CN @06.SCHEMATIC1(sch_1):INS14406@ANALOG.R.Normal(chips)
+C_C1            C1(1=IN 2=N14526 ) CN @06.SCHEMATIC1(sch_1):INS14431@ANALOG.C.Normal(chips)
+C_C2            C2(1=N14585 2=OUT ) CN @06.SCHEMATIC1(sch_1):INS14447@ANALOG.C.Normal(chips)
+C_C3            C3(1=0 2=N14589 ) CN @06.SCHEMATIC1(sch_1):INS14472@ANALOG.C.Normal(chips)
+Q_Q1            Q1(c=N14585 b=N14526 e=N14589 ) CN @06.SCHEMATIC1(sch_1):INS14499@BIPOLAR.Q2N3904.Normal(chips)
+V_V2            V2(+=VCC -=0 ) CN @06.SCHEMATIC1(sch_1):INS14800@SOURCE.VDC.Normal(chips)
+_    _(in=IN)
+_    _(out=OUT)
+_    _(VCC=VCC)
+.ENDALIASES

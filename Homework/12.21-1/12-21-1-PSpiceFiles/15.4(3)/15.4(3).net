@@ -1,0 +1,15 @@
+* source 12-21-1
+R_R4         N00292 VOUT  20k TC=0,0 
+R_R2         N00334 VOUT  800 TC=0,0 
+R_R1         N00296 N00288  800 TC=0,0 
+C_C2         N00334 N00288  10n  TC=0,0 
+R_R3         N00296 N00292  10k TC=0,0 
+C_C3         0 N00296  10n  TC=0,0 
+C_C1         N00296 N00288  10n  TC=0,0 
+V_V1         VCC 0 5Vdc
+D_D2         N00369 N00292 D1N4148 
+D_D1         N00292 N00369 D1N4148 
+R_R7         0 N00296  35k TC=0,0 
+R_R6         N00296 VCC  65k TC=0,0 
+R_R5         N00369 VOUT  24k TC=0,0 
+X_U1         N00288 N00292 VCC GND VOUT LM324/5_1/TI

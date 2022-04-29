@@ -1,0 +1,153 @@
+(ExpressProject "Common_arithmetic_circuit"
+  (ProjectVersion "19981106")
+  (ProjectType "Analog or A/D Mixed Mode")
+  (Folder "Design Resources"
+    (Folder "Library")
+    (NoModify)
+    (File ".\common_arithmetic_circuit.dsn"
+      (Type "Schematic Design"))
+    (BuildFileAddedOrDeleted "x")
+    (CompileFileAddedOrDeleted "x")
+    (RootChangedForceReNetlist "x")
+    (PSPICE_Regenerate_Netlist_Flag "FALSE"))
+  (Folder "Outputs"
+    (File ".\common_arithmetic_circuit-pspicefiles\14.7(1)\14.7(1).net"
+      (Type "Report"))
+    (File ".\common_arithmetic_circuit-pspicefiles\14.7(2)\14.7(2).net"
+      (Type "Report"))
+    (File ".\common_arithmetic_circuit-pspicefiles\14.7(3)\14.7(3).net"
+      (Type "Report")))
+  (Folder "PSpice Resources"
+    (Folder "Simulation Profiles"
+      (File.PSpice.{09528990-3187-11D2-BC7B-00A0C90CBF91}
+         ".\common_arithmetic_circuit-pspicefiles\14.7(1)\6.sim"
+        (DisplayName "14.7(1)-6")
+        (Type "PSpice Profile"))
+      (File.PSpice.{09528990-3187-11D2-BC7B-00A0C90CBF91}
+         ".\common_arithmetic_circuit-pspicefiles\14.7(2)\7.sim"
+        (DisplayName "14.7(2)-7")
+        (Type "PSpice Profile"))
+      (File.PSpice.{09528990-3187-11D2-BC7B-00A0C90CBF91}
+         ".\common_arithmetic_circuit-pspicefiles\14.7(3)\8.sim"
+        (DisplayName "14.7(3)-8")
+        (Type "PSpice Profile"))
+      (ActiveProfile ".\common_arithmetic_circuit-pspicefiles\14.7(2)\7.sim"))
+    (Folder "Model Libraries"
+      (Sort User))
+    (Folder "Stimulus Files"
+      (Sort User))
+    (Folder "Include Files"
+      (Sort User)))
+  (DefaultLibraryBrowseDirectory "library\PSpice")
+  (PartMRUSelector
+    (0
+      (LibraryName
+         "D:\SOFTWARE\CADENCE_PSPICE\CADENCE\CADENCE_SPB_17.2-2016\TOOLS\CAPTURE\LIBRARY\CAPSYM.OLB")
+      (DeviceIndex "0"))
+    (VPULSE
+      (FullPartName "VPULSE.Normal")
+      (LibraryName
+         "D:\SOFTWARE\CADENCE_PSPICE\CADENCE\CADENCE_SPB_17.2-2016\TOOLS\CAPTURE\LIBRARY\PSPICE\SOURCE.OLB")
+      (DeviceIndex "0"))
+    (VCC
+      (LibraryName
+         "D:\SOFTWARE\CADENCE_PSPICE\CADENCE\CADENCE_SPB_17.2-2016\TOOLS\CAPTURE\LIBRARY\CAPSYM.OLB")
+      (DeviceIndex "0"))
+    (VSIN
+      (FullPartName "VSIN.Normal")
+      (LibraryName
+         "D:\SOFTWARE\CADENCE_PSPICE\CADENCE\CADENCE_SPB_17.2-2016\TOOLS\CAPTURE\LIBRARY\PSPICE\SOURCE.OLB")
+      (DeviceIndex "0"))
+    (VDC
+      (FullPartName "VDC.Normal")
+      (LibraryName
+         "D:\SOFTWARE\CADENCE_PSPICE\CADENCE\CADENCE_SPB_17.2-2016\TOOLS\CAPTURE\LIBRARY\PSPICE\SOURCE.OLB")
+      (DeviceIndex "0"))
+    (GND
+      (LibraryName
+         "D:\SOFTWARE\CADENCE_PSPICE\CADENCE\CADENCE_SPB_17.2-2016\TOOLS\CAPTURE\LIBRARY\CAPSYM.OLB")
+      (DeviceIndex "0"))
+    (R
+      (FullPartName "R.Normal")
+      (LibraryName
+         "D:\SOFTWARE\CADENCE_PSPICE\CADENCE\CADENCE_SPB_17.2-2016\TOOLS\CAPTURE\LIBRARY\PSPICE\ANALOG.OLB")
+      (DeviceIndex "0"))
+    (C
+      (FullPartName "C.Normal")
+      (LibraryName
+         "D:\SOFTWARE\CADENCE_PSPICE\CADENCE\CADENCE_SPB_17.2-2016\TOOLS\CAPTURE\LIBRARY\PSPICE\ANALOG.OLB")
+      (DeviceIndex "0"))
+    (OP-07C/301/TI
+      (FullPartName "OP-07C/301/TI.Normal")
+      (LibraryName
+         "D:\SOFTWARE\CADENCE_PSPICE\CADENCE\CADENCE_SPB_17.2-2016\TOOLS\CAPTURE\LIBRARY\PSPICE\TEX_INST.OLB")
+      (DeviceIndex "0"))
+    (OPAMP
+      (FullPartName "OPAMP.Normal")
+      (LibraryName
+         "D:\SOFTWARE\CADENCE_PSPICE\CADENCE\CADENCE_SPB_17.2-2016\TOOLS\CAPTURE\LIBRARY\PSPICE\ANALOG.OLB")
+      (DeviceIndex "0")))
+  (GlobalState
+    (FileView
+      (Path "Design Resources")
+      (Path "Design Resources"
+         "D:\Software\Cadence_PSpice\Project\Common arithmetic circuit\common_arithmetic_circuit.dsn")
+      (Path "Design Resources"
+         "D:\Software\Cadence_PSpice\Project\Common arithmetic circuit\common_arithmetic_circuit.dsn"
+         "14.7(2)")
+      (Path "Design Resources"
+         "D:\Software\Cadence_PSpice\Project\Common arithmetic circuit\common_arithmetic_circuit.dsn"
+         "14.7(1)")
+      (Path "Design Resources"
+         "D:\Software\Cadence_PSpice\Project\Common arithmetic circuit\common_arithmetic_circuit.dsn"
+         "14.7(3)")
+      (Path "Design Resources"
+         "D:\Software\Cadence_PSpice\Project\Common arithmetic circuit\common_arithmetic_circuit.dsn"
+         "Adder circuit")
+      (Path "Design Resources"
+         "D:\Software\Cadence_PSpice\Project\Common arithmetic circuit\common_arithmetic_circuit.dsn"
+         "In-phase_amplifier_circuit")
+      (Path "Design Resources"
+         "D:\Software\Cadence_PSpice\Project\Common arithmetic circuit\common_arithmetic_circuit.dsn"
+         "Integral operation circuit")
+      (Path "Design Resources"
+         "D:\Software\Cadence_PSpice\Project\Common arithmetic circuit\common_arithmetic_circuit.dsn"
+         "inverting_amplifie_powe")
+      (Path "Design Resources"
+         "D:\Software\Cadence_PSpice\Project\Common arithmetic circuit\common_arithmetic_circuit.dsn"
+         "Subtraction circuit")
+      (Path "Outputs")
+      (Path "PSpice Resources")
+      (Path "PSpice Resources" "Simulation Profiles")
+      (Select "PSpice Resources" "Simulation Profiles"
+         ".\common_arithmetic_circuit-pspicefiles\14.7(2)\7.sim"))
+    (HierarchyView)
+    (Doc
+      (Type "COrCapturePMDoc")
+      (Frame
+        (Placement "44 0 1 -1 -1 -8 -31 0 200 0 282"))
+      (Tab 0))
+    (Doc
+      (Type "COrSchematicDoc")
+      (Frame
+        (Placement "44 2 3 -1 -1 -8 -31 130 1166 130 451")
+        (Scroll "-82 0")
+        (Zoom "100")
+        (Occurrence "/"))
+      (Path
+         "D:\SOFTWARE\CADENCE_PSPICE\PROJECT\COMMON ARITHMETIC CIRCUIT\COMMON_ARITHMETIC_CIRCUIT.DSN")
+      (Schematic "14.7(2)")
+      (Page "PAGE7"))
+    (Doc
+      (Type "COrSchematicDoc")
+      (Frame
+        (Placement "44 0 1 -1 -1 -8 -31 0 1036 0 321")
+        (Scroll "-9 0")
+        (Zoom "100"))
+      (Path
+         "D:\SOFTWARE\CADENCE_PSPICE\PROJECT\COMMON ARITHMETIC CIRCUIT\COMMON_ARITHMETIC_CIRCUIT.DSN")
+      (Schematic "14.7(1)")
+      (Page "PAGE6")))
+  (LastUsedLibraryBrowseDirectory
+     "D:\Software\Cadence_PSpice\Cadence\Cadence_SPB_17.2-2016\tools\capture\library\pspice")
+  (MPSSessionName "007"))

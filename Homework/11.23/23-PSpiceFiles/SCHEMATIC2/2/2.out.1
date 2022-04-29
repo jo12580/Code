@@ -1,0 +1,51 @@
+
+**** 11/23/21 11:38:47 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC2-2"  [ G:\030\11.23\23-PSpiceFiles\SCHEMATIC2\2.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "2.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+.LIB "../../../ad627a/ad627a.lib" 
+* From [PSPICE NETLIST] section of C:\SPB_Data\cdssetup\OrCAD_PSpice\17.2.0\PSpice.ini file:
+.lib "G:\030\11.23\AD627A\AD627A.lib" 
+.lib "nomd.lib" 
+
+*Analysis directives: 
+.TRAN  0 100m 0 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC2.net" 
+
+
+
+**** INCLUDING SCHEMATIC2.net ****
+* source 23
+V_V1         +VS 0 +12
+V_V2         -VS 0 -12
+V_V3         N01803 N01911  AC 1
++SIN 0 100m 1K 0 0 0
+R_R1         N01907 N01811  40.2k TC=0,0 
+C_C1         N01703 0  0.1u  TC=0,0 
+C_C2         -VS 0  0.1u  TC=0,0 
+X_U1         N01803 N01911 OUT 0 N01811 N01907 +VS -VS AD627A
+
+**** RESUMING 2.cir ****
+.END
+
+ERROR(ORPSIM-15141): Less than 2 connections at node N01703.
+
+ERROR(ORPSIM-15142): Node N01703 is floating
+

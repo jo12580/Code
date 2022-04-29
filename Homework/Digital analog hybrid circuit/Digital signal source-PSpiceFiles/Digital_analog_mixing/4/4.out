@@ -1,0 +1,342 @@
+
+**** 12/06/21 21:06:25 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "Digital_analog_mixing-4"  [ D:\Software\Capture_PSpice\Project\Digital analog hybrid circuit\Digital signal source-PSpi
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "4.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\SPB_Data\cdssetup\OrCAD_PSpice\17.2.0\PSpice.ini file:
+.lib "nomd.lib" 
+
+*Analysis directives: 
+.TRAN  0 50u 0 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\Digital_analog_mixing.net" 
+
+
+
+**** INCLUDING Digital_analog_mixing.net ****
+* source DIGITAL SIGNAL SOURCE
+V_V1         IN 0  
++SIN 0 5 100k 0 0 0
+V_V2         V+ 0 5
+V_V3         V- 0 -5
+X_U1         N00347 IN V+ V- COMP V- LM311
+X_U2A         COMP CLK OUT $G_DPWR $G_DGND 74HC00 PARAMS:
++ IO_LEVEL=0 MNTYMXDLY=0
+R_R1         N00347 COMP  33K TC=0,0 
+R_R2         0 N00347  33K TC=0,0 
+R_R3         COMP V+  1k TC=0,0 
+U_DSTM1         STIM(1,1) $G_DPWR $G_DGND CLK IO_STM IO_LEVEL=0 
++ 0 0
++ +2u 1
++REPEAT FOREVER
++ +.5u 0
++  +.5u 1
++ ENDREPEAT
+
+**** RESUMING 4.cir ****
+.END
+
+
+**** Generated AtoD and DtoA Interfaces ****
+
+*
+* Analog/Digital interface for node COMP
+*
+* Moving X_U2A.U1:IN1 from analog node COMP to new digital node COMP$AtoD
+X$COMP_AtoD1
++ COMP
++ COMP$AtoD
++ $G_DPWR
++ $G_DGND
++ AtoD_HC
++       PARAMS: CAPACITANCE=   3.5000E-12
+*
+* Analog/Digital interface power supply subcircuits
+*
+X$DIGIFPWR 0 DIGIFPWR
+
+
+**** 12/06/21 21:06:25 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "Digital_analog_mixing-4"  [ D:\Software\Capture_PSpice\Project\Digital analog hybrid circuit\Digital signal source-PSpi
+
+
+ ****     Diode MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U1.dx         
+          IS  800.000000E-18 
+
+
+**** 12/06/21 21:06:25 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "Digital_analog_mixing-4"  [ D:\Software\Capture_PSpice\Project\Digital analog hybrid circuit\Digital signal source-PSpi
+
+
+ ****     BJT MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U1.qin        X_U1.qmi        X_U1.qmo        X_U1.qoc        
+               PNP             NPN             NPN             NPN             
+       LEVEL    1               1               1               1            
+          IS  800.000000E-18  800.000000E-18  800.000000E-18  800.000000E-18 
+          BF  500               1.002000E+03    1.000000E+03  206.900000E+03 
+          NF    1               1               1               1            
+          BR    1               1               1               1            
+          NR    1               1               1               1            
+         ISS    0               0               0               0            
+          RE    0               0               0               0            
+          RC    0               0               0               0            
+         CJE    0               0               0               0            
+         VJE     .75             .75             .75             .75         
+         CJC    0               0               1.000000E-15    1.000000E-15 
+         VJC     .75             .75             .75             .75         
+         MJC     .33             .33             .33             .33         
+        XCJC    1               1               1               1            
+         CJS    0               0               0               0            
+         VJS     .75             .75             .75             .75         
+          TF                                                    7.855000E-12 
+          TR                                  124.200000E-09   83.830000E-09 
+          KF    0               0               0               0            
+          AF    1               1               1               1            
+          CN    2.2             2.42            2.42            2.42         
+           D     .52             .87             .87             .87         
+
+
+**** 12/06/21 21:06:25 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "Digital_analog_mixing-4"  [ D:\Software\Capture_PSpice\Project\Digital analog hybrid circuit\Digital signal source-PSpi
+
+
+ ****     Digital Output MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               DO74HC          
+    TIMESTEP  100.000000E-12 
+      S0NAME X               
+       S0VHI     .7          
+       S0VLO     .2          
+      S1NAME 0               
+       S1VHI     .2          
+       S1VLO    -.3          
+      S2NAME R               
+       S2VHI     .55         
+       S2VLO     .2          
+      S3NAME R               
+       S3VHI     .7          
+       S3VLO     .45         
+      S4NAME X               
+       S4VHI     .7          
+       S4VLO     .2          
+      S5NAME 1               
+       S5VHI    1.3          
+       S5VLO     .7          
+      S6NAME F               
+       S6VHI     .7          
+       S6VLO     .45         
+      S7NAME F               
+       S7VHI     .55         
+       S7VLO     .2          
+
+
+**** 12/06/21 21:06:25 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "Digital_analog_mixing-4"  [ D:\Software\Capture_PSpice\Project\Digital analog hybrid circuit\Digital signal source-PSpi
+
+
+ ****     Digital Gate MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               D_HC00          
+      TPLHMN    3.600000E-09 
+      TPLHTY    9.000000E-09 
+      TPLHMX   23.000000E-09 
+      TPHLMN    3.600000E-09 
+      TPHLTY    9.000000E-09 
+      TPHLMX   23.000000E-09 
+
+
+**** 12/06/21 21:06:25 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "Digital_analog_mixing-4"  [ D:\Software\Capture_PSpice\Project\Digital analog hybrid circuit\Digital signal source-PSpi
+
+
+ ****     Digital IO  MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               IO_STM          IO_HC           
+        INLD                    3.500000E-12 
+        DRVL    0              87            
+        DRVH    0              87            
+       AtoD1                 AtoD_HC         
+       AtoD2                 AtoD_HC_NX      
+       AtoD3                 AtoD_HC         
+       AtoD4                 AtoD_HC_NX      
+       DtoA1 DtoA_STM        DtoA_HC         
+       DtoA2 DtoA_STM        DtoA_HC         
+       DtoA3 DtoA_STM        DtoA_HC_E       
+       DtoA4 DtoA_STM        DtoA_HC_E       
+      TSWHL1                    2.742000E-09 
+      TSWHL2                    2.742000E-09 
+      TSWHL3                    2.751000E-09 
+      TSWHL4                    2.751000E-09 
+      TSWLH1                    2.758000E-09 
+      TSWLH2                    2.758000E-09 
+      TSWLH3                    2.763000E-09 
+      TSWLH4                    2.763000E-09 
+       TPWRT  100.000000E+03    2.000000E-09 
+
+
+**** 12/06/21 21:06:25 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "Digital_analog_mixing-4"  [ D:\Software\Capture_PSpice\Project\Digital analog hybrid circuit\Digital signal source-PSpi
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(   IN)    0.0000  (   V+)    5.0000  (   V-)   -5.0000  ( COMP)    -.0032      
+
+(N00347) 39.09E-06 (X_U1.7)    1.0929 (X_U1.8)   -4.3571 (X_U1.9)   -4.2379     
+
+($G_DGND)    0.0000                   ($G_DPWR)    5.0000                       
+
+(X_U1.10)   -4.2379                   (X_U1.11)   -4.2379                       
+
+(X_U1.21)     .4500                   (X_U1.22)     .4500                       
+
+(X$COMP_AtoD1.NORM)-642.5E-06         
+
+
+
+ DGTL NODE : STATE  DGTL NODE : STATE  DGTL NODE : STATE  DGTL NODE : STATE
+
+
+(COMP$AtoD) : 0    (     OUT) : 1     (     CLK) : 0     
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1         9.987E-08
+    V_V2        -6.514E-03
+    V_V3         6.514E-03
+    X_U1.vi1     9.972E-08
+    X_U1.vi2     9.987E-08
+    X_U1.v1      2.418E-08
+    X$DIGIFPWR.VDPWR  -4.999E-06
+    X$DIGIFPWR.VDGND  -5.006E-06
+
+    TOTAL POWER DISSIPATION   6.52E-02  WATTS
+
+
+**** 12/06/21 21:06:25 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "Digital_analog_mixing-4"  [ D:\Software\Capture_PSpice\Project\Digital analog hybrid circuit\Digital signal source-PSpi
+
+
+ ****     SIMULATION ERRORS
+
+
+******************************************************************************
+
+
+
+
+DIGITAL Message ID#1 (SERIOUS):
+DIGITAL INPUT VOLTAGE Hazard at time 833.3ns
+  Device: X$COMP_AtoD1.O0
+  Voltage V(X$COMP_AtoD1.NORM,$G_DGND)=-.3013 is beyond the ranges defined in model DO74HC
+
+
+DIGITAL Message ID#2 (SERIOUS):
+DIGITAL INPUT VOLTAGE Hazard at time 10.9067us
+  Device: X$COMP_AtoD1.O0
+  Voltage V(X$COMP_AtoD1.NORM,$G_DGND)=-.3002 is beyond the ranges defined in model DO74HC
+
+
+DIGITAL Message ID#3 (SERIOUS):
+DIGITAL INPUT VOLTAGE Hazard at time 20.9051us
+  Device: X$COMP_AtoD1.O0
+  Voltage V(X$COMP_AtoD1.NORM,$G_DGND)=-.3010 is beyond the ranges defined in model DO74HC
+
+
+DIGITAL Message ID#4 (SERIOUS):
+DIGITAL INPUT VOLTAGE Hazard at time 30.8942us
+  Device: X$COMP_AtoD1.O0
+  Voltage V(X$COMP_AtoD1.NORM,$G_DGND)=-.3001 is beyond the ranges defined in model DO74HC
+
+
+DIGITAL Message ID#5 (SERIOUS):
+DIGITAL INPUT VOLTAGE Hazard at time 40.8935us
+  Device: X$COMP_AtoD1.O0
+  Voltage V(X$COMP_AtoD1.NORM,$G_DGND)=-.3004 is beyond the ranges defined in model DO74HC
+
+
+
+          JOB CONCLUDED
+
+**** 12/06/21 21:06:25 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "Digital_analog_mixing-4"  [ D:\Software\Capture_PSpice\Project\Digital analog hybrid circuit\Digital signal source-PSpi
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  Total job time (using Solver 1)   =         .13
+

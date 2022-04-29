@@ -1,0 +1,15 @@
+* source DDDD
+R_U1_R1         U1_N01011 OUT1  160k TC=0,0 
+X_U1_U1A         U1_N01113 U1_N01011 V+ V- OUT1 AD648A
+R_U1_R2         U1_N01113 OUT1  160k TC=0,0 
+R_U1_R3         0 U1_N01113  910k TC=0,0 
+C_U1_C1         0 U1_N01011  0.01u  TC=0,0 
+R_U2_R1         U2_N01011 OUT2  100k TC=0,0 
+X_U2_U1A         U2_N01113 U2_N01011 V+ V- OUT2 AD648A
+R_U2_R2         U2_N01113 OUT2  160k TC=0,0 
+R_U2_R3         0 U2_N01113  910k TC=0,0 
+C_U2_C1         0 U2_N01011  0.01u  TC=0,0 
+V_V1         V+ 0 12Vdc
+V_V2         V- 0 -12Vdc
+.IC         V(U1_N01011 )=0
+.IC         V(U2_N01011 )=0

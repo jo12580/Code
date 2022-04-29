@@ -1,0 +1,9 @@
+* source TRANSIENT ANALYSIS AND FOURIER ANALYSIS
+R_R1         IN1 OUT1  1k TC=0,0 
+R_R2         0 OUT1  1k TC=0,0 
+R_R3         OUT2 IN2  1k TC=0,0 
+R_R4         OUT2 0  1k TC=0,0 
+V_V5         IN1 0  
++SIN 0 1 1K 0 0 0
+V_V6         IN2 0  
++PULSE 0 1 1m 1n 1n 0.5m 1m

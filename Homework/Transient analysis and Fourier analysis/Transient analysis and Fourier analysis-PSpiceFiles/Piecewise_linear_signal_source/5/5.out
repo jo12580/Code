@@ -1,0 +1,87 @@
+
+**** 11/01/21 21:30:28 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "Piecewise_linear_signal_source-5"  [ D:\Software\Capture_PSpice\Project\Transient analysis and Fourier analysis\Transie
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "5.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\SPB_Data\cdssetup\OrCAD_PSpice\17.2.0\PSpice.ini file:
+.lib "nomd.lib" 
+
+*Analysis directives: 
+.TRAN  0 16m 0 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\Piecewise_linear_signal_source.net" 
+
+
+
+**** INCLUDING Piecewise_linear_signal_source.net ****
+* source TRANSIENT ANALYSIS AND FOURIER ANALYSIS
+V_V1         PWL1 0  
++PWL 1m 1 2m 2 5m 2 5.01m 0 8m 0 10m 5 
+V_V2         PWL2 0  
++PWL 2m 0 2.01m 5 5m 5 6m 3 7m 5 10m 5 10.01m 0 12m 3 
+
+**** RESUMING 5.cir ****
+.END
+
+**** 11/01/21 21:30:28 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "Piecewise_linear_signal_source-5"  [ D:\Software\Capture_PSpice\Project\Transient analysis and Fourier analysis\Transie
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+( PWL1)    1.0000  ( PWL2)    0.0000  
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1         0.000E+00
+    V_V2         0.000E+00
+
+    TOTAL POWER DISSIPATION   0.00E+00  WATTS
+
+
+
+          JOB CONCLUDED
+
+**** 11/01/21 21:30:28 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "Piecewise_linear_signal_source-5"  [ D:\Software\Capture_PSpice\Project\Transient analysis and Fourier analysis\Transie
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  Total job time (using Solver 1)   =         .02
+

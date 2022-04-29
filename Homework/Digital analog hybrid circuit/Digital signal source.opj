@@ -1,0 +1,156 @@
+(ExpressProject "Digital signal source"
+  (ProjectVersion "19981106")
+  (ProjectType "Analog or A/D Mixed Mode")
+  (Folder "Design Resources"
+    (Folder "Library")
+    (NoModify)
+    (File ".\digital signal source.dsn"
+      (Type "Schematic Design"))
+    (BuildFileAddedOrDeleted "x")
+    (CompileFileAddedOrDeleted "x")
+    (PSPICE_Regenerate_Netlist_Flag "FALSE")
+    (RootChangedForceReNetlist "x")
+    (PSPICE_DoNot_Show_WarningDlg "TRUE"))
+  (Folder "Outputs"
+    (File ".\digital signal source-pspicefiles\schematic1\schematic1.net"
+      (Type "Report"))
+    (File ".\digital signal source-pspicefiles\stimn\stimn.net"
+      (Type "Report"))
+    (File
+       ".\digital signal source-pspicefiles\digital_circuit\digital_circuit.net"
+      (Type "Report"))
+    (File
+       ".\digital signal source-pspicefiles\digital_analog_mixing\digital_analog_mixing.net"
+      (Type "Report")))
+  (Folder "PSpice Resources"
+    (Folder "Simulation Profiles"
+      (File.PSpice.{09528990-3187-11D2-BC7B-00A0C90CBF91}
+         ".\digital signal source-pspicefiles\digclock\1.sim"
+        (DisplayName "DigClock-1")
+        (Type "PSpice Profile"))
+      (File.PSpice.{09528990-3187-11D2-BC7B-00A0C90CBF91}
+         ".\digital signal source-pspicefiles\stimn\2.sim"
+        (DisplayName "STIMn-2")
+        (Type "PSpice Profile"))
+      (File.PSpice.{09528990-3187-11D2-BC7B-00A0C90CBF91}
+         ".\digital signal source-pspicefiles\digital_circuit\3.sim"
+        (DisplayName "digital_circuit-3")
+        (Type "PSpice Profile"))
+      (ActiveProfile
+         ".\digital signal source-pspicefiles\digital_analog_mixing\4.sim")
+      (File.PSpice.{09528990-3187-11D2-BC7B-00A0C90CBF91}
+         ".\digital signal source-pspicefiles\digital_analog_mixing\4.sim"
+        (DisplayName "Digital_analog_mixing-4")
+        (Type "PSpice Profile")))
+    (Folder "Model Libraries"
+      (Sort User))
+    (Folder "Stimulus Files"
+      (Sort User))
+    (Folder "Include Files"
+      (Sort User)))
+  (DefaultLibraryBrowseDirectory "library\PSpice")
+  (PartMRUSelector
+    (0
+      (LibraryName
+         "D:\SOFTWARE\CAPTURE_PSPICE\TOOLS\CAPTURE\LIBRARY\CAPSYM.OLB")
+      (DeviceIndex "0"))
+    (R
+      (FullPartName "R.Normal")
+      (LibraryName
+         "D:\SOFTWARE\CAPTURE_PSPICE\TOOLS\CAPTURE\LIBRARY\PSPICE\ANALOG.OLB")
+      (DeviceIndex "0"))
+    (74HC00
+      (FullPartName "74HC00.Normal")
+      (LibraryName
+         "D:\SOFTWARE\CAPTURE_PSPICE\TOOLS\CAPTURE\LIBRARY\PSPICE\74HC.OLB")
+      (DeviceIndex "0"))
+    (LM311
+      (FullPartName "LM311.Normal")
+      (LibraryName
+         "D:\SOFTWARE\CAPTURE_PSPICE\TOOLS\CAPTURE\LIBRARY\PSPICE\OPAMP.OLB")
+      (DeviceIndex "0"))
+    (VDC
+      (FullPartName "VDC.Normal")
+      (LibraryName
+         "D:\SOFTWARE\CAPTURE_PSPICE\TOOLS\CAPTURE\LIBRARY\PSPICE\SOURCE.OLB")
+      (DeviceIndex "0"))
+    (VSIN
+      (FullPartName "VSIN.Normal")
+      (LibraryName
+         "D:\SOFTWARE\CAPTURE_PSPICE\TOOLS\CAPTURE\LIBRARY\PSPICE\SOURCE.OLB")
+      (DeviceIndex "0"))
+    ($D_HI
+      (LibraryName
+         "D:\SOFTWARE\CAPTURE_PSPICE\TOOLS\CAPTURE\LIBRARY\PSPICE\SOURCE.OLB")
+      (DeviceIndex "0"))
+    (74107
+      (FullPartName "74107.Normal")
+      (LibraryName
+         "D:\SOFTWARE\CAPTURE_PSPICE\TOOLS\CAPTURE\LIBRARY\PSPICE\7400.OLB")
+      (DeviceIndex "1"))
+    (STIM1
+      (FullPartName "STIM1.Normal")
+      (LibraryName
+         "D:\SOFTWARE\CAPTURE_PSPICE\TOOLS\CAPTURE\LIBRARY\PSPICE\SOURCE.OLB")
+      (DeviceIndex "0"))
+    (STIM4
+      (FullPartName "STIM4.Normal")
+      (LibraryName
+         "D:\SOFTWARE\CAPTURE_PSPICE\TOOLS\CAPTURE\LIBRARY\PSPICE\SOURCE.OLB")
+      (DeviceIndex "0"))
+    (DigClock
+      (FullPartName "DigClock.Normal")
+      (LibraryName
+         "D:\SOFTWARE\CAPTURE_PSPICE\TOOLS\CAPTURE\LIBRARY\PSPICE\SOURCE.OLB")
+      (DeviceIndex "0")))
+  (MPSSessionName "007")
+  (GlobalState
+    (FileView
+      (Path "Design Resources")
+      (Path "Design Resources"
+         "D:\Software\Capture_PSpice\Project\Digital analog hybrid circuit\digital signal source.dsn")
+      (Path "Design Resources"
+         "D:\Software\Capture_PSpice\Project\Digital analog hybrid circuit\digital signal source.dsn"
+         "Digital_analog_mixing")
+      (Path "Design Resources"
+         "D:\Software\Capture_PSpice\Project\Digital analog hybrid circuit\digital signal source.dsn"
+         "DigClock")
+      (Path "Design Resources"
+         "D:\Software\Capture_PSpice\Project\Digital analog hybrid circuit\digital signal source.dsn"
+         "digital_circuit")
+      (Path "Design Resources"
+         "D:\Software\Capture_PSpice\Project\Digital analog hybrid circuit\digital signal source.dsn"
+         "STIMn")
+      (Path "Outputs")
+      (Select "Design Resources"
+         "D:\Software\Capture_PSpice\Project\Digital analog hybrid circuit\digital signal source.dsn"
+         "DigClock" "PAGE1"))
+    (HierarchyView)
+    (Doc
+      (Type "COrCapturePMDoc")
+      (Frame
+        (Placement "44 0 1 -1 -1 -8 -31 0 200 0 388"))
+      (Tab 0))
+    (Doc
+      (Type "COrSchematicDoc")
+      (Frame
+        (Placement "44 2 3 -1 -1 -8 -31 156 1140 156 583")
+        (Scroll "-82 0")
+        (Zoom "100")
+        (Occurrence "/"))
+      (Path
+         "D:\SOFTWARE\CAPTURE_PSPICE\PROJECT\DIGITAL ANALOG HYBRID CIRCUIT\DIGITAL SIGNAL SOURCE.DSN")
+      (Schematic "Digital_analog_mixing")
+      (Page "PAGE4"))
+    (Doc
+      (Type "COrSchematicDoc")
+      (Frame
+        (Placement "44 0 1 -1 -1 -8 -31 182 1166 182 609")
+        (Scroll "0 0")
+        (Zoom "100"))
+      (Path
+         "D:\SOFTWARE\CAPTURE_PSPICE\PROJECT\DIGITAL ANALOG HYBRID CIRCUIT\DIGITAL SIGNAL SOURCE.DSN")
+      (Schematic "DigClock")
+      (Page "PAGE1")))
+  (LastUsedLibraryBrowseDirectory
+     "D:\Software\Capture_PSpice\tools\capture\library\pspice"))

@@ -1,0 +1,11 @@
+* source 16
+V_V1         N00073 0 DC 0Vdc AC 1Vac 
+E_LAPLACE1         OUT1 0 LAPLACE {V(N00073)} {(1000)/((S+1000)*(S+100000))}
+V_V2         N00212 0 DC 0Vdc AC 1Vac 
+E_LAPLACE2         OUT2 0 LAPLACE {V(N00212)} 
++ {(1000)/((S+1000)*(S+100000)*(S+10000000))}
+E_LAPLACE3         OUT3 0 LAPLACE {V(N00336)} 
++ {(1000*(S+1000000))/((S+1000)*(S+100000)*(S+10000000))}
+V_V3         N00336 0 DC 0Vdc AC 1Vac 
+E_LAPLACE4         OUT4 0 LAPLACE {V(N00462)} {(1)/(pwrs(s,2)+1)}
+V_V4         N00462 0 DC 0Vdc AC 1Vac 

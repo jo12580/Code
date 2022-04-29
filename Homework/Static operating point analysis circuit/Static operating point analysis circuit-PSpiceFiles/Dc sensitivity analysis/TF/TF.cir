@@ -1,0 +1,19 @@
+** Profile: "Dc sensitivity analysis-TF"  [ D:\Software\Capture_PSpice\Project\Static operating point analysis circuit\Static operating point analysis circuit-PSpiceFiles\Dc sensitivity analysis\TF.sim ] 
+
+** Creating circuit file "TF.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\SPB_Data\cdssetup\OrCAD_PSpice\17.2.0\PSpice.ini file:
+.lib "nomd.lib" 
+
+*Analysis directives: 
+.TF v([OUT]) V_V1
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\Dc sensitivity analysis.net" 
+
+
+.END

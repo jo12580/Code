@@ -1,0 +1,15 @@
+* source 008
+R_R1         N14683 VCC  500 TC=0,0 
+R_R2         N14655 N14679  20 TC=0,0 
+R_R3         0 N14655  480 TC=0,0 
+R_R4         N14687 VCC  13k TC=0,0 
+R_R5         0 N14687  8k TC=0,0 
+R_R6         0 N14751  50k TC=0,0 
+C_C1         N14683 N14751  10u  TC=0,0 
+C_C2         N14620 N14687  10u  TC=0,0 
+R_R7         N14613 N14620  0.1 TC=0,0 
+Q_Q1         N14683 N14687 N14679 Q2N2222
+C_C3         0 N14655  10u  TC=0,0 
+V_V2         VCC_CIRCLE 0 15Vdc
+V_V3         N14613 0  
++SIN 0 1m 1k 0 0 0

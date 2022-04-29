@@ -1,0 +1,15 @@
+* source 12-21-1
+R_R4         N03590 VOUT  30k TC=0,0 
+R_R3         N03346 N03590  10k TC=0,0 
+C_C1         N03346 N03356  10n  TC=0,0 
+D_D1         N03590 N03780 D1N4148 
+V_V1         VCC 0 5Vdc
+X_U1         N03356 N03590 VCC 0 VOUT LM324/5_1/TI
+R_R7         0 N03346  35k TC=0,0 
+C_C3         0 N03346  10n  TC=0,0 
+R_R6         N03346 VCC  65k TC=0,0 
+R_R2         N03370 VOUT  609 TC=0,0 
+R_R5         N03780 VOUT  60k TC=0,0 
+R_R1         N03346 N03356  600 TC=0,0 
+C_C2         N03356 N03370  10n  TC=0,0 
+D_D2         N03780 N03590 D1N4148 

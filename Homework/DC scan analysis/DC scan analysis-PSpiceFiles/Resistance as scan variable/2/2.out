@@ -1,0 +1,58 @@
+
+**** 10/11/21 21:19:42 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "Resistance as scan variable-2"  [ D:\Software\Capture_PSpice\Project\DC scan analysis\DC scan analysis-PSpiceFiles\Resi
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "2.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\SPB_Data\cdssetup\OrCAD_PSpice\17.2.0\PSpice.ini file:
+.lib "nomd.lib" 
+
+*Analysis directives: 
+.DC LIN PARAM rvar 1k 10k 10 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\Resistance as scan variable.net" 
+
+
+
+**** INCLUDING "Resistance as scan variable.net" ****
+* source DC SCAN ANALYSIS
+R_R1         IN OUT  1k TC=0,0 
+R_R2         0 OUT  {rvar} TC=0,0 
+V_V1         IN 0 12Vdc
+.PARAM  rvar=2k
+
+**** RESUMING 2.cir ****
+.END
+
+
+          JOB CONCLUDED
+
+**** 10/11/21 21:19:42 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "Resistance as scan variable-2"  [ D:\Software\Capture_PSpice\Project\DC scan analysis\DC scan analysis-PSpiceFiles\Resi
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  Total job time (using Solver 1)   =         .02
+

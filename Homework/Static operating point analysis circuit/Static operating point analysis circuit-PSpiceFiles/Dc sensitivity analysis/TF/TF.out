@@ -1,0 +1,100 @@
+
+**** 10/11/21 11:12:17 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "Dc sensitivity analysis-TF"  [ D:\Software\Capture_PSpice\Project\Static operating point analysis circuit\Static operat
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "TF.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\SPB_Data\cdssetup\OrCAD_PSpice\17.2.0\PSpice.ini file:
+.lib "nomd.lib" 
+
+*Analysis directives: 
+.TF v([OUT]) V_V1
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\Dc sensitivity analysis.net" 
+
+
+
+**** INCLUDING "Dc sensitivity analysis.net" ****
+* source STATIC OPERATING POINT ANALYSIS CIRCUIT
+R_R1         IN N00386  1k TC=0,0 
+R_R3         OUT N00386  1k TC=0,0 
+V_V1         IN 0 10Vdc
+R_R2         0 N00386  1k TC=0,0 
+C_C1         0 OUT  1p  TC=0,0 
+
+**** RESUMING TF.cir ****
+.END
+
+**** 10/11/21 11:12:17 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "Dc sensitivity analysis-TF"  [ D:\Software\Capture_PSpice\Project\Static operating point analysis circuit\Static operat
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(   IN)   10.0000  (  OUT)    5.0000  (N00386)    5.0000 
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1        -5.000E-03
+
+    TOTAL POWER DISSIPATION   5.00E-02  WATTS
+
+
+
+
+
+
+ ****     SMALL-SIGNAL CHARACTERISTICS
+
+
+      V(OUT)/V_V1 =  5.000E-01
+
+      INPUT RESISTANCE AT V_V1 =  2.000E+03
+
+      OUTPUT RESISTANCE AT V(OUT) =  1.500E+03
+
+
+          JOB CONCLUDED
+
+**** 10/11/21 11:12:17 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "Dc sensitivity analysis-TF"  [ D:\Software\Capture_PSpice\Project\Static operating point analysis circuit\Static operat
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  Total job time (using Solver 1)   =        0.00
+

@@ -1,0 +1,5 @@
+* source TRANSIENT ANALYSIS AND FOURIER ANALYSIS
+V_V1         PWL1 0  
++PWL 1m 1 2m 2 5m 2 5.01m 0 8m 0 10m 5 
+V_V2         PWL2 0  
++PWL 2m 0 2.01m 5 5m 5 6m 3 7m 5 10m 5 10.01m 0 12m 3 

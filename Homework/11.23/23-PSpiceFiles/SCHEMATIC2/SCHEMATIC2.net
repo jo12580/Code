@@ -1,0 +1,9 @@
+* source 23
+V_V1         +VS 0 +12
+V_V2         -VS 0 -12
+R_R1         N01907 N01811  40.2k TC=0,0 
+C_C1         +VS 0  0.1u  TC=0,0 
+C_C2         -VS 0  0.1u  TC=0,0 
+X_U1         IN N01911 OUT 0 N01811 N01907 +VS -VS AD627A
+V_V3         IN N01911  
++SIN 0 100m 10k 0 0 0

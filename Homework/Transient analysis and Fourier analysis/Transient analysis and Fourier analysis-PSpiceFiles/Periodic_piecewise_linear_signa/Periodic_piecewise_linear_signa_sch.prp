@@ -1,0 +1,156 @@
+("FILE_TYPE"	"PMAP File"
+    ("devices"
+        ("VPWL_RE_FOREVER")
+        ("VPWL_RE_N_TIMES")
+    )
+    ("instances"
+        ("V1"
+            ("device_name"	"VPWL_RE_FOREVER")
+            ("pspice_path"	"V_V1")
+            ("level"	"0")
+            ("model_params"
+                ("SECOND_NPAIRS"
+                    ("value"	"(3m,-5) (4m,0)")
+                    ("pspice_param"	"SECOND_NPAIRS")
+                )
+                ("FIRST_NPAIRS"
+                    ("value"	"(1m,0) (2m,5)")
+                    ("pspice_param"	"FIRST_NPAIRS")
+                )
+                ("THIRD_NPAIRS"
+                    ("value"	"")
+                    ("pspice_param"	"THIRD_NPAIRS")
+                )
+                ("VSF"
+                    ("value"	"")
+                    ("pspice_param"	"VSF")
+                )
+                ("TSF"
+                    ("value"	"")
+                    ("pspice_param"	"TSF")
+                )
+                ("AC"
+                    ("value"	"")
+                    ("pspice_param"	"AC")
+                )
+                ("DC"
+                    ("value"	"")
+                    ("pspice_param"	"DC")
+                )
+            )
+        )
+        ("V2"
+            ("device_name"	"VPWL_RE_FOREVER")
+            ("pspice_path"	"V_V2")
+            ("level"	"0")
+            ("model_params"
+                ("VSF"
+                    ("value"	"2")
+                    ("pspice_param"	"VSF")
+                )
+                ("FIRST_NPAIRS"
+                    ("value"	"(1m,0) (2m,5)")
+                    ("pspice_param"	"FIRST_NPAIRS")
+                )
+                ("SECOND_NPAIRS"
+                    ("value"	"(3m,-5) (4m,0)")
+                    ("pspice_param"	"SECOND_NPAIRS")
+                )
+                ("THIRD_NPAIRS"
+                    ("value"	"")
+                    ("pspice_param"	"THIRD_NPAIRS")
+                )
+                ("TSF"
+                    ("value"	"")
+                    ("pspice_param"	"TSF")
+                )
+                ("AC"
+                    ("value"	"")
+                    ("pspice_param"	"AC")
+                )
+                ("DC"
+                    ("value"	"")
+                    ("pspice_param"	"DC")
+                )
+            )
+        )
+        ("V3"
+            ("device_name"	"VPWL_RE_N_TIMES")
+            ("pspice_path"	"V_V3")
+            ("level"	"0")
+            ("model_params"
+                ("FIRST_NPAIRS"
+                    ("value"	"(1m,0)")
+                    ("pspice_param"	"FIRST_NPAIRS")
+                )
+                ("SECOND_NPAIRS"
+                    ("value"	"(2m,5) (3m,-5)")
+                    ("pspice_param"	"SECOND_NPAIRS")
+                )
+                ("THIRD_NPAIRS"
+                    ("value"	"(4m,0)")
+                    ("pspice_param"	"THIRD_NPAIRS")
+                )
+                ("REPEAT_VALUE"
+                    ("value"	"5")
+                    ("pspice_param"	"REPEAT_VALUE")
+                )
+                ("VSF"
+                    ("value"	"")
+                    ("pspice_param"	"VSF")
+                )
+                ("TSF"
+                    ("value"	"")
+                    ("pspice_param"	"TSF")
+                )
+                ("AC"
+                    ("value"	"")
+                    ("pspice_param"	"AC")
+                )
+                ("DC"
+                    ("value"	"")
+                    ("pspice_param"	"DC")
+                )
+            )
+        )
+        ("V4"
+            ("device_name"	"VPWL_RE_N_TIMES")
+            ("pspice_path"	"V_V4")
+            ("level"	"0")
+            ("model_params"
+                ("TSF"
+                    ("value"	"2")
+                    ("pspice_param"	"TSF")
+                )
+                ("VSF"
+                    ("value"	"")
+                    ("pspice_param"	"VSF")
+                )
+                ("REPEAT_VALUE"
+                    ("value"	"5")
+                    ("pspice_param"	"REPEAT_VALUE")
+                )
+                ("THIRD_NPAIRS"
+                    ("value"	"(4m,0)")
+                    ("pspice_param"	"THIRD_NPAIRS")
+                )
+                ("SECOND_NPAIRS"
+                    ("value"	"(2m,5) (3m,-5)")
+                    ("pspice_param"	"SECOND_NPAIRS")
+                )
+                ("FIRST_NPAIRS"
+                    ("value"	"(1m,0)")
+                    ("pspice_param"	"FIRST_NPAIRS")
+                )
+                ("AC"
+                    ("value"	"")
+                    ("pspice_param"	"AC")
+                )
+                ("DC"
+                    ("value"	"")
+                    ("pspice_param"	"DC")
+                )
+            )
+        )
+    )
+)

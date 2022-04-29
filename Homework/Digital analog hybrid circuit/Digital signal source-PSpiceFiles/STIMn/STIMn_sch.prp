@@ -1,0 +1,304 @@
+("FILE_TYPE"	"PMAP File"
+    ("devices"
+        ("STIM4")
+    )
+    ("instances"
+        ("DSTM1"
+            ("device_name"	"STIM4")
+            ("pspice_path"	"U_DSTM1")
+            ("level"	"0")
+            ("model_params"
+                ("COMMAND5"
+                    ("value"	"60c 1010")
+                    ("pspice_param"	"COMMAND5")
+                )
+                ("COMMAND3"
+                    ("value"	"20c 0110")
+                    ("pspice_param"	"COMMAND3")
+                )
+                ("COMMAND6"
+                    ("value"	"100c 0101")
+                    ("pspice_param"	"COMMAND6")
+                )
+                ("COMMAND2"
+                    ("value"	"10c 0011")
+                    ("pspice_param"	"COMMAND2")
+                )
+                ("COMMAND4"
+                    ("value"	"40c 1100")
+                    ("pspice_param"	"COMMAND4")
+                )
+                ("TIMESTEP"
+                    ("value"	"1u")
+                    ("pspice_param"	"TIMESTEP")
+                )
+                ("COMMAND1"
+                    ("value"	"0s 0000")
+                    ("pspice_param"	"COMMAND1")
+                )
+                ("COMMAND7"
+                    ("value"	"")
+                    ("pspice_param"	"COMMAND7")
+                )
+                ("COMMAND8"
+                    ("value"	"")
+                    ("pspice_param"	"COMMAND8")
+                )
+                ("COMMAND9"
+                    ("value"	"")
+                    ("pspice_param"	"COMMAND9")
+                )
+                ("COMMAND10"
+                    ("value"	"")
+                    ("pspice_param"	"COMMAND10")
+                )
+                ("COMMAND11"
+                    ("value"	"")
+                    ("pspice_param"	"COMMAND11")
+                )
+                ("COMMAND12"
+                    ("value"	"")
+                    ("pspice_param"	"COMMAND12")
+                )
+                ("COMMAND13"
+                    ("value"	"")
+                    ("pspice_param"	"COMMAND13")
+                )
+                ("COMMAND14"
+                    ("value"	"")
+                    ("pspice_param"	"COMMAND14")
+                )
+                ("COMMAND15"
+                    ("value"	"")
+                    ("pspice_param"	"COMMAND15")
+                )
+                ("COMMAND16"
+                    ("value"	"")
+                    ("pspice_param"	"COMMAND16")
+                )
+                ("WIDTH"
+                    ("value"	"4")
+                    ("pspice_param"	"WIDTH")
+                )
+                ("FORMAT"
+                    ("value"	"1111")
+                    ("pspice_param"	"FORMAT")
+                )
+                ("DIG_PWR"
+                    ("value"	"$G_DPWR")
+                    ("pspice_param"	"DIG_PWR")
+                )
+                ("DIG_GND"
+                    ("value"	"$G_DGND")
+                    ("pspice_param"	"DIG_GND")
+                )
+                ("IO_MODEL"
+                    ("value"	"IO_STM")
+                    ("pspice_param"	"IO_MODEL")
+                )
+                ("IO_LEVEL"
+                    ("value"	"0")
+                    ("pspice_param"	"IO_LEVEL")
+                )
+            )
+        )
+        ("DSTM2"
+            ("device_name"	"STIM4")
+            ("pspice_path"	"U_DSTM2")
+            ("level"	"0")
+            ("model_params"
+                ("COMMAND1"
+                    ("value"	"0s 0")
+                    ("pspice_param"	"COMMAND1")
+                )
+                ("TIMESTEP"
+                    ("value"	"1u")
+                    ("pspice_param"	"TIMESTEP")
+                )
+                ("COMMAND4"
+                    ("value"	"40c B")
+                    ("pspice_param"	"COMMAND4")
+                )
+                ("COMMAND2"
+                    ("value"	"10c 3")
+                    ("pspice_param"	"COMMAND2")
+                )
+                ("COMMAND6"
+                    ("value"	"100c 5")
+                    ("pspice_param"	"COMMAND6")
+                )
+                ("COMMAND3"
+                    ("value"	"20c 6")
+                    ("pspice_param"	"COMMAND3")
+                )
+                ("COMMAND5"
+                    ("value"	"60c 9")
+                    ("pspice_param"	"COMMAND5")
+                )
+                ("FORMAT"
+                    ("value"	"4")
+                    ("pspice_param"	"FORMAT")
+                )
+                ("COMMAND7"
+                    ("value"	"")
+                    ("pspice_param"	"COMMAND7")
+                )
+                ("COMMAND8"
+                    ("value"	"")
+                    ("pspice_param"	"COMMAND8")
+                )
+                ("COMMAND9"
+                    ("value"	"")
+                    ("pspice_param"	"COMMAND9")
+                )
+                ("COMMAND10"
+                    ("value"	"")
+                    ("pspice_param"	"COMMAND10")
+                )
+                ("COMMAND11"
+                    ("value"	"")
+                    ("pspice_param"	"COMMAND11")
+                )
+                ("COMMAND12"
+                    ("value"	"")
+                    ("pspice_param"	"COMMAND12")
+                )
+                ("COMMAND13"
+                    ("value"	"")
+                    ("pspice_param"	"COMMAND13")
+                )
+                ("COMMAND14"
+                    ("value"	"")
+                    ("pspice_param"	"COMMAND14")
+                )
+                ("COMMAND15"
+                    ("value"	"")
+                    ("pspice_param"	"COMMAND15")
+                )
+                ("COMMAND16"
+                    ("value"	"")
+                    ("pspice_param"	"COMMAND16")
+                )
+                ("WIDTH"
+                    ("value"	"4")
+                    ("pspice_param"	"WIDTH")
+                )
+                ("DIG_PWR"
+                    ("value"	"$G_DPWR")
+                    ("pspice_param"	"DIG_PWR")
+                )
+                ("DIG_GND"
+                    ("value"	"$G_DGND")
+                    ("pspice_param"	"DIG_GND")
+                )
+                ("IO_MODEL"
+                    ("value"	"IO_STM")
+                    ("pspice_param"	"IO_MODEL")
+                )
+                ("IO_LEVEL"
+                    ("value"	"0")
+                    ("pspice_param"	"IO_LEVEL")
+                )
+            )
+        )
+        ("DSTM3"
+            ("device_name"	"STIM4")
+            ("pspice_path"	"U_DSTM3")
+            ("level"	"0")
+            ("model_params"
+                ("COMMAND7"
+                    ("value"	"100c 0101")
+                    ("pspice_param"	"COMMAND7")
+                )
+                ("TIMESTEP"
+                    ("value"	"1u")
+                    ("pspice_param"	"TIMESTEP")
+                )
+                ("COMMAND4"
+                    ("value"	"20c 0110")
+                    ("pspice_param"	"COMMAND4")
+                )
+                ("COMMAND2"
+                    ("value"	"REPEAT -1 TIMES")
+                    ("pspice_param"	"COMMAND2")
+                )
+                ("COMMAND6"
+                    ("value"	"60c 1010")
+                    ("pspice_param"	"COMMAND6")
+                )
+                ("COMMAND3"
+                    ("value"	"10c 0011")
+                    ("pspice_param"	"COMMAND3")
+                )
+                ("COMMAND5"
+                    ("value"	"40c 1100")
+                    ("pspice_param"	"COMMAND5")
+                )
+                ("COMMAND8"
+                    ("value"	"ENDREPEAT")
+                    ("pspice_param"	"COMMAND8")
+                )
+                ("COMMAND1"
+                    ("value"	"0s 0000")
+                    ("pspice_param"	"COMMAND1")
+                )
+                ("COMMAND9"
+                    ("value"	"")
+                    ("pspice_param"	"COMMAND9")
+                )
+                ("COMMAND10"
+                    ("value"	"")
+                    ("pspice_param"	"COMMAND10")
+                )
+                ("COMMAND11"
+                    ("value"	"")
+                    ("pspice_param"	"COMMAND11")
+                )
+                ("COMMAND12"
+                    ("value"	"")
+                    ("pspice_param"	"COMMAND12")
+                )
+                ("COMMAND13"
+                    ("value"	"")
+                    ("pspice_param"	"COMMAND13")
+                )
+                ("COMMAND14"
+                    ("value"	"")
+                    ("pspice_param"	"COMMAND14")
+                )
+                ("COMMAND15"
+                    ("value"	"")
+                    ("pspice_param"	"COMMAND15")
+                )
+                ("COMMAND16"
+                    ("value"	"")
+                    ("pspice_param"	"COMMAND16")
+                )
+                ("WIDTH"
+                    ("value"	"4")
+                    ("pspice_param"	"WIDTH")
+                )
+                ("FORMAT"
+                    ("value"	"1111")
+                    ("pspice_param"	"FORMAT")
+                )
+                ("DIG_PWR"
+                    ("value"	"$G_DPWR")
+                    ("pspice_param"	"DIG_PWR")
+                )
+                ("DIG_GND"
+                    ("value"	"$G_DGND")
+                    ("pspice_param"	"DIG_GND")
+                )
+                ("IO_MODEL"
+                    ("value"	"IO_STM")
+                    ("pspice_param"	"IO_MODEL")
+                )
+                ("IO_LEVEL"
+                    ("value"	"0")
+                    ("pspice_param"	"IO_LEVEL")
+                )
+            )
+        )
+    )
+)

@@ -1,0 +1,16 @@
+.ALIASES
+R_R1            R1(1=IN1 2=OUT1 ) CN @TRANSIENT ANALYSIS AND FOURIER
++ANALYSIS.Fourier_analysis(sch_1):INS1727@ANALOG.R.Normal(chips)
+R_R2            R2(1=0 2=OUT1 ) CN @TRANSIENT ANALYSIS AND FOURIER ANALYSIS.Fourier_analysis(sch_1):INS1743@ANALOG.R.Normal(chips)
+R_R3            R3(1=OUT2 2=IN2 ) CN @TRANSIENT ANALYSIS AND FOURIER
++ANALYSIS.Fourier_analysis(sch_1):INS1759@ANALOG.R.Normal(chips)
+R_R4            R4(1=OUT2 2=0 ) CN @TRANSIENT ANALYSIS AND FOURIER ANALYSIS.Fourier_analysis(sch_1):INS1775@ANALOG.R.Normal(chips)
+V_V5            V5(+=IN1 -=0 ) CN @TRANSIENT ANALYSIS AND FOURIER
++ANALYSIS.Fourier_analysis(sch_1):INS2080@SOURCE.VSIN.Normal(chips)
+V_V6            V6(+=IN2 -=0 ) CN @TRANSIENT ANALYSIS AND FOURIER
++ANALYSIS.Fourier_analysis(sch_1):INS2170@SOURCE.VPULSE.Normal(chips)
+_    _(IN1=IN1)
+_    _(IN2=IN2)
+_    _(OUT1=OUT1)
+_    _(OUT2=OUT2)
+.ENDALIASES

@@ -1,0 +1,87 @@
+
+**** 11/01/21 21:20:20 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "Exponential_signal_source-4"  [ D:\Software\Capture_PSpice\Project\Transient analysis and Fourier analysis\Transient an
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "4.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\SPB_Data\cdssetup\OrCAD_PSpice\17.2.0\PSpice.ini file:
+.lib "nomd.lib" 
+
+*Analysis directives: 
+.TRAN  0 20ms 0 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\Exponential_signal_source.net" 
+
+
+
+**** INCLUDING Exponential_signal_source.net ****
+* source TRANSIENT ANALYSIS AND FOURIER ANALYSIS
+V_V2         EXP2 0  
++EXP 0 -5 2m 4m 10m 2m
+V_V1         EXP1 0  
++EXP 0 5 2m 1m 10m 2m
+
+**** RESUMING 4.cir ****
+.END
+
+**** 11/01/21 21:20:20 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "Exponential_signal_source-4"  [ D:\Software\Capture_PSpice\Project\Transient analysis and Fourier analysis\Transient an
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+( EXP1)    0.0000  ( EXP2)    0.0000  
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V2         0.000E+00
+    V_V1         0.000E+00
+
+    TOTAL POWER DISSIPATION   0.00E+00  WATTS
+
+
+
+          JOB CONCLUDED
+
+**** 11/01/21 21:20:20 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "Exponential_signal_source-4"  [ D:\Software\Capture_PSpice\Project\Transient analysis and Fourier analysis\Transient an
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  Total job time (using Solver 1)   =         .02
+

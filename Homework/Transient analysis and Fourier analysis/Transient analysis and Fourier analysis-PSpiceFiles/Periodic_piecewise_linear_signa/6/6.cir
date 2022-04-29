@@ -1,0 +1,19 @@
+** Profile: "Periodic_piecewise_linear_signa-6"  [ D:\Software\Capture_PSpice\Project\Transient analysis and Fourier analysis\Transient analysis and Fourier analysis-PSpiceFiles\Periodic_piecewise_linear_signa\6.sim ] 
+
+** Creating circuit file "6.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\SPB_Data\cdssetup\OrCAD_PSpice\17.2.0\PSpice.ini file:
+.lib "nomd.lib" 
+
+*Analysis directives: 
+.TRAN  0 50ms 0 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\Periodic_piecewise_linear_signa.net" 
+
+
+.END

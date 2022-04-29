@@ -1,0 +1,143 @@
+
+**** 11/30/21 09:14:52 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "top-SHUNTAI"  [ F:\251\dishierzhang-PSpiceFiles\top\SHUNTAI.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "SHUNTAI.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\SPB_Data\cdssetup\OrCAD_PSpice\17.2.0\PSpice.ini file:
+.lib "nomd.lib" 
+
+*Analysis directives: 
+.TRAN  0 10m 0 0.01m 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\top.net" 
+
+
+
+**** INCLUDING top.net ****
+* source DISHIERZHANG
+R_a1_R3         0 a1_N00230  910k TC=0,0 
+R_a1_R2         a1_N00230 OUT1  160k TC=0,0 
+R_a1_R1         a1_N00184 OUT1  160k TC=0,0 
+C_a1_C1         0 a1_N00184  0.01u  TC=0,0 
+X_a1_U1A         a1_N00230 a1_N00184 V- V+ OUT1 AD648A
+V_V1         V+ 0 12Vdc
+V_V2         V- 0 -12Vdc
+.IC         V(a1_N00184 )=0
+
+**** RESUMING SHUNTAI.cir ****
+.END
+
+**** 11/30/21 09:14:52 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "top-SHUNTAI"  [ F:\251\dishierzhang-PSpiceFiles\top\SHUNTAI.sim ] 
+
+
+ ****     Diode MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_a1_U1A.dx     X_a1_U1A.dy     
+          IS  800.000000E-18  800.000000E-18 
+          RS                    1.000000E-03 
+         CJO                   10.000000E-12 
+
+
+**** 11/30/21 09:14:52 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "top-SHUNTAI"  [ F:\251\dishierzhang-PSpiceFiles\top\SHUNTAI.sim ] 
+
+
+ ****     Junction FET MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_a1_U1A.jx     
+               NJF             
+         VTO   -1            
+        BETA  548.300000E-06 
+          IS    2.500000E-12 
+
+
+Starting pseudo-transient algorithm.
+
+ERROR -- Convergence problem in transient bias point calculation
+
+
+  Last node voltages tried were:
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(   V+)     .7473  (   V-)    -.7473  ( OUT1) 859.6E-06  (a1_N00184)    -.2681  
+
+(a1_N00230)    -.3314                 (X_a1_U1A.6)    -.0069                    
+
+(X_a1_U1A.7)     .0020                (X_a1_U1A.8)     .0020                    
+
+(X_a1_U1A.9)    0.0000                (X_a1_U1A.10)    -.6664                   
+
+(X_a1_U1A.11)    -.6667               (X_a1_U1A.12)    -.6734                   
+
+(X_a1_U1A.53)    -.8719               (X_a1_U1A.54)     .8719                   
+
+(X_a1_U1A.90)    1.4063               (X_a1_U1A.91)     .9341                   
+
+(X_a1_U1A.92)    -.9341               (X_a1_U1A.99)    0.0000               
+
+
+  These voltages failed to converge:
+
+    V(a1_N00230)              =  -306.57mV  \  -331.35mV
+    V(OUT1)                   =   378.21mV  \   859.63uV
+    V(X_a1_U1A.11)            =  -664.92mV  \  -666.65mV
+    V(X_a1_U1A.12)            =  -671.65mV  \  -673.38mV
+    V(X_a1_U1A.6)             =   369.28mV  \   -6.942mV
+    V(X_a1_U1A.7)             =   378.21mV  \    1.989mV
+    V(X_a1_U1A.90)            =   518.10uV  \     1.406V
+    V(X_a1_U1A.10)            =  -664.70mV  \  -666.41mV
+    V(X_a1_U1A.8)             =   378.21mV  \    1.989mV
+
+  These supply currents failed to converge:
+
+    I(X_a1_U1A.egnd)          =   -12.23uA  \   -22.58mA
+    I(V_V1)                   =   -5.666uA  \   -10.00GA
+    I(V_V2)                   =    33.30uA  \    10.00GA
+    I(X_a1_U1A.vb)            =    3.693uA  \   -69.42nA
+    I(X_a1_U1A.vc)            =   -2.486pA  \  -355.77mA
+    I(X_a1_U1A.ve)            =   -1.043pA  \  -333.19mA
+    I(X_a1_U1A.vlim)          =    8.319uA  \    22.58mA
+    I(X_a1_U1A.vlp)           =   -3.617uA  \    67.80nA
+    I(X_a1_U1A.vln)           =  -935.46fA  \   -2.341pA
+    I(X_a1_U1A.hlim)          =    3.617uA  \   -67.80nA
+
+  These devices failed to converge:
+    X_a1_U1A.dc X_a1_U1A.de X_a1_U1A.dlp X_a1_U1A.dp X_a1_U1A.fb X_a1_U1A.j1 
+    X_a1_U1A.j2 
+
+ERROR(ORPSIM-15659): Discontinuing simulation due to convergence problem
+
+**** Interrupt ****

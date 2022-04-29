@@ -1,0 +1,79 @@
+
+**** 12/06/21 20:30:25 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "STIMn-2"  [ D:\Software\Capture_PSpice\Project\Digital analog hybrid circuit\Digital signal source-PSpiceFiles\STIMn\2.
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "2.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\SPB_Data\cdssetup\OrCAD_PSpice\17.2.0\PSpice.ini file:
+.lib "nomd.lib" 
+
+*Analysis directives: 
+.TRAN  0 500u 0 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\STIMn.net" 
+
+
+
+**** INCLUDING STIMn.net ****
+* source DIGITAL SIGNAL SOURCE
+U_DSTM1         STIM(4,1111)
++ $G_DPWR $G_DGND
++ A0 A1 A2 A3 
++ IO_STM
++ IO_LEVEL=0
++ TIMESTEP=1u 
++ 0s 0000  
++ 10c 0011  
++ 20c 0110  
++ 40c 1100 
++ 60c 1010  
++ 100c 0101  
+U_DSTM2         STIM(4,4)
++ $G_DPWR $G_DGND
++ B0 B1 B2 B3 
++ IO_STM
++ IO_LEVEL=0
++ TIMESTEP=1u 
++ 0s 0  
++ 10c 3  
++ 20c 6  
++ 40c B 
++ 60c 9  
++ 100c 5  
+U_DSTM3         STIM(4,1111)
++ $G_DPWR $G_DGND
++ C0 C1 C2 C3 
++ IO_STM
++ IO_LEVEL=0
++ TIMESTEP=1u 
++ 0s 0000  
++ REPEAT-1 TIMES  
+--$
+ERROR(ORPSIM-16152): Invalid number: Error while converting token 'REPEAT-1' to double value. Token can be a constant or expression
++ 10c 0011  
++ 20c 0110 
++ 40c 1100  
++ 60c 1010  
++ 100c 0101  
++ ENDREPEAT  
+-------------$
+ERROR(ORPSIM-16254): Expecting LABEL, FILE, REPEAT or < time>
+
+**** RESUMING 2.cir ****
+.END
+

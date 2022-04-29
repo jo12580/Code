@@ -1,0 +1,8 @@
+* source 13_4
+R_R2         N00169 VCC  10K TC=0,0 
+R_R1         VC N00169  10K TC=0,0 
+X_X1         0 VC OUT VCC N00214 VC N00169 VCC 555D PARAMS: MAXFREQ=3E6
+C_C2         0 VC  47P  TC=0,0 
+C_C1         0 N00214  10P  TC=0,0 
+V_V1         VCC 0 5
+.IC         V(VC )=0

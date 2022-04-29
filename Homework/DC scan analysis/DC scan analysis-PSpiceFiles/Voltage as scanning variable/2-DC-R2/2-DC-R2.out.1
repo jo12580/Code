@@ -1,0 +1,42 @@
+
+**** 10/11/21 21:18:17 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "Voltage as scanning variable-2-DC-R2"  [ D:\Software\Capture_PSpice\Project\DC scan analysis\DC scan analysis-PSpiceFil
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "2-DC-R2.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\SPB_Data\cdssetup\OrCAD_PSpice\17.2.0\PSpice.ini file:
+.lib "nomd.lib" 
+
+*Analysis directives: 
+.DC LIN PARAM rvar 1k 10k 10 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\Voltage as scanning variable.net" 
+
+
+
+**** INCLUDING "Voltage as scanning variable.net" ****
+* source DC SCAN ANALYSIS
+V_V1         IN 0 12Vdc
+R_R1         IN OUT  1k TC=0,0 
+R_R2         0 OUT  2k TC=0,0 
+
+**** RESUMING 2-DC-R2.cir ****
+.END
+
+ERROR(ORPSIM-15167): Undefined parameter: rvar.
+

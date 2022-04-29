@@ -1,0 +1,20 @@
+* source EXAM_1
+R_R2         N27681 N27743  10k TC=0,0 
+X_U1C         N27743 N27989 VCC 0 UO11 LM324
+R_R9         N27939 UO1  1k TC=0,0 
+D_D3         N28139 N28147 D1N4148 
+R_R3         N27681 VCC  50k TC=0,0 
+R_R1         N27743 UO11  33k TC=0,0 
+R_R25         N28147 UO11  10k TC=0,0 
+C_C8         0 UO1  100nf  TC=0,0 
+C_C7         0 N27939  100nf  TC=0,0 
+R_R5         N28139 N27989  30k TC=0,0 
+D_D4         N28237 N28139 D1N4148 
+C_C2         0 N27989  10n  TC=0,0 
+R_R19         UO1 0  3meg TC=0,0 
+R_R26         N28237 UO11  10k TC=0,0 
+R_R4         0 N27681  1.6k TC=0,0 
+C_C1         0 N27681  1n  TC=0,0 
+R_R8         N278791 N27939  900 TC=0,0 
+C_C6         UO11 N278791  10u  TC=0,0 
+V_V1         VCC 0 12Vdc

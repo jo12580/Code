@@ -1,0 +1,12 @@
+* source COMMON WAVEFORM GENERATING CIRCUIT
+R_R1         N06190 N06240  1k TC=0,0 
+R_R3         N06240 VOUT  1k TC=0,0 
+R_R5         VOUT N06284  1k TC=0,0 
+R_R4         0 N06190  1k TC=0,0 
+X_U1         N06240 N06284 VCC 0 VOUT LM324/5_1/TI
+C_C1         N06190 N06284  1U  TC=0,0 
+C_C3         0 VCC  1n  TC=0,0 
+R_R2         N06190 VCC  1k TC=0,0 
+C_C4         0 VCC  1n  TC=0,0 
+C_C2         0 N06190  1n  TC=0,0 
+V_V1         VCC 0 5Vdc

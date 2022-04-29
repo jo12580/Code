@@ -1,0 +1,15 @@
+* source JJ
+V_V1         N00378 0 DC 0Vdc AC 1Vac 
+R_R2         N00378 N00323 R_R2 1..5k TC=0,0 
+.model        R_R2 RES R=1 DEV=10% TC1=0 TC2=0
+R_R3         N00323 0 R_R3 1.5k TC=0,0 
+.model        R_R3 RES R=1 DEV=10% TC1=0 TC2=0
+R_R4         N00296 OUT R_R4 150K TC=0,0 
+.model        R_R4 RES R=1 DEV=10% TC1=0 TC2=0
+C_C1         N00323 N00296 C_C1 10n  TC=0,0 
+.model        C_C1 CAP C=1 DEV=10% TC1=0 TC2=0 VC1=0 VC2=0
+X_U1         0 N00296 VCC VEE OUT uA741
+V_V2         VCC 0 12Vdc
+V_V3         VEE 0 -11Vdc
+C_C2         N00323 OUT C_C2 10n  TC=0,0 
+.model        C_C2 CAP C=1 DEV=10% TC1=0 TC2=0 VC1=0 VC2=0

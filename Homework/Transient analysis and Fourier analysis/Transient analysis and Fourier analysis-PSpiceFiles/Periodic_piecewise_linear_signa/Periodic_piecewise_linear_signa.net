@@ -1,0 +1,23 @@
+* source TRANSIENT ANALYSIS AND FOURIER ANALYSIS
+V_V1         PWL-RE-FOR-1 0   PWL   
++ REPEAT FOREVER 
++ (1m,0) (2m,5) 
++ (3m,-5) (4m,0)  
++ ENDREPEAT
+V_V2         PWL-RE-FOR-2 0   PWL  VALUE_SCALE_FACTOR=2 
++ REPEAT FOREVER 
++ (1m,0) (2m,5) 
++ (3m,-5) (4m,0)  
++ ENDREPEAT
+V_V3         PWL-RE-N1 0   PWL    
++ REPEAT FOR 5
++ (1m,0) 
++ (2m,5) (3m,-5) 
++ (4m,0)  
++ ENDREPEAT
+V_V4         PWL-RE-N2 0   PWL TIME_SCALE_FACTOR=2   
++ REPEAT FOR 5
++ (1m,0) 
++ (2m,5) (3m,-5) 
++ (4m,0)  
++ ENDREPEAT

@@ -1,0 +1,174 @@
+("FILE_TYPE"	"PMAP File"
+    ("devices"
+        ("VSIN")
+        ("GAIN")
+        ("INTEG")
+    )
+    ("instances"
+        ("V1"
+            ("device_name"	"VSIN")
+            ("pspice_path"	"V_V1")
+            ("level"	"0")
+            ("model_params"
+                ("VOFF"
+                    ("value"	"0")
+                    ("pspice_param"	"VOFF")
+                )
+                ("VAMPL"
+                    ("value"	"6")
+                    ("pspice_param"	"VAMPL")
+                )
+                ("FREQ"
+                    ("value"	"1K")
+                    ("pspice_param"	"FREQ")
+                )
+                ("DC"
+                    ("value"	"")
+                    ("pspice_param"	"DC")
+                )
+                ("AC"
+                    ("value"	"")
+                    ("pspice_param"	"AC")
+                )
+                ("TD"
+                    ("value"	"0")
+                    ("pspice_param"	"TD")
+                )
+                ("DF"
+                    ("value"	"0")
+                    ("pspice_param"	"DF")
+                )
+                ("PHASE"
+                    ("value"	"0")
+                    ("pspice_param"	"PHASE")
+                )
+            )
+        )
+        ("V2"
+            ("device_name"	"VSIN")
+            ("pspice_path"	"V_V2")
+            ("level"	"0")
+            ("model_params"
+                ("VOFF"
+                    ("value"	"0")
+                    ("pspice_param"	"VOFF")
+                )
+                ("FREQ"
+                    ("value"	"1K")
+                    ("pspice_param"	"FREQ")
+                )
+                ("VAMPL"
+                    ("value"	"6")
+                    ("pspice_param"	"VAMPL")
+                )
+                ("DC"
+                    ("value"	"")
+                    ("pspice_param"	"DC")
+                )
+                ("AC"
+                    ("value"	"")
+                    ("pspice_param"	"AC")
+                )
+                ("TD"
+                    ("value"	"0")
+                    ("pspice_param"	"TD")
+                )
+                ("DF"
+                    ("value"	"0")
+                    ("pspice_param"	"DF")
+                )
+                ("PHASE"
+                    ("value"	"0")
+                    ("pspice_param"	"PHASE")
+                )
+            )
+        )
+        ("V3"
+            ("device_name"	"VSIN")
+            ("pspice_path"	"V_V3")
+            ("level"	"0")
+            ("model_params"
+                ("VOFF"
+                    ("value"	"0")
+                    ("pspice_param"	"VOFF")
+                )
+                ("VAMPL"
+                    ("value"	"1")
+                    ("pspice_param"	"VAMPL")
+                )
+                ("FREQ"
+                    ("value"	"1K")
+                    ("pspice_param"	"FREQ")
+                )
+                ("DC"
+                    ("value"	"")
+                    ("pspice_param"	"DC")
+                )
+                ("AC"
+                    ("value"	"")
+                    ("pspice_param"	"AC")
+                )
+                ("TD"
+                    ("value"	"0")
+                    ("pspice_param"	"TD")
+                )
+                ("DF"
+                    ("value"	"0")
+                    ("pspice_param"	"DF")
+                )
+                ("PHASE"
+                    ("value"	"0")
+                    ("pspice_param"	"PHASE")
+                )
+            )
+        )
+        ("GAIN1"
+            ("device_name"	"GAIN")
+            ("pspice_path"	"E_GAIN1")
+            ("level"	"0")
+            ("model_params"
+                ("GAIN"
+                    ("value"	"2")
+                    ("pspice_param"	"GAIN")
+                )
+            )
+        )
+        ("GAIN2"
+            ("device_name"	"GAIN")
+            ("pspice_path"	"E_GAIN2")
+            ("level"	"0")
+            ("model_params"
+                ("GAIN"
+                    ("value"	"6")
+                    ("pspice_param"	"GAIN")
+                )
+            )
+        )
+        ("GAIN3"
+            ("device_name"	"GAIN")
+            ("pspice_path"	"E_GAIN3")
+            ("level"	"0")
+            ("model_params"
+                ("GAIN"
+                    ("value"	"-3")
+                    ("pspice_param"	"GAIN")
+                )
+            )
+        )
+        ("INTEG1"
+            ("device_name"	"INTEG")
+            ("pspice_path"	"E_INTEG1")
+            ("level"	"0")
+            ("model_params"
+                ("IC"
+                    ("value"	"0V")
+                    ("pspice_param"	"IC")
+                )
+                ("GAIN"
+                    ("value"	"1.0")
+                    ("pspice_param"	"GAIN")
+                )
+            )
+        )
+    )
+)

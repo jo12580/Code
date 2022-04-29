@@ -1,0 +1,7 @@
+* source TRANSIENT ANALYSIS AND FOURIER ANALYSIS
+V_V1         SIN1 0  AC 0
++SIN 0 2 1k 0 0 0
+V_V2         SIN2 0  AC 0
++SIN 2 2 500 0 200 0
+V_V3         SIN3 0  AC 0
++SIN 0 1 1k 1m -200 90

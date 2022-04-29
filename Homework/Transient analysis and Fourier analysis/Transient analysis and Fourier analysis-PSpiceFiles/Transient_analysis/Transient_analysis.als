@@ -1,0 +1,8 @@
+.ALIASES
+V_V1            V1(+=N00106 -=0 ) CN @TRANSIENT ANALYSIS AND FOURIER
++ANALYSIS.Transient_analysis(sch_1):INS26@SOURCE.VDC.Normal(chips)
+R_R1            R1(1=N00106 2=N00113 ) CN @TRANSIENT ANALYSIS AND FOURIER
++ANALYSIS.Transient_analysis(sch_1):INS51@ANALOG.R.Normal(chips)
+C_C1            C1(1=0 2=N00113 ) CN @TRANSIENT ANALYSIS AND FOURIER
++ANALYSIS.Transient_analysis(sch_1):INS268@ANALOG.C.Normal(chips)
+.ENDALIASES

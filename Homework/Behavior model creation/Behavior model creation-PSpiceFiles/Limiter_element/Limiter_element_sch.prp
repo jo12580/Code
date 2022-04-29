@@ -1,0 +1,114 @@
+("FILE_TYPE"	"PMAP File"
+    ("devices"
+        ("LIMIT")
+        ("GLIMIT")
+        ("SOFTLIM")
+        ("VSIN")
+    )
+    ("instances"
+        ("LIMIT1"
+            ("device_name"	"LIMIT")
+            ("pspice_path"	"E_LIMIT1")
+            ("level"	"0")
+            ("model_params"
+                ("HI"
+                    ("value"	"5")
+                    ("pspice_param"	"HI")
+                )
+                ("LO"
+                    ("value"	"-2")
+                    ("pspice_param"	"LO")
+                )
+            )
+        )
+        ("GLIMIT1"
+            ("device_name"	"GLIMIT")
+            ("pspice_path"	"E_GLIMIT1")
+            ("level"	"0")
+            ("model_params"
+                ("LO"
+                    ("value"	"-2")
+                    ("pspice_param"	"LO")
+                )
+                ("GAIN"
+                    ("value"	"100")
+                    ("pspice_param"	"GAIN")
+                )
+                ("HI"
+                    ("value"	"5")
+                    ("pspice_param"	"HI")
+                )
+            )
+        )
+        ("SLIMIT1"
+            ("device_name"	"SOFTLIM")
+            ("pspice_path"	"E_SLIMIT1")
+            ("level"	"0")
+            ("model_params"
+                ("GAIN"
+                    ("value"	"100")
+                    ("pspice_param"	"GAIN")
+                )
+                ("LO"
+                    ("value"	"-2")
+                    ("pspice_param"	"LO")
+                )
+                ("HI"
+                    ("value"	"5")
+                    ("pspice_param"	"HI")
+                )
+                ("A"
+                    ("value"	"(((@HI)-(@LO))/2)")
+                    ("pspice_param"	"A")
+                )
+                ("B"
+                    ("value"	"(((@HI)+(@LO))/2)")
+                    ("pspice_param"	"B")
+                )
+                ("V"
+                    ("value"	"(@GAIN)*(V(%IN)-@B)/(@A)")
+                    ("pspice_param"	"V")
+                )
+            )
+        )
+        ("V1"
+            ("device_name"	"VSIN")
+            ("pspice_path"	"V_V1")
+            ("level"	"0")
+            ("model_params"
+                ("VOFF"
+                    ("value"	"0")
+                    ("pspice_param"	"VOFF")
+                )
+                ("VAMPL"
+                    ("value"	"6")
+                    ("pspice_param"	"VAMPL")
+                )
+                ("FREQ"
+                    ("value"	"1k")
+                    ("pspice_param"	"FREQ")
+                )
+                ("PHASE"
+                    ("value"	"0")
+                    ("pspice_param"	"PHASE")
+                )
+                ("DF"
+                    ("value"	"0")
+                    ("pspice_param"	"DF")
+                )
+                ("TD"
+                    ("value"	"0")
+                    ("pspice_param"	"TD")
+                )
+                ("AC"
+                    ("value"	"")
+                    ("pspice_param"	"AC")
+                )
+                ("DC"
+                    ("value"	"")
+                    ("pspice_param"	"DC")
+                )
+            )
+        )
+    )
+)

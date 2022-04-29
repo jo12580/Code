@@ -1,0 +1,112 @@
+(ExpressProject "Transmission scan analysis"
+  (ProjectVersion "19981106")
+  (ProjectType "Analog or A/D Mixed Mode")
+  (Folder "Design Resources"
+    (Folder "Library")
+    (NoModify)
+    (File ".\transmission scan analysis.dsn"
+      (Type "Schematic Design"))
+    (BuildFileAddedOrDeleted "x")
+    (CompileFileAddedOrDeleted "x")
+    (PSPICE_Regenerate_Netlist_Flag "FALSE")
+    (RootChangedForceReNetlist "x"))
+  (Folder "Outputs"
+    (File ".\transmission scan analysis-pspicefiles\schematic1\schematic1.net"
+      (Type "Report"))
+    (File
+       ".\transmission scan analysis-pspicefiles\temperature sweep\temperature sweep.net"
+      (Type "Report")))
+  (Folder "PSpice Resources"
+    (Folder "Simulation Profiles"
+      (File.PSpice.{09528990-3187-11D2-BC7B-00A0C90CBF91}
+         ".\transmission scan analysis-pspicefiles\schematic1\1.sim"
+        (DisplayName "SCHEMATIC1-1")
+        (Type "PSpice Profile"))
+      (File.PSpice.{09528990-3187-11D2-BC7B-00A0C90CBF91}
+         ".\transmission scan analysis-pspicefiles\schematic1\2.sim"
+        (DisplayName "SCHEMATIC1-2")
+        (Type "PSpice Profile"))
+      (File.PSpice.{09528990-3187-11D2-BC7B-00A0C90CBF91}
+         ".\transmission scan analysis-pspicefiles\schematic1\3.sim"
+        (DisplayName "SCHEMATIC1-3")
+        (Type "PSpice Profile"))
+      (ActiveProfile
+         ".\transmission scan analysis-pspicefiles\temperature sweep\temperature_sweep.sim")
+      (File.PSpice.{09528990-3187-11D2-BC7B-00A0C90CBF91}
+         ".\transmission scan analysis-pspicefiles\temperature sweep\temperature_sweep.sim"
+        (DisplayName "Temperature Sweep-Temperature_Sweep")
+        (Type "PSpice Profile")))
+    (Folder "Model Libraries"
+      (Sort User))
+    (Folder "Stimulus Files"
+      (Sort User))
+    (Folder "Include Files"
+      (Sort User)))
+  (DefaultLibraryBrowseDirectory "library\PSpice")
+  (PartMRUSelector
+    (0
+      (LibraryName
+         "D:\SOFTWARE\CAPTURE_PSPICE\TOOLS\CAPTURE\LIBRARY\CAPSYM.OLB")
+      (DeviceIndex "0"))
+    (D1N4148
+      (FullPartName "D1N4148.Normal")
+      (LibraryName
+         "D:\SOFTWARE\CAPTURE_PSPICE\TOOLS\CAPTURE\LIBRARY\PSPICE\DIODE.OLB")
+      (DeviceIndex "0"))
+    (R
+      (FullPartName "R.Normal")
+      (LibraryName
+         "D:\SOFTWARE\CAPTURE_PSPICE\TOOLS\CAPTURE\LIBRARY\PSPICE\ANALOG.OLB")
+      (DeviceIndex "0"))
+    (VDC
+      (FullPartName "VDC.Normal")
+      (LibraryName
+         "D:\SOFTWARE\CAPTURE_PSPICE\TOOLS\CAPTURE\LIBRARY\PSPICE\SOURCE.OLB")
+      (DeviceIndex "0"))
+    (Q2N3904
+      (FullPartName "Q2N3904.Normal")
+      (LibraryName
+         "D:\SOFTWARE\CAPTURE_PSPICE\TOOLS\CAPTURE\LIBRARY\PSPICE\BIPOLAR.OLB")
+      (DeviceIndex "0"))
+    (IDC
+      (FullPartName "IDC.Normal")
+      (LibraryName
+         "D:\SOFTWARE\CAPTURE_PSPICE\TOOLS\CAPTURE\LIBRARY\PSPICE\SOURCE.OLB")
+      (DeviceIndex "0")))
+  (LastUsedLibraryBrowseDirectory
+     "D:\Software\Capture_PSpice\tools\capture\library\pspice")
+  (MPSSessionName "007")
+  (GlobalState
+    (FileView
+      (Path "Design Resources")
+      (Path "Design Resources"
+         "D:\Software\Capture_PSpice\Project\Transmission scan analysis\transmission scan analysis.dsn")
+      (Path "Design Resources"
+         "D:\Software\Capture_PSpice\Project\Transmission scan analysis\transmission scan analysis.dsn"
+         "Temperature Sweep")
+      (Path "Design Resources"
+         "D:\Software\Capture_PSpice\Project\Transmission scan analysis\transmission scan analysis.dsn"
+         "SCHEMATIC1")
+      (Path "Outputs")
+      (Path "PSpice Resources")
+      (Path "PSpice Resources" "Simulation Profiles")
+      (Select "Design Resources"
+         "D:\Software\Capture_PSpice\Project\Transmission scan analysis\transmission scan analysis.dsn"
+         "Temperature Sweep" "PAG2"))
+    (HierarchyView)
+    (Doc
+      (Type "COrCapturePMDoc")
+      (Frame
+        (Placement "44 0 1 -1 -1 -8 -31 0 200 0 282"))
+      (Tab 0))
+    (Doc
+      (Type "COrSchematicDoc")
+      (Frame
+        (Placement "44 2 3 -1 -1 -8 -31 78 1114 78 399")
+        (Scroll "40 250")
+        (Zoom "200")
+        (Occurrence "/"))
+      (Path
+         "D:\SOFTWARE\CAPTURE_PSPICE\PROJECT\TRANSMISSION SCAN ANALYSIS\TRANSMISSION SCAN ANALYSIS.DSN")
+      (Schematic "Temperature Sweep")
+      (Page "PAG2"))))

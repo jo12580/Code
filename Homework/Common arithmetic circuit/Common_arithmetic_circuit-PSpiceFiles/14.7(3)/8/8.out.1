@@ -1,0 +1,47 @@
+
+**** 12/15/21 15:33:47 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+
+ ** Profile: "14.7(3)-8"  [ D:\Software\Cadence_PSpice\Project\Common arithmetic circuit\Common_arithmetic_circuit-PSpiceFiles\14.7(3
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "8.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of D:\Software\Cadence_PSpice\Cadence\SPB_Data\cdssetup\OrCAD_PSpice\17.2.0\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.TRAN  0 150m 0 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\14.7(3).net" 
+
+
+
+**** INCLUDING 14.7(3).net ****
+* source COMMON_ARITHMETIC_CIRCUIT
+X_U5         VCC/2 N04153 VCC 0 VOUT OP-07C/301/TI
+C_C2         N04153 VOUT  1n  TC=0,0 
+C_C1         N04145 N04149  1n  TC=0,0 
+R_R12         N04153 VOUT  1k TC=0,0 
+R_R11         N04149 N04153  1k TC=0,0 
+V_V1         VCC 0 10Vdc
+V_V2         0 N04145  
++PULSE 0 3 0 1U 1U 
+
+**** RESUMING 8.cir ****
+.END
+
+ERROR(ORPSIM-15141): Less than 2 connections at node VCC/2.
+

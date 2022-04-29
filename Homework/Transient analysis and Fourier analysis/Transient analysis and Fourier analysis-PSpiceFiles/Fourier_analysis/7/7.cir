@@ -1,0 +1,20 @@
+** Profile: "Fourier_analysis-7"  [ D:\Software\Capture_PSpice\Project\Transient analysis and Fourier analysis\Transient analysis and Fourier analysis-PSpiceFiles\Fourier_analysis\7.sim ] 
+
+** Creating circuit file "7.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\SPB_Data\cdssetup\OrCAD_PSpice\17.2.0\PSpice.ini file:
+.lib "nomd.lib" 
+
+*Analysis directives: 
+.TRAN  0 10m 0 0.01m 
+.FOUR 1k 9 V([OUT1]) V([OUT2]) 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\Fourier_analysis.net" 
+
+
+.END

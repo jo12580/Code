@@ -1,0 +1,360 @@
+
+**** 12/12/21 11:54:54 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-1"  [ D:\Software\Cadence_PSpice\Project\Electronic circuit design\exam_1-pspicefiles\schematic1\1.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "1.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of D:\Software\Cadence_PSpice\Cadence\SPB_Data\cdssetup\OrCAD_PSpice\17.2.0\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.TRAN  0 500m 0 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source EXAM_1
+R_R11         N06051 N06141  1k TC=0,0 
+X_U1B         N06141 N06327 VCC 0 N06257 LM324
+R_R15         N06327 N063851  1k TC=0,0 
+C_C10         UI1 N063851  10u  TC=0,0 
+C_C12         N06257 UI2  10u  TC=0,0 
+R_R10         N06051 N06141  10k TC=0,0 
+R_R16         N06327 N06257  10k TC=0,0 
+V_V1         VCC 0 12Vdc
+V_V2         UI1 0  
++SIN 0 0.1 500 0 0 0
+R_R12         N06051 VCC  300k TC=0,0 
+R_R14         N06327 N062891  10k TC=0,0 
+R_R17         UI2 0  1k TC=0,0 
+C_C9         UO1 N062891  10u  TC=0,0 
+C_C11         0 N06051  10u  TC=0,0 
+R_R13         0 N06051  100k TC=0,0 
+R_R2         N09983 N10071  10k TC=0,0 
+R_R5         N15352 N10371  30k TC=0,0 
+R_R19         UO1 0  3meg TC=0,0 
+C_C2         0 N10371  10n  TC=0,0 
+X_U1C         N10071 N10371 VCC 0 UO11 LM324
+C_C6         UO11 N102391  10u  TC=0,0 
+C_C1         0 N09983  10u  TC=0,0 
+C_C8         0 UO1  100nf  TC=0,0 
+R_R9         N10307 UO1  1k TC=0,0 
+R_R3         N09983 VCC  50k TC=0,0 
+R_R4         0 N09983  51k TC=0,0 
+R_R8         N102391 N10307  900 TC=0,0 
+R_R1         N10071 UO11  33k TC=0,0 
+C_C7         0 N10307  100nf  TC=0,0 
+C_C13         N12319 N12337  1n  TC=0,0 
+R_R21         N12207 VCC  300k TC=0,0 
+R_R20         0 N12207  100k TC=0,0 
+R_R22         UI2 N12319  350k TC=0,0 
+R_R23         0 N12319  800 TC=0,0 
+X_U2B         N12207 N12337 VCC 0 UO2 LM324
+C_C14         N12319 UO2  1n  TC=0,0 
+R_R24         UO2 N12337  2meg TC=0,0 
+R_R25         N15477 UO11  10k TC=0,0 
+R_R26         N15481 UO11  10k TC=0,0 
+X_U2C         N16099 N16134 VCC 0 N16256 LM324
+R_R27         N16134 VCC  1k TC=0,0 
+R_R28         N16099 VCC  1k TC=0,0 
+R_R29         N16099 UO2  1k TC=0,0 
+R_R30         N16134 N16165  1k TC=0,0 
+R_R31         N16260 N16256  1k TC=0,0 
+R_R32         N16260 0  1k TC=0,0 
+R_R33         N16273 0  1k TC=0,0 
+C_C15         UO1 N16165  1n  TC=0,0 
+C_C16         N16260 N16273  1n  TC=0,0 
+D_D3         N15352 N15477 D1N4148 
+D_D4         N15481 N15352 D1N4148 
+
+**** RESUMING 1.cir ****
+.END
+
+**** 12/12/21 11:54:54 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-1"  [ D:\Software\Cadence_PSpice\Project\Electronic circuit design\exam_1-pspicefiles\schematic1\1.sim ] 
+
+
+ ****     Diode MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               D1N4148         X_U1B.dx        X_U1B.dy        X_U1C.dx        
+          IS    2.682000E-09  800.000000E-18  800.000000E-18  800.000000E-18 
+           N    1.836                                                        
+         ISR    1.565000E-09                                                 
+         IKF     .04417                                                      
+          BV  100                                                            
+         IBV  100.000000E-06                                                 
+          RS     .5664          1               1.000000E-03    1            
+          TT   11.540000E-09                                                 
+         CJO    4.000000E-12                   10.000000E-12                 
+          VJ     .5                                                          
+           M     .3333                                                       
+
+
+               X_U1C.dy        X_U2B.dx        X_U2B.dy        X_U2C.dx        
+          IS  800.000000E-18  800.000000E-18  800.000000E-18  800.000000E-18 
+          RS    1.000000E-03    1               1.000000E-03    1            
+         CJO   10.000000E-12                   10.000000E-12                 
+
+
+               X_U2C.dy        
+          IS  800.000000E-18 
+          RS    1.000000E-03 
+         CJO   10.000000E-12 
+
+
+**** 12/12/21 11:54:54 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-1"  [ D:\Software\Cadence_PSpice\Project\Electronic circuit design\exam_1-pspicefiles\schematic1\1.sim ] 
+
+
+ ****     BJT MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U1B.qx        X_U1C.qx        X_U2B.qx        X_U2C.qx        
+               PNP             PNP             PNP             PNP             
+       LEVEL    1               1               1               1            
+          IS  800.000000E-18  800.000000E-18  800.000000E-18  800.000000E-18 
+          BF  166.7           166.7           166.7           166.7          
+          NF    1               1               1               1            
+          BR    1               1               1               1            
+          NR    1               1               1               1            
+         ISS    0               0               0               0            
+          RE    0               0               0               0            
+          RC    0               0               0               0            
+         CJE    0               0               0               0            
+         VJE     .75             .75             .75             .75         
+         CJC    0               0               0               0            
+         VJC     .75             .75             .75             .75         
+         MJC     .33             .33             .33             .33         
+        XCJC    1               1               1               1            
+         CJS    0               0               0               0            
+         VJS     .75             .75             .75             .75         
+          KF    0               0               0               0            
+          AF    1               1               1               1            
+          CN    2.2             2.2             2.2             2.2          
+           D     .52             .52             .52             .52         
+
+
+**** 12/12/21 11:54:54 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-1"  [ D:\Software\Cadence_PSpice\Project\Electronic circuit design\exam_1-pspicefiles\schematic1\1.sim ] 
+
+
+ ****     Current Controlled Switch MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U1B.sw2       X_U1B.sw1       X_U1B.sw3       X_U1B.sw4       
+         RON    1               1               1               1            
+        ROFF   10.000000E+06   10.000000E+06   10.000000E+06   10.000000E+06 
+         ION    0              -1.000000E-06   -1.000000E-06    0            
+        IOFF   -1.000000E-06    0               0              -1.000000E-06 
+
+
+               X_U1C.sw2       X_U1C.sw1       X_U1C.sw3       X_U1C.sw4       
+         RON    1               1               1               1            
+        ROFF   10.000000E+06   10.000000E+06   10.000000E+06   10.000000E+06 
+         ION    0              -1.000000E-06   -1.000000E-06    0            
+        IOFF   -1.000000E-06    0               0              -1.000000E-06 
+
+
+               X_U2B.sw2       X_U2B.sw1       X_U2B.sw3       X_U2B.sw4       
+         RON    1               1               1               1            
+        ROFF   10.000000E+06   10.000000E+06   10.000000E+06   10.000000E+06 
+         ION    0              -1.000000E-06   -1.000000E-06    0            
+        IOFF   -1.000000E-06    0               0              -1.000000E-06 
+
+
+               X_U2C.sw2       X_U2C.sw1       X_U2C.sw3       X_U2C.sw4       
+         RON    1               1               1               1            
+        ROFF   10.000000E+06   10.000000E+06   10.000000E+06   10.000000E+06 
+         ION    0              -1.000000E-06   -1.000000E-06    0            
+        IOFF   -1.000000E-06    0               0              -1.000000E-06 
+
+
+**** 12/12/21 11:54:54 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-1"  [ D:\Software\Cadence_PSpice\Project\Electronic circuit design\exam_1-pspicefiles\schematic1\1.sim ] 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(  UI1)    0.0000  (  UI2)    0.0000  (  UO1)    0.0000  (  UO2)    2.9141      
+
+(  VCC)   12.0000  ( UO11)    5.8154  (N06051)    3.0034 (N06141)    3.0035     
+
+(N06257)    3.0038 (N06327)    3.0043 (N09983)    5.9697 (N10071)    5.9341     
+
+(N10307)    0.0000 (N10371)    5.9340 (N12207)    3.0034 (N12319)    0.0000     
+
+(N12337)    3.0042 (N15352)    5.9326 (N15477)    5.8158 (N15481)    5.8154     
+
+(N16099)    7.4571 (N16134)   12.0000 (N16165)   12.0000 (N16256)     .0057     
+
+(N16260)     .0029 (N16273)    0.0000 (N062891)    3.0043                       
+
+(N063851)    3.0043                   (N102391)    0.0000                       
+
+(X_U1B.6) 564.8E-06                   (X_U1B.7)    3.0038                       
+
+(X_U1B.8)    3.0038                   (X_U1B.9)    0.0000                       
+
+(X_U1B.a)   12.0000                   (X_U1B.b) 49.60E-09                       
+
+(X_U1C.6) 34.85E-06                   (X_U1C.7)    5.8152                       
+
+(X_U1C.8)    5.8152                   (X_U1C.9)    0.0000                       
+
+(X_U1C.a) 4.843E-06                   (X_U1C.b) 3.643E-06                       
+
+(X_U2B.6) 646.8E-06                   (X_U2B.7)    2.6869                       
+
+(X_U2B.8)    2.6869                   (X_U2B.9)    0.0000                       
+
+(X_U2B.a)     .0045                   (X_U2B.b)     .0045                       
+
+(X_U2C.6)    1.4968                   (X_U2C.7)   -2.0248                       
+
+(X_U2C.8)   -2.0248                   (X_U2C.9)    0.0000                       
+
+(X_U2C.a)     .0406                   (X_U2C.b)     .0406                       
+
+(X_U1B.10)    3.6121                  (X_U1B.11)     .0399                      
+
+(X_U1B.12)     .0407                  (X_U1B.13)    3.5982                      
+
+(X_U1B.14)    3.5979                  (X_U1B.53)   10.5000                      
+
+(X_U1B.54)     .8220                  (X_U1B.90)-45.09E-06                      
+
+(X_U1B.91)   40.0000                  (X_U1B.92)  -40.0000                      
+
+(X_U1B.99)    6.0000                  (X_U1C.10)    6.5418                      
+
+(X_U1C.11)     .0398                  (X_U1C.12)     .0396                      
+
+(X_U1C.13)    6.5278                  (X_U1C.14)    6.5279                      
+
+(X_U1C.53)   10.5000                  (X_U1C.54)     .8220                      
+
+(X_U1C.90)    -.0036                  (X_U1C.91)   40.0000                      
+
+(X_U1C.92)  -40.0000                  (X_U1C.99)    6.0000                      
+
+(X_U2B.10)    3.6121                  (X_U2B.11)     .0399                      
+
+(X_U2B.12)     .0407                  (X_U2B.13)    3.5982                      
+
+(X_U2B.14)    3.5979                  (X_U2B.53)   10.5000                      
+
+(X_U2B.54)     .8220                  (X_U2B.90)   -4.5431                      
+
+(X_U2B.91)   40.0000                  (X_U2B.92)  -40.0000                      
+
+(X_U2B.99)    6.0000                  (X_U2C.10)    8.0962                      
+
+(X_U2C.11) 106.6E-09                  (X_U2C.12)     .0787                      
+
+(X_U2C.13)    8.0962                  (X_U2C.14)    8.0686                      
+
+(X_U2C.53)   10.5000                  (X_U2C.54)     .8220                      
+
+(X_U2C.90)  -40.6100                  (X_U2C.91)   40.0000                      
+
+(X_U2C.92)  -40.0000                  (X_U2C.99)    6.0000                  
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1        -1.007E-02
+    V_V2         0.000E+00
+    X_U1B.vb     5.648E-09
+    X_U1B.vc     7.497E-12
+    X_U1B.ve     2.070E-12
+    X_U1B.vlim  -4.509E-08
+    X_U1B.vlp   -4.000E-11
+    X_U1B.vln   -4.000E-11
+    X_U1C.vb     3.485E-10
+    X_U1C.vc     4.685E-12
+    X_U1C.ve     4.882E-12
+    X_U1C.vlim  -3.643E-06
+    X_U1C.vlp   -4.000E-11
+    X_U1C.vln   -4.000E-11
+    X_U2B.vb     6.468E-09
+    X_U2B.vc     7.587E-12
+    X_U2B.ve     1.980E-12
+    X_U2B.vlim  -4.543E-03
+    X_U2B.vlp   -4.454E-11
+    X_U2B.vln   -3.546E-11
+    X_U2C.vb     1.497E-05
+    X_U2C.vc     1.050E-11
+    X_U2C.ve    -4.061E-02
+    X_U2C.vlim  -4.061E-02
+    X_U2C.vlp   -8.061E-11
+    X_U2C.vln    1.383E-05
+
+    TOTAL POWER DISSIPATION   1.54E-01  WATTS
+
+
+
+          JOB CONCLUDED
+
+**** 12/12/21 11:54:54 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-1"  [ D:\Software\Cadence_PSpice\Project\Electronic circuit design\exam_1-pspicefiles\schematic1\1.sim ] 
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  License check-out time            =         .72
+  Total job time (using Solver 1)   =       13.69
+

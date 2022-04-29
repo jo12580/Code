@@ -1,0 +1,41 @@
+("FILE_TYPE"	"PMAP File"
+    ("devices"
+        ("CONST")
+        ("GAIN")
+    )
+    ("instances"
+        ("CONST1"
+            ("device_name"	"CONST")
+            ("pspice_path"	"V_CONST1")
+            ("level"	"0")
+            ("model_params"
+                ("Value"
+                    ("value"	"8")
+                    ("pspice_param"	"DC")
+                )
+            )
+        )
+        ("CONST2"
+            ("device_name"	"CONST")
+            ("pspice_path"	"V_CONST2")
+            ("level"	"0")
+            ("model_params"
+                ("Value"
+                    ("value"	"3")
+                    ("pspice_param"	"DC")
+                )
+            )
+        )
+        ("GAIN1"
+            ("device_name"	"GAIN")
+            ("pspice_path"	"E_GAIN1")
+            ("level"	"0")
+            ("model_params"
+                ("GAIN"
+                    ("value"	"-2")
+                    ("pspice_param"	"GAIN")
+                )
+            )
+        )
+    )
+)

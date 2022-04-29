@@ -1,0 +1,78 @@
+
+**** 10/11/21 10:55:35 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "静态工作点分析-007"  [ D:\Software\Capture_PSpice\Project\Static operating point analysis circuit\Static operating poin
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "007.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\SPB_Data\cdssetup\OrCAD_PSpice\17.2.0\PSpice.ini file:
+.lib "nomd.lib" 
+
+*Analysis directives: 
+.OP
+.OPTIONS ADVCONV
+.OPTIONS ITL2= 200
+.OPTIONS ITL4= 100
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\.net" 
+
+
+
+ERROR(ORPSIM-15347): Cannot open input file D:\Software\Capture_PSpice\Project\Static operating point analysis circuit\Static operating point analysis circuit-PSpiceFiles\静态工作点分析\.net.
+
+
+ABORTING SIMULATION
+**** 10/11/21 10:55:35 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "静态工作点分析-007"  [ D:\Software\Capture_PSpice\Project\Static operating point analysis circuit\Static operating poin
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+Node counts:
+  Top level (NUNODS)                =           1
+  External (NCNODS)                 =           1
+  Total (NUMNOD)                    =           0
+
+Total device count (NUMEL)          =           0
+
+Number of subcircuits (X)           =           0
+
+Analysis statistics:
+  No. total time points (NUMTTP)    =           0
+  No. rejected time points (NUMRTP) =           0
+  No. iterations (NUMNIT)           =           0
+
+Load Threads                        =           1
+
+Runtime statistics:                       Seconds      Iterations
+  Readin                            =        0.00
+  General setup                     =        0.00
+  CMI setup                     =        0.00
+  Setup                             =        0.00
+  DC sweep                          =        0.00               0
+  Bias point                        =        0.00               0
+  AC and noise                      =        0.00               0
+  Total transient analysis          =        0.00
+  Output                            =        0.00
+  Overhead                          =         .02
+  Total job time                    =        0.00
+

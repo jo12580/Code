@@ -1,0 +1,35 @@
+* source ZONGHESHEJI_1
+R_R16         OUT2 VCC  70k TC=0,0 
+R_R15         0 OUT2  70k TC=0,0 
+R_R10         0 N12598  30k TC=0,0 
+Q_Q4         0 OUT2 N12466 Q2N3905
+R_R19         0 0  6k TC=0,0 
+V_V2         VCC 0 12Vdc
+R_R11         N12984 N12728  90 TC=0,0 
+R_R6         VCC N12644  60k TC=0,0 
+R_R7         N129300 0  5k TC=0,0 
+R_R17         N12644 N129300  5k TC=0,0 
+C_C2         OUT1 N12546  10u  TC=0,0 
+C_C3         0 N12984  50u  TC=0,0 
+R_R14         N13034 N127442  200 TC=0,0 
+C_C1         N12670 N12598  10u  TC=0,0 
+R_R18         0 0  5k TC=0,0 
+R_R8         VCC N12444  5k TC=0,0 
+C_C6         N12466 OUT3  200u  TC=0,0 
+R_R1         N12598 VCC  120k TC=0,0 
+R_R3         0 N12984  1k TC=0,0 
+R_R9         N13034 0  1k TC=0,0 
+Q_Q1         OUT1 N12598 N12728 Q2N3904
+R_R2         OUT1 VCC  5.1k TC=0,0 
+Q_Q2         N12444 N12644 N127442 Q2N3904
+C_C4         N12644 N12546  10u  TC=0,0 
+V_V1         N12670 0  
++SIN 0 20m 1k 0 0 0
+R_R4         0 N12546  2k TC=0,0 
+D_D1         N125841 OUT2 D1N4148_1 
+C_C5         0 N13034  50u  TC=0,0 
+C_C7         N12444 OUT2  20u  TC=0,0 
+D_D2         OUT2 N125841 D1N4148_1 
+Q_Q3         VCC OUT2 N12466 Q2N3904
+R_R12         0 OUT3  2k TC=0,0 
+.PARAM  rar=10k

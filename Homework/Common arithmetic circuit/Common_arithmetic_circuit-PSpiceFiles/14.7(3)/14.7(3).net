@@ -1,0 +1,10 @@
+* source COMMON_ARITHMETIC_CIRCUIT
+X_U5         VEE N04153 VCC 0 VOUT OP-07C/301/TI
+C_C2         N04153 VOUT  1n  TC=0,0 
+C_C1         N04145 N04149  1n  TC=0,0 
+R_R12         N04153 VOUT  1k TC=0,0 
+R_R11         N04149 N04153  1k TC=0,0 
+V_V1         VCC 0 10Vdc
+V_V2         0 N04145  
++PULSE 0 3 0 0 0 0.5M 0.002
+V_V3         VEE 0 5

@@ -1,0 +1,38 @@
+
+**** 10/11/21 11:32:25 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "Dc sensitivity analysis-2-SENS"  [ D:\Software\Capture_PSpice\Project\Static operating point analysis circuit\Static op
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "2-SENS.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\SPB_Data\cdssetup\OrCAD_PSpice\17.2.0\PSpice.ini file:
+.lib "nomd.lib" 
+
+*Analysis directives: 
+.SENS v([OUT]) 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\Dc sensitivity analysis.net" 
+
+
+
+**** INCLUDING "Dc sensitivity analysis.net" ****
+
+**** RESUMING 2-SENS.cir ****
+.END
+
+WARNING(ORPSIM-15188): There are no devices in this circuit
+

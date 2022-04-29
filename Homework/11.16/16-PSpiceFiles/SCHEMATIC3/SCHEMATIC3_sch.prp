@@ -1,0 +1,144 @@
+("FILE_TYPE"	"PMAP File"
+    ("devices"
+        ("VAC")
+        ("LAPLACE")
+    )
+    ("instances"
+        ("V1"
+            ("device_name"	"VAC")
+            ("pspice_path"	"V_V1")
+            ("level"	"0")
+            ("model_params"
+                ("DC"
+                    ("value"	"0Vdc")
+                    ("pspice_param"	"DC")
+                )
+                ("ACMAG"
+                    ("value"	"1Vac")
+                    ("pspice_param"	"AC")
+                )
+                ("ACPHASE"
+                    ("value"	"")
+                    ("pspice_param"	"ACPHASE")
+                )
+            )
+        )
+        ("LAPLACE1"
+            ("device_name"	"LAPLACE")
+            ("pspice_path"	"E_LAPLACE1")
+            ("level"	"0")
+            ("model_params"
+                ("DENOM"
+                    ("value"	"(S+1000)*(S+100000)")
+                    ("pspice_param"	"DENOM")
+                )
+                ("NUM"
+                    ("value"	"1000")
+                    ("pspice_param"	"NUM")
+                )
+            )
+        )
+        ("V2"
+            ("device_name"	"VAC")
+            ("pspice_path"	"V_V2")
+            ("level"	"0")
+            ("model_params"
+                ("DC"
+                    ("value"	"0Vdc")
+                    ("pspice_param"	"DC")
+                )
+                ("ACMAG"
+                    ("value"	"1Vac")
+                    ("pspice_param"	"AC")
+                )
+                ("ACPHASE"
+                    ("value"	"")
+                    ("pspice_param"	"ACPHASE")
+                )
+            )
+        )
+        ("LAPLACE2"
+            ("device_name"	"LAPLACE")
+            ("pspice_path"	"E_LAPLACE2")
+            ("level"	"0")
+            ("model_params"
+                ("NUM"
+                    ("value"	"1000")
+                    ("pspice_param"	"NUM")
+                )
+                ("DENOM"
+                    ("value"	"(S+1000)*(S+100000)*(S+10000000)")
+                    ("pspice_param"	"DENOM")
+                )
+            )
+        )
+        ("LAPLACE3"
+            ("device_name"	"LAPLACE")
+            ("pspice_path"	"E_LAPLACE3")
+            ("level"	"0")
+            ("model_params"
+                ("DENOM"
+                    ("value"	"(S+1000)*(S+100000)*(S+10000000)")
+                    ("pspice_param"	"DENOM")
+                )
+                ("NUM"
+                    ("value"	"1000*(S+1000000)")
+                    ("pspice_param"	"NUM")
+                )
+            )
+        )
+        ("V3"
+            ("device_name"	"VAC")
+            ("pspice_path"	"V_V3")
+            ("level"	"0")
+            ("model_params"
+                ("DC"
+                    ("value"	"0Vdc")
+                    ("pspice_param"	"DC")
+                )
+                ("ACMAG"
+                    ("value"	"1Vac")
+                    ("pspice_param"	"AC")
+                )
+                ("ACPHASE"
+                    ("value"	"")
+                    ("pspice_param"	"ACPHASE")
+                )
+            )
+        )
+        ("LAPLACE4"
+            ("device_name"	"LAPLACE")
+            ("pspice_path"	"E_LAPLACE4")
+            ("level"	"0")
+            ("model_params"
+                ("DENOM"
+                    ("value"	"pwrs(s,2)+1")
+                    ("pspice_param"	"DENOM")
+                )
+                ("NUM"
+                    ("value"	"1")
+                    ("pspice_param"	"NUM")
+                )
+            )
+        )
+        ("V4"
+            ("device_name"	"VAC")
+            ("pspice_path"	"V_V4")
+            ("level"	"0")
+            ("model_params"
+                ("DC"
+                    ("value"	"0Vdc")
+                    ("pspice_param"	"DC")
+                )
+                ("ACMAG"
+                    ("value"	"1Vac")
+                    ("pspice_param"	"AC")
+                )
+                ("ACPHASE"
+                    ("value"	"")
+                    ("pspice_param"	"ACPHASE")
+                )
+            )
+        )
+    )
+)

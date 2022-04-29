@@ -1,0 +1,136 @@
+("FILE_TYPE"	"PMAP File"
+    ("devices"
+        ("VPULSE")
+    )
+    ("instances"
+        ("V4"
+            ("device_name"	"VPULSE")
+            ("pspice_path"	"V_V4")
+            ("level"	"0")
+            ("model_params"
+                ("PER"
+                    ("value"	"1m")
+                    ("pspice_param"	"PER")
+                )
+                ("TF"
+                    ("value"	"1u")
+                    ("pspice_param"	"TF")
+                )
+                ("TD"
+                    ("value"	"2m")
+                    ("pspice_param"	"TD")
+                )
+                ("V1"
+                    ("value"	"0")
+                    ("pspice_param"	"V1")
+                )
+                ("V2"
+                    ("value"	"5")
+                    ("pspice_param"	"V2")
+                )
+                ("TR"
+                    ("value"	"1u")
+                    ("pspice_param"	"TR")
+                )
+                ("PW"
+                    ("value"	"0.5m")
+                    ("pspice_param"	"PW")
+                )
+                ("AC"
+                    ("value"	"")
+                    ("pspice_param"	"AC")
+                )
+                ("DC"
+                    ("value"	"")
+                    ("pspice_param"	"DC")
+                )
+            )
+        )
+        ("v5"
+            ("device_name"	"VPULSE")
+            ("pspice_path"	"V_v5")
+            ("level"	"0")
+            ("model_params"
+                ("TF"
+                    ("value"	"1m")
+                    ("pspice_param"	"TF")
+                )
+                ("TD"
+                    ("value"	"2m")
+                    ("pspice_param"	"TD")
+                )
+                ("V1"
+                    ("value"	"0")
+                    ("pspice_param"	"V1")
+                )
+                ("V2"
+                    ("value"	"5")
+                    ("pspice_param"	"V2")
+                )
+                ("TR"
+                    ("value"	"1m")
+                    ("pspice_param"	"TR")
+                )
+                ("PW"
+                    ("value"	"1u")
+                    ("pspice_param"	"PW")
+                )
+                ("PER"
+                    ("value"	"2m")
+                    ("pspice_param"	"PER")
+                )
+                ("AC"
+                    ("value"	"")
+                    ("pspice_param"	"AC")
+                )
+                ("DC"
+                    ("value"	"")
+                    ("pspice_param"	"DC")
+                )
+            )
+        )
+        ("V6"
+            ("device_name"	"VPULSE")
+            ("pspice_path"	"V_V6")
+            ("level"	"0")
+            ("model_params"
+                ("PW"
+                    ("value"	"1u")
+                    ("pspice_param"	"PW")
+                )
+                ("TF"
+                    ("value"	"1m")
+                    ("pspice_param"	"TF")
+                )
+                ("TR"
+                    ("value"	"1u")
+                    ("pspice_param"	"TR")
+                )
+                ("V2"
+                    ("value"	"0")
+                    ("pspice_param"	"V2")
+                )
+                ("V1"
+                    ("value"	"5")
+                    ("pspice_param"	"V1")
+                )
+                ("TD"
+                    ("value"	"1m")
+                    ("pspice_param"	"TD")
+                )
+                ("PER"
+                    ("value"	"1m")
+                    ("pspice_param"	"PER")
+                )
+                ("AC"
+                    ("value"	"")
+                    ("pspice_param"	"AC")
+                )
+                ("DC"
+                    ("value"	"")
+                    ("pspice_param"	"DC")
+                )
+            )
+        )
+    )
+)

@@ -1,0 +1,170 @@
+
+**** 03/15/22 10:19:30 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+
+ ** Profile: "Voltage controlled oscillator-1"  [ E:\Data\Simulation_Project\Shielding_circuit\Shielding_circuit-PSpiceFiles\Voltage 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "1.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\Users\007\cdssetup\OrCAD_PSpice\17.2.0\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.TRAN  0 10m 0 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\Voltage controlled oscillator.net" 
+
+
+
+**** INCLUDING "Voltage controlled oscillator.net" ****
+* source SHIELDING_CIRCUIT
+X_U1         0 N00198 OUT1 VCC N00106 N00198 N00277 VCC 555B
+C_C3         0 N00106  1n  TC=0,0 
+R_R3         N00277 N00198  5.1k TC=0,0 
+C_C1         0 N00277  1000p  TC=0,0 
+R_R4         N01818 N00277  1k TC=0,0 
+R_R2         N00538 N00277  1k TC=0,0 
+R_R1         N00538 VCC  10k TC=0,0 
+C_C2         OUT2 N00538  33u  TC=0,0 
+Q_Q1         VCC N01818 OUT2 Q2N3414
+R_R5         OUT2 0  1k TC=0,0 
+V_V1         VCC 0 +5Vdc
+
+**** RESUMING 1.cir ****
+.END
+
+**** 03/15/22 10:19:30 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+
+ ** Profile: "Voltage controlled oscillator-1"  [ E:\Data\Simulation_Project\Shielding_circuit\Shielding_circuit-PSpiceFiles\Voltage 
+
+
+ ****     BJT MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               Q2N3414         X_U1.qnpn555    X_U1.qpnp555    
+               NPN             NPN             PNP             
+       LEVEL    1               1               1            
+          IS   14.340000E-15   14.340000E-15  650.600000E-18 
+          BF  184.4            65.62           70.35         
+          NF    1               1               1            
+         VAF   74.03           74.03          115.7          
+         IKF     .2714           .02             .02         
+         ISE   14.340000E-15   19.480000E-15  180.500000E-15 
+          NE    1.277           1.208           1.829        
+          BR    6.386           9.715           4.146        
+          NR    1               1               1            
+         ISS    0               0               0            
+          RB   10              10              10            
+          RE    0               0               0            
+          RC    1               1                .715        
+         CJE   22.010000E-12   40.000000E-12   40.000000E-12 
+         VJE     .75             .75             .75         
+         MJE     .377            .377            .3357       
+         CJC    9.393000E-12   40.000000E-12   40.000000E-12 
+         VJC     .75             .75             .75         
+         MJC     .3416           .3416           .5383       
+        XCJC    1               1               1            
+         CJS    0               0               0            
+         VJS     .75             .75             .75         
+          TF  409.700000E-12    1.000000E-09    1.000000E-09 
+         XTF    3               3               1.7          
+         VTF    1.7             1.7             5            
+         ITF     .6              .6              .65         
+          TR   48.090000E-09   58.980000E-09  119.900000E-09 
+         XTB    1.5             1.5             1.5          
+          KF    0               0               0            
+          AF    1               1               1            
+          CN    2.42            2.42            2.2          
+           D     .87             .87             .52         
+
+
+**** 03/15/22 10:19:30 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+
+ ** Profile: "Voltage controlled oscillator-1"  [ E:\Data\Simulation_Project\Shielding_circuit\Shielding_circuit-PSpiceFiles\Voltage 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(  VCC)    5.0000  ( OUT1)    2.6225  ( OUT2)    1.0065  (N00106)    3.3319     
+
+(N00198)    1.6609 (N00277)    1.6608 (N00538)    1.9643 (N01818)    1.6513     
+
+(X_U1.9)    4.2977 (X_U1.10)    1.2367                   (X_U1.11)    3.7500    
+
+(X_U1.12)     .6119                   (X_U1.13)     .6226                       
+
+(X_U1.14)    1.2342                   (X_U1.15)     .0026                       
+
+(X_U1.16)     .6028                   (X_U1.17)    4.3139                       
+
+(X_U1.18)    4.8319                   (X_U1.19)    2.8203                       
+
+(X_U1.20)    4.9469                   (X_U1.21)     .5902                       
+
+(X_U1.22)     .5472                   (X_U1.23)    2.1883                       
+
+(X_U1.24)    2.1910                   (X_U1.25)    1.6660                       
+
+(X_U1.26)     .6154                   (X_U1.27)     .6142                       
+
+(X_U1.28)    3.1568                   (X_U1.29)     .6147                       
+
+(X_U1.30)    2.8119                   (X_U1.31)    2.3608                       
+
+(X_U1.32)    2.2063                   
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1        -3.288E-03
+
+    TOTAL POWER DISSIPATION   1.64E-02  WATTS
+
+
+
+          JOB CONCLUDED
+
+**** 03/15/22 10:19:30 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+
+ ** Profile: "Voltage controlled oscillator-1"  [ E:\Data\Simulation_Project\Shielding_circuit\Shielding_circuit-PSpiceFiles\Voltage 
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  License check-out time            =        3.09
+  Total job time (using Solver 1)   =         .06
+

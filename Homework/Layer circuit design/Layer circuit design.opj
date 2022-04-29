@@ -1,0 +1,120 @@
+(ExpressProject "Layer circuit design"
+  (ProjectVersion "19981106")
+  (ProjectType "Analog or A/D Mixed Mode")
+  (Folder "Design Resources"
+    (Folder "Library")
+    (NoModify)
+    (File ".\layer circuit design.dsn"
+      (Type "Schematic Design"))
+    (BuildFileAddedOrDeleted "x")
+    (CompileFileAddedOrDeleted "x")
+    (RootChangedForceReNetlist "x")
+    (PSPICE_Regenerate_Netlist_Flag "FALSE"))
+  (Folder "Outputs"
+    (File ".\layer circuit design-pspicefiles\main\main.net"
+      (Type "Report"))
+    (File
+       ".\layer circuit design-pspicefiles\circuit_module\circuit_module.net"
+      (Type "Report")))
+  (Folder "PSpice Resources"
+    (Folder "Simulation Profiles"
+      (ActiveProfile ".\layer circuit design-pspicefiles\circuit_module\1.sim")
+      (File.PSpice.{09528990-3187-11D2-BC7B-00A0C90CBF91}
+         ".\layer circuit design-pspicefiles\circuit_module\1.sim"
+        (DisplayName "Circuit_module-1")
+        (Type "PSpice Profile")))
+    (Folder "Model Libraries"
+      (Sort User))
+    (Folder "Stimulus Files"
+      (Sort User))
+    (Folder "Include Files"
+      (Sort User)))
+  (DefaultLibraryBrowseDirectory "library\PSpice")
+  (PartMRUSelector
+    (0
+      (LibraryName
+         "D:\SOFTWARE\CAPTURE_PSPICE\TOOLS\CAPTURE\LIBRARY\CAPSYM.OLB")
+      (DeviceIndex "0"))
+    (VCC
+      (LibraryName
+         "D:\SOFTWARE\CAPTURE_PSPICE\TOOLS\CAPTURE\LIBRARY\CAPSYM.OLB")
+      (DeviceIndex "0"))
+    (VAC
+      (FullPartName "VAC.Normal")
+      (LibraryName
+         "D:\SOFTWARE\CAPTURE_PSPICE\TOOLS\CAPTURE\LIBRARY\PSPICE\SOURCE.OLB")
+      (DeviceIndex "0"))
+    (VDC
+      (FullPartName "VDC.Normal")
+      (LibraryName
+         "D:\SOFTWARE\CAPTURE_PSPICE\TOOLS\CAPTURE\LIBRARY\PSPICE\SOURCE.OLB")
+      (DeviceIndex "0"))
+    (C
+      (FullPartName "C.Normal")
+      (LibraryName
+         "D:\SOFTWARE\CAPTURE_PSPICE\TOOLS\CAPTURE\LIBRARY\PSPICE\ANALOG.OLB")
+      (DeviceIndex "0"))
+    (R
+      (FullPartName "R.Normal")
+      (LibraryName
+         "D:\SOFTWARE\CAPTURE_PSPICE\TOOLS\CAPTURE\LIBRARY\PSPICE\ANALOG.OLB")
+      (DeviceIndex "0"))
+    (PORTRIGHT-L
+      (LibraryName
+         "D:\SOFTWARE\CAPTURE_PSPICE\TOOLS\CAPTURE\LIBRARY\CAPSYM.OLB")
+      (DeviceIndex "0"))
+    (M2SJ114
+      (FullPartName "M2SJ114.Normal")
+      (LibraryName
+         "D:\SOFTWARE\CAPTURE_PSPICE\TOOLS\CAPTURE\LIBRARY\PSPICE\JPWRMOS.OLB")
+      (DeviceIndex "0"))
+    (M2SK1044
+      (FullPartName "M2SK1044.Normal")
+      (LibraryName
+         "D:\SOFTWARE\CAPTURE_PSPICE\TOOLS\CAPTURE\LIBRARY\PSPICE\JPWRMOS.OLB")
+      (DeviceIndex "0")))
+  (MPSSessionName "007")
+  (GlobalState
+    (FileView
+      (Path "Design Resources")
+      (Path "Design Resources"
+         "D:\Software\Capture_PSpice\Project\Layer circuit design\layer circuit design.dsn")
+      (Path "Design Resources"
+         "D:\Software\Capture_PSpice\Project\Layer circuit design\layer circuit design.dsn"
+         "A")
+      (Path "Design Resources"
+         "D:\Software\Capture_PSpice\Project\Layer circuit design\layer circuit design.dsn"
+         "B")
+      (Path "Design Resources"
+         "D:\Software\Capture_PSpice\Project\Layer circuit design\layer circuit design.dsn"
+         "Component_template")
+      (Path "Outputs")
+      (Select "Design Resources"
+         "D:\Software\Capture_PSpice\Project\Layer circuit design\layer circuit design.dsn"
+         "B" "Component_template"))
+    (HierarchyView)
+    (Doc
+      (Type "COrCapturePMDoc")
+      (Frame
+        (Placement "44 0 1 -1 -1 -8 -31 0 200 0 388"))
+      (Tab 0))
+    (Doc
+      (Type "COrSchematicDoc")
+      (Frame
+        (Placement "44 0 1 -1 -1 -8 -31 156 1434 156 583")
+        (Scroll "-130 0")
+        (Zoom "100"))
+      (Path
+         "D:\SOFTWARE\CAPTURE_PSPICE\PROJECT\LAYER CIRCUIT DESIGN\LAYER CIRCUIT DESIGN.DSN")
+      (Schematic "Component_template")
+      (Page "main_B"))
+    (Doc
+      (Type "COrSchematicDoc")
+      (Frame
+        (Placement "44 2 3 -1 -1 -8 -31 26 1304 26 453")
+        (Scroll "-229 0")
+        (Zoom "100"))
+      (Path
+         "D:\SOFTWARE\CAPTURE_PSPICE\PROJECT\LAYER CIRCUIT DESIGN\LAYER CIRCUIT DESIGN.DSN")
+      (Schematic "B")
+      (Page "Component_template"))))

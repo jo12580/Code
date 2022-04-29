@@ -1,0 +1,15 @@
+* source 12_21
+R_R6         N05084 VCC  65k TC=0,0 
+X_U1         N05094 N05328 VCC 0 VOUT LM324/5_1/TI
+C_C2         N05094 N05108  10n  TC=0,0 
+V_V1         VCC 0 5Vdc
+R_R2         N05108 VOUT  609 TC=0,0 
+R_R5         N05518 VOUT  60k TC=0,0 
+C_C1         N05084 N05094  10n  TC=0,0 
+R_R3         N05084 N05328  10k TC=0,0 
+R_R1         N05084 N05094  600 TC=0,0 
+D_D2         N05518 N05328 D1N4148 
+R_R4         N05328 VOUT  30k TC=0,0 
+R_R7         0 N05084  35k TC=0,0 
+C_C3         0 N05084  10n  TC=0,0 
+D_D1         N05328 N05518 D1N4148 

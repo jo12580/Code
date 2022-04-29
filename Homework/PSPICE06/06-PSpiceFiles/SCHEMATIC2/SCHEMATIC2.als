@@ -1,0 +1,16 @@
+.ALIASES
+V_V1            V1(+=IN -=0 ) CN @06.SCHEMATIC2(sch_1):INS32@SOURCE.VSIN.Normal(chips)
+Q_Q1            Q1(c=VCC b=N00645 e=OUT ) CN @06.SCHEMATIC2(sch_1):INS71@BIPOLAR.Q2N3904.Normal(chips)
+Q_Q2            Q2(c=VEE b=N00666 e=OUT ) CN @06.SCHEMATIC2(sch_1):INS100@BIPOLAR.Q2N3906.Normal(chips)
+R_R1            R1(1=0 2=OUT ) CN @06.SCHEMATIC2(sch_1):INS127@ANALOG.R.Normal(chips)
+V_V2            V2(+=VCC -=0 ) CN @06.SCHEMATIC2(sch_1):INS152@SOURCE.VDC.Normal(chips)
+V_V3            V3(+=VEE -=0 ) CN @06.SCHEMATIC2(sch_1):INS168@SOURCE.VDC.Normal(chips)
+R_R2            R2(1=N00666 2=VEE ) CN @06.SCHEMATIC2(sch_1):INS567@ANALOG.R.Normal(chips)
+R_R3            R3(1=N00645 2=VCC ) CN @06.SCHEMATIC2(sch_1):INS583@ANALOG.R.Normal(chips)
+D_D3            D3(1=N00645 2=IN ) CN @06.SCHEMATIC2(sch_1):INS1065@DIODE.D1N4148.Normal(chips)
+D_D4            D4(1=IN 2=N00666 ) CN @06.SCHEMATIC2(sch_1):INS1128@DIODE.D1N4148.Normal(chips)
+_    _(in=IN)
+_    _(out=OUT)
+_    _(VCC=VCC)
+_    _(VEE=VEE)
+.ENDALIASES

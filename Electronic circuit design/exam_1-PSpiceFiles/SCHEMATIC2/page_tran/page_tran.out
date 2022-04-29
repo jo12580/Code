@@ -1,0 +1,61 @@
+
+**** 11/23/21 23:48:58 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC2-page_tran"  [ D:\Cadence_17.2_OrCAD\PSpice_project\dianzixianlu\exam_1-PSpiceFiles\SCHEMATIC2\page_tran.sim 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "page_tran.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\SPB_Data\cdssetup\OrCAD_PSpice\17.2.0\PSpice.ini file:
+.lib "nomd.lib" 
+
+*Analysis directives: 
+.TRAN  0 15m 6m 0.01m 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC2.net" 
+
+
+
+**** INCLUDING SCHEMATIC2.net ****
+* source EXAM_1
+X_U1A         N00243 N00334 VCC 0 N00231 LM324
+R_R1         N00243 N00231  20k TC=0,0 
+R_R2         N00247 N00243  10k TC=0,0 
+R_R3         N00247 VCC  50k TC=0,0 
+R_R4         0 N00247  51k TC=0,0 
+R_R5         N00349 N00334  6k TC=0,0 
+R_R6         N00373 N00231  13k TC=0,0 
+R_R7         N00231 N00366  10k TC=0,0 
+D_D1         N00349 N00373 D1N4148 
+D_D2         N00366 N00349 D1N4148 
+C_C1         0 N00247  10u  TC=0,0 
+C_C2         0 N00334  1n  TC=0,0 
+V_V1         VCC 0 12Vdc
+C_C6         N00231 N01895  10u  TC=0,0 
+C_C7         0 N01899  1n  TC=0,0 
+C_C8         0 OUT1  1n  TC=0,0 
+R_R8         N01895 N01899  1k TC=0,0 
+R_R9         N01899 OUT1  1k TC=0,0 
+
+**** RESUMING page_tran.cir ****
+.END
+
+ERROR(ORPSIM-15142): Node N01895 is floating
+
+ERROR(ORPSIM-15142): Node N01899 is floating
+
+ERROR(ORPSIM-15142): Node OUT1 is floating
+

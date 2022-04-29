@@ -1,0 +1,165 @@
+("FILE_TYPE"	"PMAP File"
+    ("devices"
+        ("VPWL")
+    )
+    ("instances"
+        ("V1"
+            ("device_name"	"VPWL")
+            ("pspice_path"	"V_V1")
+            ("level"	"0")
+            ("model_params"
+                ("V1"
+                    ("value"	"1")
+                    ("pspice_param"	"V1")
+                )
+                ("T5"
+                    ("value"	"8m")
+                    ("pspice_param"	"T5")
+                )
+                ("V5"
+                    ("value"	"0")
+                    ("pspice_param"	"V5")
+                )
+                ("V3"
+                    ("value"	"2")
+                    ("pspice_param"	"V3")
+                )
+                ("T4"
+                    ("value"	"5.01m")
+                    ("pspice_param"	"T4")
+                )
+                ("T1"
+                    ("value"	"1m")
+                    ("pspice_param"	"T1")
+                )
+                ("T2"
+                    ("value"	"2m")
+                    ("pspice_param"	"T2")
+                )
+                ("T3"
+                    ("value"	"5m")
+                    ("pspice_param"	"T3")
+                )
+                ("V2"
+                    ("value"	"2")
+                    ("pspice_param"	"V2")
+                )
+                ("V4"
+                    ("value"	"0")
+                    ("pspice_param"	"V4")
+                )
+                ("V6"
+                    ("value"	"5")
+                    ("pspice_param"	"V6")
+                )
+                ("T6"
+                    ("value"	"10m")
+                    ("pspice_param"	"T6")
+                )
+                ("DC"
+                    ("value"	"")
+                    ("pspice_param"	"DC")
+                )
+                ("AC"
+                    ("value"	"")
+                    ("pspice_param"	"AC")
+                )
+                ("T7"
+                    ("value"	"")
+                    ("pspice_param"	"T7")
+                )
+                ("V7"
+                    ("value"	"")
+                    ("pspice_param"	"V7")
+                )
+                ("T8"
+                    ("value"	"")
+                    ("pspice_param"	"T8")
+                )
+                ("V8"
+                    ("value"	"")
+                    ("pspice_param"	"V8")
+                )
+            )
+        )
+        ("V2"
+            ("device_name"	"VPWL")
+            ("pspice_path"	"V_V2")
+            ("level"	"0")
+            ("model_params"
+                ("V8"
+                    ("value"	"3")
+                    ("pspice_param"	"V8")
+                )
+                ("T8"
+                    ("value"	"12m")
+                    ("pspice_param"	"T8")
+                )
+                ("V1"
+                    ("value"	"0")
+                    ("pspice_param"	"V1")
+                )
+                ("T5"
+                    ("value"	"7m")
+                    ("pspice_param"	"T5")
+                )
+                ("V5"
+                    ("value"	"5")
+                    ("pspice_param"	"V5")
+                )
+                ("V3"
+                    ("value"	"5")
+                    ("pspice_param"	"V3")
+                )
+                ("T4"
+                    ("value"	"6m")
+                    ("pspice_param"	"T4")
+                )
+                ("T1"
+                    ("value"	"2m")
+                    ("pspice_param"	"T1")
+                )
+                ("T2"
+                    ("value"	"2.01m")
+                    ("pspice_param"	"T2")
+                )
+                ("T3"
+                    ("value"	"5m")
+                    ("pspice_param"	"T3")
+                )
+                ("V2"
+                    ("value"	"5")
+                    ("pspice_param"	"V2")
+                )
+                ("V4"
+                    ("value"	"3")
+                    ("pspice_param"	"V4")
+                )
+                ("V6"
+                    ("value"	"5")
+                    ("pspice_param"	"V6")
+                )
+                ("T6"
+                    ("value"	"10m")
+                    ("pspice_param"	"T6")
+                )
+                ("T7"
+                    ("value"	"10.01m")
+                    ("pspice_param"	"T7")
+                )
+                ("V7"
+                    ("value"	"0")
+                    ("pspice_param"	"V7")
+                )
+                ("DC"
+                    ("value"	"")
+                    ("pspice_param"	"DC")
+                )
+                ("AC"
+                    ("value"	"")
+                    ("pspice_param"	"AC")
+                )
+            )
+        )
+    )
+)

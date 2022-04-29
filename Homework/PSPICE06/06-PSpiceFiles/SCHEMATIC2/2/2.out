@@ -1,0 +1,210 @@
+
+**** 11/03/21 17:39:20 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC2-2"  [ D:\Software\Capture_PSpice\Project\PSPICE06\06-PSpiceFiles\SCHEMATIC2\2.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "2.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+.LIB "../../../06-pspicefiles/06.lib" 
+* From [PSPICE NETLIST] section of C:\SPB_Data\cdssetup\OrCAD_PSpice\17.2.0\PSpice.ini file:
+.lib "nomd.lib" 
+
+*Analysis directives: 
+.TRAN  0 10m 0 0.01m 
+.FOUR 1k 9 V([OUT]) 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC2.net" 
+
+
+
+**** INCLUDING SCHEMATIC2.net ****
+* source 06
+V_V1         IN 0  
++SIN 0 5 1K 0 0 0
+Q_Q1         VCC N00645 OUT Q2N3904
+Q_Q2         VEE N00666 OUT Q2N3906
+R_R1         0 OUT  1k TC=0,0 
+V_V2         VCC 0 12Vdc
+V_V3         VEE 0 -12Vdc
+R_R2         N00666 VEE  2k TC=0,0 
+R_R3         N00645 VCC  2k TC=0,0 
+D_D3         N00645 IN D1N4148 
+D_D4         IN N00666 D1N4148 
+
+**** RESUMING 2.cir ****
+.END
+
+**** 11/03/21 17:39:20 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC2-2"  [ D:\Software\Capture_PSpice\Project\PSPICE06\06-PSpiceFiles\SCHEMATIC2\2.sim ] 
+
+
+ ****     Diode MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               D1N4148         
+          IS    2.682000E-09 
+           N    1.836        
+         ISR    1.565000E-09 
+         IKF     .04417      
+          BV  100            
+         IBV  100.000000E-06 
+          RS     .5664       
+          TT   11.540000E-09 
+         CJO    4.000000E-12 
+          VJ     .5          
+           M     .3333       
+
+
+**** 11/03/21 17:39:20 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC2-2"  [ D:\Software\Capture_PSpice\Project\PSPICE06\06-PSpiceFiles\SCHEMATIC2\2.sim ] 
+
+
+ ****     BJT MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               Q2N3904         Q2N3906         
+               NPN             PNP             
+       LEVEL    1               1            
+          IS    6.734000E-15    1.410000E-15 
+          BF   50             180.7          
+          NF    1               1            
+         VAF   74.03           18.7          
+         IKF     .06678          .08         
+         ISE    6.734000E-15                 
+          NE    1.259                        
+          BR     .7371          4.977        
+          NR    1               1            
+         ISS    0               0            
+          RB   10              10            
+          RE    0               0            
+          RC    1               2.5          
+         CJE    4.493000E-12    8.063000E-12 
+         VJE     .75             .75         
+         MJE     .2593           .3677       
+         CJC    3.638000E-12    9.728000E-12 
+         VJC     .75             .75         
+         MJC     .3085           .5776       
+        XCJC    1               1            
+         CJS    0               0            
+         VJS     .75             .75         
+          TF  301.200000E-12  179.300000E-12 
+         XTF    2               6            
+         VTF    4               4            
+         ITF     .4              .4          
+          TR  239.500000E-09   33.420000E-09 
+         XTB    1.5             1.5          
+          KF    0               0            
+          AF    1               1            
+          CN    2.42            2.2          
+           D     .87             .52         
+
+
+**** 11/03/21 17:39:20 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC2-2"  [ D:\Software\Capture_PSpice\Project\PSPICE06\06-PSpiceFiles\SCHEMATIC2\2.sim ] 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(   IN)    0.0000  (  OUT)     .0157  (  VCC)   12.0000  (  VEE)  -12.0000      
+
+(N00645)     .6909 (N00666)    -.6912 
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1        -2.983E-05
+    V_V2        -7.290E-03
+    V_V3         7.304E-03
+
+    TOTAL POWER DISSIPATION   1.75E-01  WATTS
+
+
+**** 11/03/21 17:39:20 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC2-2"  [ D:\Software\Capture_PSpice\Project\PSPICE06\06-PSpiceFiles\SCHEMATIC2\2.sim ] 
+
+
+ ****     FOURIER ANALYSIS                 TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+FOURIER COMPONENTS OF TRANSIENT RESPONSE V(OUT)
+
+
+
+ DC COMPONENT =   1.5507E-02
+
+ HARMONIC   FREQUENCY     FOURIER     NORMALIZED     PHASE     NORMALIZED
+    NO         (HZ)      COMPONENT     COMPONENT     (DEG)     PHASE (DEG)
+
+     1    1.0000E+03   4.9332E+00   1.0000E+00   1.1621E-03   0.0000E+00
+     2    2.0000E+03   3.7317E-04   7.5645E-05   1.4246E+02   1.4246E+02
+     3    3.0000E+03   1.1616E-04   2.3547E-05  -1.0702E+02  -1.0703E+02
+     4    4.0000E+03   6.1011E-05   1.2367E-05  -4.1210E+01  -4.1214E+01
+     5    5.0000E+03   1.4136E-04   2.8654E-05   1.7187E+02   1.7187E+02
+     6    6.0000E+03   1.3676E-05   2.7722E-06  -1.3233E+02  -1.3234E+02
+     7    7.0000E+03   1.4042E-05   2.8465E-06  -1.3989E+02  -1.3990E+02
+     8    8.0000E+03   1.6180E-05   3.2797E-06   2.8244E+01   2.8234E+01
+     9    9.0000E+03   2.3320E-05   4.7272E-06   1.4732E+02   1.4731E+02
+
+
+     TOTAL HARMONIC DISTORTION =   8.5437E-03 PERCENT
+
+
+          JOB CONCLUDED
+
+**** 11/03/21 17:39:20 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC2-2"  [ D:\Software\Capture_PSpice\Project\PSPICE06\06-PSpiceFiles\SCHEMATIC2\2.sim ] 
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  Total job time (using Solver 1)   =         .08
+

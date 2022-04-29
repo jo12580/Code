@@ -1,0 +1,107 @@
+
+**** 11/16/21 10:28:30 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-1"  [ G:\030\11.16\16-PSpiceFiles\SCHEMATIC1\1.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "1.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\SPB_Data\cdssetup\OrCAD_PSpice\17.2.0\PSpice.ini file:
+.lib "nomd.lib" 
+
+*Analysis directives: 
+.TRAN  0 10MS 0 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source 16
+E_E1         OUT 0 VALUE { V(IN, 0)*2 }
+E_E2         OUT1 0 VALUE { if(v(in1)>4,0,5) }
+E_E3         OUT11 0 VALUE { pwrs(v(in11),3) }
+E_E5         OUT12 0 VALUE { abs(v(in12)) }
+V_V1         IN 0  
++SIN 0 1 1k 0 0 0
+V_V2         IN11 0  
++SIN 0 6 1k 0 0 0
+V_V3         IN1 0  
++SIN 0 6 1k 0 0 0
+V_V4         IN2 0  AC 1
++SIN 0 1 1k 0 0 0
+V_V5         IN12 0  
++SIN 0 6 1k 0 0 0
+R_R1         IN2 OUT2  1k TC=0,0 
+C_C1         0 OUT2  1n  TC=0,0 
+E_LAPLACE1         N00542 0 LAPLACE {V(IN2)} {(1)/(1 + 0.001*s)}
+
+**** RESUMING 1.cir ****
+.END
+
+**** 11/16/21 10:28:30 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-1"  [ G:\030\11.16\16-PSpiceFiles\SCHEMATIC1\1.sim ] 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(   IN)    0.0000  (  in1)    0.0000  (  IN2)    0.0000  (  OUT)    0.0000      
+
+( in11)    0.0000  ( in12)    0.0000  ( OUT1)    5.0000  ( OUT2)    0.0000      
+
+(OUT11)    0.0000  (OUT12)    0.0000  (N00542)    0.0000 
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1         0.000E+00
+    V_V2         0.000E+00
+    V_V3         0.000E+00
+    V_V4         0.000E+00
+    V_V5         0.000E+00
+
+    TOTAL POWER DISSIPATION   0.00E+00  WATTS
+
+
+
+          JOB CONCLUDED
+
+**** 11/16/21 10:28:30 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-1"  [ G:\030\11.16\16-PSpiceFiles\SCHEMATIC1\1.sim ] 
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  Total job time (using Solver 1)   =         .02
+

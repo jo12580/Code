@@ -1,0 +1,9 @@
+* source COMPONENT CREATION
+X_U1         N00195 N00191 VCC VSS OUT THS4031 
+V_V1         IN 0  
++SIN 0 10m 1k 0 0 0
+R_R1         IN N00191  1k TC=0,0 
+R_R2         N00191 OUT  2k TC=0,0 
+R_R3         0 N00195  680 TC=0,0 
+V_V2         VCC 0 10
+V_V3         VSS 0 -10

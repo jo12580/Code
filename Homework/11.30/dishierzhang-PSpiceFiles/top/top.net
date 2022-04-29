@@ -1,0 +1,15 @@
+* source DISHIERZHANG
+V_V1         V+ 0 12Vdc
+V_V2         V- 0 -12Vdc
+R_a1_R3         0 a1_N00230  910k TC=0,0 
+R_a1_R2         a1_N00230 OUT1  160k TC=0,0 
+R_a1_R1         a1_N00184 OUT1  160k TC=0,0 
+C_a1_C1         0 a1_N00184  0.01u  TC=0,0 
+X_a1_U1A         a1_N00230 a1_N00184 V+ V- OUT1 AD648A
+R_a2_R3         0 a2_N00230  910k TC=0,0 
+R_a2_R2         a2_N00230 OUT2  160k TC=0,0 
+R_a2_R1         a2_N00184 OUT2  100k TC=0,0 
+C_a2_C1         0 a2_N00184  0.01u  TC=0,0 
+X_a2_U1A         a2_N00230 a2_N00184 V+ V- OUT2 AD648A
+.IC         V(a1_N00184 )=0
+.IC         V(a2_N00184 )=0

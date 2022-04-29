@@ -1,0 +1,99 @@
+
+**** 11/16/21 11:57:10 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC3-3"  [ G:\030\11.16\16-PSpiceFiles\SCHEMATIC3\3.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "3.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\SPB_Data\cdssetup\OrCAD_PSpice\17.2.0\PSpice.ini file:
+.lib "nomd.lib" 
+
+*Analysis directives: 
+.AC DEC 100 10 100K
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC3.net" 
+
+
+
+**** INCLUDING SCHEMATIC3.net ****
+* source 16
+V_V1         N00073 0 DC 0Vdc AC 1Vac 
+E_LAPLACE1         OUT1 0 LAPLACE {V(N00073)} {(1000)/((S+1000)*(S+100000))}
+V_V2         N00212 0 DC 0Vdc AC 1Vac 
+E_LAPLACE2         OUT2 0 LAPLACE {V(N00212)} 
++ {(1000)/((S+1000)*(S+100000)*(S+10000000))}
+E_LAPLACE3         OUT3 0 LAPLACE {V(N00336)} 
++ {(1000*(S+1000000))/((S+1000)*(S+100000)*(S+10000000))}
+V_V3         N00336 0 DC 0Vdc AC 1Vac 
+E_LAPLACE4         OUT4 0 LAPLACE {V(N00462)} {(1)/(pwrs(s,2)+1)}
+V_V4         N00462 0 DC 0Vdc AC 1Vac 
+
+**** RESUMING 3.cir ****
+.END
+
+INFO(ORPSIM-16573): AC analysis does not support expression evaluation at each frequency. ABM devices with non-linear operations will be evaluated only at bias point.
+
+**** 11/16/21 11:57:10 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC3-3"  [ G:\030\11.16\16-PSpiceFiles\SCHEMATIC3\3.sim ] 
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+( OUT1)    0.0000  ( OUT2)    0.0000  ( OUT3)    0.0000  ( OUT4)    0.0000      
+
+(N00073)    0.0000 (N00212)    0.0000 (N00336)    0.0000 (N00462)    0.0000 
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1         0.000E+00
+    V_V2         0.000E+00
+    V_V3         0.000E+00
+    V_V4         0.000E+00
+
+    TOTAL POWER DISSIPATION   0.00E+00  WATTS
+
+
+
+          JOB CONCLUDED
+
+**** 11/16/21 11:57:10 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC3-3"  [ G:\030\11.16\16-PSpiceFiles\SCHEMATIC3\3.sim ] 
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  Total job time (using Solver 1)   =        0.00
+

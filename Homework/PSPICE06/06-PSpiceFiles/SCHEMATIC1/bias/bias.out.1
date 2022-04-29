@@ -1,0 +1,186 @@
+
+**** 11/02/21 11:33:03 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-bias"  [ D:\Progrem_Code\PSpice_project\shangji\PSPICE06\PSPICE06\06-pspicefiles\schematic1\bias.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "bias.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+.LIB "../../../06-pspicefiles/06.lib" 
+* From [PSPICE NETLIST] section of C:\Users\wu\AppData\Roaming\SPB_Data\cdssetup\OrCAD_PSpice\17.2.0\PSpice.ini file:
+.lib "nomd.lib" 
+
+*Analysis directives: 
+.OP
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source 06
+V_V1         IN 0  AC 1
++SIN 0 20m 10k 0 0 0
+R_Rb1         N14526 VCC  33k TC=0,0 
+R_Rb2         0 N14526  9k TC=0,0 
+R_Rc         N14585 VCC  3.3k TC=0,0 
+R_Re         0 N14589  1.3k TC=0,0 
+R_RL         0 OUT  5.1k TC=0,0 
+C_C1         IN N14526  10u  TC=0,0 
+C_C2         N14585 OUT  10u  TC=0,0 
+C_C3         0 N14589  50u  TC=0,0 
+Q_Q1         N14585 N14526 N14589 Q2N3904
+V_V2         VCC 0 12Vdc
+
+**** RESUMING bias.cir ****
+.END
+
+**** 11/02/21 11:33:03 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-bias"  [ D:\Progrem_Code\PSpice_project\shangji\PSPICE06\PSPICE06\06-pspicefiles\schematic1\bias.sim ] 
+
+
+ ****     BJT MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               Q2N3904         
+               NPN             
+       LEVEL    1            
+          IS    6.734000E-15 
+          BF   50            
+          NF    1            
+         VAF   74.03         
+         IKF     .06678      
+         ISE    6.734000E-15 
+          NE    1.259        
+          BR     .7371       
+          NR    1            
+         ISS    0            
+          RB   10            
+          RE    0            
+          RC    1            
+         CJE    4.493000E-12 
+         VJE     .75         
+         MJE     .2593       
+         CJC    3.638000E-12 
+         VJC     .75         
+         MJC     .3085       
+        XCJC    1            
+         CJS    0            
+         VJS     .75         
+          TF  301.200000E-12 
+         XTF    2            
+         VTF    4            
+         ITF     .4          
+          TR  239.500000E-09 
+         XTB    1.5          
+          KF    0            
+          AF    1            
+          CN    2.42         
+           D     .87         
+
+
+**** 11/02/21 11:33:03 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-bias"  [ D:\Progrem_Code\PSpice_project\shangji\PSPICE06\PSPICE06\06-pspicefiles\schematic1\bias.sim ] 
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(   IN)    0.0000  (  OUT)    0.0000  (  VCC)   12.0000  (N14526)    2.3600     
+
+(N14585)    7.8098 (N14589)    1.6896 
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1         0.000E+00
+    V_V2        -1.562E-03
+
+    TOTAL POWER DISSIPATION   1.87E-02  WATTS
+
+
+**** 11/02/21 11:33:03 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-bias"  [ D:\Progrem_Code\PSpice_project\shangji\PSPICE06\PSPICE06\06-pspicefiles\schematic1\bias.sim ] 
+
+
+ ****     OPERATING POINT INFORMATION      TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+
+
+
+**** BIPOLAR JUNCTION TRANSISTORS
+
+
+NAME         Q_Q1      
+MODEL        Q2N3904   
+IB           2.99E-05 
+IC           1.27E-03 
+VBE          6.70E-01 
+VBC         -5.45E+00 
+VCE          6.12E+00 
+BETADC       4.25E+01 
+GM           4.82E-02 
+RPI          9.01E+02 
+RX           1.00E+01 
+RO           6.26E+04 
+CBE          2.10E-11 
+CBC          1.90E-12 
+CJS          0.00E+00 
+BETAAC       4.35E+01 
+CBX/CBX2     0.00E+00 
+FT/FT2       3.35E+08 
+
+
+
+          JOB CONCLUDED
+
+**** 11/02/21 11:33:03 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-bias"  [ D:\Progrem_Code\PSpice_project\shangji\PSPICE06\PSPICE06\06-pspicefiles\schematic1\bias.sim ] 
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  Total job time (using Solver 1)   =        0.00
+

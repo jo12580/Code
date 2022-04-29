@@ -1,0 +1,21 @@
+.ALIASES
+R_R4            R4(1=N00292 2=VOUT ) CN @12-21-1.15.4(3)(sch_1):INS126@ANALOG.R.Normal(chips)
+R_R2            R2(1=N00334 2=VOUT ) CN @12-21-1.15.4(3)(sch_1):INS110@ANALOG.R.Normal(chips)
+R_R1            R1(1=N00296 2=N00288 ) CN @12-21-1.15.4(3)(sch_1):INS94@ANALOG.R.Normal(chips)
+C_C2            C2(1=N00334 2=N00288 ) CN @12-21-1.15.4(3)(sch_1):INS231@ANALOG.C.Normal(chips)
+R_R3            R3(1=N00296 2=N00292 ) CN @12-21-1.15.4(3)(sch_1):INS78@ANALOG.R.Normal(chips)
+C_C3            C3(1=0 2=N00296 ) CN @12-21-1.15.4(3)(sch_1):INS215@ANALOG.C.Normal(chips)
+C_C1            C1(1=N00296 2=N00288 ) CN @12-21-1.15.4(3)(sch_1):INS199@ANALOG.C.Normal(chips)
+V_V1            V1(+=VCC -=0 ) CN @12-21-1.15.4(3)(sch_1):INS556@SOURCE.VDC.Normal(chips)
+D_D2            D2(1=N00369 2=N00292 ) CN @12-21-1.15.4(3)(sch_1):INS272@DIODE.D1N4148.Normal(chips)
+D_D1            D1(1=N00292 2=N00369 ) CN @12-21-1.15.4(3)(sch_1):INS256@DIODE.D1N4148.Normal(chips)
+R_R7            R7(1=0 2=N00296 ) CN @12-21-1.15.4(3)(sch_1):INS174@ANALOG.R.Normal(chips)
+R_R6            R6(1=N00296 2=VCC ) CN @12-21-1.15.4(3)(sch_1):INS158@ANALOG.R.Normal(chips)
+R_R5            R5(1=N00369 2=VOUT ) CN @12-21-1.15.4(3)(sch_1):INS142@ANALOG.R.Normal(chips)
+X_U1            U1(+=N00288 -=N00292 V+=VCC V-=GND OUT=VOUT ) CN
++@12-21-1.15.4(3)(sch_1):INS1337@TEX_INST.LM324/5_1/TI.Normal(chips)
+_    _(GND=GND)
+_    _(VCC=VCC)
+_    _(Vout=VOUT)
+_    _(OUT=VOUT)
+.ENDALIASES

@@ -1,0 +1,53 @@
+* source EXAM_1
+R_R11         N06051 N06141  1k TC=0,0 
+X_U1B         N06141 N06327 VCC 0 N06257 LM324
+R_R15         N06327 N063851  1k TC=0,0 
+C_C10         UI1 N063851  10u  TC=0,0 
+C_C12         N06257 UI2  10u  TC=0,0 
+R_R10         N06051 N06141  10k TC=0,0 
+R_R16         N06327 N06257  10k TC=0,0 
+V_V1         VCC 0 12Vdc
+V_V2         UI1 0  
++SIN 0 0.1 500 0 0 0
+R_R12         N06051 VCC  300k TC=0,0 
+R_R14         N06327 N062891  10k TC=0,0 
+R_R17         UI2 0  1k TC=0,0 
+C_C9         UO1 N062891  10u  TC=0,0 
+C_C11         0 N06051  10u  TC=0,0 
+R_R13         0 N06051  100k TC=0,0 
+R_R2         N09983 N10071  10k TC=0,0 
+R_R5         N15352 N10371  30k TC=0,0 
+R_R19         UO1 0  3meg TC=0,0 
+C_C2         0 N10371  10n  TC=0,0 
+X_U1C         N10071 N10371 VCC 0 UO11 LM324
+C_C6         UO11 N102391  10u  TC=0,0 
+C_C1         0 N09983  10u  TC=0,0 
+C_C8         0 UO1  100nf  TC=0,0 
+R_R9         N10311 UO1  1k TC=0,0 
+R_R3         N09983 VCC  50k TC=0,0 
+R_R4         0 N09983  51k TC=0,0 
+R_R8         N102391 N10311  900 TC=0,0 
+R_R1         N10071 UO11  33k TC=0,0 
+C_C7         0 N10311  100nf  TC=0,0 
+C_C13         N12319 N12337  1n  TC=0,0 
+R_R21         N12207 VCC  300k TC=0,0 
+R_R20         0 N12207  100k TC=0,0 
+R_R22         UI2 N12319  350k TC=0,0 
+R_R23         0 N12319  800 TC=0,0 
+X_U2B         N12207 N12337 VCC 0 UO2 LM324
+C_C14         N12319 UO2  1n  TC=0,0 
+R_R24         UO2 N12337  2meg TC=0,0 
+R_R25         N15477 UO11  10k TC=0,0 
+R_R26         N15481 UO11  10k TC=0,0 
+X_U2C         N16099 N16134 VCC 0 N16256 LM324
+R_R27         N16134 VCC  1k TC=0,0 
+R_R28         N16099 VCC  1k TC=0,0 
+R_R29         N16099 UO2  1k TC=0,0 
+R_R30         N16134 N16165  1k TC=0,0 
+R_R31         N16260 N16256  1k TC=0,0 
+R_R32         N16260 0  1k TC=0,0 
+R_R33         N16273 0  1k TC=0,0 
+C_C15         UO1 N16165  1n  TC=0,0 
+C_C16         N16260 N16273  1n  TC=0,0 
+D_D3         N15352 N15477 D1N4148 
+D_D4         N15481 N15352 D1N4148 

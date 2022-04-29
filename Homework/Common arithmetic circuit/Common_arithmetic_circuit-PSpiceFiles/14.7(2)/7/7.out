@@ -1,0 +1,171 @@
+
+**** 12/15/21 15:46:10 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+
+ ** Profile: "14.7(2)-7"  [ D:\Software\Cadence_PSpice\Project\Common arithmetic circuit\Common_arithmetic_circuit-PSpiceFiles\14.7(2
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "7.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of D:\Software\Cadence_PSpice\Cadence\SPB_Data\cdssetup\OrCAD_PSpice\17.2.0\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.TRAN  0 150M 0 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\14.7(2).net" 
+
+
+
+**** INCLUDING 14.7(2).net ****
+* source COMMON_ARITHMETIC_CIRCUIT
+R_R5         N03063 VOUT  1k TC=0,0 
+R_R4         N03057 N03063  1k TC=0,0 
+V_V1         VCC 0 5Vdc
+X_U3         N02941 N03063 VCC VEE VOUT OP-07C/301/TI
+C_C2         0 N02941  1n  TC=0,0 
+R_R6         N02941 0  1k TC=0,0 
+V_V3         VEE 0 -5Vdc
+V_V2         0 N03057  
++PULSE 0 3 0 0 0 0.5M 0.00005
+
+**** RESUMING 7.cir ****
+.END
+
+**** 12/15/21 15:46:10 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+
+ ** Profile: "14.7(2)-7"  [ D:\Software\Cadence_PSpice\Project\Common arithmetic circuit\Common_arithmetic_circuit-PSpiceFiles\14.7(2
+
+
+ ****     Diode MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U3.DX         
+          IS  800.000000E-18 
+
+
+**** 12/15/21 15:46:10 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+
+ ** Profile: "14.7(2)-7"  [ D:\Software\Cadence_PSpice\Project\Common arithmetic circuit\Common_arithmetic_circuit-PSpiceFiles\14.7(2
+
+
+ ****     BJT MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U3.QX         
+               NPN             
+       LEVEL    1            
+          IS  800.000000E-18 
+          BF    5.357000E+03 
+          NF    1            
+          BR    1            
+          NR    1            
+         ISS    0            
+          RE    0            
+          RC    0            
+         CJE    0            
+         VJE     .75         
+         CJC    0            
+         VJC     .75         
+         MJC     .33         
+        XCJC    1            
+         CJS    0            
+         VJS     .75         
+          KF    0            
+          AF    1            
+          CN    2.42         
+           D     .87         
+
+
+WARNING(ORPSIM-15452): Pulse Period < (Rise Time + Fall Time + Pulse Width) for V_V2.
+
+**** 12/15/21 15:46:10 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+
+ ** Profile: "14.7(2)-7"  [ D:\Software\Cadence_PSpice\Project\Common arithmetic circuit\Common_arithmetic_circuit-PSpiceFiles\14.7(2
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(  VCC)    5.0000  (  VEE)   -5.0000  ( VOUT)-107.1E-09  (N02941)-693.0E-09     
+
+(N03057)    0.0000 (N03063)-400.0E-09 (X_U3.6) 2.000E-12 (X_U3.7)-98.27E-09     
+
+(X_U3.8)-98.27E-09 (X_U3.9)    0.0000 (X_U3.10)    -.5831                       
+
+(X_U3.11)    4.9669                   (X_U3.12)    4.9669                       
+
+(X_U3.13)    -.5759                   (X_U3.14)    -.5759                       
+
+(X_U3.53)    2.1000                   (X_U3.54)   -2.1000                       
+
+(X_U3.90) 293.0E-09                   (X_U3.91)   20.0000                       
+
+(X_U3.92)  -20.0000                   (X_U3.99)    0.0000                   
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1        -8.380E-04
+    V_V3         8.381E-04
+    V_V2         4.000E-10
+    X_U3.VB      2.000E-17
+    X_U3.VC      2.101E-12
+    X_U3.VE      2.101E-12
+    X_U3.VLIM    2.930E-10
+    X_U3.VLP    -2.000E-11
+    X_U3.VLN    -2.000E-11
+
+    TOTAL POWER DISSIPATION   8.38E-03  WATTS
+
+
+
+          JOB CONCLUDED
+
+**** 12/15/21 15:46:10 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+
+ ** Profile: "14.7(2)-7"  [ D:\Software\Cadence_PSpice\Project\Common arithmetic circuit\Common_arithmetic_circuit-PSpiceFiles\14.7(2
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  License check-out time            =        3.94
+  Total job time (using Solver 1)   =        1.98
+

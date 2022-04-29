@@ -1,0 +1,4 @@
+* source DC SCAN ANALYSIS
+V_V1         IN 0 12Vdc
+R_R1         IN OUT  1k TC=0,0 
+R_R2         0 OUT  2k TC=0,0 

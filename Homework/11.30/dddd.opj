@@ -1,0 +1,88 @@
+(ExpressProject "dddd"
+  (ProjectVersion "19981106")
+  (ProjectType "Analog or A/D Mixed Mode")
+  (Folder "Design Resources"
+    (Folder "Library"
+      (File "F:\251\dddd.olb"
+        (Type "Schematic Library")))
+    (NoModify)
+    (File ".\dddd.dsn"
+      (Type "Schematic Design"))
+    (BuildFileAddedOrDeleted "x")
+    (CompileFileAddedOrDeleted "x")
+    (RootChangedForceReNetlist "x")
+    (PSPICE_Regenerate_Netlist_Flag "FALSE"))
+  (Folder "Outputs"
+    (File ".\dddd-pspicefiles\top\top.net"
+      (Type "Report"))
+    (File ".\dddd-pspicefiles\electric\electric.net"
+      (Type "Report")))
+  (Folder "PSpice Resources"
+    (Folder "Simulation Profiles"
+      (File.PSpice.{09528990-3187-11D2-BC7B-00A0C90CBF91}
+         ".\dddd-pspicefiles\top\eee.sim"
+        (DisplayName "top-EEE")
+        (Type "PSpice Profile"))
+      (File.PSpice.{09528990-3187-11D2-BC7B-00A0C90CBF91}
+         ".\dddd-pspicefiles\electric\2.sim"
+        (DisplayName "electric-2")
+        (Type "PSpice Profile"))
+      (ActiveProfile ".\dddd-pspicefiles\top\eee.sim"))
+    (Folder "Model Libraries"
+      (Sort User))
+    (Folder "Stimulus Files"
+      (Sort User))
+    (Folder "Include Files"
+      (Sort User)))
+  (DefaultLibraryBrowseDirectory "library\PSpice")
+  (PartMRUSelector
+    (0
+      (LibraryName "D:\CADENCE\SPB_17.2\TOOLS\CAPTURE\LIBRARY\CAPSYM.OLB")
+      (DeviceIndex "0"))
+    (VDC
+      (FullPartName "VDC.Normal")
+      (LibraryName
+         "D:\CADENCE\SPB_17.2\TOOLS\CAPTURE\LIBRARY\PSPICE\SOURCE.OLB")
+      (DeviceIndex "0"))
+    (s2
+      (FullPartName "s2.Normal")
+      (LibraryName "F:\251\DDDD.OLB")
+      (DeviceIndex "0")))
+  (GlobalState
+    (FileView
+      (Path "Design Resources")
+      (Path "Design Resources" "G:\030\11.30\dddd.dsn")
+      (Path "Design Resources" "G:\030\11.30\dddd.dsn" "top")
+      (Path "Design Resources" "G:\030\11.30\dddd.dsn" "electric")
+      (Path "Design Resources" "G:\030\11.30\dddd.dsn" "s2")
+      (Path "Design Resources" "Library")
+      (Path "Design Resources" "Library" "F:\251\dddd.olb")
+      (Path "PSpice Resources")
+      (Path "PSpice Resources" "Simulation Profiles")
+      (Select "PSpice Resources" "Simulation Profiles"
+         ".\dddd-pspicefiles\top\eee.sim"))
+    (HierarchyView)
+    (Doc
+      (Type "COrCapturePMDoc")
+      (Frame
+        (Placement "44 0 1 -1 -1 -8 -30 0 200 0 356"))
+      (Tab 0))
+    (Doc
+      (Type "COrPrmBrowserDoc")
+      (Frame
+        (Placement "44 2 3 -1 -1 -8 -30 25 1395 25 359"))
+      (Path "F:\251\DDDD.OLB")
+      (Package "S2")
+      (PartType "1"))
+    (Doc
+      (Type "COrSchematicDoc")
+      (Frame
+        (Placement "44 0 1 -1 -1 -8 -30 75 1155 75 413")
+        (Scroll "-31 0")
+        (Zoom "100")
+        (Occurrence "/"))
+      (Path "G:\030\11.30\DDDD.DSN")
+      (Schematic "top")
+      (Page "PAGE3")))
+  (LastUsedLibraryBrowseDirectory "F:\251")
+  (MPSSessionName "Administrator"))
