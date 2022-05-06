@@ -1,8 +1,0 @@
-{
-  "C_Cpp.intelliSenseEngine": "Tag Parser",
-  "idf.portWin": "COM5",
-  "files.associations": {
-    "touch_button.h": "c"
-  },
-  "idf.adapterTargetName": "esp32s3"
-}

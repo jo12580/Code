@@ -6,24 +6,24 @@ This directory contains a range of example ESP-IDF projects. These examples are 
 
 The examples are grouped into subdirectories by category. Each category directory contains one or more example projects:
 
+* `get-started` Simple examples with minimal functionality. Good start point for beginners.——入门例程
 * `bluetooth/bluedroid` Classic BT, BLE and coex examples using default Bluedroid host stack.
 * `bluetooth/nimble` BLE examples using NimBLE host stack.
 * `bluetooth/esp_ble_mesh` ESP BLE Mesh examples.
 * `bluetooth/hci` HCI transport (VHCI and HCI UART) examples.
 * `build_system` Examples of build system features.
-* `cxx` C++ language utilization examples and experimental components.
-* `ethernet` Ethernet network examples.
-* `get-started` Simple examples with minimal functionality. Good start point for beginners.
-* `mesh` Wi-Fi Mesh examples.
-* `network` Examples related to general network environment, test & analysis.
+* `cxx` C++ language utilization examples and experimental components.——c++语言示例
+* `ethernet` Ethernet network examples.——以太网
+* `mesh` Wi-Fi Mesh examples.——mesh网络
+* `network` Examples related to general network environment, test & analysis.——网络测试、分析、嗅探
 * `openthread` OpenThread examples.
-* `peripherals` Examples showing driver functionality for the various onboard ESP32 peripherals.
-* `protocols` Examples showing network protocol interactions.
+* `peripherals` Examples showing driver functionality for the various onboard ESP32 peripherals.——外设
+* `protocols` Examples showing network protocol interactions.——协议
 * `provisioning` Wi-Fi provisioning examples.
-* `security` Examples about security features.
-* `storage` Examples showing data storage methods using SPI flash, external storage like the SD/MMC interface and flash partitioning.
+* `security` Examples about security features.——安全配置
+* `storage` Examples showing data storage methods using SPI flash, external storage like the SD/MMC interface and flash partitioning.——存储
 * `system` Demonstrates some internal chip features, or debugging & development tools.
-* `wifi` Advanced Wi-Fi features (For network protocol examples, see `protocols` instead.)
+* `wifi` Advanced Wi-Fi features (For network protocol examples, see `protocols` instead.)——wifi基本连接方式与功能示例
 
 In addition to these examples, `commmon_components` directory contains code shared by several examples.
 

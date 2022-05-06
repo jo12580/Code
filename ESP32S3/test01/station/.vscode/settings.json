@@ -1,0 +1,9 @@
+{
+  "C_Cpp.intelliSenseEngine": "Tag Parser",
+  "idf.adapterTargetName": "esp32s3",
+  "files.associations": {
+    "esp_event.h": "c",
+    "esp_event_internal.h": "c",
+    "esp_wifi.h": "c"
+  }
+}
