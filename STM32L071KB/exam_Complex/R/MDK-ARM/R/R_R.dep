@@ -1,973 +1,0 @@
-Dependencies for Project 'R', Target 'R': (DO NOT MODIFY !)
-F (startup_stm32l071xx.s)(0x5DF9E531)(--cpu Cortex-M0+ -g --apcs=interwork --pd "__MICROLIB SETA 1"-I "E:\desktop file\物联网\蓝桥物联网代码\4.exam_Complex\R\MDK-ARM\RTE"-I D:\Software\Keil\32\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-I D:\Software\Keil\32\ARM\PACK\Keil\STM32L0xx_DFP\2.0.1\Drivers\CMSIS\Device\ST\STM32L0xx\Include--pd "__UVISION_VERSION SETA 518" --pd "_RTE_ SETA 1" --pd "STM32L071xx SETA 1"--list startup_stm32l071xx.lst --xref -o r\startup_stm32l071xx.o --depend r\startup_stm32l071xx.d)
-F (..\Src\i2c.c)(0x5DF9E532)(--c99 -c --cpu Cortex-M0+ -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32L0xx_HAL_Driver/Inc -I ../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I ../Drivers/CMSIS/Include-I "E:\desktop file\物联网\蓝桥物联网代码\4.exam_Complex\R\MDK-ARM\RTE"-I D:\Software\Keil\32\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-I D:\Software\Keil\32\ARM\PACK\Keil\STM32L0xx_DFP\2.0.1\Drivers\CMSIS\Device\ST\STM32L0xx\Include-D__UVISION_VERSION="518" -D_RTE_ -DSTM32L071xx -DUSE_HAL_DRIVER -DSTM32L071xx -DUSE_HAL_DRIVER -DSTM32L071xx-o r\i2c.o --omf_browse r\i2c.crf --depend r\i2c.d)
-I (../Inc/i2c.h)(0x5DF9E52D)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal.h)(0x5DF9E52C)
-I (../Inc/stm32l0xx_hal_conf.h)(0x5DF9E52D)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_rcc.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_def.h)(0x5DF9E52C)
-I (../Drivers/CMSIS/Device/ST/STM32L0xx/Include/stm32l0xx.h)(0x5DF9E52C)
-I (../Drivers/CMSIS/Device/ST/STM32L0xx/Include/stm32l071xx.h)(0x5DF9E52C)
-I (../Drivers/CMSIS/Include/core_cm0plus.h)(0x5DF9E52C)
-I (D:\Software\Keil\32\ARM\ARMCC\include\stdint.h)(0x62089920)
-I (../Drivers/CMSIS/Include/core_cmInstr.h)(0x5DF9E52C)
-I (../Drivers/CMSIS/Include/cmsis_armcc.h)(0x5DF9E52C)
-I (../Drivers/CMSIS/Include/core_cmFunc.h)(0x5DF9E52C)
-I (../Drivers/CMSIS/Device/ST/STM32L0xx/Include/system_stm32l0xx.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h)(0x5DF9E52C)
-I (D:\Software\Keil\32\ARM\ARMCC\include\stddef.h)(0x569DEA3A)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_rcc_ex.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_gpio.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_gpio_ex.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_dma.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_cortex.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_flash.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_flash_ex.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_flash_ramfunc.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_i2c.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_i2c_ex.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_pwr.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_pwr_ex.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_rtc.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_rtc_ex.h)(0x5DF9E52C)
-F (..\Src\font.c)(0x5DF9E532)(--c99 -c --cpu Cortex-M0+ -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32L0xx_HAL_Driver/Inc -I ../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I ../Drivers/CMSIS/Include-I "E:\desktop file\物联网\蓝桥物联网代码\4.exam_Complex\R\MDK-ARM\RTE"-I D:\Software\Keil\32\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-I D:\Software\Keil\32\ARM\PACK\Keil\STM32L0xx_DFP\2.0.1\Drivers\CMSIS\Device\ST\STM32L0xx\Include-D__UVISION_VERSION="518" -D_RTE_ -DSTM32L071xx -DUSE_HAL_DRIVER -DSTM32L071xx -DUSE_HAL_DRIVER -DSTM32L071xx-o r\font.o --omf_browse r\font.crf --depend r\font.d)
-F (..\Src\main_task.c)(0x5DF9E532)(--c99 -c --cpu Cortex-M0+ -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32L0xx_HAL_Driver/Inc -I ../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I ../Drivers/CMSIS/Include-I "E:\desktop file\物联网\蓝桥物联网代码\4.exam_Complex\R\MDK-ARM\RTE"-I D:\Software\Keil\32\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-I D:\Software\Keil\32\ARM\PACK\Keil\STM32L0xx_DFP\2.0.1\Drivers\CMSIS\Device\ST\STM32L0xx\Include-D__UVISION_VERSION="518" -D_RTE_ -DSTM32L071xx -DUSE_HAL_DRIVER -DSTM32L071xx -DUSE_HAL_DRIVER -DSTM32L071xx-o r\main_task.o --omf_browse r\main_task.crf --depend r\main_task.d)
-I (../Inc/main_task.h)(0x5DF9E52D)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal.h)(0x5DF9E52C)
-I (../Inc/stm32l0xx_hal_conf.h)(0x5DF9E52D)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_rcc.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_def.h)(0x5DF9E52C)
-I (../Drivers/CMSIS/Device/ST/STM32L0xx/Include/stm32l0xx.h)(0x5DF9E52C)
-I (../Drivers/CMSIS/Device/ST/STM32L0xx/Include/stm32l071xx.h)(0x5DF9E52C)
-I (../Drivers/CMSIS/Include/core_cm0plus.h)(0x5DF9E52C)
-I (D:\Software\Keil\32\ARM\ARMCC\include\stdint.h)(0x62089920)
-I (../Drivers/CMSIS/Include/core_cmInstr.h)(0x5DF9E52C)
-I (../Drivers/CMSIS/Include/cmsis_armcc.h)(0x5DF9E52C)
-I (../Drivers/CMSIS/Include/core_cmFunc.h)(0x5DF9E52C)
-I (../Drivers/CMSIS/Device/ST/STM32L0xx/Include/system_stm32l0xx.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h)(0x5DF9E52C)
-I (D:\Software\Keil\32\ARM\ARMCC\include\stddef.h)(0x569DEA3A)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_rcc_ex.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_gpio.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_gpio_ex.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_dma.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_cortex.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_flash.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_flash_ex.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_flash_ramfunc.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_i2c.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_i2c_ex.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_pwr.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_pwr_ex.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_rtc.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_rtc_ex.h)(0x5DF9E52C)
-I (../Inc/oled.h)(0x5DF9E52D)
-I (../Inc/i2c.h)(0x5DF9E52D)
-I (D:\Software\Keil\32\ARM\ARMCC\include\stdio.h)(0x6208A63F)
-I (D:\Software\Keil\32\ARM\ARMCC\include\string.h)(0x569DEA3A)
-I (../Inc/sx127x_lora.h)(0x5DF9E52D)
-I (D:\Software\Keil\32\ARM\ARMCC\include\stdbool.h)(0x569DEA3A)
-I (../Inc/sx127x_regs_lora.h)(0x5DF9E52D)
-I (../Inc/recv_task.h)(0x5DF9E52D)
-I (../Inc/spi.h)(0x5DF9E52D)
-I (D:\Software\Keil\32\ARM\ARMCC\include\stdlib.h)(0x62089C73)
-I (../Inc/zm4xx_gpio.h)(0x5DF9E52D)
-I (../Inc/timer.h)(0x5DF9E52D)
-I (../Inc/rtc_task.h)(0x5DF9E52D)
-I (../Inc/key.h)(0x5DF9E52D)
-I (../Inc/sts30.h)(0x5DF9E52D)
-F (..\Src\oled.c)(0x5DF9E532)(--c99 -c --cpu Cortex-M0+ -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32L0xx_HAL_Driver/Inc -I ../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I ../Drivers/CMSIS/Include-I "E:\desktop file\物联网\蓝桥物联网代码\4.exam_Complex\R\MDK-ARM\RTE"-I D:\Software\Keil\32\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-I D:\Software\Keil\32\ARM\PACK\Keil\STM32L0xx_DFP\2.0.1\Drivers\CMSIS\Device\ST\STM32L0xx\Include-D__UVISION_VERSION="518" -D_RTE_ -DSTM32L071xx -DUSE_HAL_DRIVER -DSTM32L071xx -DUSE_HAL_DRIVER -DSTM32L071xx-o r\oled.o --omf_browse r\oled.crf --depend r\oled.d)
-I (../Inc/oled.h)(0x5DF9E52D)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal.h)(0x5DF9E52C)
-I (../Inc/stm32l0xx_hal_conf.h)(0x5DF9E52D)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_rcc.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_def.h)(0x5DF9E52C)
-I (../Drivers/CMSIS/Device/ST/STM32L0xx/Include/stm32l0xx.h)(0x5DF9E52C)
-I (../Drivers/CMSIS/Device/ST/STM32L0xx/Include/stm32l071xx.h)(0x5DF9E52C)
-I (../Drivers/CMSIS/Include/core_cm0plus.h)(0x5DF9E52C)
-I (D:\Software\Keil\32\ARM\ARMCC\include\stdint.h)(0x62089920)
-I (../Drivers/CMSIS/Include/core_cmInstr.h)(0x5DF9E52C)
-I (../Drivers/CMSIS/Include/cmsis_armcc.h)(0x5DF9E52C)
-I (../Drivers/CMSIS/Include/core_cmFunc.h)(0x5DF9E52C)
-I (../Drivers/CMSIS/Device/ST/STM32L0xx/Include/system_stm32l0xx.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h)(0x5DF9E52C)
-I (D:\Software\Keil\32\ARM\ARMCC\include\stddef.h)(0x569DEA3A)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_rcc_ex.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_gpio.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_gpio_ex.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_dma.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_cortex.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_flash.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_flash_ex.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_flash_ramfunc.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_i2c.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_i2c_ex.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_pwr.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_pwr_ex.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_rtc.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_rtc_ex.h)(0x5DF9E52C)
-I (../Inc/i2c.h)(0x5DF9E52D)
-F (..\Src\spi.c)(0x5DF9E532)(--c99 -c --cpu Cortex-M0+ -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32L0xx_HAL_Driver/Inc -I ../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I ../Drivers/CMSIS/Include-I "E:\desktop file\物联网\蓝桥物联网代码\4.exam_Complex\R\MDK-ARM\RTE"-I D:\Software\Keil\32\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-I D:\Software\Keil\32\ARM\PACK\Keil\STM32L0xx_DFP\2.0.1\Drivers\CMSIS\Device\ST\STM32L0xx\Include-D__UVISION_VERSION="518" -D_RTE_ -DSTM32L071xx -DUSE_HAL_DRIVER -DSTM32L071xx -DUSE_HAL_DRIVER -DSTM32L071xx-o r\spi.o --omf_browse r\spi.crf --depend r\spi.d)
-I (../Drivers/CMSIS/Device/ST/STM32L0xx/Include/stm32l0xx.h)(0x5DF9E52C)
-I (../Drivers/CMSIS/Device/ST/STM32L0xx/Include/stm32l071xx.h)(0x5DF9E52C)
-I (../Drivers/CMSIS/Include/core_cm0plus.h)(0x5DF9E52C)
-I (D:\Software\Keil\32\ARM\ARMCC\include\stdint.h)(0x62089920)
-I (../Drivers/CMSIS/Include/core_cmInstr.h)(0x5DF9E52C)
-I (../Drivers/CMSIS/Include/cmsis_armcc.h)(0x5DF9E52C)
-I (../Drivers/CMSIS/Include/core_cmFunc.h)(0x5DF9E52C)
-I (../Drivers/CMSIS/Device/ST/STM32L0xx/Include/system_stm32l0xx.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal.h)(0x5DF9E52C)
-I (../Inc/stm32l0xx_hal_conf.h)(0x5DF9E52D)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_rcc.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_def.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h)(0x5DF9E52C)
-I (D:\Software\Keil\32\ARM\ARMCC\include\stddef.h)(0x569DEA3A)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_rcc_ex.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_gpio.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_gpio_ex.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_dma.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_cortex.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_flash.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_flash_ex.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_flash_ramfunc.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_i2c.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_i2c_ex.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_pwr.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_pwr_ex.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_rtc.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_rtc_ex.h)(0x5DF9E52C)
-I (../Inc/zm4xx_gpio.h)(0x5DF9E52D)
-I (D:\Software\Keil\32\ARM\ARMCC\include\stdlib.h)(0x62089C73)
-I (../Inc/timer.h)(0x5DF9E52D)
-F (..\Src\sx127x_lora.c)(0x5DF9E532)(--c99 -c --cpu Cortex-M0+ -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32L0xx_HAL_Driver/Inc -I ../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I ../Drivers/CMSIS/Include-I "E:\desktop file\物联网\蓝桥物联网代码\4.exam_Complex\R\MDK-ARM\RTE"-I D:\Software\Keil\32\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-I D:\Software\Keil\32\ARM\PACK\Keil\STM32L0xx_DFP\2.0.1\Drivers\CMSIS\Device\ST\STM32L0xx\Include-D__UVISION_VERSION="518" -D_RTE_ -DSTM32L071xx -DUSE_HAL_DRIVER -DSTM32L071xx -DUSE_HAL_DRIVER -DSTM32L071xx-o r\sx127x_lora.o --omf_browse r\sx127x_lora.crf --depend r\sx127x_lora.d)
-I (../Inc/sx127x_lora.h)(0x5DF9E52D)
-I (D:\Software\Keil\32\ARM\ARMCC\include\stdint.h)(0x62089920)
-I (D:\Software\Keil\32\ARM\ARMCC\include\stddef.h)(0x569DEA3A)
-I (D:\Software\Keil\32\ARM\ARMCC\include\stdbool.h)(0x569DEA3A)
-I (../Inc/sx127x_regs_lora.h)(0x5DF9E52D)
-F (..\Src\zm4xx_gpio.c)(0x5DF9E532)(--c99 -c --cpu Cortex-M0+ -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32L0xx_HAL_Driver/Inc -I ../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I ../Drivers/CMSIS/Include-I "E:\desktop file\物联网\蓝桥物联网代码\4.exam_Complex\R\MDK-ARM\RTE"-I D:\Software\Keil\32\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-I D:\Software\Keil\32\ARM\PACK\Keil\STM32L0xx_DFP\2.0.1\Drivers\CMSIS\Device\ST\STM32L0xx\Include-D__UVISION_VERSION="518" -D_RTE_ -DSTM32L071xx -DUSE_HAL_DRIVER -DSTM32L071xx -DUSE_HAL_DRIVER -DSTM32L071xx-o r\zm4xx_gpio.o --omf_browse r\zm4xx_gpio.crf --depend r\zm4xx_gpio.d)
-I (../Drivers/CMSIS/Device/ST/STM32L0xx/Include/stm32l0xx.h)(0x5DF9E52C)
-I (../Drivers/CMSIS/Device/ST/STM32L0xx/Include/stm32l071xx.h)(0x5DF9E52C)
-I (../Drivers/CMSIS/Include/core_cm0plus.h)(0x5DF9E52C)
-I (D:\Software\Keil\32\ARM\ARMCC\include\stdint.h)(0x62089920)
-I (../Drivers/CMSIS/Include/core_cmInstr.h)(0x5DF9E52C)
-I (../Drivers/CMSIS/Include/cmsis_armcc.h)(0x5DF9E52C)
-I (../Drivers/CMSIS/Include/core_cmFunc.h)(0x5DF9E52C)
-I (../Drivers/CMSIS/Device/ST/STM32L0xx/Include/system_stm32l0xx.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal.h)(0x5DF9E52C)
-I (../Inc/stm32l0xx_hal_conf.h)(0x5DF9E52D)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_rcc.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_def.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h)(0x5DF9E52C)
-I (D:\Software\Keil\32\ARM\ARMCC\include\stddef.h)(0x569DEA3A)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_rcc_ex.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_gpio.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_gpio_ex.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_dma.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_cortex.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_flash.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_flash_ex.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_flash_ramfunc.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_i2c.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_i2c_ex.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_pwr.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_pwr_ex.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_rtc.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_rtc_ex.h)(0x5DF9E52C)
-F (..\Src\i2c_2.c)(0x5DF9E532)(--c99 -c --cpu Cortex-M0+ -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32L0xx_HAL_Driver/Inc -I ../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I ../Drivers/CMSIS/Include-I "E:\desktop file\物联网\蓝桥物联网代码\4.exam_Complex\R\MDK-ARM\RTE"-I D:\Software\Keil\32\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-I D:\Software\Keil\32\ARM\PACK\Keil\STM32L0xx_DFP\2.0.1\Drivers\CMSIS\Device\ST\STM32L0xx\Include-D__UVISION_VERSION="518" -D_RTE_ -DSTM32L071xx -DUSE_HAL_DRIVER -DSTM32L071xx -DUSE_HAL_DRIVER -DSTM32L071xx-o r\i2c_2.o --omf_browse r\i2c_2.crf --depend r\i2c_2.d)
-I (..\Src\i2c_2.h)(0x5DF9E532)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal.h)(0x5DF9E52C)
-I (../Inc/stm32l0xx_hal_conf.h)(0x5DF9E52D)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_rcc.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_def.h)(0x5DF9E52C)
-I (../Drivers/CMSIS/Device/ST/STM32L0xx/Include/stm32l0xx.h)(0x5DF9E52C)
-I (../Drivers/CMSIS/Device/ST/STM32L0xx/Include/stm32l071xx.h)(0x5DF9E52C)
-I (../Drivers/CMSIS/Include/core_cm0plus.h)(0x5DF9E52C)
-I (D:\Software\Keil\32\ARM\ARMCC\include\stdint.h)(0x62089920)
-I (../Drivers/CMSIS/Include/core_cmInstr.h)(0x5DF9E52C)
-I (../Drivers/CMSIS/Include/cmsis_armcc.h)(0x5DF9E52C)
-I (../Drivers/CMSIS/Include/core_cmFunc.h)(0x5DF9E52C)
-I (../Drivers/CMSIS/Device/ST/STM32L0xx/Include/system_stm32l0xx.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h)(0x5DF9E52C)
-I (D:\Software\Keil\32\ARM\ARMCC\include\stddef.h)(0x569DEA3A)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_rcc_ex.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_gpio.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_gpio_ex.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_dma.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_cortex.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_flash.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_flash_ex.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_flash_ramfunc.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_i2c.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_i2c_ex.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_pwr.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_pwr_ex.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_rtc.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_rtc_ex.h)(0x5DF9E52C)
-F (..\Src\sts30.c)(0x5DF9E532)(--c99 -c --cpu Cortex-M0+ -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32L0xx_HAL_Driver/Inc -I ../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I ../Drivers/CMSIS/Include-I "E:\desktop file\物联网\蓝桥物联网代码\4.exam_Complex\R\MDK-ARM\RTE"-I D:\Software\Keil\32\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-I D:\Software\Keil\32\ARM\PACK\Keil\STM32L0xx_DFP\2.0.1\Drivers\CMSIS\Device\ST\STM32L0xx\Include-D__UVISION_VERSION="518" -D_RTE_ -DSTM32L071xx -DUSE_HAL_DRIVER -DSTM32L071xx -DUSE_HAL_DRIVER -DSTM32L071xx-o r\sts30.o --omf_browse r\sts30.crf --depend r\sts30.d)
-I (..\Src\sts30.h)(0x5DF9E532)
-I (..\Src\i2c_2.h)(0x5DF9E532)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal.h)(0x5DF9E52C)
-I (../Inc/stm32l0xx_hal_conf.h)(0x5DF9E52D)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_rcc.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_def.h)(0x5DF9E52C)
-I (../Drivers/CMSIS/Device/ST/STM32L0xx/Include/stm32l0xx.h)(0x5DF9E52C)
-I (../Drivers/CMSIS/Device/ST/STM32L0xx/Include/stm32l071xx.h)(0x5DF9E52C)
-I (../Drivers/CMSIS/Include/core_cm0plus.h)(0x5DF9E52C)
-I (D:\Software\Keil\32\ARM\ARMCC\include\stdint.h)(0x62089920)
-I (../Drivers/CMSIS/Include/core_cmInstr.h)(0x5DF9E52C)
-I (../Drivers/CMSIS/Include/cmsis_armcc.h)(0x5DF9E52C)
-I (../Drivers/CMSIS/Include/core_cmFunc.h)(0x5DF9E52C)
-I (../Drivers/CMSIS/Device/ST/STM32L0xx/Include/system_stm32l0xx.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h)(0x5DF9E52C)
-I (D:\Software\Keil\32\ARM\ARMCC\include\stddef.h)(0x569DEA3A)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_rcc_ex.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_gpio.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_gpio_ex.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_dma.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_cortex.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_flash.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_flash_ex.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_flash_ramfunc.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_i2c.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_i2c_ex.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_pwr.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_pwr_ex.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_rtc.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_rtc_ex.h)(0x5DF9E52C)
-F (..\Src\recv_task.c)(0x5DF9E532)(--c99 -c --cpu Cortex-M0+ -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32L0xx_HAL_Driver/Inc -I ../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I ../Drivers/CMSIS/Include-I "E:\desktop file\物联网\蓝桥物联网代码\4.exam_Complex\R\MDK-ARM\RTE"-I D:\Software\Keil\32\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-I D:\Software\Keil\32\ARM\PACK\Keil\STM32L0xx_DFP\2.0.1\Drivers\CMSIS\Device\ST\STM32L0xx\Include-D__UVISION_VERSION="518" -D_RTE_ -DSTM32L071xx -DUSE_HAL_DRIVER -DSTM32L071xx -DUSE_HAL_DRIVER -DSTM32L071xx-o r\recv_task.o --omf_browse r\recv_task.crf --depend r\recv_task.d)
-I (../Inc/recv_task.h)(0x5DF9E52D)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal.h)(0x5DF9E52C)
-I (../Inc/stm32l0xx_hal_conf.h)(0x5DF9E52D)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_rcc.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_def.h)(0x5DF9E52C)
-I (../Drivers/CMSIS/Device/ST/STM32L0xx/Include/stm32l0xx.h)(0x5DF9E52C)
-I (../Drivers/CMSIS/Device/ST/STM32L0xx/Include/stm32l071xx.h)(0x5DF9E52C)
-I (../Drivers/CMSIS/Include/core_cm0plus.h)(0x5DF9E52C)
-I (D:\Software\Keil\32\ARM\ARMCC\include\stdint.h)(0x62089920)
-I (../Drivers/CMSIS/Include/core_cmInstr.h)(0x5DF9E52C)
-I (../Drivers/CMSIS/Include/cmsis_armcc.h)(0x5DF9E52C)
-I (../Drivers/CMSIS/Include/core_cmFunc.h)(0x5DF9E52C)
-I (../Drivers/CMSIS/Device/ST/STM32L0xx/Include/system_stm32l0xx.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h)(0x5DF9E52C)
-I (D:\Software\Keil\32\ARM\ARMCC\include\stddef.h)(0x569DEA3A)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_rcc_ex.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_gpio.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_gpio_ex.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_dma.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_cortex.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_flash.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_flash_ex.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_flash_ramfunc.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_i2c.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_i2c_ex.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_pwr.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_pwr_ex.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_rtc.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_rtc_ex.h)(0x5DF9E52C)
-I (D:\Software\Keil\32\ARM\ARMCC\include\stdio.h)(0x6208A63F)
-I (../Inc/sx127x_lora.h)(0x5DF9E52D)
-I (D:\Software\Keil\32\ARM\ARMCC\include\stdbool.h)(0x569DEA3A)
-I (../Inc/sx127x_regs_lora.h)(0x5DF9E52D)
-I (../Inc/spi.h)(0x5DF9E52D)
-I (D:\Software\Keil\32\ARM\ARMCC\include\stdlib.h)(0x62089C73)
-I (../Inc/zm4xx_gpio.h)(0x5DF9E52D)
-I (../Inc/timer.h)(0x5DF9E52D)
-F (..\Src\rtc_task.c)(0x5DF9E532)(--c99 -c --cpu Cortex-M0+ -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32L0xx_HAL_Driver/Inc -I ../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I ../Drivers/CMSIS/Include-I "E:\desktop file\物联网\蓝桥物联网代码\4.exam_Complex\R\MDK-ARM\RTE"-I D:\Software\Keil\32\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-I D:\Software\Keil\32\ARM\PACK\Keil\STM32L0xx_DFP\2.0.1\Drivers\CMSIS\Device\ST\STM32L0xx\Include-D__UVISION_VERSION="518" -D_RTE_ -DSTM32L071xx -DUSE_HAL_DRIVER -DSTM32L071xx -DUSE_HAL_DRIVER -DSTM32L071xx-o r\rtc_task.o --omf_browse r\rtc_task.crf --depend r\rtc_task.d)
-I (../Inc/rtc_task.h)(0x5DF9E52D)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal.h)(0x5DF9E52C)
-I (../Inc/stm32l0xx_hal_conf.h)(0x5DF9E52D)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_rcc.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_def.h)(0x5DF9E52C)
-I (../Drivers/CMSIS/Device/ST/STM32L0xx/Include/stm32l0xx.h)(0x5DF9E52C)
-I (../Drivers/CMSIS/Device/ST/STM32L0xx/Include/stm32l071xx.h)(0x5DF9E52C)
-I (../Drivers/CMSIS/Include/core_cm0plus.h)(0x5DF9E52C)
-I (D:\Software\Keil\32\ARM\ARMCC\include\stdint.h)(0x62089920)
-I (../Drivers/CMSIS/Include/core_cmInstr.h)(0x5DF9E52C)
-I (../Drivers/CMSIS/Include/cmsis_armcc.h)(0x5DF9E52C)
-I (../Drivers/CMSIS/Include/core_cmFunc.h)(0x5DF9E52C)
-I (../Drivers/CMSIS/Device/ST/STM32L0xx/Include/system_stm32l0xx.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h)(0x5DF9E52C)
-I (D:\Software\Keil\32\ARM\ARMCC\include\stddef.h)(0x569DEA3A)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_rcc_ex.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_gpio.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_gpio_ex.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_dma.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_cortex.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_flash.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_flash_ex.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_flash_ramfunc.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_i2c.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_i2c_ex.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_pwr.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_pwr_ex.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_rtc.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_rtc_ex.h)(0x5DF9E52C)
-I (../Inc/key.h)(0x5DF9E52D)
-I (../Inc/sx127x_lora.h)(0x5DF9E52D)
-I (D:\Software\Keil\32\ARM\ARMCC\include\stdbool.h)(0x569DEA3A)
-I (../Inc/sx127x_regs_lora.h)(0x5DF9E52D)
-I (D:\Software\Keil\32\ARM\ARMCC\include\string.h)(0x569DEA3A)
-I (D:\Software\Keil\32\ARM\ARMCC\include\stdio.h)(0x6208A63F)
-F (..\Inc\rtc_task.h)(0x5DF9E52D)()
-F (../Src/main.c)(0x5DF9E532)(--c99 -c --cpu Cortex-M0+ -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32L0xx_HAL_Driver/Inc -I ../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I ../Drivers/CMSIS/Include-I "E:\desktop file\物联网\蓝桥物联网代码\4.exam_Complex\R\MDK-ARM\RTE"-I D:\Software\Keil\32\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-I D:\Software\Keil\32\ARM\PACK\Keil\STM32L0xx_DFP\2.0.1\Drivers\CMSIS\Device\ST\STM32L0xx\Include-D__UVISION_VERSION="518" -D_RTE_ -DSTM32L071xx -DUSE_HAL_DRIVER -DSTM32L071xx -DUSE_HAL_DRIVER -DSTM32L071xx-o r\main.o --omf_browse r\main.crf --depend r\main.d)
-I (../Inc/main.h)(0x5DF9E52D)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal.h)(0x5DF9E52C)
-I (../Inc/stm32l0xx_hal_conf.h)(0x5DF9E52D)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_rcc.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_def.h)(0x5DF9E52C)
-I (../Drivers/CMSIS/Device/ST/STM32L0xx/Include/stm32l0xx.h)(0x5DF9E52C)
-I (../Drivers/CMSIS/Device/ST/STM32L0xx/Include/stm32l071xx.h)(0x5DF9E52C)
-I (../Drivers/CMSIS/Include/core_cm0plus.h)(0x5DF9E52C)
-I (D:\Software\Keil\32\ARM\ARMCC\include\stdint.h)(0x62089920)
-I (../Drivers/CMSIS/Include/core_cmInstr.h)(0x5DF9E52C)
-I (../Drivers/CMSIS/Include/cmsis_armcc.h)(0x5DF9E52C)
-I (../Drivers/CMSIS/Include/core_cmFunc.h)(0x5DF9E52C)
-I (../Drivers/CMSIS/Device/ST/STM32L0xx/Include/system_stm32l0xx.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h)(0x5DF9E52C)
-I (D:\Software\Keil\32\ARM\ARMCC\include\stddef.h)(0x569DEA3A)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_rcc_ex.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_gpio.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_gpio_ex.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_dma.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_cortex.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_flash.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_flash_ex.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_flash_ramfunc.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_i2c.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_i2c_ex.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_pwr.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_pwr_ex.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_rtc.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_rtc_ex.h)(0x5DF9E52C)
-I (../Inc/main_task.h)(0x5DF9E52D)
-I (../Inc/oled.h)(0x5DF9E52D)
-I (../Inc/i2c.h)(0x5DF9E52D)
-I (D:\Software\Keil\32\ARM\ARMCC\include\stdio.h)(0x6208A63F)
-I (D:\Software\Keil\32\ARM\ARMCC\include\string.h)(0x569DEA3A)
-I (../Inc/sx127x_lora.h)(0x5DF9E52D)
-I (D:\Software\Keil\32\ARM\ARMCC\include\stdbool.h)(0x569DEA3A)
-I (../Inc/sx127x_regs_lora.h)(0x5DF9E52D)
-I (../Inc/recv_task.h)(0x5DF9E52D)
-I (../Inc/spi.h)(0x5DF9E52D)
-I (D:\Software\Keil\32\ARM\ARMCC\include\stdlib.h)(0x62089C73)
-I (../Inc/zm4xx_gpio.h)(0x5DF9E52D)
-I (../Inc/timer.h)(0x5DF9E52D)
-I (../Inc/rtc_task.h)(0x5DF9E52D)
-I (../Inc/key.h)(0x5DF9E52D)
-I (../Inc/sts30.h)(0x5DF9E52D)
-F (../Src/stm32l0xx_it.c)(0x5DF9E532)(--c99 -c --cpu Cortex-M0+ -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32L0xx_HAL_Driver/Inc -I ../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I ../Drivers/CMSIS/Include-I "E:\desktop file\物联网\蓝桥物联网代码\4.exam_Complex\R\MDK-ARM\RTE"-I D:\Software\Keil\32\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-I D:\Software\Keil\32\ARM\PACK\Keil\STM32L0xx_DFP\2.0.1\Drivers\CMSIS\Device\ST\STM32L0xx\Include-D__UVISION_VERSION="518" -D_RTE_ -DSTM32L071xx -DUSE_HAL_DRIVER -DSTM32L071xx -DUSE_HAL_DRIVER -DSTM32L071xx-o r\stm32l0xx_it.o --omf_browse r\stm32l0xx_it.crf --depend r\stm32l0xx_it.d)
-I (../Inc/main.h)(0x5DF9E52D)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal.h)(0x5DF9E52C)
-I (../Inc/stm32l0xx_hal_conf.h)(0x5DF9E52D)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_rcc.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_def.h)(0x5DF9E52C)
-I (../Drivers/CMSIS/Device/ST/STM32L0xx/Include/stm32l0xx.h)(0x5DF9E52C)
-I (../Drivers/CMSIS/Device/ST/STM32L0xx/Include/stm32l071xx.h)(0x5DF9E52C)
-I (../Drivers/CMSIS/Include/core_cm0plus.h)(0x5DF9E52C)
-I (D:\Software\Keil\32\ARM\ARMCC\include\stdint.h)(0x62089920)
-I (../Drivers/CMSIS/Include/core_cmInstr.h)(0x5DF9E52C)
-I (../Drivers/CMSIS/Include/cmsis_armcc.h)(0x5DF9E52C)
-I (../Drivers/CMSIS/Include/core_cmFunc.h)(0x5DF9E52C)
-I (../Drivers/CMSIS/Device/ST/STM32L0xx/Include/system_stm32l0xx.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h)(0x5DF9E52C)
-I (D:\Software\Keil\32\ARM\ARMCC\include\stddef.h)(0x569DEA3A)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_rcc_ex.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_gpio.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_gpio_ex.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_dma.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_cortex.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_flash.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_flash_ex.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_flash_ramfunc.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_i2c.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_i2c_ex.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_pwr.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_pwr_ex.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_rtc.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_rtc_ex.h)(0x5DF9E52C)
-I (../Inc/main_task.h)(0x5DF9E52D)
-I (../Inc/oled.h)(0x5DF9E52D)
-I (../Inc/i2c.h)(0x5DF9E52D)
-I (D:\Software\Keil\32\ARM\ARMCC\include\stdio.h)(0x6208A63F)
-I (D:\Software\Keil\32\ARM\ARMCC\include\string.h)(0x569DEA3A)
-I (../Inc/sx127x_lora.h)(0x5DF9E52D)
-I (D:\Software\Keil\32\ARM\ARMCC\include\stdbool.h)(0x569DEA3A)
-I (../Inc/sx127x_regs_lora.h)(0x5DF9E52D)
-I (../Inc/recv_task.h)(0x5DF9E52D)
-I (../Inc/spi.h)(0x5DF9E52D)
-I (D:\Software\Keil\32\ARM\ARMCC\include\stdlib.h)(0x62089C73)
-I (../Inc/zm4xx_gpio.h)(0x5DF9E52D)
-I (../Inc/timer.h)(0x5DF9E52D)
-I (../Inc/rtc_task.h)(0x5DF9E52D)
-I (../Inc/key.h)(0x5DF9E52D)
-I (../Inc/sts30.h)(0x5DF9E52D)
-I (../Inc/stm32l0xx_it.h)(0x5DF9E52D)
-F (../Src/stm32l0xx_hal_msp.c)(0x5DF9E532)(--c99 -c --cpu Cortex-M0+ -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32L0xx_HAL_Driver/Inc -I ../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I ../Drivers/CMSIS/Include-I "E:\desktop file\物联网\蓝桥物联网代码\4.exam_Complex\R\MDK-ARM\RTE"-I D:\Software\Keil\32\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-I D:\Software\Keil\32\ARM\PACK\Keil\STM32L0xx_DFP\2.0.1\Drivers\CMSIS\Device\ST\STM32L0xx\Include-D__UVISION_VERSION="518" -D_RTE_ -DSTM32L071xx -DUSE_HAL_DRIVER -DSTM32L071xx -DUSE_HAL_DRIVER -DSTM32L071xx-o r\stm32l0xx_hal_msp.o --omf_browse r\stm32l0xx_hal_msp.crf --depend r\stm32l0xx_hal_msp.d)
-I (../Inc/main.h)(0x5DF9E52D)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal.h)(0x5DF9E52C)
-I (../Inc/stm32l0xx_hal_conf.h)(0x5DF9E52D)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_rcc.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_def.h)(0x5DF9E52C)
-I (../Drivers/CMSIS/Device/ST/STM32L0xx/Include/stm32l0xx.h)(0x5DF9E52C)
-I (../Drivers/CMSIS/Device/ST/STM32L0xx/Include/stm32l071xx.h)(0x5DF9E52C)
-I (../Drivers/CMSIS/Include/core_cm0plus.h)(0x5DF9E52C)
-I (D:\Software\Keil\32\ARM\ARMCC\include\stdint.h)(0x62089920)
-I (../Drivers/CMSIS/Include/core_cmInstr.h)(0x5DF9E52C)
-I (../Drivers/CMSIS/Include/cmsis_armcc.h)(0x5DF9E52C)
-I (../Drivers/CMSIS/Include/core_cmFunc.h)(0x5DF9E52C)
-I (../Drivers/CMSIS/Device/ST/STM32L0xx/Include/system_stm32l0xx.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h)(0x5DF9E52C)
-I (D:\Software\Keil\32\ARM\ARMCC\include\stddef.h)(0x569DEA3A)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_rcc_ex.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_gpio.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_gpio_ex.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_dma.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_cortex.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_flash.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_flash_ex.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_flash_ramfunc.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_i2c.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_i2c_ex.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_pwr.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_pwr_ex.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_rtc.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_rtc_ex.h)(0x5DF9E52C)
-I (../Inc/main_task.h)(0x5DF9E52D)
-I (../Inc/oled.h)(0x5DF9E52D)
-I (../Inc/i2c.h)(0x5DF9E52D)
-I (D:\Software\Keil\32\ARM\ARMCC\include\stdio.h)(0x6208A63F)
-I (D:\Software\Keil\32\ARM\ARMCC\include\string.h)(0x569DEA3A)
-I (../Inc/sx127x_lora.h)(0x5DF9E52D)
-I (D:\Software\Keil\32\ARM\ARMCC\include\stdbool.h)(0x569DEA3A)
-I (../Inc/sx127x_regs_lora.h)(0x5DF9E52D)
-I (../Inc/recv_task.h)(0x5DF9E52D)
-I (../Inc/spi.h)(0x5DF9E52D)
-I (D:\Software\Keil\32\ARM\ARMCC\include\stdlib.h)(0x62089C73)
-I (../Inc/zm4xx_gpio.h)(0x5DF9E52D)
-I (../Inc/timer.h)(0x5DF9E52D)
-I (../Inc/rtc_task.h)(0x5DF9E52D)
-I (../Inc/key.h)(0x5DF9E52D)
-I (../Inc/sts30.h)(0x5DF9E52D)
-F (../Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_rtc.c)(0x5DF9E52D)(--c99 -c --cpu Cortex-M0+ -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32L0xx_HAL_Driver/Inc -I ../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I ../Drivers/CMSIS/Include-I "E:\desktop file\物联网\蓝桥物联网代码\4.exam_Complex\R\MDK-ARM\RTE"-I D:\Software\Keil\32\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-I D:\Software\Keil\32\ARM\PACK\Keil\STM32L0xx_DFP\2.0.1\Drivers\CMSIS\Device\ST\STM32L0xx\Include-D__UVISION_VERSION="518" -D_RTE_ -DSTM32L071xx -DUSE_HAL_DRIVER -DSTM32L071xx -DUSE_HAL_DRIVER -DSTM32L071xx-o r\stm32l0xx_hal_rtc.o --omf_browse r\stm32l0xx_hal_rtc.crf --depend r\stm32l0xx_hal_rtc.d)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal.h)(0x5DF9E52C)
-I (../Inc/stm32l0xx_hal_conf.h)(0x5DF9E52D)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_rcc.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_def.h)(0x5DF9E52C)
-I (../Drivers/CMSIS/Device/ST/STM32L0xx/Include/stm32l0xx.h)(0x5DF9E52C)
-I (../Drivers/CMSIS/Device/ST/STM32L0xx/Include/stm32l071xx.h)(0x5DF9E52C)
-I (../Drivers/CMSIS/Include/core_cm0plus.h)(0x5DF9E52C)
-I (D:\Software\Keil\32\ARM\ARMCC\include\stdint.h)(0x62089920)
-I (../Drivers/CMSIS/Include/core_cmInstr.h)(0x5DF9E52C)
-I (../Drivers/CMSIS/Include/cmsis_armcc.h)(0x5DF9E52C)
-I (../Drivers/CMSIS/Include/core_cmFunc.h)(0x5DF9E52C)
-I (../Drivers/CMSIS/Device/ST/STM32L0xx/Include/system_stm32l0xx.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h)(0x5DF9E52C)
-I (D:\Software\Keil\32\ARM\ARMCC\include\stddef.h)(0x569DEA3A)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_rcc_ex.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_gpio.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_gpio_ex.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_dma.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_cortex.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_flash.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_flash_ex.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_flash_ramfunc.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_i2c.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_i2c_ex.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_pwr.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_pwr_ex.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_rtc.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_rtc_ex.h)(0x5DF9E52C)
-F (../Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_rtc_ex.c)(0x5DF9E52D)(--c99 -c --cpu Cortex-M0+ -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32L0xx_HAL_Driver/Inc -I ../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I ../Drivers/CMSIS/Include-I "E:\desktop file\物联网\蓝桥物联网代码\4.exam_Complex\R\MDK-ARM\RTE"-I D:\Software\Keil\32\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-I D:\Software\Keil\32\ARM\PACK\Keil\STM32L0xx_DFP\2.0.1\Drivers\CMSIS\Device\ST\STM32L0xx\Include-D__UVISION_VERSION="518" -D_RTE_ -DSTM32L071xx -DUSE_HAL_DRIVER -DSTM32L071xx -DUSE_HAL_DRIVER -DSTM32L071xx-o r\stm32l0xx_hal_rtc_ex.o --omf_browse r\stm32l0xx_hal_rtc_ex.crf --depend r\stm32l0xx_hal_rtc_ex.d)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal.h)(0x5DF9E52C)
-I (../Inc/stm32l0xx_hal_conf.h)(0x5DF9E52D)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_rcc.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_def.h)(0x5DF9E52C)
-I (../Drivers/CMSIS/Device/ST/STM32L0xx/Include/stm32l0xx.h)(0x5DF9E52C)
-I (../Drivers/CMSIS/Device/ST/STM32L0xx/Include/stm32l071xx.h)(0x5DF9E52C)
-I (../Drivers/CMSIS/Include/core_cm0plus.h)(0x5DF9E52C)
-I (D:\Software\Keil\32\ARM\ARMCC\include\stdint.h)(0x62089920)
-I (../Drivers/CMSIS/Include/core_cmInstr.h)(0x5DF9E52C)
-I (../Drivers/CMSIS/Include/cmsis_armcc.h)(0x5DF9E52C)
-I (../Drivers/CMSIS/Include/core_cmFunc.h)(0x5DF9E52C)
-I (../Drivers/CMSIS/Device/ST/STM32L0xx/Include/system_stm32l0xx.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h)(0x5DF9E52C)
-I (D:\Software\Keil\32\ARM\ARMCC\include\stddef.h)(0x569DEA3A)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_rcc_ex.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_gpio.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_gpio_ex.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_dma.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_cortex.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_flash.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_flash_ex.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_flash_ramfunc.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_i2c.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_i2c_ex.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_pwr.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_pwr_ex.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_rtc.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_rtc_ex.h)(0x5DF9E52C)
-F (../Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_tim.c)(0x5DF9E52D)(--c99 -c --cpu Cortex-M0+ -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32L0xx_HAL_Driver/Inc -I ../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I ../Drivers/CMSIS/Include-I "E:\desktop file\物联网\蓝桥物联网代码\4.exam_Complex\R\MDK-ARM\RTE"-I D:\Software\Keil\32\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-I D:\Software\Keil\32\ARM\PACK\Keil\STM32L0xx_DFP\2.0.1\Drivers\CMSIS\Device\ST\STM32L0xx\Include-D__UVISION_VERSION="518" -D_RTE_ -DSTM32L071xx -DUSE_HAL_DRIVER -DSTM32L071xx -DUSE_HAL_DRIVER -DSTM32L071xx-o r\stm32l0xx_hal_tim.o --omf_browse r\stm32l0xx_hal_tim.crf --depend r\stm32l0xx_hal_tim.d)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal.h)(0x5DF9E52C)
-I (../Inc/stm32l0xx_hal_conf.h)(0x5DF9E52D)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_rcc.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_def.h)(0x5DF9E52C)
-I (../Drivers/CMSIS/Device/ST/STM32L0xx/Include/stm32l0xx.h)(0x5DF9E52C)
-I (../Drivers/CMSIS/Device/ST/STM32L0xx/Include/stm32l071xx.h)(0x5DF9E52C)
-I (../Drivers/CMSIS/Include/core_cm0plus.h)(0x5DF9E52C)
-I (D:\Software\Keil\32\ARM\ARMCC\include\stdint.h)(0x62089920)
-I (../Drivers/CMSIS/Include/core_cmInstr.h)(0x5DF9E52C)
-I (../Drivers/CMSIS/Include/cmsis_armcc.h)(0x5DF9E52C)
-I (../Drivers/CMSIS/Include/core_cmFunc.h)(0x5DF9E52C)
-I (../Drivers/CMSIS/Device/ST/STM32L0xx/Include/system_stm32l0xx.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h)(0x5DF9E52C)
-I (D:\Software\Keil\32\ARM\ARMCC\include\stddef.h)(0x569DEA3A)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_rcc_ex.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_gpio.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_gpio_ex.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_dma.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_cortex.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_flash.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_flash_ex.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_flash_ramfunc.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_i2c.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_i2c_ex.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_pwr.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_pwr_ex.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_rtc.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_rtc_ex.h)(0x5DF9E52C)
-F (../Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_tim_ex.c)(0x5DF9E52D)(--c99 -c --cpu Cortex-M0+ -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32L0xx_HAL_Driver/Inc -I ../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I ../Drivers/CMSIS/Include-I "E:\desktop file\物联网\蓝桥物联网代码\4.exam_Complex\R\MDK-ARM\RTE"-I D:\Software\Keil\32\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-I D:\Software\Keil\32\ARM\PACK\Keil\STM32L0xx_DFP\2.0.1\Drivers\CMSIS\Device\ST\STM32L0xx\Include-D__UVISION_VERSION="518" -D_RTE_ -DSTM32L071xx -DUSE_HAL_DRIVER -DSTM32L071xx -DUSE_HAL_DRIVER -DSTM32L071xx-o r\stm32l0xx_hal_tim_ex.o --omf_browse r\stm32l0xx_hal_tim_ex.crf --depend r\stm32l0xx_hal_tim_ex.d)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal.h)(0x5DF9E52C)
-I (../Inc/stm32l0xx_hal_conf.h)(0x5DF9E52D)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_rcc.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_def.h)(0x5DF9E52C)
-I (../Drivers/CMSIS/Device/ST/STM32L0xx/Include/stm32l0xx.h)(0x5DF9E52C)
-I (../Drivers/CMSIS/Device/ST/STM32L0xx/Include/stm32l071xx.h)(0x5DF9E52C)
-I (../Drivers/CMSIS/Include/core_cm0plus.h)(0x5DF9E52C)
-I (D:\Software\Keil\32\ARM\ARMCC\include\stdint.h)(0x62089920)
-I (../Drivers/CMSIS/Include/core_cmInstr.h)(0x5DF9E52C)
-I (../Drivers/CMSIS/Include/cmsis_armcc.h)(0x5DF9E52C)
-I (../Drivers/CMSIS/Include/core_cmFunc.h)(0x5DF9E52C)
-I (../Drivers/CMSIS/Device/ST/STM32L0xx/Include/system_stm32l0xx.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h)(0x5DF9E52C)
-I (D:\Software\Keil\32\ARM\ARMCC\include\stddef.h)(0x569DEA3A)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_rcc_ex.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_gpio.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_gpio_ex.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_dma.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_cortex.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_flash.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_flash_ex.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_flash_ramfunc.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_i2c.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_i2c_ex.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_pwr.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_pwr_ex.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_rtc.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_rtc_ex.h)(0x5DF9E52C)
-F (../Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal.c)(0x5DF9E52D)(--c99 -c --cpu Cortex-M0+ -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32L0xx_HAL_Driver/Inc -I ../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I ../Drivers/CMSIS/Include-I "E:\desktop file\物联网\蓝桥物联网代码\4.exam_Complex\R\MDK-ARM\RTE"-I D:\Software\Keil\32\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-I D:\Software\Keil\32\ARM\PACK\Keil\STM32L0xx_DFP\2.0.1\Drivers\CMSIS\Device\ST\STM32L0xx\Include-D__UVISION_VERSION="518" -D_RTE_ -DSTM32L071xx -DUSE_HAL_DRIVER -DSTM32L071xx -DUSE_HAL_DRIVER -DSTM32L071xx-o r\stm32l0xx_hal.o --omf_browse r\stm32l0xx_hal.crf --depend r\stm32l0xx_hal.d)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal.h)(0x5DF9E52C)
-I (../Inc/stm32l0xx_hal_conf.h)(0x5DF9E52D)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_rcc.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_def.h)(0x5DF9E52C)
-I (../Drivers/CMSIS/Device/ST/STM32L0xx/Include/stm32l0xx.h)(0x5DF9E52C)
-I (../Drivers/CMSIS/Device/ST/STM32L0xx/Include/stm32l071xx.h)(0x5DF9E52C)
-I (../Drivers/CMSIS/Include/core_cm0plus.h)(0x5DF9E52C)
-I (D:\Software\Keil\32\ARM\ARMCC\include\stdint.h)(0x62089920)
-I (../Drivers/CMSIS/Include/core_cmInstr.h)(0x5DF9E52C)
-I (../Drivers/CMSIS/Include/cmsis_armcc.h)(0x5DF9E52C)
-I (../Drivers/CMSIS/Include/core_cmFunc.h)(0x5DF9E52C)
-I (../Drivers/CMSIS/Device/ST/STM32L0xx/Include/system_stm32l0xx.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h)(0x5DF9E52C)
-I (D:\Software\Keil\32\ARM\ARMCC\include\stddef.h)(0x569DEA3A)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_rcc_ex.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_gpio.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_gpio_ex.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_dma.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_cortex.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_flash.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_flash_ex.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_flash_ramfunc.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_i2c.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_i2c_ex.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_pwr.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_pwr_ex.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_rtc.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_rtc_ex.h)(0x5DF9E52C)
-F (../Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c.c)(0x5DF9E52D)(--c99 -c --cpu Cortex-M0+ -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32L0xx_HAL_Driver/Inc -I ../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I ../Drivers/CMSIS/Include-I "E:\desktop file\物联网\蓝桥物联网代码\4.exam_Complex\R\MDK-ARM\RTE"-I D:\Software\Keil\32\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-I D:\Software\Keil\32\ARM\PACK\Keil\STM32L0xx_DFP\2.0.1\Drivers\CMSIS\Device\ST\STM32L0xx\Include-D__UVISION_VERSION="518" -D_RTE_ -DSTM32L071xx -DUSE_HAL_DRIVER -DSTM32L071xx -DUSE_HAL_DRIVER -DSTM32L071xx-o r\stm32l0xx_hal_i2c.o --omf_browse r\stm32l0xx_hal_i2c.crf --depend r\stm32l0xx_hal_i2c.d)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal.h)(0x5DF9E52C)
-I (../Inc/stm32l0xx_hal_conf.h)(0x5DF9E52D)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_rcc.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_def.h)(0x5DF9E52C)
-I (../Drivers/CMSIS/Device/ST/STM32L0xx/Include/stm32l0xx.h)(0x5DF9E52C)
-I (../Drivers/CMSIS/Device/ST/STM32L0xx/Include/stm32l071xx.h)(0x5DF9E52C)
-I (../Drivers/CMSIS/Include/core_cm0plus.h)(0x5DF9E52C)
-I (D:\Software\Keil\32\ARM\ARMCC\include\stdint.h)(0x62089920)
-I (../Drivers/CMSIS/Include/core_cmInstr.h)(0x5DF9E52C)
-I (../Drivers/CMSIS/Include/cmsis_armcc.h)(0x5DF9E52C)
-I (../Drivers/CMSIS/Include/core_cmFunc.h)(0x5DF9E52C)
-I (../Drivers/CMSIS/Device/ST/STM32L0xx/Include/system_stm32l0xx.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h)(0x5DF9E52C)
-I (D:\Software\Keil\32\ARM\ARMCC\include\stddef.h)(0x569DEA3A)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_rcc_ex.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_gpio.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_gpio_ex.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_dma.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_cortex.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_flash.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_flash_ex.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_flash_ramfunc.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_i2c.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_i2c_ex.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_pwr.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_pwr_ex.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_rtc.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_rtc_ex.h)(0x5DF9E52C)
-F (../Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c)(0x5DF9E52D)(--c99 -c --cpu Cortex-M0+ -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32L0xx_HAL_Driver/Inc -I ../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I ../Drivers/CMSIS/Include-I "E:\desktop file\物联网\蓝桥物联网代码\4.exam_Complex\R\MDK-ARM\RTE"-I D:\Software\Keil\32\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-I D:\Software\Keil\32\ARM\PACK\Keil\STM32L0xx_DFP\2.0.1\Drivers\CMSIS\Device\ST\STM32L0xx\Include-D__UVISION_VERSION="518" -D_RTE_ -DSTM32L071xx -DUSE_HAL_DRIVER -DSTM32L071xx -DUSE_HAL_DRIVER -DSTM32L071xx-o r\stm32l0xx_hal_i2c_ex.o --omf_browse r\stm32l0xx_hal_i2c_ex.crf --depend r\stm32l0xx_hal_i2c_ex.d)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal.h)(0x5DF9E52C)
-I (../Inc/stm32l0xx_hal_conf.h)(0x5DF9E52D)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_rcc.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_def.h)(0x5DF9E52C)
-I (../Drivers/CMSIS/Device/ST/STM32L0xx/Include/stm32l0xx.h)(0x5DF9E52C)
-I (../Drivers/CMSIS/Device/ST/STM32L0xx/Include/stm32l071xx.h)(0x5DF9E52C)
-I (../Drivers/CMSIS/Include/core_cm0plus.h)(0x5DF9E52C)
-I (D:\Software\Keil\32\ARM\ARMCC\include\stdint.h)(0x62089920)
-I (../Drivers/CMSIS/Include/core_cmInstr.h)(0x5DF9E52C)
-I (../Drivers/CMSIS/Include/cmsis_armcc.h)(0x5DF9E52C)
-I (../Drivers/CMSIS/Include/core_cmFunc.h)(0x5DF9E52C)
-I (../Drivers/CMSIS/Device/ST/STM32L0xx/Include/system_stm32l0xx.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h)(0x5DF9E52C)
-I (D:\Software\Keil\32\ARM\ARMCC\include\stddef.h)(0x569DEA3A)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_rcc_ex.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_gpio.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_gpio_ex.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_dma.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_cortex.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_flash.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_flash_ex.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_flash_ramfunc.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_i2c.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_i2c_ex.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_pwr.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_pwr_ex.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_rtc.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_rtc_ex.h)(0x5DF9E52C)
-F (../Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_rcc.c)(0x5DF9E52D)(--c99 -c --cpu Cortex-M0+ -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32L0xx_HAL_Driver/Inc -I ../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I ../Drivers/CMSIS/Include-I "E:\desktop file\物联网\蓝桥物联网代码\4.exam_Complex\R\MDK-ARM\RTE"-I D:\Software\Keil\32\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-I D:\Software\Keil\32\ARM\PACK\Keil\STM32L0xx_DFP\2.0.1\Drivers\CMSIS\Device\ST\STM32L0xx\Include-D__UVISION_VERSION="518" -D_RTE_ -DSTM32L071xx -DUSE_HAL_DRIVER -DSTM32L071xx -DUSE_HAL_DRIVER -DSTM32L071xx-o r\stm32l0xx_hal_rcc.o --omf_browse r\stm32l0xx_hal_rcc.crf --depend r\stm32l0xx_hal_rcc.d)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal.h)(0x5DF9E52C)
-I (../Inc/stm32l0xx_hal_conf.h)(0x5DF9E52D)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_rcc.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_def.h)(0x5DF9E52C)
-I (../Drivers/CMSIS/Device/ST/STM32L0xx/Include/stm32l0xx.h)(0x5DF9E52C)
-I (../Drivers/CMSIS/Device/ST/STM32L0xx/Include/stm32l071xx.h)(0x5DF9E52C)
-I (../Drivers/CMSIS/Include/core_cm0plus.h)(0x5DF9E52C)
-I (D:\Software\Keil\32\ARM\ARMCC\include\stdint.h)(0x62089920)
-I (../Drivers/CMSIS/Include/core_cmInstr.h)(0x5DF9E52C)
-I (../Drivers/CMSIS/Include/cmsis_armcc.h)(0x5DF9E52C)
-I (../Drivers/CMSIS/Include/core_cmFunc.h)(0x5DF9E52C)
-I (../Drivers/CMSIS/Device/ST/STM32L0xx/Include/system_stm32l0xx.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h)(0x5DF9E52C)
-I (D:\Software\Keil\32\ARM\ARMCC\include\stddef.h)(0x569DEA3A)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_rcc_ex.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_gpio.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_gpio_ex.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_dma.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_cortex.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_flash.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_flash_ex.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_flash_ramfunc.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_i2c.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_i2c_ex.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_pwr.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_pwr_ex.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_rtc.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_rtc_ex.h)(0x5DF9E52C)
-F (../Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_rcc_ex.c)(0x5DF9E52D)(--c99 -c --cpu Cortex-M0+ -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32L0xx_HAL_Driver/Inc -I ../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I ../Drivers/CMSIS/Include-I "E:\desktop file\物联网\蓝桥物联网代码\4.exam_Complex\R\MDK-ARM\RTE"-I D:\Software\Keil\32\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-I D:\Software\Keil\32\ARM\PACK\Keil\STM32L0xx_DFP\2.0.1\Drivers\CMSIS\Device\ST\STM32L0xx\Include-D__UVISION_VERSION="518" -D_RTE_ -DSTM32L071xx -DUSE_HAL_DRIVER -DSTM32L071xx -DUSE_HAL_DRIVER -DSTM32L071xx-o r\stm32l0xx_hal_rcc_ex.o --omf_browse r\stm32l0xx_hal_rcc_ex.crf --depend r\stm32l0xx_hal_rcc_ex.d)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal.h)(0x5DF9E52C)
-I (../Inc/stm32l0xx_hal_conf.h)(0x5DF9E52D)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_rcc.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_def.h)(0x5DF9E52C)
-I (../Drivers/CMSIS/Device/ST/STM32L0xx/Include/stm32l0xx.h)(0x5DF9E52C)
-I (../Drivers/CMSIS/Device/ST/STM32L0xx/Include/stm32l071xx.h)(0x5DF9E52C)
-I (../Drivers/CMSIS/Include/core_cm0plus.h)(0x5DF9E52C)
-I (D:\Software\Keil\32\ARM\ARMCC\include\stdint.h)(0x62089920)
-I (../Drivers/CMSIS/Include/core_cmInstr.h)(0x5DF9E52C)
-I (../Drivers/CMSIS/Include/cmsis_armcc.h)(0x5DF9E52C)
-I (../Drivers/CMSIS/Include/core_cmFunc.h)(0x5DF9E52C)
-I (../Drivers/CMSIS/Device/ST/STM32L0xx/Include/system_stm32l0xx.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h)(0x5DF9E52C)
-I (D:\Software\Keil\32\ARM\ARMCC\include\stddef.h)(0x569DEA3A)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_rcc_ex.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_gpio.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_gpio_ex.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_dma.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_cortex.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_flash.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_flash_ex.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_flash_ramfunc.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_i2c.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_i2c_ex.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_pwr.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_pwr_ex.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_rtc.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_rtc_ex.h)(0x5DF9E52C)
-F (../Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c)(0x5DF9E52D)(--c99 -c --cpu Cortex-M0+ -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32L0xx_HAL_Driver/Inc -I ../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I ../Drivers/CMSIS/Include-I "E:\desktop file\物联网\蓝桥物联网代码\4.exam_Complex\R\MDK-ARM\RTE"-I D:\Software\Keil\32\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-I D:\Software\Keil\32\ARM\PACK\Keil\STM32L0xx_DFP\2.0.1\Drivers\CMSIS\Device\ST\STM32L0xx\Include-D__UVISION_VERSION="518" -D_RTE_ -DSTM32L071xx -DUSE_HAL_DRIVER -DSTM32L071xx -DUSE_HAL_DRIVER -DSTM32L071xx-o r\stm32l0xx_hal_flash_ramfunc.o --omf_browse r\stm32l0xx_hal_flash_ramfunc.crf --depend r\stm32l0xx_hal_flash_ramfunc.d)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal.h)(0x5DF9E52C)
-I (../Inc/stm32l0xx_hal_conf.h)(0x5DF9E52D)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_rcc.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_def.h)(0x5DF9E52C)
-I (../Drivers/CMSIS/Device/ST/STM32L0xx/Include/stm32l0xx.h)(0x5DF9E52C)
-I (../Drivers/CMSIS/Device/ST/STM32L0xx/Include/stm32l071xx.h)(0x5DF9E52C)
-I (../Drivers/CMSIS/Include/core_cm0plus.h)(0x5DF9E52C)
-I (D:\Software\Keil\32\ARM\ARMCC\include\stdint.h)(0x62089920)
-I (../Drivers/CMSIS/Include/core_cmInstr.h)(0x5DF9E52C)
-I (../Drivers/CMSIS/Include/cmsis_armcc.h)(0x5DF9E52C)
-I (../Drivers/CMSIS/Include/core_cmFunc.h)(0x5DF9E52C)
-I (../Drivers/CMSIS/Device/ST/STM32L0xx/Include/system_stm32l0xx.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h)(0x5DF9E52C)
-I (D:\Software\Keil\32\ARM\ARMCC\include\stddef.h)(0x569DEA3A)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_rcc_ex.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_gpio.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_gpio_ex.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_dma.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_cortex.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_flash.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_flash_ex.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_flash_ramfunc.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_i2c.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_i2c_ex.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_pwr.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_pwr_ex.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_rtc.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_rtc_ex.h)(0x5DF9E52C)
-F (../Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash.c)(0x5DF9E52D)(--c99 -c --cpu Cortex-M0+ -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32L0xx_HAL_Driver/Inc -I ../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I ../Drivers/CMSIS/Include-I "E:\desktop file\物联网\蓝桥物联网代码\4.exam_Complex\R\MDK-ARM\RTE"-I D:\Software\Keil\32\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-I D:\Software\Keil\32\ARM\PACK\Keil\STM32L0xx_DFP\2.0.1\Drivers\CMSIS\Device\ST\STM32L0xx\Include-D__UVISION_VERSION="518" -D_RTE_ -DSTM32L071xx -DUSE_HAL_DRIVER -DSTM32L071xx -DUSE_HAL_DRIVER -DSTM32L071xx-o r\stm32l0xx_hal_flash.o --omf_browse r\stm32l0xx_hal_flash.crf --depend r\stm32l0xx_hal_flash.d)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal.h)(0x5DF9E52C)
-I (../Inc/stm32l0xx_hal_conf.h)(0x5DF9E52D)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_rcc.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_def.h)(0x5DF9E52C)
-I (../Drivers/CMSIS/Device/ST/STM32L0xx/Include/stm32l0xx.h)(0x5DF9E52C)
-I (../Drivers/CMSIS/Device/ST/STM32L0xx/Include/stm32l071xx.h)(0x5DF9E52C)
-I (../Drivers/CMSIS/Include/core_cm0plus.h)(0x5DF9E52C)
-I (D:\Software\Keil\32\ARM\ARMCC\include\stdint.h)(0x62089920)
-I (../Drivers/CMSIS/Include/core_cmInstr.h)(0x5DF9E52C)
-I (../Drivers/CMSIS/Include/cmsis_armcc.h)(0x5DF9E52C)
-I (../Drivers/CMSIS/Include/core_cmFunc.h)(0x5DF9E52C)
-I (../Drivers/CMSIS/Device/ST/STM32L0xx/Include/system_stm32l0xx.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h)(0x5DF9E52C)
-I (D:\Software\Keil\32\ARM\ARMCC\include\stddef.h)(0x569DEA3A)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_rcc_ex.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_gpio.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_gpio_ex.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_dma.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_cortex.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_flash.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_flash_ex.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_flash_ramfunc.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_i2c.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_i2c_ex.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_pwr.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_pwr_ex.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_rtc.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_rtc_ex.h)(0x5DF9E52C)
-F (../Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ex.c)(0x5DF9E52D)(--c99 -c --cpu Cortex-M0+ -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32L0xx_HAL_Driver/Inc -I ../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I ../Drivers/CMSIS/Include-I "E:\desktop file\物联网\蓝桥物联网代码\4.exam_Complex\R\MDK-ARM\RTE"-I D:\Software\Keil\32\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-I D:\Software\Keil\32\ARM\PACK\Keil\STM32L0xx_DFP\2.0.1\Drivers\CMSIS\Device\ST\STM32L0xx\Include-D__UVISION_VERSION="518" -D_RTE_ -DSTM32L071xx -DUSE_HAL_DRIVER -DSTM32L071xx -DUSE_HAL_DRIVER -DSTM32L071xx-o r\stm32l0xx_hal_flash_ex.o --omf_browse r\stm32l0xx_hal_flash_ex.crf --depend r\stm32l0xx_hal_flash_ex.d)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal.h)(0x5DF9E52C)
-I (../Inc/stm32l0xx_hal_conf.h)(0x5DF9E52D)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_rcc.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_def.h)(0x5DF9E52C)
-I (../Drivers/CMSIS/Device/ST/STM32L0xx/Include/stm32l0xx.h)(0x5DF9E52C)
-I (../Drivers/CMSIS/Device/ST/STM32L0xx/Include/stm32l071xx.h)(0x5DF9E52C)
-I (../Drivers/CMSIS/Include/core_cm0plus.h)(0x5DF9E52C)
-I (D:\Software\Keil\32\ARM\ARMCC\include\stdint.h)(0x62089920)
-I (../Drivers/CMSIS/Include/core_cmInstr.h)(0x5DF9E52C)
-I (../Drivers/CMSIS/Include/cmsis_armcc.h)(0x5DF9E52C)
-I (../Drivers/CMSIS/Include/core_cmFunc.h)(0x5DF9E52C)
-I (../Drivers/CMSIS/Device/ST/STM32L0xx/Include/system_stm32l0xx.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h)(0x5DF9E52C)
-I (D:\Software\Keil\32\ARM\ARMCC\include\stddef.h)(0x569DEA3A)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_rcc_ex.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_gpio.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_gpio_ex.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_dma.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_cortex.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_flash.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_flash_ex.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_flash_ramfunc.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_i2c.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_i2c_ex.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_pwr.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_pwr_ex.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_rtc.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_rtc_ex.h)(0x5DF9E52C)
-F (../Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c)(0x5DF9E52D)(--c99 -c --cpu Cortex-M0+ -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32L0xx_HAL_Driver/Inc -I ../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I ../Drivers/CMSIS/Include-I "E:\desktop file\物联网\蓝桥物联网代码\4.exam_Complex\R\MDK-ARM\RTE"-I D:\Software\Keil\32\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-I D:\Software\Keil\32\ARM\PACK\Keil\STM32L0xx_DFP\2.0.1\Drivers\CMSIS\Device\ST\STM32L0xx\Include-D__UVISION_VERSION="518" -D_RTE_ -DSTM32L071xx -DUSE_HAL_DRIVER -DSTM32L071xx -DUSE_HAL_DRIVER -DSTM32L071xx-o r\stm32l0xx_hal_gpio.o --omf_browse r\stm32l0xx_hal_gpio.crf --depend r\stm32l0xx_hal_gpio.d)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal.h)(0x5DF9E52C)
-I (../Inc/stm32l0xx_hal_conf.h)(0x5DF9E52D)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_rcc.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_def.h)(0x5DF9E52C)
-I (../Drivers/CMSIS/Device/ST/STM32L0xx/Include/stm32l0xx.h)(0x5DF9E52C)
-I (../Drivers/CMSIS/Device/ST/STM32L0xx/Include/stm32l071xx.h)(0x5DF9E52C)
-I (../Drivers/CMSIS/Include/core_cm0plus.h)(0x5DF9E52C)
-I (D:\Software\Keil\32\ARM\ARMCC\include\stdint.h)(0x62089920)
-I (../Drivers/CMSIS/Include/core_cmInstr.h)(0x5DF9E52C)
-I (../Drivers/CMSIS/Include/cmsis_armcc.h)(0x5DF9E52C)
-I (../Drivers/CMSIS/Include/core_cmFunc.h)(0x5DF9E52C)
-I (../Drivers/CMSIS/Device/ST/STM32L0xx/Include/system_stm32l0xx.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h)(0x5DF9E52C)
-I (D:\Software\Keil\32\ARM\ARMCC\include\stddef.h)(0x569DEA3A)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_rcc_ex.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_gpio.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_gpio_ex.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_dma.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_cortex.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_flash.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_flash_ex.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_flash_ramfunc.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_i2c.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_i2c_ex.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_pwr.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_pwr_ex.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_rtc.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_rtc_ex.h)(0x5DF9E52C)
-F (../Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_dma.c)(0x5DF9E52D)(--c99 -c --cpu Cortex-M0+ -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32L0xx_HAL_Driver/Inc -I ../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I ../Drivers/CMSIS/Include-I "E:\desktop file\物联网\蓝桥物联网代码\4.exam_Complex\R\MDK-ARM\RTE"-I D:\Software\Keil\32\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-I D:\Software\Keil\32\ARM\PACK\Keil\STM32L0xx_DFP\2.0.1\Drivers\CMSIS\Device\ST\STM32L0xx\Include-D__UVISION_VERSION="518" -D_RTE_ -DSTM32L071xx -DUSE_HAL_DRIVER -DSTM32L071xx -DUSE_HAL_DRIVER -DSTM32L071xx-o r\stm32l0xx_hal_dma.o --omf_browse r\stm32l0xx_hal_dma.crf --depend r\stm32l0xx_hal_dma.d)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal.h)(0x5DF9E52C)
-I (../Inc/stm32l0xx_hal_conf.h)(0x5DF9E52D)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_rcc.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_def.h)(0x5DF9E52C)
-I (../Drivers/CMSIS/Device/ST/STM32L0xx/Include/stm32l0xx.h)(0x5DF9E52C)
-I (../Drivers/CMSIS/Device/ST/STM32L0xx/Include/stm32l071xx.h)(0x5DF9E52C)
-I (../Drivers/CMSIS/Include/core_cm0plus.h)(0x5DF9E52C)
-I (D:\Software\Keil\32\ARM\ARMCC\include\stdint.h)(0x62089920)
-I (../Drivers/CMSIS/Include/core_cmInstr.h)(0x5DF9E52C)
-I (../Drivers/CMSIS/Include/cmsis_armcc.h)(0x5DF9E52C)
-I (../Drivers/CMSIS/Include/core_cmFunc.h)(0x5DF9E52C)
-I (../Drivers/CMSIS/Device/ST/STM32L0xx/Include/system_stm32l0xx.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h)(0x5DF9E52C)
-I (D:\Software\Keil\32\ARM\ARMCC\include\stddef.h)(0x569DEA3A)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_rcc_ex.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_gpio.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_gpio_ex.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_dma.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_cortex.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_flash.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_flash_ex.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_flash_ramfunc.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_i2c.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_i2c_ex.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_pwr.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_pwr_ex.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_rtc.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_rtc_ex.h)(0x5DF9E52C)
-F (../Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_pwr.c)(0x5DF9E52D)(--c99 -c --cpu Cortex-M0+ -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32L0xx_HAL_Driver/Inc -I ../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I ../Drivers/CMSIS/Include-I "E:\desktop file\物联网\蓝桥物联网代码\4.exam_Complex\R\MDK-ARM\RTE"-I D:\Software\Keil\32\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-I D:\Software\Keil\32\ARM\PACK\Keil\STM32L0xx_DFP\2.0.1\Drivers\CMSIS\Device\ST\STM32L0xx\Include-D__UVISION_VERSION="518" -D_RTE_ -DSTM32L071xx -DUSE_HAL_DRIVER -DSTM32L071xx -DUSE_HAL_DRIVER -DSTM32L071xx-o r\stm32l0xx_hal_pwr.o --omf_browse r\stm32l0xx_hal_pwr.crf --depend r\stm32l0xx_hal_pwr.d)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal.h)(0x5DF9E52C)
-I (../Inc/stm32l0xx_hal_conf.h)(0x5DF9E52D)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_rcc.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_def.h)(0x5DF9E52C)
-I (../Drivers/CMSIS/Device/ST/STM32L0xx/Include/stm32l0xx.h)(0x5DF9E52C)
-I (../Drivers/CMSIS/Device/ST/STM32L0xx/Include/stm32l071xx.h)(0x5DF9E52C)
-I (../Drivers/CMSIS/Include/core_cm0plus.h)(0x5DF9E52C)
-I (D:\Software\Keil\32\ARM\ARMCC\include\stdint.h)(0x62089920)
-I (../Drivers/CMSIS/Include/core_cmInstr.h)(0x5DF9E52C)
-I (../Drivers/CMSIS/Include/cmsis_armcc.h)(0x5DF9E52C)
-I (../Drivers/CMSIS/Include/core_cmFunc.h)(0x5DF9E52C)
-I (../Drivers/CMSIS/Device/ST/STM32L0xx/Include/system_stm32l0xx.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h)(0x5DF9E52C)
-I (D:\Software\Keil\32\ARM\ARMCC\include\stddef.h)(0x569DEA3A)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_rcc_ex.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_gpio.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_gpio_ex.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_dma.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_cortex.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_flash.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_flash_ex.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_flash_ramfunc.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_i2c.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_i2c_ex.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_pwr.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_pwr_ex.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_rtc.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_rtc_ex.h)(0x5DF9E52C)
-F (../Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_pwr_ex.c)(0x5DF9E52D)(--c99 -c --cpu Cortex-M0+ -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32L0xx_HAL_Driver/Inc -I ../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I ../Drivers/CMSIS/Include-I "E:\desktop file\物联网\蓝桥物联网代码\4.exam_Complex\R\MDK-ARM\RTE"-I D:\Software\Keil\32\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-I D:\Software\Keil\32\ARM\PACK\Keil\STM32L0xx_DFP\2.0.1\Drivers\CMSIS\Device\ST\STM32L0xx\Include-D__UVISION_VERSION="518" -D_RTE_ -DSTM32L071xx -DUSE_HAL_DRIVER -DSTM32L071xx -DUSE_HAL_DRIVER -DSTM32L071xx-o r\stm32l0xx_hal_pwr_ex.o --omf_browse r\stm32l0xx_hal_pwr_ex.crf --depend r\stm32l0xx_hal_pwr_ex.d)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal.h)(0x5DF9E52C)
-I (../Inc/stm32l0xx_hal_conf.h)(0x5DF9E52D)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_rcc.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_def.h)(0x5DF9E52C)
-I (../Drivers/CMSIS/Device/ST/STM32L0xx/Include/stm32l0xx.h)(0x5DF9E52C)
-I (../Drivers/CMSIS/Device/ST/STM32L0xx/Include/stm32l071xx.h)(0x5DF9E52C)
-I (../Drivers/CMSIS/Include/core_cm0plus.h)(0x5DF9E52C)
-I (D:\Software\Keil\32\ARM\ARMCC\include\stdint.h)(0x62089920)
-I (../Drivers/CMSIS/Include/core_cmInstr.h)(0x5DF9E52C)
-I (../Drivers/CMSIS/Include/cmsis_armcc.h)(0x5DF9E52C)
-I (../Drivers/CMSIS/Include/core_cmFunc.h)(0x5DF9E52C)
-I (../Drivers/CMSIS/Device/ST/STM32L0xx/Include/system_stm32l0xx.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h)(0x5DF9E52C)
-I (D:\Software\Keil\32\ARM\ARMCC\include\stddef.h)(0x569DEA3A)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_rcc_ex.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_gpio.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_gpio_ex.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_dma.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_cortex.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_flash.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_flash_ex.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_flash_ramfunc.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_i2c.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_i2c_ex.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_pwr.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_pwr_ex.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_rtc.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_rtc_ex.h)(0x5DF9E52C)
-F (../Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_cortex.c)(0x5DF9E52D)(--c99 -c --cpu Cortex-M0+ -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32L0xx_HAL_Driver/Inc -I ../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I ../Drivers/CMSIS/Include-I "E:\desktop file\物联网\蓝桥物联网代码\4.exam_Complex\R\MDK-ARM\RTE"-I D:\Software\Keil\32\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-I D:\Software\Keil\32\ARM\PACK\Keil\STM32L0xx_DFP\2.0.1\Drivers\CMSIS\Device\ST\STM32L0xx\Include-D__UVISION_VERSION="518" -D_RTE_ -DSTM32L071xx -DUSE_HAL_DRIVER -DSTM32L071xx -DUSE_HAL_DRIVER -DSTM32L071xx-o r\stm32l0xx_hal_cortex.o --omf_browse r\stm32l0xx_hal_cortex.crf --depend r\stm32l0xx_hal_cortex.d)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal.h)(0x5DF9E52C)
-I (../Inc/stm32l0xx_hal_conf.h)(0x5DF9E52D)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_rcc.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_def.h)(0x5DF9E52C)
-I (../Drivers/CMSIS/Device/ST/STM32L0xx/Include/stm32l0xx.h)(0x5DF9E52C)
-I (../Drivers/CMSIS/Device/ST/STM32L0xx/Include/stm32l071xx.h)(0x5DF9E52C)
-I (../Drivers/CMSIS/Include/core_cm0plus.h)(0x5DF9E52C)
-I (D:\Software\Keil\32\ARM\ARMCC\include\stdint.h)(0x62089920)
-I (../Drivers/CMSIS/Include/core_cmInstr.h)(0x5DF9E52C)
-I (../Drivers/CMSIS/Include/cmsis_armcc.h)(0x5DF9E52C)
-I (../Drivers/CMSIS/Include/core_cmFunc.h)(0x5DF9E52C)
-I (../Drivers/CMSIS/Device/ST/STM32L0xx/Include/system_stm32l0xx.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h)(0x5DF9E52C)
-I (D:\Software\Keil\32\ARM\ARMCC\include\stddef.h)(0x569DEA3A)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_rcc_ex.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_gpio.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_gpio_ex.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_dma.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_cortex.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_flash.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_flash_ex.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_flash_ramfunc.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_i2c.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_i2c_ex.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_pwr.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_pwr_ex.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_rtc.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_rtc_ex.h)(0x5DF9E52C)
-F (../Src/system_stm32l0xx.c)(0x5DF9E532)(--c99 -c --cpu Cortex-M0+ -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32L0xx_HAL_Driver/Inc -I ../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I ../Drivers/CMSIS/Include-I "E:\desktop file\物联网\蓝桥物联网代码\4.exam_Complex\R\MDK-ARM\RTE"-I D:\Software\Keil\32\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-I D:\Software\Keil\32\ARM\PACK\Keil\STM32L0xx_DFP\2.0.1\Drivers\CMSIS\Device\ST\STM32L0xx\Include-D__UVISION_VERSION="518" -D_RTE_ -DSTM32L071xx -DUSE_HAL_DRIVER -DSTM32L071xx -DUSE_HAL_DRIVER -DSTM32L071xx-o r\system_stm32l0xx.o --omf_browse r\system_stm32l0xx.crf --depend r\system_stm32l0xx.d)
-I (../Drivers/CMSIS/Device/ST/STM32L0xx/Include/stm32l0xx.h)(0x5DF9E52C)
-I (../Drivers/CMSIS/Device/ST/STM32L0xx/Include/stm32l071xx.h)(0x5DF9E52C)
-I (../Drivers/CMSIS/Include/core_cm0plus.h)(0x5DF9E52C)
-I (D:\Software\Keil\32\ARM\ARMCC\include\stdint.h)(0x62089920)
-I (../Drivers/CMSIS/Include/core_cmInstr.h)(0x5DF9E52C)
-I (../Drivers/CMSIS/Include/cmsis_armcc.h)(0x5DF9E52C)
-I (../Drivers/CMSIS/Include/core_cmFunc.h)(0x5DF9E52C)
-I (../Drivers/CMSIS/Device/ST/STM32L0xx/Include/system_stm32l0xx.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal.h)(0x5DF9E52C)
-I (../Inc/stm32l0xx_hal_conf.h)(0x5DF9E52D)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_rcc.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_def.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h)(0x5DF9E52C)
-I (D:\Software\Keil\32\ARM\ARMCC\include\stddef.h)(0x569DEA3A)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_rcc_ex.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_gpio.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_gpio_ex.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_dma.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_cortex.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_flash.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_flash_ex.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_flash_ramfunc.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_i2c.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_i2c_ex.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_pwr.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_pwr_ex.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_rtc.h)(0x5DF9E52C)
-I (../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_rtc_ex.h)(0x5DF9E52C)

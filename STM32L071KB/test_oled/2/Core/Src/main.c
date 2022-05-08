@@ -121,15 +121,14 @@ int main(void)
   while (1)
   {
     /* USER CODE END WHILE */
-
     /* USER CODE BEGIN 3 */
 		sprintf(lcdLine_1st_line, "GXCT IOT       ");
 		sprintf(lcdLine_2st_line, "Hello World    ");
 		a=LORA_Rx(rx);
 ////		unsigned char send;
 //		LORA_Tx((unsigned char *)lcdLine_1st_line,strlen(lcdLine_1st_line));
-		OLED_ShowString(0, 0, (unsigned char *)rx, 16);
-		OLED_ShowString(0, 2, (unsigned char *)a, 16);
+		OLED_ShowString(0, 0, (unsigned char *)lcdLine_1st_line, 16);
+		OLED_ShowString(0, 2, (unsigned char *)lcdLine_2st_line, 16);
 		
 		
   }
